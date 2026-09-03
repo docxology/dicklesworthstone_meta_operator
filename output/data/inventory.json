@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-03T08:42:55Z",
+  "generated_at": "2026-09-03T22:30:46Z",
   "repos": [
     {
       "name": "ChatTTS",
@@ -48,9 +48,9 @@
       "has_tests": false,
       "test_cmd": null,
       "auto_cmds": {},
-      "last_commit_sha": "f533900a73a3b733a39a8532133ba95ee1b7a023",
-      "last_commit_date": "2026-09-02T23:03:16-04:00",
-      "last_commit_message": "fix: harden profile refresh and project claims"
+      "last_commit_sha": "377f83c77b8332d8994ccd6e3db77d2dfec90fb1",
+      "last_commit_date": "2026-09-03T05:42:52-04:00",
+      "last_commit_message": "Update GitHub stats (2026-09-03)"
     },
     {
       "name": "aadc",
@@ -1616,39 +1616,39 @@
         ".css": 381,
         ".entitlements": 4,
         ".glb": 20000,
-        ".js": 2667,
-        ".json": 23340,
-        ".jsonl": 125,
-        ".lock": 360,
-        ".md": 12658,
-        ".mjs": 34,
+        ".js": 2837,
+        ".json": 23693,
+        ".jsonl": 195,
+        ".lock": 387,
+        ".md": 12681,
+        ".mjs": 70,
         ".out": 2,
-        ".pbxproj": 1056,
+        ".pbxproj": 1052,
         ".pdf": 2346663,
         ".plist": 50,
-        ".png": 5066850,
-        ".sh": 15,
+        ".png": 5100571,
+        ".sh": 32,
         ".stl": 20000,
-        ".swift": 6563,
-        ".ts": 287167,
-        ".tsx": 108608,
+        ".swift": 6821,
+        ".ts": 318492,
+        ".tsx": 114068,
         ".txt": 76355,
-        ".usdz": 329897,
-        ".wasm": 53274,
+        ".usdz": 301022,
+        ".wasm": 55600,
+        ".webp": 233527,
         ".xcprivacy": 13,
         ".xcscheme": 141,
         ".xcworkspacedata": 7,
         ".yaml": 1,
-        ".yml": 153
+        ".yml": 118
       },
-      "total_loc": 8356477,
-      "file_count": 3536,
+      "total_loc": 8634876,
+      "file_count": 3799,
       "readme_title": "Classic Patents",
       "readme_summary": "[![License: MIT + Rider](https://img.shields.io/badge/License-MIT_+_OpenAI/Anthropic_Rider-blue.svg)](./LICENSE) [![Framework: Next.js 15](https://img.shields.io/badge/Framework-Next.js_15-black.svg)](https://nextjs.org/) [![3D Engine: Three.js](https://img.shields.io/badge/3D_Ph…",
       "manifests": {
         "package.json": "package.json",
-        "tsconfig.json": "tsconfig.json",
-        ".github/workflows": ".github/workflows"
+        "tsconfig.json": "tsconfig.json"
       },
       "entry_points": [],
       "has_tests": false,
@@ -1657,9 +1657,9 @@
         "lint": "npm run lint",
         "typecheck": "npm run typecheck"
       },
-      "last_commit_sha": "bb02f51022f7aa97f526d11852d53e10a9c088fd",
-      "last_commit_date": "2026-09-03T00:22:46-04:00",
-      "last_commit_message": "chore(beads): record Apple CI proof boundary"
+      "last_commit_sha": "864dd6ba31bc8d25a0b089119a1392cc3e5e549b",
+      "last_commit_date": "2026-09-03T17:00:41-04:00",
+      "last_commit_message": "Merge remote-tracking branch 'origin/main'"
     },
     {
       "name": "claude_code_agent_farm",
@@ -1747,11 +1747,11 @@
         ".heapprofile": 60018,
         ".html": 1435,
         ".ico": 8,
-        ".js": 10929,
-        ".json": 150733,
+        ".js": 11377,
+        ".json": 150749,
         ".jsonl": 211,
         ".lock": 1223,
-        ".md": 82688,
+        ".md": 82695,
         ".mjs": 226,
         ".pbxproj": 554,
         ".plist": 50,
@@ -1761,29 +1761,28 @@
         ".rebuild_20260829t153616z-wal": 5,
         ".rebuild_20260829t153616z-wal-cert": 2,
         ".rebuild_20260829t153616z-wal-cert-head": 2,
-        ".sh": 463,
+        ".sh": 480,
         ".sha256": 2,
         ".stl": 276750,
         ".swift": 2158,
-        ".ts": 54834,
-        ".tsx": 30956,
+        ".ts": 55434,
+        ".tsx": 31021,
         ".ttf": 6625,
         ".txt": 1045,
-        ".wasm": 364846,
+        ".wasm": 384206,
         ".xcprivacy": 14,
         ".xcscheme": 141,
         ".xcworkspacedata": 7,
         ".yaml": 8,
-        ".yml": 163
+        ".yml": 90
       },
-      "total_loc": 1111216,
-      "file_count": 1201,
+      "total_loc": 1131656,
+      "file_count": 1205,
       "readme_title": "CMA-ES Explainer",
       "readme_summary": "An interactive, evidence-first tour of covariance matrix adaptation. The site combines Next.js, React Three Fiber, MathJax, a reference-audited TypeScript CMA-ES, and versioned Frankensim WebAssembly kernels.",
       "manifests": {
         "package.json": "package.json",
-        "tsconfig.json": "tsconfig.json",
-        ".github/workflows": ".github/workflows"
+        "tsconfig.json": "tsconfig.json"
       },
       "entry_points": [],
       "has_tests": true,
@@ -1793,9 +1792,9 @@
         "lint": "npm run lint",
         "typecheck": "npm run typecheck"
       },
-      "last_commit_sha": "fcd38a3dc827e8d92c0d11a211ed639dc4b2a6f1",
-      "last_commit_date": "2026-09-03T00:54:39-04:00",
-      "last_commit_message": "feat(humanoid): IK ghost skeleton for the six-pin drag mode"
+      "last_commit_sha": "31a72acd74e821e19543606d052663a255e452f8",
+      "last_commit_date": "2026-09-03T16:59:59-04:00",
+      "last_commit_message": "build: route Apple validation through DSR"
     },
     {
       "name": "coding_agent_account_manager",
@@ -2288,15 +2287,15 @@
         ".golden": 21864,
         ".jpg": 8606,
         ".json": 112815,
-        ".jsonl": 4715,
+        ".jsonl": 4725,
         ".lean": 29,
-        ".lock": 13,
+        ".lock": 15,
         ".log": 5,
-        ".md": 106028,
+        ".md": 106077,
         ".ps1": 2902,
         ".pub": 4,
         ".py": 16604,
-        ".rs": 1239041,
+        ".rs": 1239405,
         ".sh": 93690,
         ".snap": 12342,
         ".sql": 123,
@@ -2308,8 +2307,8 @@
         ".yaml": 7,
         ".yml": 2610
       },
-      "total_loc": 1633771,
-      "file_count": 3793,
+      "total_loc": 1634196,
+      "file_count": 3794,
       "readme_title": "Eidetic Engine (`ee`)",
       "readme_summary": "<img src=\"./ee_illustration.webp\" alt=\"Eidetic Engine illustration\" width=\"720\">",
       "manifests": {
@@ -2327,9 +2326,9 @@
         "lint": "cargo clippy -- -D warnings",
         "typecheck": "cargo check"
       },
-      "last_commit_sha": "4fab17a888217dc69c88a31857b78c6159cb6ef7",
-      "last_commit_date": "2026-09-03T03:36:06-04:00",
-      "last_commit_message": "fix(policy,model): entropy-based secret classifier and snapshot-safe lifecycle probe"
+      "last_commit_sha": "543ae211700739cfdd5236af66f7343849826d59",
+      "last_commit_date": "2026-09-03T15:56:26-04:00",
+      "last_commit_message": "tracker: sync beads metadata (.23 closed with e2e proof)"
     },
     {
       "name": "exacl",
@@ -2507,9 +2506,9 @@
         ".toml": 26140,
         ".webp": 6422,
         ".yaml": 98,
-        ".yml": 472
+        ".yml": 495
       },
-      "total_loc": 612847,
+      "total_loc": 612870,
       "file_count": 309,
       "readme_title": "Current published package; publication is not aggregate conformance evidence",
       "readme_summary": "<p align=\"center\"> <img src=\"fastmcp_rust_illustration.webp\" alt=\"FastMCP Rust - cancel-aware MCP framework\" width=\"800\"> </p>",
@@ -2525,9 +2524,9 @@
         "lint": "cargo clippy -- -D warnings",
         "typecheck": "cargo check"
       },
-      "last_commit_sha": "f97dd0a3e9551e430f4ecff6dd202a8617a8c609",
-      "last_commit_date": "2026-09-01T20:07:57-04:00",
-      "last_commit_message": "test(evidence): expand fnd-01 dependency evidence verification and state capabilities"
+      "last_commit_sha": "3b50e7f314a28484861895fa03a2dce756587926",
+      "last_commit_date": "2026-09-03T17:01:33-04:00",
+      "last_commit_message": "chore(ci): export exact source snapshot for repair qualification"
     },
     {
       "name": "ffn",
@@ -2732,17 +2731,17 @@
       "languages": {
         ".example": 8,
         ".inc": 17186,
-        ".json": 6207,
+        ".json": 6629,
         ".jsonl": 742,
-        ".md": 15903,
+        ".md": 16099,
         ".py": 1621,
         ".rs": 25227,
         ".sh": 2212,
-        ".toml": 3706,
+        ".toml": 3712,
         ".yml": 30
       },
-      "total_loc": 72842,
-      "file_count": 357,
+      "total_loc": 73466,
+      "file_count": 359,
       "readme_title": "franken_drone_geometry_reconstruction (`fdgr`)",
       "readme_summary": "# franken_drone_geometry_reconstruction (`fdgr`)",
       "manifests": {
@@ -2757,9 +2756,9 @@
         "lint": "cargo clippy -- -D warnings",
         "typecheck": "cargo check"
       },
-      "last_commit_sha": "6bc485662d86dc71f27532b898bd2a78bd8c8921",
-      "last_commit_date": "2026-09-03T02:17:43-04:00",
-      "last_commit_message": "refactor(edge-scale): remove obsolete empty-subject error (WP-018)"
+      "last_commit_sha": "6ce2311bde2e7886499b90b983a917fa0bd0eba3",
+      "last_commit_date": "2026-09-03T17:00:48-04:00",
+      "last_commit_message": "feat(contract): freeze translation-only pose refinement semantics (WP-018/C01)"
     },
     {
       "name": "franken_engine",
@@ -2830,7 +2829,7 @@
         ".ndjson": 5776,
         ".olean": 30609,
         ".py": 49482,
-        ".rs": 592570,
+        ".rs": 592576,
         ".sh": 33226,
         ".stderr": 0,
         ".stdout": 8,
@@ -2840,7 +2839,7 @@
         ".yaml": 1,
         ".yml": 10051
       },
-      "total_loc": 777923,
+      "total_loc": 777929,
       "file_count": 849,
       "readme_title": "franken_lean",
       "readme_summary": "[![License: MIT + Rider](https://img.shields.io/badge/License-MIT_+_OpenAI/Anthropic_Rider-blue.svg)](./LICENSE) [![Rust Edition](https://img.shields.io/badge/Rust-2024_Edition-orange.svg)](https://doc.rust-lang.org/edition-guide/rust-2024/) [![toolchain: pinned nightly](https://…",
@@ -2856,9 +2855,9 @@
         "lint": "cargo clippy -- -D warnings",
         "typecheck": "cargo check"
       },
-      "last_commit_sha": "09e018f57d9becd2546cd7f0e7162bea9ab36fa2",
-      "last_commit_date": "2026-09-03T02:28:27-04:00",
-      "last_commit_message": "test(agents): prove capsule ownership conflicts fail closed"
+      "last_commit_sha": "b77e930982eb603a51d07bfd818585dfaf23ea9f",
+      "last_commit_date": "2026-09-03T15:27:13-04:00",
+      "last_commit_message": "chore(beads): record fln-51y8 HEq frontier advance (item 15 -> 27) at 6aa24bbd"
     },
     {
       "name": "franken_manim",
@@ -2881,10 +2880,10 @@
         ".mjs": 321,
         ".npy": 27,
         ".png": 29112,
-        ".py": 61028,
+        ".py": 61858,
         ".rgb": 1408,
         ".rgba": 255,
-        ".rs": 303545,
+        ".rs": 303543,
         ".sh": 1620,
         ".svg": 123,
         ".toml": 1019,
@@ -2894,11 +2893,11 @@
         ".wav": 13,
         ".webp": 9593,
         ".yaml": 4,
-        ".yml": 900,
+        ".yml": 1089,
         ".zlib": 434
       },
-      "total_loc": 563887,
-      "file_count": 897,
+      "total_loc": 564904,
+      "file_count": 898,
       "readme_title": "franken_manim",
       "readme_summary": "<p align=\"center\"> <img src=\"franken_manim_illustration.webp\" alt=\"franken_manim - A sovereign, deterministic rewrite of manim in pure Rust\" width=\"800\"> </p>",
       "manifests": {
@@ -2914,9 +2913,9 @@
         "lint": "cargo clippy -- -D warnings",
         "typecheck": "cargo check"
       },
-      "last_commit_sha": "cd92472cbca75e90b4eb90c1415424c5058bca56",
-      "last_commit_date": "2026-09-03T02:26:05-04:00",
-      "last_commit_message": "test(w10): gate constructor authority census"
+      "last_commit_sha": "de7ca82e46dc744e18d840359b15de592965d22c",
+      "last_commit_date": "2026-09-03T17:02:23-04:00",
+      "last_commit_message": "test(w10): lock qualified alias identity policy"
     },
     {
       "name": "franken_markdown",
@@ -2949,7 +2948,7 @@
         ".points": 1792,
         ".ps1": 668,
         ".rs": 150001,
-        ".sh": 9916,
+        ".sh": 9933,
         ".snapshot": 85,
         ".stale-20260627t200542z": 0,
         ".stale-20260627t201321z": 0,
@@ -2970,16 +2969,15 @@
         ".xcprivacy": 19,
         ".xcscheme": 141,
         ".xcworkspacedata": 7,
-        ".yml": 768,
+        ".yml": 103,
         ".zsh": 169
       },
-      "total_loc": 661061,
-      "file_count": 702,
+      "total_loc": 660413,
+      "file_count": 695,
       "readme_title": "franken_markdown",
       "readme_summary": "<img src=\"franken_markdown_illustration.webp\" alt=\"franken_markdown clean-room Rust Markdown renderer for HTML, PDF, fmd CLI, and WASM\">",
       "manifests": {
-        "Cargo.toml": "Cargo.toml",
-        ".github/workflows": ".github/workflows"
+        "Cargo.toml": "Cargo.toml"
       },
       "entry_points": [
         "src/lib.rs",
@@ -2992,9 +2990,9 @@
         "lint": "cargo clippy -- -D warnings",
         "typecheck": "cargo check"
       },
-      "last_commit_sha": "3577d2ed19d4b7b4ab60565bf83e9595069d675e",
-      "last_commit_date": "2026-09-03T00:22:32-04:00",
-      "last_commit_message": "chore(beads): sync bead tracker state"
+      "last_commit_sha": "eb220dd611c264ec002367291f1eb8c927ea618b",
+      "last_commit_date": "2026-09-03T16:59:59-04:00",
+      "last_commit_message": "build: route Apple validation through DSR"
     },
     {
       "name": "franken_markdown_website",
@@ -3279,8 +3277,8 @@
         ".cxx": 1104,
         ".d": 1,
         ".dat": 377,
-        ".db-wal-cert": 1360,
-        ".db-wal-cert-head": 2,
+        ".db-wal-cert": 1395,
+        ".db-wal-cert-head": 3,
         ".dia": 138,
         ".f": 731,
         ".f90": 1306,
@@ -3339,7 +3337,7 @@
         ".yaml": 673,
         ".yml": 3665
       },
-      "total_loc": 1905154,
+      "total_loc": 1905190,
       "file_count": 4397,
       "readme_title": "FrankenNumPy",
       "readme_summary": "<div align=\"center\"> <img src=\"franken_numpy_illustration.webp\" alt=\"FrankenNumPy — memory-safe clean-room NumPy reimplementation in Rust\" width=\"400\">",
@@ -3356,9 +3354,9 @@
         "lint": "cargo clippy -- -D warnings",
         "typecheck": "cargo check"
       },
-      "last_commit_sha": "b049c562116378c9a538c55a6398ec88a0c34b50",
-      "last_commit_date": "2026-09-03T01:29:06-04:00",
-      "last_commit_message": "test(raptorq): refresh benchmark and conformance raptorq bundles"
+      "last_commit_sha": "343a09f0a9a792367165c584704f0112a1358b87",
+      "last_commit_date": "2026-09-03T13:39:10-04:00",
+      "last_commit_message": "chore(beads): 7evbk interp closed with evidence; r5fy8 final local board (doctests fixed, fnp-python 197 binaries green)"
     },
     {
       "name": "franken_ocr",
@@ -3397,7 +3395,7 @@
         ".ps1": 859,
         ".py": 51567,
         ".rs": 118497,
-        ".sh": 7994,
+        ".sh": 8006,
         ".sha256": 31,
         ".size": 4,
         ".stderr": 19521,
@@ -3414,15 +3412,14 @@
         ".woff2": 2368,
         ".xcprivacy": 51,
         ".yaml": 4,
-        ".yml": 1739
+        ".yml": 463
       },
-      "total_loc": 927789,
-      "file_count": 1425,
+      "total_loc": 926525,
+      "file_count": 1421,
       "readme_title": "franken_ocr",
       "readme_summary": "<div align=\"center\"> <img src=\"franken_ocr_illustration.webp\" alt=\"franken_ocr - Pure-Rust CPU-only OCR for Baidu Unlimited-OCR\"> </div>",
       "manifests": {
-        "Cargo.toml": "Cargo.toml",
-        ".github/workflows": ".github/workflows"
+        "Cargo.toml": "Cargo.toml"
       },
       "entry_points": [
         "src/lib.rs",
@@ -3435,9 +3432,9 @@
         "lint": "cargo clippy -- -D warnings",
         "typecheck": "cargo check"
       },
-      "last_commit_sha": "8a685213a437ee952c6d821b7444f6ff33ac3009",
-      "last_commit_date": "2026-09-03T00:22:47-04:00",
-      "last_commit_message": "chore(beads): record Apple CI proof boundary"
+      "last_commit_sha": "634bfb9b0e40275e155514819b60552bf273a4b2",
+      "last_commit_date": "2026-09-03T16:59:59-04:00",
+      "last_commit_message": "build: route Apple validation through DSR"
     },
     {
       "name": "franken_overlap",
@@ -3477,18 +3474,18 @@
         ".jpg": 11330,
         ".json": 203,
         ".jsonl": 107,
-        ".md": 6298,
+        ".md": 6350,
         ".ps1": 626,
         ".py": 787,
-        ".rs": 48449,
+        ".rs": 50019,
         ".sh": 1131,
-        ".toml": 503,
+        ".toml": 514,
         ".webp": 9669,
         ".yaml": 4,
         ".yml": 129
       },
-      "total_loc": 79238,
-      "file_count": 134,
+      "total_loc": 80871,
+      "file_count": 137,
       "readme_title": "franken_snowflake",
       "readme_summary": "<img src=\"franken_snowflake_illustration.webp\" alt=\"franken_snowflake - clean-room, Rust-first Snowflake SQL API connector for coding agents\">",
       "manifests": {
@@ -3503,9 +3500,9 @@
         "lint": "cargo clippy -- -D warnings",
         "typecheck": "cargo check"
       },
-      "last_commit_sha": "57b1fcd93ec9653a8649a7a8bea95758ab16e1b2",
-      "last_commit_date": "2026-09-03T01:30:21-04:00",
-      "last_commit_message": "chore(beads): update transport injection seam scope in bead o2o"
+      "last_commit_sha": "3ae3687513c0b0e3a708fa2a7633e455a9bef49b",
+      "last_commit_date": "2026-09-03T14:01:16-04:00",
+      "last_commit_message": "chore(beads): record the bound dsr quality receipt on the release bead"
     },
     {
       "name": "franken_surveillance_system",
@@ -3521,10 +3518,10 @@
         ".sha256": 263,
         ".toml": 622,
         ".yaml": 140,
-        ".yml": 288
+        ".yml": 257
       },
-      "total_loc": 74526,
-      "file_count": 275,
+      "total_loc": 74495,
+      "file_count": 274,
       "readme_title": "Franken Surveillance System (`fss`)",
       "readme_summary": "**A pure-Rust, evidence-native, local-first sensor fabric for owner-authorized cameras and manually piloted capture drones.**",
       "manifests": {
@@ -3540,9 +3537,9 @@
         "lint": "cargo clippy -- -D warnings",
         "typecheck": "cargo check"
       },
-      "last_commit_sha": "a2056fb0bf1fb2f5d5089a2dfcdec4509c8e5935",
-      "last_commit_date": "2026-09-03T02:27:22-04:00",
-      "last_commit_message": "agent: expose exact continuation streams"
+      "last_commit_sha": "b9405270d05b95a1f8c54a4da39a399bec8ac25d",
+      "last_commit_date": "2026-09-03T16:51:40-04:00",
+      "last_commit_message": "fix(policy): remove forbidden source token from delta docs"
     },
     {
       "name": "franken_tts",
@@ -3554,8 +3551,8 @@
         ".creq": 291,
         ".css": 2,
         ".data": 2225,
-        ".db-wal-cert": 685,
-        ".db-wal-cert-head": 3,
+        ".db-wal-cert": 741,
+        ".db-wal-cert-head": 2,
         ".entitlements": 50,
         ".etypes": 216,
         ".fsqlite-migration-state": 5,
@@ -3566,7 +3563,7 @@
         ".js": 5178,
         ".json": 47598,
         ".jsonl": 407,
-        ".md": 8785,
+        ".md": 9431,
         ".mjs": 781,
         ".modulemap": 4,
         ".ndjson": 224,
@@ -3575,9 +3572,9 @@
         ".ps1": 279,
         ".py": 9891,
         ".qoi": 20000,
-        ".rs": 92331,
+        ".rs": 94978,
         ".safetensors": 18856,
-        ".sh": 2519,
+        ".sh": 2531,
         ".sha256": 43,
         ".spk": 1620,
         ".sqlite3": 2,
@@ -3604,16 +3601,15 @@
         ".xcprivacy": 31,
         ".xml": 20434,
         ".yaml": 4,
-        ".yml": 487,
+        ".yml": 176,
         ".zip": 622
       },
-      "total_loc": 407651,
-      "file_count": 576,
+      "total_loc": 410700,
+      "file_count": 586,
       "readme_title": "franken_tts",
       "readme_summary": "![franken_tts](assets/frankentts_illustration.webp)",
       "manifests": {
-        "Cargo.toml": "Cargo.toml",
-        ".github/workflows": ".github/workflows"
+        "Cargo.toml": "Cargo.toml"
       },
       "entry_points": [],
       "has_tests": true,
@@ -3623,9 +3619,9 @@
         "lint": "cargo clippy -- -D warnings",
         "typecheck": "cargo check"
       },
-      "last_commit_sha": "73b7e3034ec33a2bf4917de491b904845df98c0b",
-      "last_commit_date": "2026-09-03T00:22:46-04:00",
-      "last_commit_message": "chore(beads): record Apple CI proof boundary"
+      "last_commit_sha": "0ab3d789a08c6bb6b7ed82c96fcad85e834e6803",
+      "last_commit_date": "2026-09-03T16:59:59-04:00",
+      "last_commit_message": "build: route Apple validation through DSR"
     },
     {
       "name": "franken_whisper",
@@ -3652,7 +3648,7 @@
         ".png": 30185,
         ".py": 4945,
         ".rs": 332345,
-        ".sh": 3482,
+        ".sh": 3494,
         ".srt": 383,
         ".svg": 13,
         ".swift": 10715,
@@ -3667,15 +3663,14 @@
         ".woff2": 2368,
         ".xcprivacy": 52,
         ".yaml": 4,
-        ".yml": 560
+        ".yml": 219
       },
-      "total_loc": 546579,
-      "file_count": 656,
+      "total_loc": 546250,
+      "file_count": 654,
       "readme_title": "franken_whisper",
       "readme_summary": "<div align=\"center\"> <img src=\"https://raw.githubusercontent.com/Dicklesworthstone/franken_whisper/main/franken_whisper_illustration.webp\" alt=\"franken_whisper — agent-first Rust ASR orchestration stack\"> </div>",
       "manifests": {
-        "Cargo.toml": "Cargo.toml",
-        ".github/workflows": ".github/workflows"
+        "Cargo.toml": "Cargo.toml"
       },
       "entry_points": [
         "src/lib.rs",
@@ -3688,9 +3683,9 @@
         "lint": "cargo clippy -- -D warnings",
         "typecheck": "cargo check"
       },
-      "last_commit_sha": "14ba273ce1986c7d8741107d11fc67d715427a39",
-      "last_commit_date": "2026-09-03T00:22:47-04:00",
-      "last_commit_message": "chore(beads): record Apple CI proof boundary"
+      "last_commit_sha": "88747203e20d29670a02350a8df8a0ac93e32100",
+      "last_commit_date": "2026-09-03T16:59:59-04:00",
+      "last_commit_message": "build: route Apple validation through DSR"
     },
     {
       "name": "frankenfs",
@@ -3757,15 +3752,15 @@
         ".hex": 22,
         ".html": 101,
         ".json": 1043,
-        ".jsonl": 577,
+        ".jsonl": 578,
         ".lean": 613,
         ".lock": 23,
         ".md": 23022,
         ".mdin": 259,
         ".pkt": 24,
         ".py": 1853,
-        ".rs": 444347,
-        ".sh": 25513,
+        ".rs": 444385,
+        ".sh": 25528,
         ".toml": 1244,
         ".trace": 256,
         ".ts": 514,
@@ -3774,7 +3769,7 @@
         ".yaml": 48,
         ".yml": 125
       },
-      "total_loc": 502233,
+      "total_loc": 502287,
       "file_count": 1468,
       "readme_title": "FrankenGit",
       "readme_summary": "**A clean-room, pure-Rust, Git-compatible forge designed for humans, autonomous coding agents, extreme scale, and independently verifiable recovery.**",
@@ -3790,9 +3785,9 @@
         "lint": "cargo clippy -- -D warnings",
         "typecheck": "cargo check"
       },
-      "last_commit_sha": "ee90f0f55f5dcba4909a332056fd4015f3865c95",
-      "last_commit_date": "2026-09-03T00:58:36-04:00",
-      "last_commit_message": "chore(beads): move frankengit-xefn to batch_pending; file frankengit-rpqx"
+      "last_commit_sha": "74c20b2f312b43eedb1740d5859fabf37b235d9b",
+      "last_commit_date": "2026-09-03T15:27:56-04:00",
+      "last_commit_message": "style(codec,reference): format canonical state and merge delivery"
     },
     {
       "name": "frankengraphdb",
@@ -3967,7 +3962,7 @@
         ".rs": 236679,
         ".schemabroken_t166": 20001,
         ".schemabroken_t459": 40002,
-        ".sh": 1370,
+        ".sh": 1387,
         ".stale_20260830t0123z": 1,
         ".svg": 51,
         ".swift": 2211,
@@ -3981,15 +3976,14 @@
         ".xcscheme": 141,
         ".xcworkspacedata": 7,
         ".yaml": 64,
-        ".yml": 1536
+        ".yml": 180
       },
-      "total_loc": 6775704,
-      "file_count": 2899,
+      "total_loc": 6774365,
+      "file_count": 2897,
       "readme_title": "frankenmermaid",
       "readme_summary": "<img src=\"frankenmermaid_illustration.webp\" alt=\"frankenmermaid\" width=\"320\" />",
       "manifests": {
-        "Cargo.toml": "Cargo.toml",
-        ".github/workflows": ".github/workflows"
+        "Cargo.toml": "Cargo.toml"
       },
       "entry_points": [],
       "has_tests": true,
@@ -3999,9 +3993,9 @@
         "lint": "cargo clippy -- -D warnings",
         "typecheck": "cargo check"
       },
-      "last_commit_sha": "662478d54acf9d6d1e38bd3b5d72c7b8a7aa8e19",
-      "last_commit_date": "2026-09-03T00:17:04-04:00",
-      "last_commit_message": "feat(ios): inspect diagram elements through the source lens"
+      "last_commit_sha": "5b9f25ef634e630401e4bd735fc997937dd4a12c",
+      "last_commit_date": "2026-09-03T16:59:59-04:00",
+      "last_commit_message": "build: route Apple validation through DSR"
     },
     {
       "name": "frankenpandas",
@@ -4096,8 +4090,8 @@
         ".conf": 62,
         ".csv": 72,
         ".data": 276340,
-        ".db-wal-cert": 2287,
-        ".db-wal-cert-head": 5,
+        ".db-wal-cert": 2409,
+        ".db-wal-cert-head": 4,
         ".diff": 978,
         ".dump": 201,
         ".err": 156,
@@ -4106,7 +4100,7 @@
         ".golden": 993,
         ".hex": 231,
         ".json": 156659,
-        ".jsonl": 3440,
+        ".jsonl": 3444,
         ".len": 3,
         ".lock": 8,
         ".log": 14345,
@@ -4129,7 +4123,7 @@
         ".req": 123,
         ".resp": 201147,
         ".response": 50,
-        ".rs": 300352,
+        ".rs": 300373,
         ".seed": 48,
         ".sh": 7921,
         ".sha256": 1256,
@@ -4144,9 +4138,9 @@
         ".wc": 7,
         ".webp": 9533,
         ".yaml": 173,
-        ".yml": 440
+        ".yml": 451
       },
-      "total_loc": 2313549,
+      "total_loc": 2313706,
       "file_count": 7691,
       "readme_title": "FrankenRedis",
       "readme_summary": "<div align=\"center\"> <img src=\"frankenredis_illustration.webp\" alt=\"FrankenRedis — memory-safe clean-room Redis reimplementation in Rust\"> </div>",
@@ -4162,9 +4156,9 @@
         "lint": "cargo clippy -- -D warnings",
         "typecheck": "cargo check"
       },
-      "last_commit_sha": "8869ee3f244b94f657bf11f1ba446d53bae1d440",
-      "last_commit_date": "2026-09-03T01:25:45-04:00",
-      "last_commit_message": "chore(beads): sync beads certificates"
+      "last_commit_sha": "aa2b0cf12619fa14c7a3eea06ec6c01eb35641d0",
+      "last_commit_date": "2026-09-03T15:27:08-04:00",
+      "last_commit_message": "chore(beads): record full G2 and upstream tcl execution results in bead wvle1"
     },
     {
       "name": "frankenscipy",
@@ -4419,32 +4413,33 @@
         ".ipynb": 156,
         ".jpg": 9002,
         ".js": 116,
-        ".json": 57947,
-        ".jsonl": 5261,
+        ".json": 57967,
+        ".jsonl": 5262,
         ".listening-receipt": 91,
         ".lock": 16,
-        ".md": 92519,
+        ".md": 92586,
         ".mjs": 1353,
         ".modulemap": 4,
+        ".parked": 525,
         ".pbxproj": 503,
         ".pdf": 75021,
         ".plist": 43,
         ".ply": 20000,
         ".png": 40000,
         ".py": 2515,
-        ".rs": 2010134,
+        ".rs": 2011586,
         ".rs:255-265": 8,
         ".rs:6150-6230": 8,
         ".rs:800-845": 8,
-        ".sh": 48551,
+        ".sh": 48564,
         ".step": 14193,
         ".stl": 36739,
         ".swift": 2310,
         ".tar": 8022,
-        ".toml": 9828,
+        ".toml": 9829,
         ".ts": 23015,
         ".tsv": 6197,
-        ".txt": 5668,
+        ".txt": 91,
         ".v": 95,
         ".vacuum-fsqlite-ns-gate": 0,
         ".vacuum-fsqlite-ns-use": 1,
@@ -4460,7 +4455,7 @@
         ".yml": 344,
         ".zip": 250
       },
-      "total_loc": 2617865,
+      "total_loc": 2614367,
       "file_count": 3215,
       "readme_title": "FrankenSim",
       "readme_summary": "<div align=\"center\"> <img src=\"frankensim_illustration.webp\" alt=\"FrankenSim illustration\" width=\"720\"> </div>",
@@ -4476,9 +4471,9 @@
         "lint": "cargo clippy -- -D warnings",
         "typecheck": "cargo check"
       },
-      "last_commit_sha": "f440423ee90fc6d0207ea65aac9971ac4d403b34",
-      "last_commit_date": "2026-09-03T03:13:12-04:00",
-      "last_commit_message": "chore(manifest): regenerate source manifest + SPDX at 5358782b"
+      "last_commit_sha": "6c62a560425d1a3a82de5613519abc3acfb24d35",
+      "last_commit_date": "2026-09-03T17:02:16-04:00",
+      "last_commit_message": "chore(manifest): regenerate source manifest + SPDX at 43e380b0"
     },
     {
       "name": "frankensim_website",
@@ -4529,7 +4524,7 @@
         ".gz": 80634,
         ".html": 2256,
         ".json": 193571,
-        ".jsonl": 13341,
+        ".jsonl": 13345,
         ".log": 43079,
         ".md": 86256,
         ".mjs": 1509,
@@ -4542,7 +4537,7 @@
         ".py": 3783,
         ".rebuild4_20260726t042549z": 107,
         ".rebuild4_20260726t042549z-wal": 43,
-        ".rs": 1309671,
+        ".rs": 1309891,
         ".sh": 48755,
         ".sha256": 146,
         ".slt": 21,
@@ -4561,8 +4556,8 @@
         ".yml": 3555,
         ".zst": 20000
       },
-      "total_loc": 1903115,
-      "file_count": 2581,
+      "total_loc": 1903339,
+      "file_count": 2582,
       "readme_title": "Full test suite",
       "readme_summary": "<div align=\"center\"> <img src=\"site/spec-evolution/frankensqlite_illustration.webp\" alt=\"FrankenSQLite — a Frankenstein monster building a database engine at his workbench\"> </div>",
       "manifests": {
@@ -4578,9 +4573,9 @@
         "lint": "cargo clippy -- -D warnings",
         "typecheck": "cargo check"
       },
-      "last_commit_sha": "cd3a21ae076412f1a38df9859b35abb60dafb6e5",
-      "last_commit_date": "2026-09-03T01:52:24-04:00",
-      "last_commit_message": "chore(beads): FTS5 lazy plain-MATCH fast at scale (Fix A+B landed); record progress + Fix C remaining"
+      "last_commit_sha": "1557983c015c358a6797de5e6be0f8a0960a126e",
+      "last_commit_date": "2026-09-03T16:58:29-04:00",
+      "last_commit_message": "test(fts5): test prefix queries in bd_fts5_lazy_ranked_parity against stock SQLite"
     },
     {
       "name": "frankensqlite_website",
@@ -4750,7 +4745,7 @@
         ".inf": 72,
         ".intel": 118,
         ".jpg": 81,
-        ".json": 191326,
+        ".json": 191327,
         ".jsonl": 12649,
         ".lean": 175,
         ".linux": 131,
@@ -4788,14 +4783,14 @@
         ".proptest-regressions": 681,
         ".pub": 2,
         ".pup": 69,
-        ".py": 29387,
+        ".py": 29400,
         ".qpg": 141,
         ".raw": 1184,
         ".rb": 549,
         ".rc": 405,
         ".riscos": 205,
         ".rl": 1249,
-        ".rs": 2865379,
+        ".rs": 2865635,
         ".rsp": 2,
         ".s": 635,
         ".sas": 68,
@@ -4803,7 +4798,7 @@
         ".service": 26,
         ".sggcc": 118,
         ".sgi": 119,
-        ".sh": 163116,
+        ".sh": 163128,
         ".sic": 37,
         ".sigstore": 1,
         ".sln": 1261,
@@ -4840,7 +4835,7 @@
         ".yml": 1630,
         ".zst": 20000
       },
-      "total_loc": 6245658,
+      "total_loc": 6245940,
       "file_count": 9510,
       "readme_title": "ft — FrankenTerm",
       "readme_summary": "<div align=\"center\"> <img src=\"frankenterm_illustration.webp\" alt=\"ft - Swarm-Native Terminal Platform for AI Agent Fleets\"> </div>",
@@ -4855,9 +4850,9 @@
         "lint": "cargo clippy -- -D warnings",
         "typecheck": "cargo check"
       },
-      "last_commit_sha": "16862d8f14139f1b463465e28a4923330e7f156a",
-      "last_commit_date": "2026-09-03T03:00:16-04:00",
-      "last_commit_message": "fix(smoke): escalate to SIGKILL when the headless observe watcher ignores SIGTERM (ft-yykm1)"
+      "last_commit_sha": "cf06c4836cdcc295e3a33752c49fd1d797587484",
+      "last_commit_date": "2026-09-03T16:51:19-04:00",
+      "last_commit_message": "chore(beads): synchronize issue tracker state"
     },
     {
       "name": "frankentorch",
@@ -5407,13 +5402,13 @@
       "name": "jazz_chord_progression_editor_html",
       "primary_language": "TypeScript",
       "languages": {
-        ".css": 9692,
+        ".css": 9708,
         ".entitlements": 10,
         ".fsqlite-migration-state": 5,
         ".gz": 13243,
         ".html": 2718,
         ".js": 1913,
-        ".json": 268634,
+        ".json": 268636,
         ".jsonl": 1112,
         ".lock": 221,
         ".md": 24842,
@@ -5424,11 +5419,12 @@
         ".pre-dedupe": 281,
         ".py": 222,
         ".rs": 55383,
+        ".sh": 17,
         ".swift": 6451,
         ".toml": 70,
-        ".ts": 490190,
+        ".ts": 490209,
         ".tsv": 21,
-        ".tsx": 25540,
+        ".tsx": 25544,
         ".txt": 201,
         ".webp": 14825,
         ".woff2": 5644,
@@ -5436,16 +5432,15 @@
         ".xcscheme": 141,
         ".xcworkspacedata": 7,
         ".yaml": 4,
-        ".yml": 154
+        ".yml": 110
       },
-      "total_loc": 974446,
+      "total_loc": 974460,
       "file_count": 1427,
       "readme_title": "Changes — Jazz Progression Studio",
       "readme_summary": "An offline, deterministic jazz chord-progression studio designed to turn lead-sheet changes into an explainable, playable, portable chart—without accounts, telemetry, cloud services, or runtime AI.",
       "manifests": {
         "package.json": "package.json",
-        "tsconfig.json": "tsconfig.json",
-        ".github/workflows": ".github/workflows"
+        "tsconfig.json": "tsconfig.json"
       },
       "entry_points": [],
       "has_tests": true,
@@ -5455,9 +5450,9 @@
         "lint": "npm run lint",
         "typecheck": "npm run typecheck"
       },
-      "last_commit_sha": "ad8a969a80a977260a8758d9df4bc88cf173e797",
-      "last_commit_date": "2026-09-03T03:25:16-04:00",
-      "last_commit_message": "chore(beads): record user-visible recovery shipped on l3a.2"
+      "last_commit_sha": "3566f0816dbd0d158d3ffd920fe4a34f4c2a0e40",
+      "last_commit_date": "2026-09-03T16:59:59-04:00",
+      "last_commit_message": "build: route Apple validation through DSR"
     },
     {
       "name": "jeffrey_emanuel_personal_site",
@@ -5476,13 +5471,13 @@
         ".mjs": 135,
         ".png": 203478,
         ".svg": 5,
-        ".ts": 16831,
-        ".tsx": 61027,
+        ".ts": 16965,
+        ".tsx": 61049,
         ".webp": 30788,
         ".yaml": 62,
         ".yml": 83
       },
-      "total_loc": 355511,
+      "total_loc": 355667,
       "file_count": 365,
       "readme_title": "Jeffrey Emanuel - Personal Site",
       "readme_summary": "Modern personal portfolio site built with Next.js 16, TypeScript, Tailwind CSS v4, and React Three Fiber.",
@@ -5499,9 +5494,9 @@
         "lint": "npm run lint",
         "typecheck": "npx tsc --noEmit"
       },
-      "last_commit_sha": "dead3959109cb8c32699583d2c7cfa191fc6c522",
-      "last_commit_date": "2026-09-03T00:36:38-04:00",
-      "last_commit_message": "feat(projects): add detail pages for ACFS and DCG, update repo star badges, and strengthen cross-reference tests"
+      "last_commit_sha": "4a13dbdc32c96a2112e51a9360b21e5df7800fea",
+      "last_commit_date": "2026-09-03T16:49:52-04:00",
+      "last_commit_message": "feat(search): index interactive writing articles in /api/search with validation test suite"
     },
     {
       "name": "jeffreysprompts.com",
@@ -6480,31 +6475,31 @@
         ".css": 16255,
         ".db": 20000,
         ".html": 182,
-        ".js": 6172,
-        ".json": 4929,
-        ".jsonl": 976,
+        ".js": 5222,
+        ".json": 4928,
+        ".jsonl": 977,
         ".lock": 1523,
-        ".md": 29261,
+        ".md": 29262,
         ".mjs": 75,
         ".patch": 26,
         ".png": 22294,
         ".py": 1431,
-        ".rs": 5982,
+        ".rs": 5440,
         ".sh": 509,
         ".svg": 105,
         ".toml": 52,
-        ".ts": 100284,
-        ".tsx": 72273,
+        ".ts": 100131,
+        ".tsx": 72296,
         ".txt": 8,
-        ".wasm": 24092,
+        ".wasm": 18032,
         ".webp": 179911,
         ".wgsl": 566,
         ".woff2": 7716,
         ".yaml": 62,
         ".yml": 1232
       },
-      "total_loc": 496037,
-      "file_count": 767,
+      "total_loc": 488356,
+      "file_count": 772,
       "readme_title": "Phage Explorer",
       "readme_summary": "![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Linux%20%7C%20Windows-blue) ![Runtime](https://img.shields.io/badge/runtime-Bun%201.1+-purple) ![License](https://img.shields.io/badge/License-MIT%2BOpenAI%2FAnthropic%20Rider-blue)",
       "manifests": {
@@ -6520,9 +6515,9 @@
         "lint": "npm run lint",
         "typecheck": "npm run typecheck"
       },
-      "last_commit_sha": "4eedd7ab7b895e405784cd5c54fe0c5a13354c0d",
-      "last_commit_date": "2026-09-03T00:31:49-04:00",
-      "last_commit_message": "chore(beads): file P0 bug phage_explorer-98ni for Anti-CRISPR precision calibration"
+      "last_commit_sha": "2252a47382ea556cdc2e8d2196086d9b2621e2fa",
+      "last_commit_date": "2026-09-03T19:55:14Z",
+      "last_commit_message": "fix(collab): scope collaboration to honest Multi-Tab Sync and register in palette (phage_explorer-9vk4.2)"
     },
     {
       "name": "pi_agent_rust",
@@ -6565,7 +6560,7 @@
         ".lock": 1186,
         ".log": 29009,
         ".lua": 1544,
-        ".md": 1998233,
+        ".md": 1998274,
         ".mjs": 2121,
         ".mod": 26,
         ".mp4": 140000,
@@ -6579,7 +6574,7 @@
         ".proto": 139,
         ".py": 293208,
         ".qls": 96,
-        ".rs": 963165,
+        ".rs": 964544,
         ".scad": 187,
         ".scala": 59,
         ".sh": 88974,
@@ -6611,8 +6606,8 @@
         ".zip": 403,
         ".zsh": 296
       },
-      "total_loc": 5277804,
-      "file_count": 20968,
+      "total_loc": 5279224,
+      "file_count": 20970,
       "readme_title": "Install latest release",
       "readme_summary": "<p align=\"center\"> <img src=\"pi_agent_rust_illustration.webp\" alt=\"Pi Agent Rust\" width=\"600\"/> </p>",
       "manifests": {
@@ -6630,9 +6625,9 @@
         "lint": "cargo clippy -- -D warnings",
         "typecheck": "cargo check"
       },
-      "last_commit_sha": "f90c8e0b42381b1cc499d94167bbd6f99d7d4f87",
-      "last_commit_date": "2026-09-02T23:17:35-04:00",
-      "last_commit_message": "chore(beads): record the third sweep and run19 relaunch on bd-0x31m"
+      "last_commit_sha": "78c6ebb99d282eece0887d20b8c874b11381c01b",
+      "last_commit_date": "2026-09-03T16:38:15-04:00",
+      "last_commit_message": "feat(http): honor http/https proxy settings for every outbound request (#210)"
     },
     {
       "name": "post_compact_reminder",
@@ -6942,7 +6937,7 @@
         ".plist": 152,
         ".png": 27076,
         ".py": 1566,
-        ".rs": 520380,
+        ".rs": 520664,
         ".sh": 25798,
         ".svg": 42,
         ".toml": 1475,
@@ -6953,7 +6948,7 @@
         ".yaml": 377,
         ".yml": 1864
       },
-      "total_loc": 698814,
+      "total_loc": 699098,
       "file_count": 1173,
       "readme_title": "rch — Remote Compilation Helper",
       "readme_summary": "<div align=\"center\"> <img src=\"rch_illustration.webp\" alt=\"rch - Remote Compilation Helper for AI coding agents\"> </div>",
@@ -6970,9 +6965,9 @@
         "lint": "cargo clippy -- -D warnings",
         "typecheck": "cargo check"
       },
-      "last_commit_sha": "df897f3080a0a34f3559ea8e0a8bd9758a259034",
-      "last_commit_date": "2026-09-03T02:24:21-04:00",
-      "last_commit_message": "chore(beads): close bd-daspu — lease-scan wedge fixed in v1.0.63, fleet upgraded"
+      "last_commit_sha": "300bb5eebd06ef2ab1137b95c61fe87339c3f97e",
+      "last_commit_date": "2026-09-03T16:58:52-04:00",
+      "last_commit_message": "refactor(hook): extract pooled_store_base_for and add unit tests (#64)"
     },
     {
       "name": "repo_updater",
@@ -7129,29 +7124,29 @@
         ".h": 4091,
         ".html": 202,
         ".in": 2,
-        ".js": 502,
+        ".js": 913,
         ".json": 20378,
         ".jsonl": 1353,
         ".lib": 1364,
         ".lock": 70,
         ".log": 1077,
-        ".md": 15096,
+        ".md": 15372,
         ".png": 159421,
         ".postcard": 1049,
         ".py": 3524,
-        ".rs": 257939,
-        ".sh": 4077,
+        ".rs": 259423,
+        ".sh": 4176,
         ".sqlite-fsqlite-ns-gate": 0,
         ".sqlite-fsqlite-ns-use": 13,
         ".svg": 45,
-        ".toml": 1167,
+        ".toml": 1170,
         ".txt": 20915,
         ".vcproj": 207,
         ".yaml": 306,
         ".yml": 1730
       },
-      "total_loc": 564327,
-      "file_count": 439,
+      "total_loc": 566600,
+      "file_count": 446,
       "readme_title": "No storage (isolates world.step performance)",
       "readme_summary": "ScriptBots is a modern Rust reimagining of Andrej Karpathy’s classic agent-based evolution simulator. Our goal is a faithful, deterministic port with a GPU-accelerated UI, pluggable brain implementations, and first-class analytics. This is a multi-crate Cargo workspace separating…",
       "manifests": {
@@ -7166,9 +7161,9 @@
         "lint": "cargo clippy -- -D warnings",
         "typecheck": "cargo check"
       },
-      "last_commit_sha": "f0bd2d0b06246b9e10ae120be21329e686e5b5bd",
-      "last_commit_date": "2026-09-03T04:10:30Z",
-      "last_commit_message": "ci(economy): add conservation economy gate job to ci.yml and calibrate spawn interval (bd-16g.11.2)"
+      "last_commit_sha": "3009e49cbc084b115f28b263c464b1a33ee64bfe",
+      "last_commit_date": "2026-09-03T20:49:48Z",
+      "last_commit_message": "chore(beads): close bd-wdyu after locus tracing and E2E test verification"
     },
     {
       "name": "rust_stream_deck",
@@ -7461,22 +7456,22 @@
         ".db": 20000,
         ".json": 295,
         ".jsonl": 1832,
-        ".md": 15266,
+        ".md": 14930,
         ".plist": 100,
         ".png": 9487,
         ".ps1": 584,
         ".rb": 59,
-        ".rs": 191282,
-        ".sh": 4620,
+        ".rs": 198126,
+        ".sh": 4624,
         ".snap": 115,
-        ".toml": 963,
+        ".toml": 974,
         ".txt": 3,
         ".webp": 9374,
         ".yaml": 4,
-        ".yml": 1959
+        ".yml": 1996
       },
-      "total_loc": 255943,
-      "file_count": 260,
+      "total_loc": 262503,
+      "file_count": 262,
       "readme_title": "storage_ballast_helper (`sbh`)",
       "readme_summary": "<div align=\"center\"> <img src=\"sbh_illustration.webp\" alt=\"sbh - Storage Ballast Helper illustration\"> </div>",
       "manifests": {
@@ -7494,9 +7489,9 @@
         "lint": "cargo clippy -- -D warnings",
         "typecheck": "cargo check"
       },
-      "last_commit_sha": "88665cbd67ac14e46f554058bf4450cf6e94300c",
-      "last_commit_date": "2026-09-03T04:24:57-04:00",
-      "last_commit_message": "test(docs): the documented-commands check is a function with a negative test (bd-rc-master-ajg1.12.3)"
+      "last_commit_sha": "21b65484536753ec47f8d18913013366055a203b",
+      "last_commit_date": "2026-09-03T07:01:24-04:00",
+      "last_commit_message": "chore(beads): record the ajg1.5.3 follow-up comment (asset-audit workflow job at 2af9785)"
     },
     {
       "name": "suno2cd",

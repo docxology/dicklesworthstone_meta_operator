@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-03T16:31:39Z",
+  "generated_at": "2026-09-03T23:24:47Z",
   "passed": false,
   "checks": [
     {
@@ -9,13 +9,13 @@
     },
     {
       "check_id": "clones_complete",
-      "passed": false,
-      "detail": "missing clones: ChatTTS, Dicklesworthstone, aadc, acip, advice_for_learning_to_code_and_making_an_app, agent-mailbox-viewer-example, agent_flywheel_clawdbot_skills_and_integrations, agent_settings_backup_script, agentic_coding_flywheel_setup, anti_alzheimers_flasher (+197 more) — fix: run scripts/20_clone_corpus.py"
+      "passed": true,
+      "detail": "all 207 clones present under repos/"
     },
     {
       "check_id": "upstream_all_ok",
       "passed": false,
-      "detail": "offenders: jazz_chord_progression_editor_html: behind, storage_ballast_helper: behind — run the upstream verification step"
+      "detail": "offenders: agentic_coding_flywheel_setup: behind, classic-patents.com: behind, cmaes_explainer: behind, coding_agent_session_search: behind, eidetic_engine_cli: behind, fastmcp_rust: behind, franken_drone_geometry_reconstruction: behind, franken_lean: behind, franken_manim: behind, franken_markdown: behind (+22 more) — run the upstream verification step"
     },
     {
       "check_id": "inventory_complete",
@@ -25,17 +25,17 @@
     {
       "check_id": "dashboard_present",
       "passed": true,
-      "detail": "dashboard.html present (237681 bytes)"
+      "detail": "dashboard.html present (409057 bytes)"
     },
     {
       "check_id": "catalog_present",
       "passed": true,
-      "detail": "corpus_catalog.md present (55141 bytes)"
+      "detail": "corpus_catalog.md present (54986 bytes)"
     },
     {
       "check_id": "runs_present",
       "passed": true,
-      "detail": "no runs yet (advisory)"
+      "detail": "last run 20260903-210033"
     }
   ]
 }

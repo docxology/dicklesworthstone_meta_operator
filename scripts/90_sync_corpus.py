@@ -16,6 +16,9 @@ script 50 and exits 1 when any repo failed.
 from __future__ import annotations
 
 import argparse
+import glob
+import logging
+import os
 import sys
 from pathlib import Path
 
@@ -26,6 +29,8 @@ from src.config import load_config  # noqa: E402
 from src.orchestrator import run_and_save, summarize  # noqa: E402
 from src.upstream_check import find_unborn  # noqa: E402
 from src.registry import load_registry, registry_metas  # noqa: E402
+
+logger = logging.getLogger(__name__)
 
 
 def main() -> int:
@@ -51,6 +56,12 @@ def main() -> int:
         print("registry is empty — run scripts/10_build_registry.py first")
         return 1
     repos_dir = REPO_ROOT / config.repos_dir
+    # Sweep stale ORIG_HEAD.lock files (transient git-pull state; leftovers
+    # after a killed pull block every subsequent pull with 'cannot lock ref').
+    stale_locks = glob.glob(str(repos_dir / "*" / ".git" / "ORIG_HEAD.lock"))
+    for lock in stale_locks:
+        os.remove(lock)
+        logger.warning("removed stale pull lock: %s", lock)
     unborn = find_unborn(names, repos_dir)
     names = [n for n in names if n not in set(unborn)]
     if unborn:

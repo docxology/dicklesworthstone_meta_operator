@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-03T08:42:51Z",
+  "generated_at": "2026-09-03T22:30:27Z",
   "checked": 207,
-  "ok": 205,
+  "ok": 175,
   "repos": [
     {
       "name": "ChatTTS",
@@ -16,14 +16,14 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "Dicklesworthstone",
       "default_branch": "main",
       "checked_out_branch": "main",
-      "head_sha": "f533900a73a3b733a39a8532133ba95ee1b7a023",
-      "remote_sha": "f533900a73a3b733a39a8532133ba95ee1b7a023",
+      "head_sha": "377f83c77b8332d8994ccd6e3db77d2dfec90fb1",
+      "remote_sha": "377f83c77b8332d8994ccd6e3db77d2dfec90fb1",
       "on_upstream_default": true,
       "ahead": 0,
       "behind": 0,
@@ -31,7 +31,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "aadc",
@@ -46,7 +46,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "acip",
@@ -61,7 +61,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "advice_for_learning_to_code_and_making_an_app",
@@ -76,7 +76,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "agent-mailbox-viewer-example",
@@ -91,7 +91,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "agent_flywheel_clawdbot_skills_and_integrations",
@@ -106,7 +106,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "agent_settings_backup_script",
@@ -121,21 +121,21 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "agentic_coding_flywheel_setup",
       "default_branch": "main",
       "checked_out_branch": "main",
       "head_sha": "4567aad88f25394aa03b378e534d718fba84f946",
-      "remote_sha": "4567aad88f25394aa03b378e534d718fba84f946",
-      "on_upstream_default": true,
+      "remote_sha": "832fc7931be48e4e703162a1e11b2e1df8fa3f82",
+      "on_upstream_default": false,
       "ahead": 0,
-      "behind": 0,
+      "behind": 4,
       "dirty": false,
       "detached": false,
       "unborn": false,
-      "state": "on_upstream",
+      "state": "behind",
       "fetched": true
     },
     {
@@ -151,7 +151,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "ascii_art_mini_transformer",
@@ -166,7 +166,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "asimposium.org",
@@ -181,7 +181,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "asupersync",
@@ -196,7 +196,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "asupersync-beads",
@@ -226,7 +226,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "asupersync_website",
@@ -241,7 +241,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "atp",
@@ -256,7 +256,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "automated_flywheel_setup_checker",
@@ -271,7 +271,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "automated_passive_causal_determination",
@@ -286,7 +286,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "automated_plan_reviser_pro",
@@ -301,7 +301,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "automatic_cpp_code_analysis_with_gpt",
@@ -316,7 +316,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "automatic_log_collector_and_analyzer",
@@ -331,7 +331,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "bakery_algorithm",
@@ -346,7 +346,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "ball_fighters",
@@ -361,7 +361,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "beads-for-frankentui",
@@ -376,7 +376,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "beads_for_asupersync",
@@ -391,7 +391,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "beads_for_cass",
@@ -406,7 +406,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "beads_for_cass_memory_system",
@@ -421,7 +421,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "beads_for_franken_engine",
@@ -436,7 +436,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "beads_rust",
@@ -451,7 +451,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "beads_viewer",
@@ -466,7 +466,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "beads_viewer-pages",
@@ -481,7 +481,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "beads_viewer_for_agentic_coding_flywheel_setup",
@@ -496,7 +496,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "beads_viewer_rust",
@@ -511,7 +511,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "bio_inspired_nanochat",
@@ -526,7 +526,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "brenner_bot",
@@ -541,7 +541,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "bulk_transcribe_youtube_videos_from_playlist",
@@ -556,7 +556,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "bun",
@@ -571,7 +571,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "cardinal_network_analysis",
@@ -586,7 +586,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "cass-memory-system-agent-mailbox-viewer",
@@ -601,7 +601,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "cass_memory_system",
@@ -616,7 +616,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "causal_direction_estimation_from_data",
@@ -631,7 +631,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "cellular_automata_snowflake_simulator",
@@ -646,7 +646,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "charmed_rust",
@@ -661,7 +661,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "chat_shared_conversation_to_file",
@@ -676,21 +676,21 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "classic-patents.com",
       "default_branch": "main",
       "checked_out_branch": "main",
-      "head_sha": "bb02f51022f7aa97f526d11852d53e10a9c088fd",
-      "remote_sha": "bb02f51022f7aa97f526d11852d53e10a9c088fd",
-      "on_upstream_default": true,
+      "head_sha": "864dd6ba31bc8d25a0b089119a1392cc3e5e549b",
+      "remote_sha": "6e91f32818c55bef4be5fb53495b86a8ef2cecbc",
+      "on_upstream_default": false,
       "ahead": 0,
-      "behind": 0,
+      "behind": 6,
       "dirty": false,
       "detached": false,
       "unborn": false,
-      "state": "on_upstream",
+      "state": "behind",
       "fetched": true
     },
     {
@@ -706,7 +706,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "cloud_benchmarker",
@@ -721,21 +721,21 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "cmaes_explainer",
       "default_branch": "main",
       "checked_out_branch": "main",
-      "head_sha": "fcd38a3dc827e8d92c0d11a211ed639dc4b2a6f1",
-      "remote_sha": "fcd38a3dc827e8d92c0d11a211ed639dc4b2a6f1",
-      "on_upstream_default": true,
+      "head_sha": "31a72acd74e821e19543606d052663a255e452f8",
+      "remote_sha": "30a2c6c033f253fc8462bd19de3a9e1ede860d76",
+      "on_upstream_default": false,
       "ahead": 0,
-      "behind": 0,
+      "behind": 11,
       "dirty": false,
       "detached": false,
       "unborn": false,
-      "state": "on_upstream",
+      "state": "behind",
       "fetched": true
     },
     {
@@ -751,21 +751,21 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "coding_agent_session_search",
       "default_branch": "main",
       "checked_out_branch": "main",
       "head_sha": "90607c6f22ba9d153d784c8ce5680e3e40c418e1",
-      "remote_sha": "90607c6f22ba9d153d784c8ce5680e3e40c418e1",
-      "on_upstream_default": true,
+      "remote_sha": "509ff70e8e34b6e2ebf1e6b69c67eb2a592b5051",
+      "on_upstream_default": false,
       "ahead": 0,
-      "behind": 0,
+      "behind": 14,
       "dirty": false,
       "detached": false,
       "unborn": false,
-      "state": "on_upstream",
+      "state": "behind",
       "fetched": true
     },
     {
@@ -781,7 +781,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "cohomological_ai",
@@ -796,7 +796,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "cool_desktop_wallpapers",
@@ -811,7 +811,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "cross_agent_session_resumer",
@@ -826,7 +826,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "curl_bash_one_liners_for_flywheel_tools",
@@ -841,7 +841,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "destructive_command_guard",
@@ -856,7 +856,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "doodlestein_self_releaser",
@@ -871,7 +871,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "dwarf_fortress_mcp",
@@ -886,7 +886,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "ees",
@@ -901,7 +901,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "eidetic-engine-docs",
@@ -916,7 +916,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "eidetic-engine-website-project",
@@ -931,21 +931,21 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "eidetic_engine_cli",
       "default_branch": "main",
       "checked_out_branch": "main",
-      "head_sha": "4fab17a888217dc69c88a31857b78c6159cb6ef7",
-      "remote_sha": "4fab17a888217dc69c88a31857b78c6159cb6ef7",
-      "on_upstream_default": true,
+      "head_sha": "543ae211700739cfdd5236af66f7343849826d59",
+      "remote_sha": "149ba495213668fbae7ef1d90733bca84921de32",
+      "on_upstream_default": false,
       "ahead": 0,
-      "behind": 0,
+      "behind": 2,
       "dirty": false,
       "detached": false,
       "unborn": false,
-      "state": "on_upstream",
+      "state": "behind",
       "fetched": true
     },
     {
@@ -961,7 +961,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "fast_cmaes",
@@ -976,7 +976,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "fast_vector_similarity",
@@ -991,7 +991,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "fastapi_rust",
@@ -1006,21 +1006,21 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "fastmcp_rust",
       "default_branch": "main",
       "checked_out_branch": "main",
-      "head_sha": "f97dd0a3e9551e430f4ecff6dd202a8617a8c609",
-      "remote_sha": "f97dd0a3e9551e430f4ecff6dd202a8617a8c609",
-      "on_upstream_default": true,
+      "head_sha": "3b50e7f314a28484861895fa03a2dce756587926",
+      "remote_sha": "ccea88c4dae806023844a4c60baf15474f0c1b6d",
+      "on_upstream_default": false,
       "ahead": 0,
-      "behind": 0,
+      "behind": 56,
       "dirty": false,
       "detached": false,
       "unborn": false,
-      "state": "on_upstream",
+      "state": "behind",
       "fetched": true
     },
     {
@@ -1036,7 +1036,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "flywheel_connectors",
@@ -1051,7 +1051,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "flywheel_gateway",
@@ -1066,7 +1066,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "fmd_blog_posts",
@@ -1081,7 +1081,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "franken_agent_detection",
@@ -1096,21 +1096,21 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "franken_drone_geometry_reconstruction",
       "default_branch": "main",
       "checked_out_branch": "main",
-      "head_sha": "6bc485662d86dc71f27532b898bd2a78bd8c8921",
-      "remote_sha": "6bc485662d86dc71f27532b898bd2a78bd8c8921",
-      "on_upstream_default": true,
+      "head_sha": "6ce2311bde2e7886499b90b983a917fa0bd0eba3",
+      "remote_sha": "6ebac04c6a8619afe4f41e4b16d0ff5dd003cefc",
+      "on_upstream_default": false,
       "ahead": 0,
-      "behind": 0,
+      "behind": 9,
       "dirty": false,
       "detached": false,
       "unborn": false,
-      "state": "on_upstream",
+      "state": "behind",
       "fetched": true
     },
     {
@@ -1126,51 +1126,51 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "franken_lean",
       "default_branch": "main",
       "checked_out_branch": "main",
-      "head_sha": "09e018f57d9becd2546cd7f0e7162bea9ab36fa2",
-      "remote_sha": "09e018f57d9becd2546cd7f0e7162bea9ab36fa2",
-      "on_upstream_default": true,
+      "head_sha": "b77e930982eb603a51d07bfd818585dfaf23ea9f",
+      "remote_sha": "9fceff60befb6f7be2e2fe2e33cbbeb291bc75dc",
+      "on_upstream_default": false,
       "ahead": 0,
-      "behind": 0,
+      "behind": 4,
       "dirty": false,
       "detached": false,
       "unborn": false,
-      "state": "on_upstream",
+      "state": "behind",
       "fetched": true
     },
     {
       "name": "franken_manim",
       "default_branch": "main",
       "checked_out_branch": "main",
-      "head_sha": "cd92472cbca75e90b4eb90c1415424c5058bca56",
-      "remote_sha": "cd92472cbca75e90b4eb90c1415424c5058bca56",
-      "on_upstream_default": true,
+      "head_sha": "de7ca82e46dc744e18d840359b15de592965d22c",
+      "remote_sha": "c3c57532d4fc723eae4700001c7205fb2960bcc6",
+      "on_upstream_default": false,
       "ahead": 0,
-      "behind": 0,
+      "behind": 11,
       "dirty": false,
       "detached": false,
       "unborn": false,
-      "state": "on_upstream",
+      "state": "behind",
       "fetched": true
     },
     {
       "name": "franken_markdown",
       "default_branch": "main",
       "checked_out_branch": "main",
-      "head_sha": "3577d2ed19d4b7b4ab60565bf83e9595069d675e",
-      "remote_sha": "3577d2ed19d4b7b4ab60565bf83e9595069d675e",
-      "on_upstream_default": true,
+      "head_sha": "eb220dd611c264ec002367291f1eb8c927ea618b",
+      "remote_sha": "235394b28b81b12e73937a8801d49508e4330f21",
+      "on_upstream_default": false,
       "ahead": 0,
-      "behind": 0,
+      "behind": 2,
       "dirty": false,
       "detached": false,
       "unborn": false,
-      "state": "on_upstream",
+      "state": "behind",
       "fetched": true
     },
     {
@@ -1186,7 +1186,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "franken_native_capsule",
@@ -1201,21 +1201,21 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "franken_networkx",
       "default_branch": "main",
       "checked_out_branch": "main",
       "head_sha": "6e73643bdd6a41769cbc3302c67244b2302fb7f9",
-      "remote_sha": "6e73643bdd6a41769cbc3302c67244b2302fb7f9",
-      "on_upstream_default": true,
+      "remote_sha": "f0278413254ba41408e57d90768a0f9b30ef8052",
+      "on_upstream_default": false,
       "ahead": 0,
-      "behind": 0,
+      "behind": 4,
       "dirty": false,
       "detached": false,
       "unborn": false,
-      "state": "on_upstream",
+      "state": "behind",
       "fetched": true
     },
     {
@@ -1231,7 +1231,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "franken_node",
@@ -1246,36 +1246,36 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "franken_numpy",
       "default_branch": "main",
       "checked_out_branch": "main",
-      "head_sha": "b049c562116378c9a538c55a6398ec88a0c34b50",
-      "remote_sha": "b049c562116378c9a538c55a6398ec88a0c34b50",
-      "on_upstream_default": true,
+      "head_sha": "343a09f0a9a792367165c584704f0112a1358b87",
+      "remote_sha": "fba5e19ef98860cd6b6380457bbfb9a9bcc9481d",
+      "on_upstream_default": false,
       "ahead": 0,
-      "behind": 0,
+      "behind": 2,
       "dirty": false,
       "detached": false,
       "unborn": false,
-      "state": "on_upstream",
+      "state": "behind",
       "fetched": true
     },
     {
       "name": "franken_ocr",
       "default_branch": "main",
       "checked_out_branch": "main",
-      "head_sha": "8a685213a437ee952c6d821b7444f6ff33ac3009",
-      "remote_sha": "8a685213a437ee952c6d821b7444f6ff33ac3009",
-      "on_upstream_default": true,
+      "head_sha": "634bfb9b0e40275e155514819b60552bf273a4b2",
+      "remote_sha": "f89bbbc50bed9e7859251ed0555a26d8313975ff",
+      "on_upstream_default": false,
       "ahead": 0,
-      "behind": 0,
+      "behind": 1,
       "dirty": false,
       "detached": false,
       "unborn": false,
-      "state": "on_upstream",
+      "state": "behind",
       "fetched": true
     },
     {
@@ -1291,66 +1291,66 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "franken_snowflake",
       "default_branch": "main",
       "checked_out_branch": "main",
-      "head_sha": "57b1fcd93ec9653a8649a7a8bea95758ab16e1b2",
-      "remote_sha": "57b1fcd93ec9653a8649a7a8bea95758ab16e1b2",
-      "on_upstream_default": true,
+      "head_sha": "3ae3687513c0b0e3a708fa2a7633e455a9bef49b",
+      "remote_sha": "218f36df9fcd3cf4fb2c75b009fb870bbbb7d9c2",
+      "on_upstream_default": false,
       "ahead": 0,
-      "behind": 0,
+      "behind": 6,
       "dirty": false,
       "detached": false,
       "unborn": false,
-      "state": "on_upstream",
+      "state": "behind",
       "fetched": true
     },
     {
       "name": "franken_surveillance_system",
       "default_branch": "main",
       "checked_out_branch": "main",
-      "head_sha": "a2056fb0bf1fb2f5d5089a2dfcdec4509c8e5935",
-      "remote_sha": "a2056fb0bf1fb2f5d5089a2dfcdec4509c8e5935",
-      "on_upstream_default": true,
+      "head_sha": "b9405270d05b95a1f8c54a4da39a399bec8ac25d",
+      "remote_sha": "25edf861b73afcfc6d7dedcc4749ab7d2531a4e5",
+      "on_upstream_default": false,
       "ahead": 0,
-      "behind": 0,
+      "behind": 27,
       "dirty": false,
       "detached": false,
       "unborn": false,
-      "state": "on_upstream",
+      "state": "behind",
       "fetched": true
     },
     {
       "name": "franken_tts",
       "default_branch": "main",
       "checked_out_branch": "main",
-      "head_sha": "73b7e3034ec33a2bf4917de491b904845df98c0b",
-      "remote_sha": "73b7e3034ec33a2bf4917de491b904845df98c0b",
-      "on_upstream_default": true,
+      "head_sha": "0ab3d789a08c6bb6b7ed82c96fcad85e834e6803",
+      "remote_sha": "aedf714d9fd8d5bd1366b0a22b9f98745b2b4cd0",
+      "on_upstream_default": false,
       "ahead": 0,
-      "behind": 0,
+      "behind": 4,
       "dirty": false,
       "detached": false,
       "unborn": false,
-      "state": "on_upstream",
+      "state": "behind",
       "fetched": true
     },
     {
       "name": "franken_whisper",
       "default_branch": "main",
       "checked_out_branch": "main",
-      "head_sha": "14ba273ce1986c7d8741107d11fc67d715427a39",
-      "remote_sha": "14ba273ce1986c7d8741107d11fc67d715427a39",
-      "on_upstream_default": true,
+      "head_sha": "88747203e20d29670a02350a8df8a0ac93e32100",
+      "remote_sha": "96399fac041c330fe226fe97aa12abaa2ede907a",
+      "on_upstream_default": false,
       "ahead": 0,
-      "behind": 0,
+      "behind": 1,
       "dirty": false,
       "detached": false,
       "unborn": false,
-      "state": "on_upstream",
+      "state": "behind",
       "fetched": true
     },
     {
@@ -1366,14 +1366,14 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "frankengit",
       "default_branch": "main",
       "checked_out_branch": "main",
-      "head_sha": "ee90f0f55f5dcba4909a332056fd4015f3865c95",
-      "remote_sha": "ee90f0f55f5dcba4909a332056fd4015f3865c95",
+      "head_sha": "74c20b2f312b43eedb1740d5859fabf37b235d9b",
+      "remote_sha": "74c20b2f312b43eedb1740d5859fabf37b235d9b",
       "on_upstream_default": true,
       "ahead": 0,
       "behind": 0,
@@ -1381,7 +1381,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "frankengraphdb",
@@ -1396,7 +1396,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "frankenjax",
@@ -1411,7 +1411,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "frankenlibc",
@@ -1426,21 +1426,21 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "frankenmermaid",
       "default_branch": "main",
       "checked_out_branch": "main",
-      "head_sha": "662478d54acf9d6d1e38bd3b5d72c7b8a7aa8e19",
-      "remote_sha": "662478d54acf9d6d1e38bd3b5d72c7b8a7aa8e19",
-      "on_upstream_default": true,
+      "head_sha": "5b9f25ef634e630401e4bd735fc997937dd4a12c",
+      "remote_sha": "5032d455b09be316771e92ebe4cb6995abcc0ebc",
+      "on_upstream_default": false,
       "ahead": 0,
-      "behind": 0,
+      "behind": 1,
       "dirty": false,
       "detached": false,
       "unborn": false,
-      "state": "on_upstream",
+      "state": "behind",
       "fetched": true
     },
     {
@@ -1448,29 +1448,29 @@
       "default_branch": "main",
       "checked_out_branch": "main",
       "head_sha": "04004e6b447de7c74faa5c52d85b97272d7ce2dc",
-      "remote_sha": "04004e6b447de7c74faa5c52d85b97272d7ce2dc",
-      "on_upstream_default": true,
+      "remote_sha": "d397792c48a6ffb0f3888f7364ed057b2d200232",
+      "on_upstream_default": false,
       "ahead": 0,
-      "behind": 0,
+      "behind": 2,
       "dirty": false,
       "detached": false,
       "unborn": false,
-      "state": "on_upstream",
+      "state": "behind",
       "fetched": true
     },
     {
       "name": "frankenredis",
       "default_branch": "main",
       "checked_out_branch": "main",
-      "head_sha": "8869ee3f244b94f657bf11f1ba446d53bae1d440",
-      "remote_sha": "8869ee3f244b94f657bf11f1ba446d53bae1d440",
-      "on_upstream_default": true,
+      "head_sha": "aa2b0cf12619fa14c7a3eea06ec6c01eb35641d0",
+      "remote_sha": "66d876639d82c2fbe7a362618499ffb0a942bc1f",
+      "on_upstream_default": false,
       "ahead": 0,
-      "behind": 0,
+      "behind": 2,
       "dirty": false,
       "detached": false,
       "unborn": false,
-      "state": "on_upstream",
+      "state": "behind",
       "fetched": true
     },
     {
@@ -1478,14 +1478,14 @@
       "default_branch": "main",
       "checked_out_branch": "main",
       "head_sha": "2cc2a79defe973b758ca8414db9c05b75cad79ec",
-      "remote_sha": "2cc2a79defe973b758ca8414db9c05b75cad79ec",
-      "on_upstream_default": true,
+      "remote_sha": "d495712d75a6d017428c191a1f9d46fffe0a69db",
+      "on_upstream_default": false,
       "ahead": 0,
-      "behind": 0,
+      "behind": 1,
       "dirty": false,
       "detached": false,
       "unborn": false,
-      "state": "on_upstream",
+      "state": "behind",
       "fetched": true
     },
     {
@@ -1493,29 +1493,29 @@
       "default_branch": "main",
       "checked_out_branch": "main",
       "head_sha": "79c935e2b502d9f5a1d7eddfd427d1b6a753010b",
-      "remote_sha": "79c935e2b502d9f5a1d7eddfd427d1b6a753010b",
-      "on_upstream_default": true,
+      "remote_sha": "bc42b8648dfcb172998cbae723fd572d5b10b48e",
+      "on_upstream_default": false,
       "ahead": 0,
-      "behind": 0,
+      "behind": 4,
       "dirty": false,
       "detached": false,
       "unborn": false,
-      "state": "on_upstream",
+      "state": "behind",
       "fetched": true
     },
     {
       "name": "frankensim",
       "default_branch": "main",
       "checked_out_branch": "main",
-      "head_sha": "f440423ee90fc6d0207ea65aac9971ac4d403b34",
-      "remote_sha": "f440423ee90fc6d0207ea65aac9971ac4d403b34",
-      "on_upstream_default": true,
+      "head_sha": "6c62a560425d1a3a82de5613519abc3acfb24d35",
+      "remote_sha": "d8a7bc89190f72539a90313202620e0df22c8817",
+      "on_upstream_default": false,
       "ahead": 0,
-      "behind": 0,
+      "behind": 9,
       "dirty": false,
       "detached": false,
       "unborn": false,
-      "state": "on_upstream",
+      "state": "behind",
       "fetched": true
     },
     {
@@ -1531,21 +1531,21 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "frankensqlite",
       "default_branch": "main",
       "checked_out_branch": "main",
-      "head_sha": "cd3a21ae076412f1a38df9859b35abb60dafb6e5",
-      "remote_sha": "cd3a21ae076412f1a38df9859b35abb60dafb6e5",
-      "on_upstream_default": true,
+      "head_sha": "1557983c015c358a6797de5e6be0f8a0960a126e",
+      "remote_sha": "42695407b7b4fe51016f76701f8321a4da0a49e2",
+      "on_upstream_default": false,
       "ahead": 0,
-      "behind": 0,
+      "behind": 2,
       "dirty": false,
       "detached": false,
       "unborn": false,
-      "state": "on_upstream",
+      "state": "behind",
       "fetched": true
     },
     {
@@ -1561,7 +1561,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "frankensympy",
@@ -1576,14 +1576,14 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "frankenterm",
       "default_branch": "main",
       "checked_out_branch": "main",
-      "head_sha": "16862d8f14139f1b463465e28a4923330e7f156a",
-      "remote_sha": "16862d8f14139f1b463465e28a4923330e7f156a",
+      "head_sha": "cf06c4836cdcc295e3a33752c49fd1d797587484",
+      "remote_sha": "cf06c4836cdcc295e3a33752c49fd1d797587484",
       "on_upstream_default": true,
       "ahead": 0,
       "behind": 0,
@@ -1591,7 +1591,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "frankentorch",
@@ -1606,21 +1606,21 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "frankentui",
       "default_branch": "main",
       "checked_out_branch": "main",
       "head_sha": "9f8b4d4c2833c9c3770760f212733fc5d890a6a8",
-      "remote_sha": "9f8b4d4c2833c9c3770760f212733fc5d890a6a8",
-      "on_upstream_default": true,
+      "remote_sha": "ddbd5aa5ca6444929a165fe0a4be3ecd308c3af6",
+      "on_upstream_default": false,
       "ahead": 0,
-      "behind": 0,
+      "behind": 4,
       "dirty": false,
       "detached": false,
       "unborn": false,
-      "state": "on_upstream",
+      "state": "behind",
       "fetched": true
     },
     {
@@ -1636,7 +1636,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "gemini-api-updater-doc",
@@ -1651,7 +1651,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "giil",
@@ -1666,7 +1666,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "github-diff-viewer",
@@ -1681,7 +1681,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "github_stars_curve",
@@ -1696,7 +1696,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "gonode",
@@ -1711,7 +1711,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "grassmann_article",
@@ -1726,7 +1726,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "guide_to_openai_response_api_and_agents_sdk",
@@ -1741,7 +1741,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "hacker-news-clone",
@@ -1756,7 +1756,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "hessian_free_email_chain",
@@ -1771,7 +1771,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "hnswlib-rs",
@@ -1786,7 +1786,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "hoeffdings_d_explainer",
@@ -1801,7 +1801,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "homebrew-sbh",
@@ -1816,7 +1816,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "homebrew-tap",
@@ -1831,7 +1831,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "interactive_reversible_cellular_automata",
@@ -1846,7 +1846,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "introduction_to_temporal_logic",
@@ -1861,29 +1861,14 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "jazz_chord_progression_editor_html",
       "default_branch": "main",
       "checked_out_branch": "main",
-      "head_sha": "ad8a969a80a977260a8758d9df4bc88cf173e797",
-      "remote_sha": "6ac98098624e27ce5c804610717fcc6127880fed",
-      "on_upstream_default": false,
-      "ahead": 0,
-      "behind": 2,
-      "dirty": false,
-      "detached": false,
-      "unborn": false,
-      "state": "behind",
-      "fetched": true
-    },
-    {
-      "name": "jeffrey_emanuel_personal_site",
-      "default_branch": "main",
-      "checked_out_branch": "main",
-      "head_sha": "dead3959109cb8c32699583d2c7cfa191fc6c522",
-      "remote_sha": "dead3959109cb8c32699583d2c7cfa191fc6c522",
+      "head_sha": "3566f0816dbd0d158d3ffd920fe4a34f4c2a0e40",
+      "remote_sha": "3566f0816dbd0d158d3ffd920fe4a34f4c2a0e40",
       "on_upstream_default": true,
       "ahead": 0,
       "behind": 0,
@@ -1891,6 +1876,21 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
+      "fetched": false
+    },
+    {
+      "name": "jeffrey_emanuel_personal_site",
+      "default_branch": "main",
+      "checked_out_branch": "main",
+      "head_sha": "4a13dbdc32c96a2112e51a9360b21e5df7800fea",
+      "remote_sha": "aa0c4ab6c25bc1431aca0531b605185422806c3e",
+      "on_upstream_default": false,
+      "ahead": 0,
+      "behind": 4,
+      "dirty": false,
+      "detached": false,
+      "unborn": false,
+      "state": "behind",
       "fetched": true
     },
     {
@@ -1906,7 +1906,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "kissinger_undergraduate_thesis",
@@ -1921,7 +1921,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "lemelsonbot",
@@ -1936,7 +1936,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "letter_learning_game",
@@ -1951,7 +1951,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "llm-docs",
@@ -1966,7 +1966,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "llm-tournament",
@@ -1981,7 +1981,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "llm_aided_legal_discovery_bot",
@@ -1996,7 +1996,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "llm_aided_ocr",
@@ -2011,7 +2011,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "llm_docs",
@@ -2026,7 +2026,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "llm_introspective_compression_and_metacognition",
@@ -2041,7 +2041,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "llm_multi_round_coding_tournament",
@@ -2056,7 +2056,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "loaded-pow",
@@ -2071,7 +2071,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "markdown-browser-agent-mailbox-viewer",
@@ -2086,7 +2086,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "markdown_web_browser",
@@ -2101,7 +2101,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "mcp_agent_mail",
@@ -2116,21 +2116,21 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "mcp_agent_mail_rust",
       "default_branch": "main",
       "checked_out_branch": "main",
       "head_sha": "2cef283e3042c0624a4b1e6fbf471dfcc3adece1",
-      "remote_sha": "2cef283e3042c0624a4b1e6fbf471dfcc3adece1",
-      "on_upstream_default": true,
+      "remote_sha": "0ca5e4b2abadb253bdbc169399622ec3a2ca7fa3",
+      "on_upstream_default": false,
       "ahead": 0,
-      "behind": 0,
+      "behind": 7,
       "dirty": false,
       "detached": false,
       "unborn": false,
-      "state": "on_upstream",
+      "state": "behind",
       "fetched": true
     },
     {
@@ -2146,7 +2146,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "mechanism_interferometry_causality",
@@ -2161,7 +2161,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "meta_skill",
@@ -2176,7 +2176,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "military_history_articles",
@@ -2191,7 +2191,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "mindmap-generator",
@@ -2206,7 +2206,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "misc_coding_agent_tips_and_scripts",
@@ -2221,7 +2221,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "model_guided_research",
@@ -2236,7 +2236,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "most-influential-github-repo-stars",
@@ -2251,7 +2251,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "multivariate_normality_testing",
@@ -2266,7 +2266,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "my_shared_conversations",
@@ -2281,7 +2281,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "nextjs-github-markdown-blog",
@@ -2296,21 +2296,21 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "ntm",
       "default_branch": "main",
       "checked_out_branch": "main",
       "head_sha": "e47185301a8d0149e7fac0a21c3b8b2ab9c58984",
-      "remote_sha": "e47185301a8d0149e7fac0a21c3b8b2ab9c58984",
-      "on_upstream_default": true,
+      "remote_sha": "8399dc540634f5ab952b84340cfc333fb48b49ae",
+      "on_upstream_default": false,
       "ahead": 0,
-      "behind": 0,
+      "behind": 1,
       "dirty": false,
       "detached": false,
       "unborn": false,
-      "state": "on_upstream",
+      "state": "behind",
       "fetched": true
     },
     {
@@ -2326,7 +2326,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "paxos_vs_raft",
@@ -2341,14 +2341,14 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "phage_explorer",
       "default_branch": "main",
       "checked_out_branch": "main",
-      "head_sha": "4eedd7ab7b895e405784cd5c54fe0c5a13354c0d",
-      "remote_sha": "4eedd7ab7b895e405784cd5c54fe0c5a13354c0d",
+      "head_sha": "2252a47382ea556cdc2e8d2196086d9b2621e2fa",
+      "remote_sha": "2252a47382ea556cdc2e8d2196086d9b2621e2fa",
       "on_upstream_default": true,
       "ahead": 0,
       "behind": 0,
@@ -2356,14 +2356,14 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "pi_agent_rust",
       "default_branch": "main",
       "checked_out_branch": "main",
-      "head_sha": "f90c8e0b42381b1cc499d94167bbd6f99d7d4f87",
-      "remote_sha": "f90c8e0b42381b1cc499d94167bbd6f99d7d4f87",
+      "head_sha": "78c6ebb99d282eece0887d20b8c874b11381c01b",
+      "remote_sha": "78c6ebb99d282eece0887d20b8c874b11381c01b",
       "on_upstream_default": true,
       "ahead": 0,
       "behind": 0,
@@ -2371,7 +2371,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "post_compact_reminder",
@@ -2386,7 +2386,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "power_failure_resumer",
@@ -2401,7 +2401,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "ppp_loan_fraud_analysis",
@@ -2416,7 +2416,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "prepareprojectforllmprompt",
@@ -2431,7 +2431,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "process_triage",
@@ -2446,7 +2446,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "py_chord_chart_generator",
@@ -2461,7 +2461,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "rano",
@@ -2476,7 +2476,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "raptorq_article",
@@ -2491,7 +2491,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "readme_smoke_wt-pages",
@@ -2506,21 +2506,21 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "remote_compilation_helper",
       "default_branch": "main",
       "checked_out_branch": "main",
-      "head_sha": "df897f3080a0a34f3559ea8e0a8bd9758a259034",
-      "remote_sha": "df897f3080a0a34f3559ea8e0a8bd9758a259034",
-      "on_upstream_default": true,
+      "head_sha": "300bb5eebd06ef2ab1137b95c61fe87339c3f97e",
+      "remote_sha": "357cbe3a418086c14ce38bc022e31534d98535aa",
+      "on_upstream_default": false,
       "ahead": 0,
-      "behind": 0,
+      "behind": 1,
       "dirty": false,
       "detached": false,
       "unborn": false,
-      "state": "on_upstream",
+      "state": "behind",
       "fetched": true
     },
     {
@@ -2536,7 +2536,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "rich_rust",
@@ -2551,7 +2551,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "rust-block",
@@ -2566,7 +2566,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "rust_proxy",
@@ -2581,21 +2581,21 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "rust_scriptbots",
       "default_branch": "main",
       "checked_out_branch": "main",
-      "head_sha": "f0bd2d0b06246b9e10ae120be21329e686e5b5bd",
-      "remote_sha": "f0bd2d0b06246b9e10ae120be21329e686e5b5bd",
-      "on_upstream_default": true,
+      "head_sha": "3009e49cbc084b115f28b263c464b1a33ee64bfe",
+      "remote_sha": "c2f353293e39b68e0868a6c825fdc7b210312e18",
+      "on_upstream_default": false,
       "ahead": 0,
-      "behind": 0,
+      "behind": 8,
       "dirty": false,
       "detached": false,
       "unborn": false,
-      "state": "on_upstream",
+      "state": "behind",
       "fetched": true
     },
     {
@@ -2611,7 +2611,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "sassaman_and_dingledine_on_remailers_at_blackhat_2003",
@@ -2626,7 +2626,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "savant-elite",
@@ -2641,7 +2641,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "scoop-bucket",
@@ -2656,7 +2656,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "slb",
@@ -2671,7 +2671,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "some_thoughts_on_ai_alignment",
@@ -2686,7 +2686,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "source_to_prompt_tui",
@@ -2701,7 +2701,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "sqlalchemy_data_model_visualizer",
@@ -2716,7 +2716,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "sqlmodel_rust",
@@ -2731,17 +2731,17 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "storage_ballast_helper",
       "default_branch": "main",
       "checked_out_branch": "main",
-      "head_sha": "88665cbd67ac14e46f554058bf4450cf6e94300c",
-      "remote_sha": "49ddfe4a97cfdd906bee1e6266bee29e778d8b5e",
+      "head_sha": "21b65484536753ec47f8d18913013366055a203b",
+      "remote_sha": "eb813f0de9bd0f23687bf5fafd4023d6ac6b2cdd",
       "on_upstream_default": false,
       "ahead": 0,
-      "behind": 2,
+      "behind": 3,
       "dirty": false,
       "detached": false,
       "unborn": false,
@@ -2761,7 +2761,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "surface-dial-rust",
@@ -2776,7 +2776,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "swiss_army_llama",
@@ -2791,7 +2791,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "system_resource_protection_script",
@@ -2806,7 +2806,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "textract-py3",
@@ -2821,7 +2821,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "textsynth_server_cluster",
@@ -2836,7 +2836,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "the_lighthill_debate_on_ai",
@@ -2851,7 +2851,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "toon-go",
@@ -2866,7 +2866,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "toon_rust",
@@ -2881,7 +2881,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "tsap_mcp_server",
@@ -2896,21 +2896,21 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "ultimate_bug_scanner",
       "default_branch": "main",
       "checked_out_branch": "main",
       "head_sha": "79a4769a5446685a762034d6542f35cc0763db7f",
-      "remote_sha": "79a4769a5446685a762034d6542f35cc0763db7f",
-      "on_upstream_default": true,
+      "remote_sha": "9a7bc8296d5aa5c6cb873bf3c263c1b116657389",
+      "on_upstream_default": false,
       "ahead": 0,
-      "behind": 0,
+      "behind": 5,
       "dirty": false,
       "detached": false,
       "unborn": false,
-      "state": "on_upstream",
+      "state": "behind",
       "fetched": true
     },
     {
@@ -2926,7 +2926,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "ultimate_mcp_server",
@@ -2941,7 +2941,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "ultrasearch",
@@ -2956,7 +2956,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "useful_coding_guides_for_llms",
@@ -2971,7 +2971,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "useful_tmux_commands",
@@ -2986,7 +2986,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "vibe_cockpit",
@@ -3001,7 +3001,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "visual_astar_python",
@@ -3016,7 +3016,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "wasm_cmaes",
@@ -3031,7 +3031,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "wezterm",
@@ -3046,7 +3046,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "xf",
@@ -3061,7 +3061,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "your-source-to-prompt.html",
@@ -3076,7 +3076,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "youtube_transcript_cleaner",
@@ -3091,7 +3091,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     },
     {
       "name": "yto_blog_posts",
@@ -3106,7 +3106,7 @@
       "detached": false,
       "unborn": false,
       "state": "on_upstream",
-      "fetched": true
+      "fetched": false
     }
   ]
 }
