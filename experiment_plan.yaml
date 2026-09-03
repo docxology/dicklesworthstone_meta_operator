@@ -1,0 +1,35 @@
+# Pipeline Experiment Plan — Dicklesworthstone Meta-Operator
+
+conditions:
+  - name: registry
+    role: reference
+    description: "Enumerate the corpus via the GitHub API into the canonical registry artifact."
+  - name: clone_verify
+    role: proposed
+    description: "Idempotently clone every registry repo and verify each sits on its upstream default branch, clean."
+  - name: inventory
+    role: proposed
+    description: "Profile every clone: languages, LOC, manifests, entry points, test setup, README digests, activity."
+  - name: orchestrate
+    role: variant
+    description: "Run selected commands across selector-filtered subsets with per-repo timeouts and typed outcomes."
+  - name: dashboard_gate
+    role: reference
+    description: "Render the deterministic dashboard + catalog, then run the binary health gate."
+metrics:
+  primary:
+    name: upstream_sync_ratio
+    direction: maximize
+protocol: "Run the pipeline stages in order (10→70) against the live corpus; every stage is idempotent and re-runnable given its predecessors' artifacts."
+expected_artifacts:
+  - output/data/repo_registry.json
+  - output/data/clone_outcomes.json
+  - output/data/upstream_status.json
+  - output/data/inventory.json
+  - output/web/dashboard.html
+  - output/data/corpus_catalog.md
+  - output/data/health_gate.json
+baselines:
+  - registry
+ablations:
+  - orchestrate

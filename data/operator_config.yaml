@@ -1,0 +1,24 @@
+# Dicklesworthstone Meta-Operator Configuration
+# Versioned project INPUT: edit deliberately; generated data lives under output/.
+# All paths are relative to the project root.
+
+github_user: Dicklesworthstone
+
+# Where corpus clones live. Never tracked by git.
+repos_dir: repos
+
+# "All Dicklesworthstone repos" directive: include the 8 third-party forks
+# (bun, exacl, ffn, gonode, hnswlib-rs, rust-block, textract-py3, wezterm),
+# flagged as fork=true in the registry. Flip to false to operate on his own
+# work only.
+include_forks: true
+
+clone_workers: 8
+fetch_workers: 8
+run_workers: 6
+
+# Per-repo command timeout for orchestrated runs (seconds).
+run_timeout_s: 600
+
+# Trailing bytes kept of captured stdout/stderr per run result.
+stream_tail_bytes: 20000

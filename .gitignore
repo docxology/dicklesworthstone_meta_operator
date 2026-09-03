@@ -1,0 +1,21 @@
+.coverage
+.coverage.*
+.pytest_cache/
+__pycache__/
+*.pyc
+.benchmarks/
+
+# Egg-info from local installs (any location — guards against renamed-fork drift).
+**/*.egg-info/
+
+# Project-local virtualenvs (root .venv is shared)
+.venv/
+
+# Fleet clones (third-party repos; never tracked)
+/repos/
+.venv/
+
+# Generated churn: run artifacts and reports are local session state
+output/data/runs/
+output/reports/
+output/data/clone_outcomes.json

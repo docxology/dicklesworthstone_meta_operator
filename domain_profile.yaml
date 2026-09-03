@@ -1,0 +1,23 @@
+domain: code_tooling
+display_name: Dicklesworthstone Corpus Meta-Operator
+required_packages:
+  - pyyaml
+  - pytest
+preferred_outputs:
+  - html
+validation_gates:
+  - preflight
+  - upstream_all_ok
+  - health_gate
+artifact_expectations:
+  - output/data/repo_registry.json
+  - output/data/upstream_status.json
+  - output/data/inventory.json
+  - output/web/dashboard.html
+  - output/data/health_gate.json
+citation_policy: none
+source_policy: "The corpus is third-party: read and run it, never modify or push to it. Operator claims about repos come from generated artifacts, never from memory."
+review_gates:
+  - upstream_all_ok
+  - health_gate
+llm_prompt_guidance: "Use the generated registry, upstream status, and inventory artifacts as the only evidence source for corpus claims; missing artifacts are blockers, not assumptions."

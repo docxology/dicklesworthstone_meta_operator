@@ -1,0 +1,3808 @@
+{
+  "generated_at": "2026-09-03T05:45:12Z",
+  "github_user": "Dicklesworthstone",
+  "include_forks": true,
+  "repos": [
+    {
+      "name": "ChatTTS",
+      "html_url": "https://github.com/Dicklesworthstone/ChatTTS",
+      "clone_url": "https://github.com/Dicklesworthstone/ChatTTS.git",
+      "default_branch": "main",
+      "language": "Jupyter Notebook",
+      "description": "Forked to make it installable via pip",
+      "size_kb": 2082,
+      "pushed_at": "2024-05-29T17:28:20Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai",
+        "python",
+        "speech",
+        "tts"
+      ]
+    },
+    {
+      "name": "Dicklesworthstone",
+      "html_url": "https://github.com/Dicklesworthstone/Dicklesworthstone",
+      "clone_url": "https://github.com/Dicklesworthstone/Dicklesworthstone.git",
+      "default_branch": "main",
+      "language": "Python",
+      "description": "GitHub profile README",
+      "size_kb": 1806,
+      "pushed_at": "2026-09-03T03:03:24Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "github",
+        "profile"
+      ]
+    },
+    {
+      "name": "aadc",
+      "html_url": "https://github.com/Dicklesworthstone/aadc",
+      "clone_url": "https://github.com/Dicklesworthstone/aadc.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Fixes misaligned right borders in ASCII art diagrams with a single command",
+      "size_kb": 3434,
+      "pushed_at": "2026-08-24T03:36:11Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ascii-art",
+        "cli",
+        "developer-tools"
+      ]
+    },
+    {
+      "name": "acip",
+      "html_url": "https://github.com/Dicklesworthstone/acip",
+      "clone_url": "https://github.com/Dicklesworthstone/acip.git",
+      "default_branch": "main",
+      "language": "Shell",
+      "description": "The Advanced Cognitive Inoculation Prompt",
+      "size_kb": 974,
+      "pushed_at": "2026-03-22T01:29:47Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai",
+        "llm",
+        "prompt-engineering",
+        "security"
+      ]
+    },
+    {
+      "name": "advice_for_learning_to_code_and_making_an_app",
+      "html_url": "https://github.com/Dicklesworthstone/advice_for_learning_to_code_and_making_an_app",
+      "clone_url": "https://github.com/Dicklesworthstone/advice_for_learning_to_code_and_making_an_app.git",
+      "default_branch": "main",
+      "language": "HTML",
+      "description": "Practical advice for beginners learning to code and building their first app",
+      "size_kb": 3312,
+      "pushed_at": "2023-06-26T19:57:01Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "education",
+        "guide",
+        "programming"
+      ]
+    },
+    {
+      "name": "agent-mailbox-viewer-example",
+      "html_url": "https://github.com/Dicklesworthstone/agent-mailbox-viewer-example",
+      "clone_url": "https://github.com/Dicklesworthstone/agent-mailbox-viewer-example.git",
+      "default_branch": "main",
+      "language": "JavaScript",
+      "description": "MCP Agent Mail static viewer",
+      "size_kb": 1962,
+      "pushed_at": "2026-03-22T01:29:48Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "agent-mail",
+        "viewer"
+      ]
+    },
+    {
+      "name": "agent_flywheel_clawdbot_skills_and_integrations",
+      "html_url": "https://github.com/Dicklesworthstone/agent_flywheel_clawdbot_skills_and_integrations",
+      "clone_url": "https://github.com/Dicklesworthstone/agent_flywheel_clawdbot_skills_and_integrations.git",
+      "default_branch": "main",
+      "language": "Shell",
+      "description": "Clawdbot skills for agentic coding workflows - ACFS stack, cloud CLIs, and dev tools",
+      "size_kb": 608,
+      "pushed_at": "2026-08-31T02:22:33Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "acfs",
+        "agentic-coding",
+        "ai-agents",
+        "claude",
+        "clawdbot",
+        "cli-tools",
+        "skills"
+      ]
+    },
+    {
+      "name": "agent_settings_backup_script",
+      "html_url": "https://github.com/Dicklesworthstone/agent_settings_backup_script",
+      "clone_url": "https://github.com/Dicklesworthstone/agent_settings_backup_script.git",
+      "default_branch": "main",
+      "language": "Shell",
+      "description": "Git-versioned backup tool for AI coding agent config folders (Claude Code, Cursor, Codex, etc.) with size-based rotation and easy restoration",
+      "size_kb": 3121,
+      "pushed_at": "2026-08-24T03:36:10Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai-agents",
+        "backup",
+        "bash",
+        "developer-tools",
+        "git"
+      ]
+    },
+    {
+      "name": "agentic_coding_flywheel_setup",
+      "html_url": "https://github.com/Dicklesworthstone/agentic_coding_flywheel_setup",
+      "clone_url": "https://github.com/Dicklesworthstone/agentic_coding_flywheel_setup.git",
+      "default_branch": "main",
+      "language": "Shell",
+      "description": "Bootstraps a fresh Ubuntu VPS into a complete multi-agent AI development environment in 30 minutes: coding agents, session management, safety tools, and coordination infrastructure",
+      "size_kb": 159462,
+      "pushed_at": "2026-09-02T19:40:58Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "agentic-ai",
+        "agentic-workflow",
+        "agentmail",
+        "beads",
+        "bv"
+      ]
+    },
+    {
+      "name": "anti_alzheimers_flasher",
+      "html_url": "https://github.com/Dicklesworthstone/anti_alzheimers_flasher",
+      "clone_url": "https://github.com/Dicklesworthstone/anti_alzheimers_flasher.git",
+      "default_branch": "main",
+      "language": "HTML",
+      "description": "Web app delivering 40Hz light and sound stimulation for gamma entrainment research",
+      "size_kb": 1814,
+      "pushed_at": "2024-01-30T01:03:30Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "health",
+        "javascript",
+        "neuroscience",
+        "web-app"
+      ]
+    },
+    {
+      "name": "ascii_art_mini_transformer",
+      "html_url": "https://github.com/Dicklesworthstone/ascii_art_mini_transformer",
+      "clone_url": "https://github.com/Dicklesworthstone/ascii_art_mini_transformer.git",
+      "default_branch": "main",
+      "language": "Python",
+      "description": "A tiny, CPU-efficient transformer for generating ASCII art with 2D positional encoding",
+      "size_kb": 1826,
+      "pushed_at": "2026-08-27T08:42:20Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ascii-art",
+        "machine-learning",
+        "python",
+        "transformer"
+      ]
+    },
+    {
+      "name": "asimposium.org",
+      "html_url": "https://github.com/Dicklesworthstone/asimposium.org",
+      "clone_url": "https://github.com/Dicklesworthstone/asimposium.org.git",
+      "default_branch": "main",
+      "language": "TypeScript",
+      "description": "A symposium for frontier AI agents: a public scientific ledger where human-sponsored agents propose, refute, and review work in mathematics and physics.",
+      "size_kb": 23167,
+      "pushed_at": "2026-08-28T21:42:48Z",
+      "fork": false,
+      "archived": false,
+      "topics": []
+    },
+    {
+      "name": "asupersync",
+      "html_url": "https://github.com/Dicklesworthstone/asupersync",
+      "clone_url": "https://github.com/Dicklesworthstone/asupersync.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Async runtime for Rust where correctness is structural: region-owned tasks, cancel-correct protocols, capability-gated effects, and deterministic replay testing",
+      "size_kb": 768206,
+      "pushed_at": "2026-09-03T05:16:07Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "async",
+        "concurrency",
+        "runtime",
+        "rust",
+        "structured-concurrency"
+      ]
+    },
+    {
+      "name": "asupersync-beads",
+      "html_url": "https://github.com/Dicklesworthstone/asupersync-beads",
+      "clone_url": "https://github.com/Dicklesworthstone/asupersync-beads.git",
+      "default_branch": "main",
+      "language": "",
+      "description": "Issue tracker dashboard",
+      "size_kb": 0,
+      "pushed_at": "2026-06-16T02:53:06Z",
+      "fork": false,
+      "archived": false,
+      "topics": []
+    },
+    {
+      "name": "asupersync_ansi_c",
+      "html_url": "https://github.com/Dicklesworthstone/asupersync_ansi_c",
+      "clone_url": "https://github.com/Dicklesworthstone/asupersync_ansi_c.git",
+      "default_branch": "main",
+      "language": "C",
+      "description": "Highly portable, dependency-free ANSI C port of asupersync with deterministic replay, strict resource contracts, and embedded-router profiles.",
+      "size_kb": 10961,
+      "pushed_at": "2026-08-24T03:36:13Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ansi-c",
+        "c99",
+        "concurrency",
+        "deterministic",
+        "embedded",
+        "embedded-systems",
+        "no-dependencies",
+        "openwrt",
+        "portability",
+        "replay",
+        "runtime",
+        "systems-programming"
+      ]
+    },
+    {
+      "name": "asupersync_website",
+      "html_url": "https://github.com/Dicklesworthstone/asupersync_website",
+      "clone_url": "https://github.com/Dicklesworthstone/asupersync_website.git",
+      "default_branch": "main",
+      "language": "TypeScript",
+      "description": "Official Next.js 16 website for the Asupersync runtime: interactive demos, architecture docs, glossary, and searchable spec explorer.",
+      "size_kb": 1462,
+      "pushed_at": "2026-08-26T15:52:03Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "async-runtime",
+        "bun",
+        "documentation",
+        "framer-motion",
+        "interactive-demos",
+        "nextjs",
+        "react",
+        "tailwindcss",
+        "typescript"
+      ]
+    },
+    {
+      "name": "atp",
+      "html_url": "https://github.com/Dicklesworthstone/atp",
+      "clone_url": "https://github.com/Dicklesworthstone/atp.git",
+      "default_branch": "main",
+      "language": "Shell",
+      "description": "atp — fountain-coded file transfer (RaptorQ over UDP/QUIC) that outruns tuned rsync on real networks. Verified end-to-end, fail-closed.",
+      "size_kb": 929,
+      "pushed_at": "2026-08-21T00:48:57Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "cli",
+        "file-transfer",
+        "fountain-codes",
+        "quic",
+        "raptorq",
+        "rsync",
+        "rust"
+      ]
+    },
+    {
+      "name": "automated_flywheel_setup_checker",
+      "html_url": "https://github.com/Dicklesworthstone/automated_flywheel_setup_checker",
+      "clone_url": "https://github.com/Dicklesworthstone/automated_flywheel_setup_checker.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Automated testing framework for ACFS installer scripts — runs all 41 installers in isolated Docker containers with error classification, parallel execution, and Claude-powered auto-remediation",
+      "size_kb": 800,
+      "pushed_at": "2026-09-03T04:39:42Z",
+      "fork": false,
+      "archived": false,
+      "topics": []
+    },
+    {
+      "name": "automated_passive_causal_determination",
+      "html_url": "https://github.com/Dicklesworthstone/automated_passive_causal_determination",
+      "clone_url": "https://github.com/Dicklesworthstone/automated_passive_causal_determination.git",
+      "default_branch": "main",
+      "language": "Python",
+      "description": "A fully automated causal discovery pipeline using transformers, XGBoost, and model parsimony to infer causal structures directly from observational data.",
+      "size_kb": 123,
+      "pushed_at": "2025-03-17T18:20:12Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "causal-inference",
+        "machine-learning",
+        "python",
+        "statistics"
+      ]
+    },
+    {
+      "name": "automated_plan_reviser_pro",
+      "html_url": "https://github.com/Dicklesworthstone/automated_plan_reviser_pro",
+      "clone_url": "https://github.com/Dicklesworthstone/automated_plan_reviser_pro.git",
+      "default_branch": "main",
+      "language": "Shell",
+      "description": "Iterative specification refinement tool: feeds your docs through GPT Pro Extended Reasoning via Oracle for multiple revision rounds until production-ready",
+      "size_kb": 950,
+      "pushed_at": "2026-08-25T02:00:02Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai-agents",
+        "bash",
+        "cli",
+        "developer-tools",
+        "specification"
+      ]
+    },
+    {
+      "name": "automatic_cpp_code_analysis_with_gpt",
+      "html_url": "https://github.com/Dicklesworthstone/automatic_cpp_code_analysis_with_gpt",
+      "clone_url": "https://github.com/Dicklesworthstone/automatic_cpp_code_analysis_with_gpt.git",
+      "default_branch": "main",
+      "language": "Python",
+      "description": "Parses C++ files into individual functions, generates GPT-4 analysis prompts, and stores results in SQLite",
+      "size_kb": 10,
+      "pushed_at": "2023-04-18T16:51:35Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "code-analysis",
+        "cpp",
+        "gpt-4",
+        "python"
+      ]
+    },
+    {
+      "name": "automatic_log_collector_and_analyzer",
+      "html_url": "https://github.com/Dicklesworthstone/automatic_log_collector_and_analyzer",
+      "clone_url": "https://github.com/Dicklesworthstone/automatic_log_collector_and_analyzer.git",
+      "default_branch": "main",
+      "language": "Python",
+      "description": "Replace Splunk in your small company with this one weird trick!",
+      "size_kb": 844,
+      "pushed_at": "2025-02-27T11:22:03Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ingestion",
+        "log",
+        "logging",
+        "splunk"
+      ]
+    },
+    {
+      "name": "bakery_algorithm",
+      "html_url": "https://github.com/Dicklesworthstone/bakery_algorithm",
+      "clone_url": "https://github.com/Dicklesworthstone/bakery_algorithm.git",
+      "default_branch": "main",
+      "language": "Python",
+      "description": "Lamport's Bakery Algorithm Demonstrated in Python",
+      "size_kb": 1499,
+      "pushed_at": "2024-01-19T15:46:07Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "algorithms",
+        "concurrency",
+        "education",
+        "python"
+      ]
+    },
+    {
+      "name": "ball_fighters",
+      "html_url": "https://github.com/Dicklesworthstone/ball_fighters",
+      "clone_url": "https://github.com/Dicklesworthstone/ball_fighters.git",
+      "default_branch": "main",
+      "language": "HTML",
+      "description": "Browser-based two-player game where players control balls on a grid competing to cover squares",
+      "size_kb": 2727,
+      "pushed_at": "2024-01-28T02:15:01Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "game",
+        "javascript",
+        "web-app"
+      ]
+    },
+    {
+      "name": "beads-for-frankentui",
+      "html_url": "https://github.com/Dicklesworthstone/beads-for-frankentui",
+      "clone_url": "https://github.com/Dicklesworthstone/beads-for-frankentui.git",
+      "default_branch": "main",
+      "language": "HTML",
+      "description": "Issue tracker dashboard",
+      "size_kb": 12501,
+      "pushed_at": "2026-04-11T17:38:53Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "beads",
+        "dashboard"
+      ]
+    },
+    {
+      "name": "beads_for_asupersync",
+      "html_url": "https://github.com/Dicklesworthstone/beads_for_asupersync",
+      "clone_url": "https://github.com/Dicklesworthstone/beads_for_asupersync.git",
+      "default_branch": "main",
+      "language": "HTML",
+      "description": "Issue tracker dashboard",
+      "size_kb": 18307,
+      "pushed_at": "2026-03-23T02:21:30Z",
+      "fork": false,
+      "archived": false,
+      "topics": []
+    },
+    {
+      "name": "beads_for_cass",
+      "html_url": "https://github.com/Dicklesworthstone/beads_for_cass",
+      "clone_url": "https://github.com/Dicklesworthstone/beads_for_cass.git",
+      "default_branch": "main",
+      "language": "HTML",
+      "description": "Cass Beads",
+      "size_kb": 2041,
+      "pushed_at": "2026-03-22T01:25:46Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "beads",
+        "dashboard"
+      ]
+    },
+    {
+      "name": "beads_for_cass_memory_system",
+      "html_url": "https://github.com/Dicklesworthstone/beads_for_cass_memory_system",
+      "clone_url": "https://github.com/Dicklesworthstone/beads_for_cass_memory_system.git",
+      "default_branch": "main",
+      "language": "HTML",
+      "description": "Issue tracker dashboard",
+      "size_kb": 3111,
+      "pushed_at": "2026-03-14T00:58:22Z",
+      "fork": false,
+      "archived": false,
+      "topics": []
+    },
+    {
+      "name": "beads_for_franken_engine",
+      "html_url": "https://github.com/Dicklesworthstone/beads_for_franken_engine",
+      "clone_url": "https://github.com/Dicklesworthstone/beads_for_franken_engine.git",
+      "default_branch": "main",
+      "language": "HTML",
+      "description": "Issue tracker dashboard",
+      "size_kb": 6381,
+      "pushed_at": "2026-03-09T00:20:14Z",
+      "fork": false,
+      "archived": false,
+      "topics": []
+    },
+    {
+      "name": "beads_rust",
+      "html_url": "https://github.com/Dicklesworthstone/beads_rust",
+      "clone_url": "https://github.com/Dicklesworthstone/beads_rust.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Fast Rust port of Steve Yegge's beads: local-first, non-invasive issue tracker storing tasks in SQLite with JSONL export for git collaboration",
+      "size_kb": 127961,
+      "pushed_at": "2026-09-03T05:44:53Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "developer-tools",
+        "git",
+        "issue-tracker",
+        "rust",
+        "sqlite"
+      ]
+    },
+    {
+      "name": "beads_viewer",
+      "html_url": "https://github.com/Dicklesworthstone/beads_viewer",
+      "clone_url": "https://github.com/Dicklesworthstone/beads_viewer.git",
+      "default_branch": "main",
+      "language": "Go",
+      "description": "Graph-aware TUI for the Beads issue tracker: PageRank, critical path, kanban, dependency DAG visualization, and robot-mode JSON API",
+      "size_kb": 206878,
+      "pushed_at": "2026-09-03T04:34:37Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "developer-tools",
+        "go",
+        "graph-analysis",
+        "issue-tracker",
+        "tui"
+      ]
+    },
+    {
+      "name": "beads_viewer-pages",
+      "html_url": "https://github.com/Dicklesworthstone/beads_viewer-pages",
+      "clone_url": "https://github.com/Dicklesworthstone/beads_viewer-pages.git",
+      "default_branch": "main",
+      "language": "HTML",
+      "description": "Issue tracker dashboard",
+      "size_kb": 2903,
+      "pushed_at": "2026-03-22T01:31:08Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "beads",
+        "dashboard"
+      ]
+    },
+    {
+      "name": "beads_viewer_for_agentic_coding_flywheel_setup",
+      "html_url": "https://github.com/Dicklesworthstone/beads_viewer_for_agentic_coding_flywheel_setup",
+      "clone_url": "https://github.com/Dicklesworthstone/beads_viewer_for_agentic_coding_flywheel_setup.git",
+      "default_branch": "main",
+      "language": "HTML",
+      "description": "Issue tracker dashboard",
+      "size_kb": 2060,
+      "pushed_at": "2026-03-22T01:31:06Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "beads",
+        "dashboard"
+      ]
+    },
+    {
+      "name": "beads_viewer_rust",
+      "html_url": "https://github.com/Dicklesworthstone/beads_viewer_rust",
+      "clone_url": "https://github.com/Dicklesworthstone/beads_viewer_rust.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Rust port of beads_viewer (bvr): graph-aware TUI for the Beads issue tracker with robot-mode JSON API, conformance testing, and full legacy parity",
+      "size_kb": 5661,
+      "pushed_at": "2026-09-02T20:41:54Z",
+      "fork": false,
+      "archived": false,
+      "topics": []
+    },
+    {
+      "name": "bio_inspired_nanochat",
+      "html_url": "https://github.com/Dicklesworthstone/bio_inspired_nanochat",
+      "clone_url": "https://github.com/Dicklesworthstone/bio_inspired_nanochat.git",
+      "default_branch": "main",
+      "language": "Python",
+      "description": "A version of Karpathy's Nanochat that attempts to capture more biologically inspired structure.",
+      "size_kb": 8224,
+      "pushed_at": "2026-09-03T04:39:56Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "biology",
+        "machine-learning",
+        "python",
+        "transformer"
+      ]
+    },
+    {
+      "name": "brenner_bot",
+      "html_url": "https://github.com/Dicklesworthstone/brenner_bot",
+      "clone_url": "https://github.com/Dicklesworthstone/brenner_bot.git",
+      "default_branch": "main",
+      "language": "TypeScript",
+      "description": "Harness the scientific methods of Sydney Brenner using AI Agents",
+      "size_kb": 14627,
+      "pushed_at": "2026-08-26T15:52:05Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai-agents",
+        "biology",
+        "python",
+        "research",
+        "science-research"
+      ]
+    },
+    {
+      "name": "bulk_transcribe_youtube_videos_from_playlist",
+      "html_url": "https://github.com/Dicklesworthstone/bulk_transcribe_youtube_videos_from_playlist",
+      "clone_url": "https://github.com/Dicklesworthstone/bulk_transcribe_youtube_videos_from_playlist.git",
+      "default_branch": "main",
+      "language": "Python",
+      "description": "Easily take an entire YouTube playlist and turn it into high quality transcripts using Whisper.",
+      "size_kb": 2065,
+      "pushed_at": "2025-02-27T11:20:47Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "playlists",
+        "transcription",
+        "transcripts",
+        "whisper",
+        "youtube"
+      ]
+    },
+    {
+      "name": "bun",
+      "html_url": "https://github.com/Dicklesworthstone/bun",
+      "clone_url": "https://github.com/Dicklesworthstone/bun.git",
+      "default_branch": "main",
+      "language": "",
+      "description": "Incredibly fast JavaScript runtime, bundler, test runner, and package manager – all in one",
+      "size_kb": 554375,
+      "pushed_at": "2026-08-14T13:19:49Z",
+      "fork": true,
+      "archived": false,
+      "topics": []
+    },
+    {
+      "name": "cardinal_network_analysis",
+      "html_url": "https://github.com/Dicklesworthstone/cardinal_network_analysis",
+      "clone_url": "https://github.com/Dicklesworthstone/cardinal_network_analysis.git",
+      "default_branch": "main",
+      "language": "HTML",
+      "description": "Based on a study by Rizzo, Soda and Iorio",
+      "size_kb": 55,
+      "pushed_at": "2026-03-22T01:26:41Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "graph-theory",
+        "network-analysis",
+        "python"
+      ]
+    },
+    {
+      "name": "cass-memory-system-agent-mailbox-viewer",
+      "html_url": "https://github.com/Dicklesworthstone/cass-memory-system-agent-mailbox-viewer",
+      "clone_url": "https://github.com/Dicklesworthstone/cass-memory-system-agent-mailbox-viewer.git",
+      "default_branch": "main",
+      "language": "JavaScript",
+      "description": "MCP Agent Mail static viewer",
+      "size_kb": 1102,
+      "pushed_at": "2026-03-22T01:26:46Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "agent-mail",
+        "viewer"
+      ]
+    },
+    {
+      "name": "cass_memory_system",
+      "html_url": "https://github.com/Dicklesworthstone/cass_memory_system",
+      "clone_url": "https://github.com/Dicklesworthstone/cass_memory_system.git",
+      "default_branch": "main",
+      "language": "TypeScript",
+      "description": "Procedural memory for AI coding agents: transforms scattered session history into persistent, cross-agent memory so every agent learns from every other",
+      "size_kb": 3532,
+      "pushed_at": "2026-09-02T10:34:17Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai-agents",
+        "bun",
+        "developer-tools",
+        "memory",
+        "typescript"
+      ]
+    },
+    {
+      "name": "causal_direction_estimation_from_data",
+      "html_url": "https://github.com/Dicklesworthstone/causal_direction_estimation_from_data",
+      "clone_url": "https://github.com/Dicklesworthstone/causal_direction_estimation_from_data.git",
+      "default_branch": "main",
+      "language": "Python",
+      "description": "Automated Python script for data-driven causal inference, leveraging machine learning models and statistical error analysis to uncover hidden causal relationships.",
+      "size_kb": 14327,
+      "pushed_at": "2023-12-30T03:41:42Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "causal-inference",
+        "machine-learning",
+        "python",
+        "statistics"
+      ]
+    },
+    {
+      "name": "cellular_automata_snowflake_simulator",
+      "html_url": "https://github.com/Dicklesworthstone/cellular_automata_snowflake_simulator",
+      "clone_url": "https://github.com/Dicklesworthstone/cellular_automata_snowflake_simulator.git",
+      "default_branch": "main",
+      "language": "HTML",
+      "description": "Interactive snowflake generation using cellular automata rules",
+      "size_kb": 185,
+      "pushed_at": "2024-12-21T04:58:49Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "cellular-automata",
+        "javascript",
+        "simulation"
+      ]
+    },
+    {
+      "name": "charmed_rust",
+      "html_url": "https://github.com/Dicklesworthstone/charmed_rust",
+      "clone_url": "https://github.com/Dicklesworthstone/charmed_rust.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Rust port of the Charm ecosystem (Bubble Tea, Lip Gloss, Bubbles, Wish): Elm-architecture TUIs, CSS-like terminal styling, and SSH app framework",
+      "size_kb": 18130,
+      "pushed_at": "2026-09-01T23:57:42Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "charm",
+        "rust",
+        "ssh",
+        "terminal",
+        "tui"
+      ]
+    },
+    {
+      "name": "chat_shared_conversation_to_file",
+      "html_url": "https://github.com/Dicklesworthstone/chat_shared_conversation_to_file",
+      "clone_url": "https://github.com/Dicklesworthstone/chat_shared_conversation_to_file.git",
+      "default_branch": "main",
+      "language": "TypeScript",
+      "description": "CLI tool that converts public share links from ChatGPT, Gemini, Grok, and Claude into clean Markdown and static HTML transcripts with GitHub Pages publishing",
+      "size_kb": 324,
+      "pushed_at": "2026-08-25T02:34:45Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai",
+        "chatgpt",
+        "cli",
+        "markdown",
+        "python"
+      ]
+    },
+    {
+      "name": "classic-patents.com",
+      "html_url": "https://github.com/Dicklesworthstone/classic-patents.com",
+      "clone_url": "https://github.com/Dicklesworthstone/classic-patents.com.git",
+      "default_branch": "main",
+      "language": "TypeScript",
+      "description": "An open-source digital museum restoring history's most consequential patents into pristine OCR transcripts, rigorous Plain English engineering breakdowns, and interactive real-time simulations.",
+      "size_kb": 566136,
+      "pushed_at": "2026-09-03T04:22:54Z",
+      "fork": false,
+      "archived": false,
+      "topics": []
+    },
+    {
+      "name": "claude_code_agent_farm",
+      "html_url": "https://github.com/Dicklesworthstone/claude_code_agent_farm",
+      "clone_url": "https://github.com/Dicklesworthstone/claude_code_agent_farm.git",
+      "default_branch": "main",
+      "language": "Shell",
+      "description": "Orchestration framework for running 20+ Claude Code agents in parallel: automated bug fixing, best-practices sweeps, lock-based coordination, and real-time tmux monitoring",
+      "size_kb": 1037,
+      "pushed_at": "2026-09-01T11:33:00Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai-agents",
+        "automation",
+        "developer-tools",
+        "python",
+        "tmux"
+      ]
+    },
+    {
+      "name": "cloud_benchmarker",
+      "html_url": "https://github.com/Dicklesworthstone/cloud_benchmarker",
+      "clone_url": "https://github.com/Dicklesworthstone/cloud_benchmarker.git",
+      "default_branch": "main",
+      "language": "Python",
+      "description": "Cloud Benchmarker automates performance testing of cloud instances, offering insightful charts and tracking over time.",
+      "size_kb": 1539,
+      "pushed_at": "2026-08-30T01:21:44Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "benchmarking",
+        "cloud",
+        "monitoring",
+        "python",
+        "vps-admin",
+        "vps-server"
+      ]
+    },
+    {
+      "name": "cmaes_explainer",
+      "html_url": "https://github.com/Dicklesworthstone/cmaes_explainer",
+      "clone_url": "https://github.com/Dicklesworthstone/cmaes_explainer.git",
+      "default_branch": "main",
+      "language": "TypeScript",
+      "description": "An introduction and explanation of the incredible CMA-ES optimization algorithm.",
+      "size_kb": 647735,
+      "pushed_at": "2026-09-03T04:54:40Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "cma-es",
+        "education",
+        "mathematics",
+        "optimization"
+      ]
+    },
+    {
+      "name": "coding_agent_account_manager",
+      "html_url": "https://github.com/Dicklesworthstone/coding_agent_account_manager",
+      "clone_url": "https://github.com/Dicklesworthstone/coding_agent_account_manager.git",
+      "default_branch": "main",
+      "language": "Go",
+      "description": "Sub-100ms auth switching for AI coding CLIs (Claude Code, Codex, Gemini): swap subscription accounts instantly when you hit usage limits",
+      "size_kb": 4239,
+      "pushed_at": "2026-09-02T21:12:49Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai-agents",
+        "authentication",
+        "cli",
+        "developer-tools",
+        "go"
+      ]
+    },
+    {
+      "name": "coding_agent_session_search",
+      "html_url": "https://github.com/Dicklesworthstone/coding_agent_session_search",
+      "clone_url": "https://github.com/Dicklesworthstone/coding_agent_session_search.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Unified TUI and CLI to index and search your local coding agent session history across 11+ providers (Codex, Claude, Gemini, Cursor, Aider, etc.)",
+      "size_kb": 521362,
+      "pushed_at": "2026-09-03T05:29:27Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai-agents",
+        "developer-tools",
+        "rust",
+        "search",
+        "tui"
+      ]
+    },
+    {
+      "name": "coding_agent_usage_tracker",
+      "html_url": "https://github.com/Dicklesworthstone/coding_agent_usage_tracker",
+      "clone_url": "https://github.com/Dicklesworthstone/coding_agent_usage_tracker.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Single CLI to monitor LLM provider usage across Codex, Claude, Gemini, Cursor, and Copilot: remaining quota, rate limits, and cost tracking in one place",
+      "size_kb": 3916,
+      "pushed_at": "2026-09-02T01:14:36Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai-agents",
+        "cli",
+        "developer-tools",
+        "monitoring",
+        "rust"
+      ]
+    },
+    {
+      "name": "cohomological_ai",
+      "html_url": "https://github.com/Dicklesworthstone/cohomological_ai",
+      "clone_url": "https://github.com/Dicklesworthstone/cohomological_ai.git",
+      "default_branch": "main",
+      "language": "Python",
+      "description": "Applying advanced the mathematics of cohomology to AI research (invented by Claude)",
+      "size_kb": 232,
+      "pushed_at": "2024-12-27T05:29:15Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai",
+        "cohomology",
+        "mathematics",
+        "research"
+      ]
+    },
+    {
+      "name": "cool_desktop_wallpapers",
+      "html_url": "https://github.com/Dicklesworthstone/cool_desktop_wallpapers",
+      "clone_url": "https://github.com/Dicklesworthstone/cool_desktop_wallpapers.git",
+      "default_branch": "main",
+      "language": "",
+      "description": "Hiroshi Nagai style AI-generated wallpapers created with Midjourney",
+      "size_kb": 97582,
+      "pushed_at": "2026-03-22T01:27:55Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai-art",
+        "midjourney",
+        "wallpapers"
+      ]
+    },
+    {
+      "name": "cross_agent_session_resumer",
+      "html_url": "https://github.com/Dicklesworthstone/cross_agent_session_resumer",
+      "clone_url": "https://github.com/Dicklesworthstone/cross_agent_session_resumer.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Resume AI coding sessions across providers: converts Codex, Claude, Gemini, and other session formats through a canonical IR so you can pick up where you left off in any tool",
+      "size_kb": 1391,
+      "pushed_at": "2026-09-02T00:40:43Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai-agents",
+        "cli",
+        "developer-tools",
+        "rust",
+        "session-management"
+      ]
+    },
+    {
+      "name": "curl_bash_one_liners_for_flywheel_tools",
+      "html_url": "https://github.com/Dicklesworthstone/curl_bash_one_liners_for_flywheel_tools",
+      "clone_url": "https://github.com/Dicklesworthstone/curl_bash_one_liners_for_flywheel_tools.git",
+      "default_branch": "main",
+      "language": "",
+      "description": "Copy-paste curl|bash one-liners to install every tool in the Agent Flywheel ecosystem: 23+ CLIs for AI agent orchestration, memory, security, and development",
+      "size_kb": 65,
+      "pushed_at": "2026-03-22T01:28:05Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai-agents",
+        "bash",
+        "cli",
+        "developer-tools",
+        "installer"
+      ]
+    },
+    {
+      "name": "destructive_command_guard",
+      "html_url": "https://github.com/Dicklesworthstone/destructive_command_guard",
+      "clone_url": "https://github.com/Dicklesworthstone/destructive_command_guard.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "The Destructive Command Guard (dcg) is for blocking dangerous git and shell commands from being executed by agents.",
+      "size_kb": 31612,
+      "pushed_at": "2026-09-02T19:33:42Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai-agents",
+        "cli",
+        "developer-tools",
+        "git",
+        "rust",
+        "safety"
+      ]
+    },
+    {
+      "name": "doodlestein_self_releaser",
+      "html_url": "https://github.com/Dicklesworthstone/doodlestein_self_releaser",
+      "clone_url": "https://github.com/Dicklesworthstone/doodlestein_self_releaser.git",
+      "default_branch": "main",
+      "language": "Shell",
+      "description": "Local release tool that reuses your GitHub Actions workflow YAML to build via nektos/act when CI queues are throttled, then uploads artifacts to GitHub Releases",
+      "size_kb": 4991,
+      "pushed_at": "2026-09-02T02:45:45Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "bash",
+        "ci-cd",
+        "developer-tools",
+        "github-actions",
+        "release-automation"
+      ]
+    },
+    {
+      "name": "dwarf_fortress_mcp",
+      "html_url": "https://github.com/Dicklesworthstone/dwarf_fortress_mcp",
+      "clone_url": "https://github.com/Dicklesworthstone/dwarf_fortress_mcp.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "A semantic, transactional, replayable MCP control plane that lets autonomous AI agents operate Dwarf Fortress as a long-lived civilization. Safe-Rust phase-0B scaffold: MVCC world state, witnessed semantic plans, evidence-backed effects, deterministic replay.",
+      "size_kb": 1827,
+      "pushed_at": "2026-09-03T04:44:21Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai-agents",
+        "autonomous-agents",
+        "control-plane",
+        "deterministic",
+        "dfhack",
+        "dwarf-fortress",
+        "game-automation",
+        "llm-tools",
+        "mcp",
+        "model-context-protocol",
+        "multi-agent",
+        "mvcc",
+        "rust",
+        "safe-rust",
+        "transactional"
+      ]
+    },
+    {
+      "name": "ees",
+      "html_url": "https://github.com/Dicklesworthstone/ees",
+      "clone_url": "https://github.com/Dicklesworthstone/ees.git",
+      "default_branch": "main",
+      "language": "HTML",
+      "description": "Client-side, zero-backend web app for exploring and searching the Epstein email corpus with full privacy",
+      "size_kb": 50110,
+      "pushed_at": "2026-03-22T01:30:17Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "javascript",
+        "privacy",
+        "search",
+        "web-app"
+      ]
+    },
+    {
+      "name": "eidetic-engine-docs",
+      "html_url": "https://github.com/Dicklesworthstone/eidetic-engine-docs",
+      "clone_url": "https://github.com/Dicklesworthstone/eidetic-engine-docs.git",
+      "default_branch": "main",
+      "language": "",
+      "description": "Documentation for the Eidetic Engine AI memory system",
+      "size_kb": 37,
+      "pushed_at": "2025-05-12T19:18:55Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai",
+        "documentation",
+        "memory"
+      ]
+    },
+    {
+      "name": "eidetic-engine-website-project",
+      "html_url": "https://github.com/Dicklesworthstone/eidetic-engine-website-project",
+      "clone_url": "https://github.com/Dicklesworthstone/eidetic-engine-website-project.git",
+      "default_branch": "main",
+      "language": "TeX",
+      "description": "Website for the Eidetic Engine AI memory project",
+      "size_kb": 1604,
+      "pushed_at": "2025-04-20T21:22:55Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai",
+        "website"
+      ]
+    },
+    {
+      "name": "eidetic_engine_cli",
+      "html_url": "https://github.com/Dicklesworthstone/eidetic_engine_cli",
+      "clone_url": "https://github.com/Dicklesworthstone/eidetic_engine_cli.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Durable, local-first, explainable memory for coding agents. A Rust CLI memory substrate built on the franken-stack (Asupersync, FrankenSQLite, Frankensearch, FrankenNetworkX).",
+      "size_kb": 257685,
+      "pushed_at": "2026-09-03T04:08:12Z",
+      "fork": false,
+      "archived": false,
+      "topics": []
+    },
+    {
+      "name": "exacl",
+      "html_url": "https://github.com/Dicklesworthstone/exacl",
+      "clone_url": "https://github.com/Dicklesworthstone/exacl.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Rust library to manipulate file system access control lists (ACL) on macOS, Linux, and FreeBSD.",
+      "size_kb": 6725,
+      "pushed_at": "2026-08-23T17:13:59Z",
+      "fork": true,
+      "archived": false,
+      "topics": []
+    },
+    {
+      "name": "fast_cmaes",
+      "html_url": "https://github.com/Dicklesworthstone/fast_cmaes",
+      "clone_url": "https://github.com/Dicklesworthstone/fast_cmaes.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "SIMD-accelerated CMA-ES optimization in Rust with Python bindings (PyPI: fast-cmaes), rayon parallelism, deterministic seeds, and a Rich TUI",
+      "size_kb": 218,
+      "pushed_at": "2026-08-17T17:10:54Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "cma-es",
+        "optimization",
+        "python",
+        "rust",
+        "simd"
+      ]
+    },
+    {
+      "name": "fast_vector_similarity",
+      "html_url": "https://github.com/Dicklesworthstone/fast_vector_similarity",
+      "clone_url": "https://github.com/Dicklesworthstone/fast_vector_similarity.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "High-performance vector similarity library in Rust with Python bindings: Spearman, Kendall, distance correlation, Jensen-Shannon, Hoeffding's D, and bootstrapped confidence intervals",
+      "size_kb": 3590,
+      "pushed_at": "2026-02-25T09:30:36Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "embedding-vectors",
+        "llm",
+        "similarity",
+        "vector",
+        "vectorsearch"
+      ]
+    },
+    {
+      "name": "fastapi_rust",
+      "html_url": "https://github.com/Dicklesworthstone/fastapi_rust",
+      "clone_url": "https://github.com/Dicklesworthstone/fastapi_rust.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Rust web framework inspired by Python's FastAPI: type-safe routing, zero-copy parsing, OpenAPI generation, and structured concurrency via asupersync",
+      "size_kb": 3795,
+      "pushed_at": "2026-09-02T07:09:29Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "api",
+        "async",
+        "openapi",
+        "rust",
+        "web-framework"
+      ]
+    },
+    {
+      "name": "fastmcp_rust",
+      "html_url": "https://github.com/Dicklesworthstone/fastmcp_rust",
+      "clone_url": "https://github.com/Dicklesworthstone/fastmcp_rust.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Rust framework for building Model Context Protocol servers with cancel-correct async, zero-copy serialization, and first-class tool/resource/prompt abstractions",
+      "size_kb": 255998,
+      "pushed_at": "2026-09-02T00:08:01Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai-agents",
+        "async",
+        "json-rpc",
+        "mcp",
+        "rust"
+      ]
+    },
+    {
+      "name": "ffn",
+      "html_url": "https://github.com/Dicklesworthstone/ffn",
+      "clone_url": "https://github.com/Dicklesworthstone/ffn.git",
+      "default_branch": "master",
+      "language": "",
+      "description": "ffn - a financial function library for Python",
+      "size_kb": 5297,
+      "pushed_at": "2019-10-07T00:49:15Z",
+      "fork": true,
+      "archived": false,
+      "topics": [
+        "finance",
+        "library",
+        "python"
+      ]
+    },
+    {
+      "name": "flywheel_connectors",
+      "html_url": "https://github.com/Dicklesworthstone/flywheel_connectors",
+      "clone_url": "https://github.com/Dicklesworthstone/flywheel_connectors.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Mesh-native protocol and Rust connector library for secure AI agent integration with external services: Twitter, Linear, Stripe, Discord, Gmail, GitHub, and more",
+      "size_kb": 552593,
+      "pushed_at": "2026-09-01T12:01:46Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai-agents",
+        "connectors",
+        "mesh-networking",
+        "rust",
+        "security"
+      ]
+    },
+    {
+      "name": "flywheel_gateway",
+      "html_url": "https://github.com/Dicklesworthstone/flywheel_gateway",
+      "clone_url": "https://github.com/Dicklesworthstone/flywheel_gateway.git",
+      "default_branch": "main",
+      "language": "TypeScript",
+      "description": "SDK-first orchestration platform for managing AI coding agent fleets: BYOA key rotation, real-time WebSocket dashboard, DCG integration, and cross-agent search",
+      "size_kb": 12833,
+      "pushed_at": "2026-08-24T03:36:16Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai-agents",
+        "bun",
+        "dashboard",
+        "orchestration",
+        "typescript"
+      ]
+    },
+    {
+      "name": "fmd_blog_posts",
+      "html_url": "https://github.com/Dicklesworthstone/fmd_blog_posts",
+      "clone_url": "https://github.com/Dicklesworthstone/fmd_blog_posts.git",
+      "default_branch": "main",
+      "language": "",
+      "description": "Blog posts for Fix My Documents",
+      "size_kb": 3493,
+      "pushed_at": "2026-02-13T23:28:06Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "blog",
+        "writing"
+      ]
+    },
+    {
+      "name": "franken_agent_detection",
+      "html_url": "https://github.com/Dicklesworthstone/franken_agent_detection",
+      "clone_url": "https://github.com/Dicklesworthstone/franken_agent_detection.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Deterministic, local filesystem-based detection of installed coding-agent connectors for Rust tooling.",
+      "size_kb": 1908,
+      "pushed_at": "2026-09-02T21:07:15Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "agent-detection",
+        "coding-agents",
+        "developer-tools",
+        "filesystem",
+        "mcp",
+        "rust"
+      ]
+    },
+    {
+      "name": "franken_drone_geometry_reconstruction",
+      "html_url": "https://github.com/Dicklesworthstone/franken_drone_geometry_reconstruction",
+      "clone_url": "https://github.com/Dicklesworthstone/franken_drone_geometry_reconstruction.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Agent-native, evidence-grade operating substrate for turning owner-authorized drone video into metrically honest semantic digital twins",
+      "size_kb": 1643,
+      "pushed_at": "2026-09-03T02:37:07Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "3d-reconstruction",
+        "computer-vision",
+        "digital-twin",
+        "drone",
+        "photogrammetry",
+        "rust",
+        "spatial-computing"
+      ]
+    },
+    {
+      "name": "franken_engine",
+      "html_url": "https://github.com/Dicklesworthstone/franken_engine",
+      "clone_url": "https://github.com/Dicklesworthstone/franken_engine.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Native Rust runtime for adversarial extension workloads with deterministic replay, cryptographic decision receipts, and fleet-scale containment.",
+      "size_kb": 118834,
+      "pushed_at": "2026-09-02T01:22:48Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "bayesian-inference",
+        "capability-security",
+        "deterministic-replay",
+        "extension-runtime",
+        "incident-response",
+        "javascript-runtime",
+        "runtime",
+        "rust",
+        "sandboxing",
+        "supply-chain-security",
+        "typescript"
+      ]
+    },
+    {
+      "name": "franken_lean",
+      "html_url": "https://github.com/Dicklesworthstone/franken_lean",
+      "clone_url": "https://github.com/Dicklesworthstone/franken_lean.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "A ground-up, native-Rust reimplementation of the entire Lean 4 toolchain — drop-in at the binary surfaces (.olean, C ABI, LSP, CLI), deterministic under parallelism, declaration-granular incremental, with a ≤12 KLOC dual-engine kernel that ships receipts.",
+      "size_kb": 121107,
+      "pushed_at": "2026-09-03T05:18:06Z",
+      "fork": false,
+      "archived": false,
+      "topics": []
+    },
+    {
+      "name": "franken_manim",
+      "html_url": "https://github.com/Dicklesworthstone/franken_manim",
+      "clone_url": "https://github.com/Dicklesworthstone/franken_manim.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "A sovereign, deterministic rewrite of 3b1b's manim in pure Rust — native TeX math typesetting (no LaTeX), an analytic Bézier renderer with the 3b1b look, certified bit-reproducible renders, and source compatibility with existing manimlib scenes. One binary; ffmpeg is the only external tool.",
+      "size_kb": 13026,
+      "pushed_at": "2026-09-03T02:48:56Z",
+      "fork": false,
+      "archived": false,
+      "topics": []
+    },
+    {
+      "name": "franken_markdown",
+      "html_url": "https://github.com/Dicklesworthstone/franken_markdown",
+      "clone_url": "https://github.com/Dicklesworthstone/franken_markdown.git",
+      "default_branch": "main",
+      "language": "HTML",
+      "description": "Pure-Rust, dependency-lean, ultra-fast Markdown -> beautiful all-in-one HTML & tiny optimized PDF (library + single-binary CLI: fmd)",
+      "size_kb": 20023,
+      "pushed_at": "2026-09-03T04:22:42Z",
+      "fork": false,
+      "archived": false,
+      "topics": []
+    },
+    {
+      "name": "franken_markdown_website",
+      "html_url": "https://github.com/Dicklesworthstone/franken_markdown_website",
+      "clone_url": "https://github.com/Dicklesworthstone/franken_markdown_website.git",
+      "default_branch": "main",
+      "language": "JavaScript",
+      "description": "The FrankenMarkdown demo site (franken-markdown.com): the real Rust markdown→HTML/PDF engine running as WASM in your browser, with a live two-pane playground, HTML⇄PDF toggle, and serverless URL document sharing",
+      "size_kb": 12984,
+      "pushed_at": "2026-08-30T02:42:42Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "cloudflare-pages",
+        "knuth-plass",
+        "markdown",
+        "pdf",
+        "playground",
+        "rust",
+        "static-site",
+        "typography",
+        "wasm",
+        "webassembly"
+      ]
+    },
+    {
+      "name": "franken_native_capsule",
+      "html_url": "https://github.com/Dicklesworthstone/franken_native_capsule",
+      "clone_url": "https://github.com/Dicklesworthstone/franken_native_capsule.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Separately owned native-code capsule for FrankenEngine (ADR-0010)",
+      "size_kb": 45,
+      "pushed_at": "2026-08-20T20:16:34Z",
+      "fork": false,
+      "archived": false,
+      "topics": []
+    },
+    {
+      "name": "franken_networkx",
+      "html_url": "https://github.com/Dicklesworthstone/franken_networkx",
+      "clone_url": "https://github.com/Dicklesworthstone/franken_networkx.git",
+      "default_branch": "main",
+      "language": "Python",
+      "description": "Memory-safe clean-room Rust reimplementation of NetworkX with deterministic graph semantics, differential conformance, and RaptorQ-backed durability.",
+      "size_kb": 222619,
+      "pushed_at": "2026-09-03T05:30:15Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "benchmarking",
+        "clean-room",
+        "conformance-testing",
+        "deterministic",
+        "differential-testing",
+        "graph-algorithms",
+        "graph-theory",
+        "memory-safe",
+        "networkx",
+        "raptorq",
+        "rust"
+      ]
+    },
+    {
+      "name": "franken_nlp",
+      "html_url": "https://github.com/Dicklesworthstone/franken_nlp",
+      "clone_url": "https://github.com/Dicklesworthstone/franken_nlp.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Pure-Rust CPU-hyper-optimized local NLP engine for Nanbeige4.2-3B (design review)",
+      "size_kb": 172150,
+      "pushed_at": "2026-08-29T19:10:36Z",
+      "fork": false,
+      "archived": false,
+      "topics": []
+    },
+    {
+      "name": "franken_node",
+      "html_url": "https://github.com/Dicklesworthstone/franken_node",
+      "clone_url": "https://github.com/Dicklesworthstone/franken_node.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Trust-native JavaScript/TypeScript runtime platform built on franken_engine with deterministic compatibility, migration autopilot, extension trust controls, and incident replay.",
+      "size_kb": 96635,
+      "pushed_at": "2026-09-01T00:56:47Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "cli",
+        "developer-tools",
+        "javascript",
+        "migration",
+        "observability",
+        "runtime",
+        "rust",
+        "security",
+        "supply-chain-security",
+        "typescript"
+      ]
+    },
+    {
+      "name": "franken_numpy",
+      "html_url": "https://github.com/Dicklesworthstone/franken_numpy",
+      "clone_url": "https://github.com/Dicklesworthstone/franken_numpy.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Memory-safe clean-room Rust reimplementation of NumPy with strict/hardened compatibility modes, deterministic stride calculus, differential conformance harnesses, and RaptorQ durability artifacts.",
+      "size_kb": 74983,
+      "pushed_at": "2026-09-03T05:29:08Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "array-programming",
+        "broadcasting",
+        "clean-room",
+        "conformance-testing",
+        "memory-safety",
+        "ndarray",
+        "numerical-computing",
+        "numpy",
+        "raptorq",
+        "rust",
+        "scientific-computing",
+        "ufunc"
+      ]
+    },
+    {
+      "name": "franken_ocr",
+      "html_url": "https://github.com/Dicklesworthstone/franken_ocr",
+      "clone_url": "https://github.com/Dicklesworthstone/franken_ocr.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Pure-Rust, CPU-only OCR engine for Baidu Unlimited-OCR (a DeepSeek-OCR-derived 3B MoE VLM). Five-model zoo, custom int8 kernels, no ML framework, no Python, no GPU.",
+      "size_kb": 45466,
+      "pushed_at": "2026-09-03T04:22:53Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "avx512",
+        "cpu-inference",
+        "deepseek-ocr",
+        "int4",
+        "int8",
+        "moe",
+        "neon",
+        "ocr",
+        "quantization",
+        "rust",
+        "simd",
+        "vision-language-model"
+      ]
+    },
+    {
+      "name": "franken_overlap",
+      "html_url": "https://github.com/Dicklesworthstone/franken_overlap",
+      "clone_url": "https://github.com/Dicklesworthstone/franken_overlap.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Ultra-fast sparse-spectral textual overlap detection and approximate alignment in safe Rust",
+      "size_kb": 945,
+      "pushed_at": "2026-08-22T00:44:49Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "approximate-matching",
+        "cross-correlation",
+        "edit-distance",
+        "rust",
+        "text-processing"
+      ]
+    },
+    {
+      "name": "franken_snowflake",
+      "html_url": "https://github.com/Dicklesworthstone/franken_snowflake",
+      "clone_url": "https://github.com/Dicklesworthstone/franken_snowflake.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Clean-room, Rust-first, Asupersync-native Snowflake SQL API connector built for coding agents. 14-crate workspace, live reads and writes, no ODBC or JDBC.",
+      "size_kb": 5924,
+      "pushed_at": "2026-09-03T05:30:23Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "agentic",
+        "asupersync",
+        "clean-room",
+        "coding-agents",
+        "data-engineering",
+        "frankensuite",
+        "mcp",
+        "rust",
+        "snowflake",
+        "sql-api"
+      ]
+    },
+    {
+      "name": "franken_surveillance_system",
+      "html_url": "https://github.com/Dicklesworthstone/franken_surveillance_system",
+      "clone_url": "https://github.com/Dicklesworthstone/franken_surveillance_system.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Pure-Rust, evidence-native, local-first sensor fabric and semantic control plane for owner-authorized cameras and capture drones",
+      "size_kb": 1779,
+      "pushed_at": "2026-09-03T04:13:59Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "computer-vision",
+        "drone-capture",
+        "evidence-native",
+        "local-first",
+        "multimodal",
+        "rust",
+        "security",
+        "sensor-fusion",
+        "surveillance"
+      ]
+    },
+    {
+      "name": "franken_tts",
+      "html_url": "https://github.com/Dicklesworthstone/franken_tts",
+      "clone_url": "https://github.com/Dicklesworthstone/franken_tts.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Pure-Rust, CPU-hyper-optimized runtime for Qwen3-TTS zero-shot voice cloning — turns the model's hidden 15-step residual-code microdecoder from its largest CPU liability into its largest optimization advantage",
+      "size_kb": 39973,
+      "pushed_at": "2026-09-03T04:22:54Z",
+      "fork": false,
+      "archived": false,
+      "topics": []
+    },
+    {
+      "name": "franken_whisper",
+      "html_url": "https://github.com/Dicklesworthstone/franken_whisper",
+      "clone_url": "https://github.com/Dicklesworthstone/franken_whisper.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Agent-first Rust ASR orchestration stack: Bayesian backend routing across whisper.cpp/insanely-fast-whisper/whisper-diarization, real-time NDJSON streaming, SQLite persistence, TTY audio transport, conformance harness. 107K lines, 2000+ tests, zero unsafe code.",
+      "size_kb": 27455,
+      "pushed_at": "2026-09-03T04:22:54Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "agent-first",
+        "asr",
+        "bayesian",
+        "cli",
+        "diarization",
+        "ffmpeg",
+        "gpu",
+        "machine-learning",
+        "ndjson",
+        "rust",
+        "speech-recognition",
+        "sqlite",
+        "transcription",
+        "tty-audio",
+        "whisper"
+      ]
+    },
+    {
+      "name": "frankenfs",
+      "html_url": "https://github.com/Dicklesworthstone/frankenfs",
+      "clone_url": "https://github.com/Dicklesworthstone/frankenfs.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Memory-safe FUSE reimplementation of ext4 and btrfs in Rust with block-level MVCC and RaptorQ self-healing. 22-crate workspace, zero unsafe code.",
+      "size_kb": 109239,
+      "pushed_at": "2026-09-01T20:27:35Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "btrfs",
+        "ext4",
+        "filesystem",
+        "fuse",
+        "linux",
+        "memory-safe",
+        "mvcc",
+        "raptorq",
+        "rust",
+        "self-healing"
+      ]
+    },
+    {
+      "name": "frankengit",
+      "html_url": "https://github.com/Dicklesworthstone/frankengit",
+      "clone_url": "https://github.com/Dicklesworthstone/frankengit.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Git-compatible, agent-native, repairable, self-hostable code forge and GitHub alternative.",
+      "size_kb": 28644,
+      "pushed_at": "2026-09-03T05:18:26Z",
+      "fork": false,
+      "archived": false,
+      "topics": []
+    },
+    {
+      "name": "frankengraphdb",
+      "html_url": "https://github.com/Dicklesworthstone/frankengraphdb",
+      "clone_url": "https://github.com/Dicklesworthstone/frankengraphdb.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "A blank-slate, memory-safe, ultra-high-performance property-graph database in Rust — unified MVCC/time-travel/branches/replication over a fountain-coded commit stream, WCO+factorized execution, incremental everything, and deterministic auditable results.",
+      "size_kb": 29820,
+      "pushed_at": "2026-09-03T04:29:19Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "database",
+        "deterministic-simulation",
+        "gql",
+        "graph-database",
+        "graphrag",
+        "mvcc",
+        "rust",
+        "time-travel",
+        "vector-search",
+        "worst-case-optimal-join"
+      ]
+    },
+    {
+      "name": "frankenjax",
+      "html_url": "https://github.com/Dicklesworthstone/frankenjax",
+      "clone_url": "https://github.com/Dicklesworthstone/frankenjax.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Clean-room Rust reimplementation of JAX transform semantics (jit, grad, vmap) with canonical JAXPR-like IR, Trace Transform Ledger, deterministic cache keys, and differential conformance harness",
+      "size_kb": 28113,
+      "pushed_at": "2026-08-24T03:36:20Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "automatic-differentiation",
+        "clean-room",
+        "compiler",
+        "differential-testing",
+        "intermediate-representation",
+        "jax",
+        "machine-learning",
+        "numerical-computing",
+        "rust",
+        "transform-composition"
+      ]
+    },
+    {
+      "name": "frankenlibc",
+      "html_url": "https://github.com/Dicklesworthstone/frankenlibc",
+      "clone_url": "https://github.com/Dicklesworthstone/frankenlibc.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Rust interposition layer for glibc: transparent safety membrane that incrementally replaces C library functions with memory-safe Rust implementations",
+      "size_kb": 166843,
+      "pushed_at": "2026-09-02T21:09:34Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "libc",
+        "linux",
+        "memory-safety",
+        "rust",
+        "systems-programming"
+      ]
+    },
+    {
+      "name": "frankenmermaid",
+      "html_url": "https://github.com/Dicklesworthstone/frankenmermaid",
+      "clone_url": "https://github.com/Dicklesworthstone/frankenmermaid.git",
+      "default_branch": "main",
+      "language": "HTML",
+      "description": "Next-gen Rust diagram engine with 15 layout algorithms, deterministic output, intent-aware recovery, and WASM/SVG/Canvas/terminal renderers",
+      "size_kb": 84805,
+      "pushed_at": "2026-09-03T04:17:06Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "cli",
+        "diagrams",
+        "mermaid",
+        "rust",
+        "wasm"
+      ]
+    },
+    {
+      "name": "frankenpandas",
+      "html_url": "https://github.com/Dicklesworthstone/frankenpandas",
+      "clone_url": "https://github.com/Dicklesworthstone/frankenpandas.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Memory-safe, clean-room Rust reimplementation of pandas with packetized conformance gates, strict/hardened runtime modes, and RaptorQ-backed artifact durability.",
+      "size_kb": 242692,
+      "pushed_at": "2026-09-03T05:25:30Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "clean-room",
+        "columnar",
+        "conformance-testing",
+        "dataframe",
+        "high-performance",
+        "memory-safe",
+        "pandas",
+        "raptorq",
+        "reliability",
+        "rust"
+      ]
+    },
+    {
+      "name": "frankenredis",
+      "html_url": "https://github.com/Dicklesworthstone/frankenredis",
+      "clone_url": "https://github.com/Dicklesworthstone/frankenredis.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Memory-safe clean-room Redis reimplementation in Rust with strict/hardened compatibility modes, deterministic replication semantics, differential conformance harnesses, and profile-guided optimization proofs.",
+      "size_kb": 117725,
+      "pushed_at": "2026-09-03T05:25:49Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "clean-room",
+        "compatibility",
+        "conformance",
+        "distributed-systems",
+        "fuzz-testing",
+        "memory-safe",
+        "performance-engineering",
+        "persistence",
+        "redis",
+        "reliability",
+        "replication",
+        "rust"
+      ]
+    },
+    {
+      "name": "frankenscipy",
+      "html_url": "https://github.com/Dicklesworthstone/frankenscipy",
+      "clone_url": "https://github.com/Dicklesworthstone/frankenscipy.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Clean-room Rust reimplementation of SciPy with Condition-Aware Solver Portfolio (CASP) — runtime algorithm selection driven by conditioning diagnostics, stability certificates, and decision-theoretic policy controllers",
+      "size_kb": 84478,
+      "pushed_at": "2026-09-03T05:28:09Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "condition-number",
+        "differential-conformance",
+        "linear-algebra",
+        "math",
+        "numerical-analysis",
+        "numerical-methods",
+        "rust",
+        "scientific-computing",
+        "scipy",
+        "solver-portfolio"
+      ]
+    },
+    {
+      "name": "frankensearch",
+      "html_url": "https://github.com/Dicklesworthstone/frankensearch",
+      "clone_url": "https://github.com/Dicklesworthstone/frankensearch.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Two-tier hybrid search for Rust: sub-millisecond initial results via potion-128M, quality-refined rankings in 150ms via MiniLM-L6-v2. Combines lexical (Tantivy BM25) and semantic (vector cosine) search with Reciprocal Rank Fusion. Progressive iterator API, f16 SIMD vector index, feature-gated compilation.",
+      "size_kb": 58108,
+      "pushed_at": "2026-09-03T05:30:45Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "embeddings",
+        "full-text-search",
+        "hybrid-search",
+        "information-retrieval",
+        "nlp",
+        "progressive-search",
+        "reciprocal-rank-fusion",
+        "rust",
+        "search",
+        "semantic-search",
+        "simd",
+        "tantivy",
+        "two-tier",
+        "vector-search"
+      ]
+    },
+    {
+      "name": "frankensim",
+      "html_url": "https://github.com/Dicklesworthstone/frankensim",
+      "clone_url": "https://github.com/Dicklesworthstone/frankensim.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Plan-first Rust continuum for certified geometry, physics simulation, optimization, and rendering.",
+      "size_kb": 155743,
+      "pushed_at": "2026-09-03T05:38:21Z",
+      "fork": false,
+      "archived": false,
+      "topics": []
+    },
+    {
+      "name": "frankensim_website",
+      "html_url": "https://github.com/Dicklesworthstone/frankensim_website",
+      "clone_url": "https://github.com/Dicklesworthstone/frankensim_website.git",
+      "default_branch": "main",
+      "language": "TypeScript",
+      "description": "FrankenSim — the certified simulation & design kernel for Rust. Marketing + docs site with 20 real Rust kernels compiled to WebAssembly, running live in the browser. https://frankensim.org",
+      "size_kb": 14456,
+      "pushed_at": "2026-08-21T18:49:50Z",
+      "fork": false,
+      "archived": false,
+      "topics": []
+    },
+    {
+      "name": "frankensqlite",
+      "html_url": "https://github.com/Dicklesworthstone/frankensqlite",
+      "clone_url": "https://github.com/Dicklesworthstone/frankensqlite.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Independent ground-up Rust reimplementation of SQLite with concurrent writers and information-theoretic durability",
+      "size_kb": 466481,
+      "pushed_at": "2026-09-03T04:46:05Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "database",
+        "mvcc",
+        "raptorq",
+        "rust",
+        "sqlite"
+      ]
+    },
+    {
+      "name": "frankensqlite_website",
+      "html_url": "https://github.com/Dicklesworthstone/frankensqlite_website",
+      "clone_url": "https://github.com/Dicklesworthstone/frankensqlite_website.git",
+      "default_branch": "main",
+      "language": "TypeScript",
+      "description": "Marketing and documentation website for FrankenSQLite",
+      "size_kb": 2382,
+      "pushed_at": "2026-08-26T15:52:30Z",
+      "fork": false,
+      "archived": false,
+      "topics": []
+    },
+    {
+      "name": "frankensympy",
+      "html_url": "https://github.com/Dicklesworthstone/frankensympy",
+      "clone_url": "https://github.com/Dicklesworthstone/frankensympy.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "",
+      "size_kb": 2729,
+      "pushed_at": "2026-08-30T01:30:58Z",
+      "fork": false,
+      "archived": false,
+      "topics": []
+    },
+    {
+      "name": "frankenterm",
+      "html_url": "https://github.com/Dicklesworthstone/frankenterm",
+      "clone_url": "https://github.com/Dicklesworthstone/frankenterm.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Terminal hypervisor for AI agent swarms: real-time pane capture, state-machine pattern detection, and a JSON API for coordinating fleets of coding agents across WezTerm",
+      "size_kb": 532407,
+      "pushed_at": "2026-09-03T05:36:12Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai-agents",
+        "automation",
+        "rust",
+        "terminal",
+        "wezterm"
+      ]
+    },
+    {
+      "name": "frankentorch",
+      "html_url": "https://github.com/Dicklesworthstone/frankentorch",
+      "clone_url": "https://github.com/Dicklesworthstone/frankentorch.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Memory-safe clean-room Rust reimplementation of PyTorch with deterministic autograd contracts, strict/hardened compatibility modes, differential conformance harnesses, and RaptorQ-backed durability artifacts.",
+      "size_kb": 97345,
+      "pushed_at": "2026-09-01T23:26:09Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "autograd",
+        "clean-room",
+        "clean-room-reimplementation",
+        "compatibility",
+        "conformance-testing",
+        "deterministic-autograd",
+        "erasure-coding",
+        "machine-learning",
+        "memory-safe",
+        "performance",
+        "pytorch",
+        "raptorq",
+        "reliability",
+        "robustness",
+        "rust",
+        "rust-2024",
+        "systems-programming",
+        "tensor"
+      ]
+    },
+    {
+      "name": "frankentui",
+      "html_url": "https://github.com/Dicklesworthstone/frankentui",
+      "clone_url": "https://github.com/Dicklesworthstone/frankentui.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Minimal, high-performance terminal UI kernel with diff-based rendering, inline mode, and RAII terminal cleanup",
+      "size_kb": 106854,
+      "pushed_at": "2026-09-03T04:37:59Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "rendering",
+        "rust",
+        "terminal",
+        "tui",
+        "ui-framework"
+      ]
+    },
+    {
+      "name": "frankentui_website",
+      "html_url": "https://github.com/Dicklesworthstone/frankentui_website",
+      "clone_url": "https://github.com/Dicklesworthstone/frankentui_website.git",
+      "default_branch": "main",
+      "language": "C",
+      "description": "Next.js 16 project site for FrankenTUI with interactive Beads DAG visualization, spec evolution lab, and framer-motion polish",
+      "size_kb": 168993,
+      "pushed_at": "2026-08-26T15:52:31Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "nextjs",
+        "react",
+        "typescript",
+        "vercel",
+        "website"
+      ]
+    },
+    {
+      "name": "gemini-api-updater-doc",
+      "html_url": "https://github.com/Dicklesworthstone/gemini-api-updater-doc",
+      "clone_url": "https://github.com/Dicklesworthstone/gemini-api-updater-doc.git",
+      "default_branch": "main",
+      "language": "",
+      "description": "Tired of your LLM not knowing the new Gemini API correctly and telling you wrong stuff? Paste this as your first message and set it straight!",
+      "size_kb": 30,
+      "pushed_at": "2025-06-11T03:48:03Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "api",
+        "documentation",
+        "gemini",
+        "llm"
+      ]
+    },
+    {
+      "name": "giil",
+      "html_url": "https://github.com/Dicklesworthstone/giil",
+      "clone_url": "https://github.com/Dicklesworthstone/giil.git",
+      "default_branch": "main",
+      "language": "Shell",
+      "description": "Zero-setup bash CLI that downloads full-resolution images from iCloud/Dropbox/Google Photos share links, bridging iPhone screenshots to remote AI coding sessions",
+      "size_kb": 468,
+      "pushed_at": "2026-08-24T03:36:22Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "bash",
+        "cli",
+        "developer-tools",
+        "icloud",
+        "images"
+      ]
+    },
+    {
+      "name": "github-diff-viewer",
+      "html_url": "https://github.com/Dicklesworthstone/github-diff-viewer",
+      "clone_url": "https://github.com/Dicklesworthstone/github-diff-viewer.git",
+      "default_branch": "main",
+      "language": "JavaScript",
+      "description": "Web app for viewing and analyzing diffs between GitHub repos or branches using in-browser git operations via isomorphic-git",
+      "size_kb": 15,
+      "pushed_at": "2024-07-03T18:09:33Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "diff",
+        "git",
+        "nextjs",
+        "web-app"
+      ]
+    },
+    {
+      "name": "github_stars_curve",
+      "html_url": "https://github.com/Dicklesworthstone/github_stars_curve",
+      "clone_url": "https://github.com/Dicklesworthstone/github_stars_curve.git",
+      "default_branch": "main",
+      "language": "JavaScript",
+      "description": "Svelte app for visualizing GitHub star growth curves over time",
+      "size_kb": 35,
+      "pushed_at": "2024-01-28T20:41:04Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "github",
+        "svelte",
+        "visualization"
+      ]
+    },
+    {
+      "name": "gonode",
+      "html_url": "https://github.com/Dicklesworthstone/gonode",
+      "clone_url": "https://github.com/Dicklesworthstone/gonode.git",
+      "default_branch": "master",
+      "language": "",
+      "description": "All Golang functionality in Pastel Network is consolidated in this repo",
+      "size_kb": 47493,
+      "pushed_at": "2021-07-02T00:55:59Z",
+      "fork": true,
+      "archived": false,
+      "topics": [
+        "blockchain",
+        "go",
+        "pastel-network"
+      ]
+    },
+    {
+      "name": "grassmann_article",
+      "html_url": "https://github.com/Dicklesworthstone/grassmann_article",
+      "clone_url": "https://github.com/Dicklesworthstone/grassmann_article.git",
+      "default_branch": "main",
+      "language": "",
+      "description": "Long-form biographical essay on Hermann Grassmann, the 19th-century polymath who invented exterior algebra, exploring his life, mathematical discoveries, and themes of unrecognized genius",
+      "size_kb": 165,
+      "pushed_at": "2024-06-07T18:22:20Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "education",
+        "mathematics"
+      ]
+    },
+    {
+      "name": "guide_to_openai_response_api_and_agents_sdk",
+      "html_url": "https://github.com/Dicklesworthstone/guide_to_openai_response_api_and_agents_sdk",
+      "clone_url": "https://github.com/Dicklesworthstone/guide_to_openai_response_api_and_agents_sdk.git",
+      "default_branch": "main",
+      "language": "",
+      "description": "Detailed guide covering OpenAI Responses API, built-in tools (web search, file search, computer use), Agents SDK, and observability tracing",
+      "size_kb": 172,
+      "pushed_at": "2026-03-22T01:30:45Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai-agents",
+        "api",
+        "documentation",
+        "openai"
+      ]
+    },
+    {
+      "name": "hacker-news-clone",
+      "html_url": "https://github.com/Dicklesworthstone/hacker-news-clone",
+      "clone_url": "https://github.com/Dicklesworthstone/hacker-news-clone.git",
+      "default_branch": "main",
+      "language": "JavaScript",
+      "description": "Hacker News clone implementation",
+      "size_kb": 720,
+      "pushed_at": "2024-08-18T05:02:11Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "clone",
+        "web-app"
+      ]
+    },
+    {
+      "name": "hessian_free_email_chain",
+      "html_url": "https://github.com/Dicklesworthstone/hessian_free_email_chain",
+      "clone_url": "https://github.com/Dicklesworthstone/hessian_free_email_chain.git",
+      "default_branch": "main",
+      "language": "",
+      "description": "Email chain discussion on Hessian-free optimization methods",
+      "size_kb": 80,
+      "pushed_at": "2025-02-08T05:18:25Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "machine-learning",
+        "optimization"
+      ]
+    },
+    {
+      "name": "hnswlib-rs",
+      "html_url": "https://github.com/Dicklesworthstone/hnswlib-rs",
+      "clone_url": "https://github.com/Dicklesworthstone/hnswlib-rs.git",
+      "default_branch": "master",
+      "language": "Rust",
+      "description": "Rust implementation of the HNSW algorithm (Malkov-Yashunin)",
+      "size_kb": 334,
+      "pushed_at": "2026-08-25T00:25:51Z",
+      "fork": true,
+      "archived": false,
+      "topics": []
+    },
+    {
+      "name": "hoeffdings_d_explainer",
+      "html_url": "https://github.com/Dicklesworthstone/hoeffdings_d_explainer",
+      "clone_url": "https://github.com/Dicklesworthstone/hoeffdings_d_explainer.git",
+      "default_branch": "main",
+      "language": "",
+      "description": "A Detailed Introduction to My Favorite Statistical Measure, Hoeffding's D",
+      "size_kb": 1083,
+      "pushed_at": "2024-02-23T00:12:56Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "education",
+        "mathematics",
+        "statistics"
+      ]
+    },
+    {
+      "name": "homebrew-sbh",
+      "html_url": "https://github.com/Dicklesworthstone/homebrew-sbh",
+      "clone_url": "https://github.com/Dicklesworthstone/homebrew-sbh.git",
+      "default_branch": "main",
+      "language": "Ruby",
+      "description": "Homebrew tap for sbh (Storage Ballast Helper)",
+      "size_kb": 5,
+      "pushed_at": "2026-06-08T18:43:29Z",
+      "fork": false,
+      "archived": false,
+      "topics": []
+    },
+    {
+      "name": "homebrew-tap",
+      "html_url": "https://github.com/Dicklesworthstone/homebrew-tap",
+      "clone_url": "https://github.com/Dicklesworthstone/homebrew-tap.git",
+      "default_branch": "main",
+      "language": "Shell",
+      "description": "Homebrew tap for NTM and other tools",
+      "size_kb": 332,
+      "pushed_at": "2026-09-02T01:14:53Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "homebrew",
+        "macos",
+        "package-manager"
+      ]
+    },
+    {
+      "name": "interactive_reversible_cellular_automata",
+      "html_url": "https://github.com/Dicklesworthstone/interactive_reversible_cellular_automata",
+      "clone_url": "https://github.com/Dicklesworthstone/interactive_reversible_cellular_automata.git",
+      "default_branch": "main",
+      "language": "HTML",
+      "description": "Browser-based explorer for one-dimensional reversible cellular automata with WebGPU acceleration, bidirectional time stepping, and live rule editing",
+      "size_kb": 14,
+      "pushed_at": "2024-12-18T23:44:54Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "cellular-automata",
+        "javascript",
+        "simulation",
+        "visualization",
+        "webgpu"
+      ]
+    },
+    {
+      "name": "introduction_to_temporal_logic",
+      "html_url": "https://github.com/Dicklesworthstone/introduction_to_temporal_logic",
+      "clone_url": "https://github.com/Dicklesworthstone/introduction_to_temporal_logic.git",
+      "default_branch": "main",
+      "language": "",
+      "description": "An introduction to temporal logic and how it can be used to analyze concurrency",
+      "size_kb": 409,
+      "pushed_at": "2024-01-24T22:11:24Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "concurrency",
+        "education",
+        "logic",
+        "mathematics"
+      ]
+    },
+    {
+      "name": "jazz_chord_progression_editor_html",
+      "html_url": "https://github.com/Dicklesworthstone/jazz_chord_progression_editor_html",
+      "clone_url": "https://github.com/Dicklesworthstone/jazz_chord_progression_editor_html.git",
+      "default_branch": "main",
+      "language": "TypeScript",
+      "description": "Create and explore jazz chord progressions, with annotations and sequences, import/export, presets, and more.",
+      "size_kb": 149740,
+      "pushed_at": "2026-09-03T05:37:17Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "html",
+        "javascript",
+        "music",
+        "web-app"
+      ]
+    },
+    {
+      "name": "jeffrey_emanuel_personal_site",
+      "html_url": "https://github.com/Dicklesworthstone/jeffrey_emanuel_personal_site",
+      "clone_url": "https://github.com/Dicklesworthstone/jeffrey_emanuel_personal_site.git",
+      "default_branch": "main",
+      "language": "TypeScript",
+      "description": "Personal website for me, Jeffrey Emanuel",
+      "size_kb": 30223,
+      "pushed_at": "2026-09-03T04:39:03Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "personal",
+        "website"
+      ]
+    },
+    {
+      "name": "jeffreysprompts.com",
+      "html_url": "https://github.com/Dicklesworthstone/jeffreysprompts.com",
+      "clone_url": "https://github.com/Dicklesworthstone/jeffreysprompts.com.git",
+      "default_branch": "main",
+      "language": "TypeScript",
+      "description": "A curated collection of battle-tested prompts for agentic coding - Browse, copy, and install as Claude Code skills",
+      "size_kb": 14971,
+      "pushed_at": "2026-08-26T15:52:37Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai",
+        "claude",
+        "prompts",
+        "skills",
+        "website"
+      ]
+    },
+    {
+      "name": "kissinger_undergraduate_thesis",
+      "html_url": "https://github.com/Dicklesworthstone/kissinger_undergraduate_thesis",
+      "clone_url": "https://github.com/Dicklesworthstone/kissinger_undergraduate_thesis.git",
+      "default_branch": "main",
+      "language": "HTML",
+      "description": "Digital edition of Kissinger's 400-page 1950 Harvard thesis: OCR'd and LLM-cleaned from scans, with HTML/EPUB/Kindle formats, interactive mindmap, enriched footnotes, and a reader UI",
+      "size_kb": 2759,
+      "pushed_at": "2025-09-03T21:50:37Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "digital-edition",
+        "document",
+        "history",
+        "ocr"
+      ]
+    },
+    {
+      "name": "lemelsonbot",
+      "html_url": "https://github.com/Dicklesworthstone/lemelsonbot",
+      "clone_url": "https://github.com/Dicklesworthstone/lemelsonbot.git",
+      "default_branch": "main",
+      "language": "Python",
+      "description": "Structured corpus and methodology distillation from Jerome Lemelson's invention notebooks: cleaned text, reusable heuristics, operator library, and provenance-traced quote bank",
+      "size_kb": 1637,
+      "pushed_at": "2026-08-03T02:44:24Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "dataset",
+        "inventions",
+        "methodology",
+        "python",
+        "text-processing"
+      ]
+    },
+    {
+      "name": "letter_learning_game",
+      "html_url": "https://github.com/Dicklesworthstone/letter_learning_game",
+      "clone_url": "https://github.com/Dicklesworthstone/letter_learning_game.git",
+      "default_branch": "main",
+      "language": "HTML",
+      "description": "Educational game for children learning letters and the alphabet",
+      "size_kb": 377,
+      "pushed_at": "2026-03-22T01:33:24Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "children",
+        "education",
+        "game"
+      ]
+    },
+    {
+      "name": "llm-docs",
+      "html_url": "https://github.com/Dicklesworthstone/llm-docs",
+      "clone_url": "https://github.com/Dicklesworthstone/llm-docs.git",
+      "default_branch": "main",
+      "language": "",
+      "description": "Condensed, LLM-optimized documentation for popular Python packages: stripped of fluff to maximize context window efficiency",
+      "size_kb": 127,
+      "pushed_at": "2025-03-14T16:53:10Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "developer-tools",
+        "documentation",
+        "llm",
+        "python"
+      ]
+    },
+    {
+      "name": "llm-tournament",
+      "html_url": "https://github.com/Dicklesworthstone/llm-tournament",
+      "clone_url": "https://github.com/Dicklesworthstone/llm-tournament.git",
+      "default_branch": "main",
+      "language": "Python",
+      "description": "Automated LLM Coding Tournaments. There can be only one (winning code solution from the competing AIs)",
+      "size_kb": 1357,
+      "pushed_at": "2026-07-24T21:55:52Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai-agents",
+        "competing-agents",
+        "evolutionary-computation",
+        "llm-coder"
+      ]
+    },
+    {
+      "name": "llm_aided_legal_discovery_bot",
+      "html_url": "https://github.com/Dicklesworthstone/llm_aided_legal_discovery_bot",
+      "clone_url": "https://github.com/Dicklesworthstone/llm_aided_legal_discovery_bot.git",
+      "default_branch": "main",
+      "language": "Python",
+      "description": "AI-powered legal discovery automation: processes PDFs, Word, PST, and mobile databases with OCR and generates relevance-scored dossiers",
+      "size_kb": 505,
+      "pushed_at": "2024-08-17T00:03:53Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai",
+        "document-processing",
+        "legal",
+        "ocr",
+        "python"
+      ]
+    },
+    {
+      "name": "llm_aided_ocr",
+      "html_url": "https://github.com/Dicklesworthstone/llm_aided_ocr",
+      "clone_url": "https://github.com/Dicklesworthstone/llm_aided_ocr.git",
+      "default_branch": "main",
+      "language": "Python",
+      "description": "Enhances Tesseract OCR output using LLMs (local or API) for error correction, smart chunking, and markdown formatting of scanned PDFs",
+      "size_kb": 1458,
+      "pushed_at": "2026-08-03T04:19:28Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai-assist",
+        "llama2",
+        "llm",
+        "ocr",
+        "ocr-correction",
+        "tesseract"
+      ]
+    },
+    {
+      "name": "llm_docs",
+      "html_url": "https://github.com/Dicklesworthstone/llm_docs",
+      "clone_url": "https://github.com/Dicklesworthstone/llm_docs.git",
+      "default_branch": "main",
+      "language": "Python",
+      "description": "Actual implementation of llm-docs.org project",
+      "size_kb": 431,
+      "pushed_at": "2025-06-02T18:04:14Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "documentation",
+        "llm",
+        "website"
+      ]
+    },
+    {
+      "name": "llm_introspective_compression_and_metacognition",
+      "html_url": "https://github.com/Dicklesworthstone/llm_introspective_compression_and_metacognition",
+      "clone_url": "https://github.com/Dicklesworthstone/llm_introspective_compression_and_metacognition.git",
+      "default_branch": "main",
+      "language": "",
+      "description": "A novel approach for transformer model introspection that enables saving, compressing, and manipulating internal thought states for advanced capabilities like reasoning backtracking, latent thought optimization, and metacognitive control.",
+      "size_kb": 923,
+      "pushed_at": "2026-03-22T01:30:44Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "machine-learning",
+        "metacognition",
+        "python",
+        "research",
+        "transformer"
+      ]
+    },
+    {
+      "name": "llm_multi_round_coding_tournament",
+      "html_url": "https://github.com/Dicklesworthstone/llm_multi_round_coding_tournament",
+      "clone_url": "https://github.com/Dicklesworthstone/llm_multi_round_coding_tournament.git",
+      "default_branch": "main",
+      "language": "Python",
+      "description": "Pitting together all the best LLMs to fight in a coding tournament with no holds barred! Who will win? You!",
+      "size_kb": 3547,
+      "pushed_at": "2026-03-22T01:30:45Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "coding",
+        "competing-agents",
+        "evolutionary-computation",
+        "llms",
+        "tournament"
+      ]
+    },
+    {
+      "name": "loaded-pow",
+      "html_url": "https://github.com/Dicklesworthstone/loaded-pow",
+      "clone_url": "https://github.com/Dicklesworthstone/loaded-pow.git",
+      "default_branch": "main",
+      "language": "Python",
+      "description": "Conceptual proposal for proof-of-work mining that embeds useful computation (ML training, scientific computing) into the hash puzzle so energy produces real results",
+      "size_kb": 82,
+      "pushed_at": "2025-06-23T18:12:16Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "blockchain",
+        "cryptography",
+        "mining",
+        "proof-of-work"
+      ]
+    },
+    {
+      "name": "markdown-browser-agent-mailbox-viewer",
+      "html_url": "https://github.com/Dicklesworthstone/markdown-browser-agent-mailbox-viewer",
+      "clone_url": "https://github.com/Dicklesworthstone/markdown-browser-agent-mailbox-viewer.git",
+      "default_branch": "main",
+      "language": "JavaScript",
+      "description": "MCP Agent Mail static viewer",
+      "size_kb": 1711,
+      "pushed_at": "2026-03-22T01:30:47Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "agent-mail",
+        "viewer"
+      ]
+    },
+    {
+      "name": "markdown_web_browser",
+      "html_url": "https://github.com/Dicklesworthstone/markdown_web_browser",
+      "clone_url": "https://github.com/Dicklesworthstone/markdown_web_browser.git",
+      "default_branch": "main",
+      "language": "Python",
+      "description": "Renders any URL via headless Chrome, tiles screenshots into OCR slices, and streams structured Markdown + provenance back to AI agents and pipelines",
+      "size_kb": 7170,
+      "pushed_at": "2026-09-02T21:53:19Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai-agents",
+        "markdown",
+        "ocr",
+        "python",
+        "web-scraping"
+      ]
+    },
+    {
+      "name": "mcp_agent_mail",
+      "html_url": "https://github.com/Dicklesworthstone/mcp_agent_mail",
+      "clone_url": "https://github.com/Dicklesworthstone/mcp_agent_mail.git",
+      "default_branch": "main",
+      "language": "Python",
+      "description": "Asynchronous coordination layer for AI coding agents: identities, inboxes, searchable threads, and advisory file leases over FastMCP + Git + SQLite",
+      "size_kb": 11930,
+      "pushed_at": "2026-08-26T07:14:14Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai-agents",
+        "coordination",
+        "fastmcp",
+        "mcp",
+        "python"
+      ]
+    },
+    {
+      "name": "mcp_agent_mail_rust",
+      "html_url": "https://github.com/Dicklesworthstone/mcp_agent_mail_rust",
+      "clone_url": "https://github.com/Dicklesworthstone/mcp_agent_mail_rust.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Rust MCP server for multi-agent coordination: 34 tools, Git-backed archive, SQLite indexing, advisory file locks, and an interactive TUI console",
+      "size_kb": 83361,
+      "pushed_at": "2026-09-03T05:19:33Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai-agents",
+        "coordination",
+        "mcp",
+        "rust",
+        "tui"
+      ]
+    },
+    {
+      "name": "mcp_agent_mail_website",
+      "html_url": "https://github.com/Dicklesworthstone/mcp_agent_mail_website",
+      "clone_url": "https://github.com/Dicklesworthstone/mcp_agent_mail_website.git",
+      "default_branch": "main",
+      "language": "TypeScript",
+      "description": "",
+      "size_kb": 8796,
+      "pushed_at": "2026-08-27T17:28:23Z",
+      "fork": false,
+      "archived": false,
+      "topics": []
+    },
+    {
+      "name": "mechanism_interferometry_causality",
+      "html_url": "https://github.com/Dicklesworthstone/mechanism_interferometry_causality",
+      "clone_url": "https://github.com/Dicklesworthstone/mechanism_interferometry_causality.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Mechanism Interferometry: a gauge-invariant soft-intervention certificate for causal modularity",
+      "size_kb": 5879,
+      "pushed_at": "2026-08-21T18:49:57Z",
+      "fork": false,
+      "archived": false,
+      "topics": []
+    },
+    {
+      "name": "meta_skill",
+      "html_url": "https://github.com/Dicklesworthstone/meta_skill",
+      "clone_url": "https://github.com/Dicklesworthstone/meta_skill.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Local-first skill management platform for AI coding agents: dual SQLite+Git persistence, semantic search, bandit-optimized suggestions, and MCP integration",
+      "size_kb": 196677,
+      "pushed_at": "2026-09-02T09:47:03Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai-agents",
+        "cli",
+        "developer-tools",
+        "mcp",
+        "rust"
+      ]
+    },
+    {
+      "name": "military_history_articles",
+      "html_url": "https://github.com/Dicklesworthstone/military_history_articles",
+      "clone_url": "https://github.com/Dicklesworthstone/military_history_articles.git",
+      "default_branch": "main",
+      "language": "",
+      "description": "Collection of military history articles and analyses",
+      "size_kb": 26,
+      "pushed_at": "2025-04-30T13:40:55Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "history",
+        "military"
+      ]
+    },
+    {
+      "name": "mindmap-generator",
+      "html_url": "https://github.com/Dicklesworthstone/mindmap-generator",
+      "clone_url": "https://github.com/Dicklesworthstone/mindmap-generator.git",
+      "default_branch": "main",
+      "language": "Python",
+      "description": "Turn any input document into a sophisticated, context-dependent mindmap that distills the meaning and structure of the document.",
+      "size_kb": 2519,
+      "pushed_at": "2025-02-26T15:51:27Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai",
+        "documents",
+        "python",
+        "visualization"
+      ]
+    },
+    {
+      "name": "misc_coding_agent_tips_and_scripts",
+      "html_url": "https://github.com/Dicklesworthstone/misc_coding_agent_tips_and_scripts",
+      "clone_url": "https://github.com/Dicklesworthstone/misc_coding_agent_tips_and_scripts.git",
+      "default_branch": "main",
+      "language": "HTML",
+      "description": "Various things I had to figure out recently to make things work better...",
+      "size_kb": 802,
+      "pushed_at": "2026-09-02T20:39:38Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai-agents",
+        "developer-tools",
+        "tips"
+      ]
+    },
+    {
+      "name": "model_guided_research",
+      "html_url": "https://github.com/Dicklesworthstone/model_guided_research",
+      "clone_url": "https://github.com/Dicklesworthstone/model_guided_research.git",
+      "default_branch": "main",
+      "language": "Python",
+      "description": "Systematic investigation of 11 exotic math frameworks (Lie groups, tropical algebra, p-adic numbers, etc.) applied to deep learning, with dual JAX and PyTorch implementations",
+      "size_kb": 161068,
+      "pushed_at": "2026-09-03T04:40:02Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai",
+        "deep-learning",
+        "machine-learning",
+        "mathematics",
+        "python",
+        "research"
+      ]
+    },
+    {
+      "name": "most-influential-github-repo-stars",
+      "html_url": "https://github.com/Dicklesworthstone/most-influential-github-repo-stars",
+      "clone_url": "https://github.com/Dicklesworthstone/most-influential-github-repo-stars.git",
+      "default_branch": "main",
+      "language": "TypeScript",
+      "description": "See the most influential users who have starred or forked a given repo (sorted by earned stars and follower count)",
+      "size_kb": 351,
+      "pushed_at": "2024-08-17T00:57:53Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "analytics",
+        "github",
+        "python",
+        "stars"
+      ]
+    },
+    {
+      "name": "multivariate_normality_testing",
+      "html_url": "https://github.com/Dicklesworthstone/multivariate_normality_testing",
+      "clone_url": "https://github.com/Dicklesworthstone/multivariate_normality_testing.git",
+      "default_branch": "main",
+      "language": "HTML",
+      "description": "A Novel Way to Determine if High Dimensional Data is Normal",
+      "size_kb": 27,
+      "pushed_at": "2025-04-24T22:06:23Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "mathematics",
+        "python",
+        "statistics",
+        "testing"
+      ]
+    },
+    {
+      "name": "my_shared_conversations",
+      "html_url": "https://github.com/Dicklesworthstone/my_shared_conversations",
+      "clone_url": "https://github.com/Dicklesworthstone/my_shared_conversations.git",
+      "default_branch": "gh-pages",
+      "language": "HTML",
+      "description": "Archive of notable AI chat conversations",
+      "size_kb": 778,
+      "pushed_at": "2025-12-06T20:46:50Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai",
+        "archive"
+      ]
+    },
+    {
+      "name": "nextjs-github-markdown-blog",
+      "html_url": "https://github.com/Dicklesworthstone/nextjs-github-markdown-blog",
+      "clone_url": "https://github.com/Dicklesworthstone/nextjs-github-markdown-blog.git",
+      "default_branch": "main",
+      "language": "TypeScript",
+      "description": "A simple but slick NextJS blogging system for your app, using a GitHub Repo as the CMS",
+      "size_kb": 48,
+      "pushed_at": "2025-02-27T11:24:15Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "blog",
+        "github",
+        "markdown",
+        "nextjs"
+      ]
+    },
+    {
+      "name": "ntm",
+      "html_url": "https://github.com/Dicklesworthstone/ntm",
+      "clone_url": "https://github.com/Dicklesworthstone/ntm.git",
+      "default_branch": "main",
+      "language": "Go",
+      "description": "Named Tmux Manager: spawn, tile, and coordinate multiple AI coding agents (Claude, Codex, Gemini) across tmux panes with a TUI command palette",
+      "size_kb": 117314,
+      "pushed_at": "2026-09-02T20:37:19Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai-agents",
+        "cli",
+        "developer-tools",
+        "go",
+        "tmux"
+      ]
+    },
+    {
+      "name": "opentui_rust",
+      "html_url": "https://github.com/Dicklesworthstone/opentui_rust",
+      "clone_url": "https://github.com/Dicklesworthstone/opentui_rust.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Terminal UI rendering engine for Rust with real RGBA alpha blending, scissor clipping, and double-buffered cell composition. Port of OpenTUI (Zig).",
+      "size_kb": 259880,
+      "pushed_at": "2026-08-25T15:03:44Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "rendering",
+        "rust",
+        "terminal",
+        "tui",
+        "ui-framework"
+      ]
+    },
+    {
+      "name": "paxos_vs_raft",
+      "html_url": "https://github.com/Dicklesworthstone/paxos_vs_raft",
+      "clone_url": "https://github.com/Dicklesworthstone/paxos_vs_raft.git",
+      "default_branch": "main",
+      "language": "",
+      "description": "Educational comparison of the Paxos and Raft distributed consensus algorithms",
+      "size_kb": 130,
+      "pushed_at": "2023-07-23T22:08:08Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "algorithms",
+        "consensus",
+        "distributed-systems",
+        "education"
+      ]
+    },
+    {
+      "name": "phage_explorer",
+      "html_url": "https://github.com/Dicklesworthstone/phage_explorer",
+      "clone_url": "https://github.com/Dicklesworthstone/phage_explorer.git",
+      "default_branch": "main",
+      "language": "TypeScript",
+      "description": "Learn and explore the world of phages, the viruses that attack bacteria. A window into the world of genetics.",
+      "size_kb": 42409,
+      "pushed_at": "2026-09-03T04:31:53Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "biology",
+        "genetics",
+        "phage",
+        "virus"
+      ]
+    },
+    {
+      "name": "pi_agent_rust",
+      "html_url": "https://github.com/Dicklesworthstone/pi_agent_rust",
+      "clone_url": "https://github.com/Dicklesworthstone/pi_agent_rust.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "High-performance AI coding agent CLI written in Rust with zero unsafe code",
+      "size_kb": 160591,
+      "pushed_at": "2026-09-03T03:17:39Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai-agents",
+        "cli",
+        "developer-tools",
+        "rust"
+      ]
+    },
+    {
+      "name": "post_compact_reminder",
+      "html_url": "https://github.com/Dicklesworthstone/post_compact_reminder",
+      "clone_url": "https://github.com/Dicklesworthstone/post_compact_reminder.git",
+      "default_branch": "main",
+      "language": "Shell",
+      "description": "Claude Code hook that detects context compaction and injects a reminder to re-read AGENTS.md, preventing post-compaction rule amnesia in long sessions",
+      "size_kb": 2723,
+      "pushed_at": "2026-08-31T09:04:32Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai-agents",
+        "bash",
+        "claude",
+        "developer-tools",
+        "hooks"
+      ]
+    },
+    {
+      "name": "power_failure_resumer",
+      "html_url": "https://github.com/Dicklesworthstone/power_failure_resumer",
+      "clone_url": "https://github.com/Dicklesworthstone/power_failure_resumer.git",
+      "default_branch": "main",
+      "language": "Python",
+      "description": "Resume your Codex/Claude Code Ghostty sessions after a power failure — crash-cluster detection, confidence-scored plans, verified reopens",
+      "size_kb": 1043,
+      "pushed_at": "2026-08-21T18:49:59Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai-agents",
+        "claude-code",
+        "cli",
+        "codex",
+        "ghostty",
+        "linux",
+        "macos",
+        "power-failure",
+        "session-recovery",
+        "terminal"
+      ]
+    },
+    {
+      "name": "ppp_loan_fraud_analysis",
+      "html_url": "https://github.com/Dicklesworthstone/ppp_loan_fraud_analysis",
+      "clone_url": "https://github.com/Dicklesworthstone/ppp_loan_fraud_analysis.git",
+      "default_branch": "main",
+      "language": "Python",
+      "description": "An Analysis of Public PPP Loan Data To Uncover Fraud",
+      "size_kb": 1460,
+      "pushed_at": "2025-02-20T14:14:40Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "data-analysis",
+        "finance",
+        "fraud-detection",
+        "python"
+      ]
+    },
+    {
+      "name": "prepareprojectforllmprompt",
+      "html_url": "https://github.com/Dicklesworthstone/prepareprojectforllmprompt",
+      "clone_url": "https://github.com/Dicklesworthstone/prepareprojectforllmprompt.git",
+      "default_branch": "master",
+      "language": "TypeScript",
+      "description": "Transform your code project into a Markdown document optimized for interaction with Language Learning Models like GPT-4, complete with dynamic file selection and token management features.",
+      "size_kb": 4195,
+      "pushed_at": "2023-09-29T02:09:36Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai-assisted-development",
+        "chatgpt",
+        "code-to-markdown",
+        "gpt-4",
+        "vscode-extension"
+      ]
+    },
+    {
+      "name": "process_triage",
+      "html_url": "https://github.com/Dicklesworthstone/process_triage",
+      "clone_url": "https://github.com/Dicklesworthstone/process_triage.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Bayesian process classifier that detects abandoned/zombie processes and recommends safe cleanup actions",
+      "size_kb": 10820,
+      "pushed_at": "2026-08-26T06:46:50Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "cli",
+        "developer-tools",
+        "linux",
+        "process-management",
+        "rust"
+      ]
+    },
+    {
+      "name": "py_chord_chart_generator",
+      "html_url": "https://github.com/Dicklesworthstone/py_chord_chart_generator",
+      "clone_url": "https://github.com/Dicklesworthstone/py_chord_chart_generator.git",
+      "default_branch": "main",
+      "language": "Python",
+      "description": "Python tool for generating chord charts",
+      "size_kb": 1774,
+      "pushed_at": "2024-08-21T06:54:31Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "music",
+        "python"
+      ]
+    },
+    {
+      "name": "rano",
+      "html_url": "https://github.com/Dicklesworthstone/rano",
+      "clone_url": "https://github.com/Dicklesworthstone/rano.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Network observer that tracks outbound connections from AI CLI processes (Claude Code, Codex, Gemini), attributing sockets to providers in real time with SQLite logging",
+      "size_kb": 3086,
+      "pushed_at": "2026-08-27T08:54:23Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai-agents",
+        "linux",
+        "monitoring",
+        "networking",
+        "rust"
+      ]
+    },
+    {
+      "name": "raptorq_article",
+      "html_url": "https://github.com/Dicklesworthstone/raptorq_article",
+      "clone_url": "https://github.com/Dicklesworthstone/raptorq_article.git",
+      "default_branch": "main",
+      "language": "HTML",
+      "description": "Interactive visual deep-dive into RaptorQ (RFC 6330) fountain codes — 5 hands-on visualizations, Python demos, and a first-principles walkthrough of the protocol that turns files into mathematical liquid",
+      "size_kb": 401,
+      "pushed_at": "2026-03-22T01:30:21Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "d3js",
+        "education",
+        "erasure-coding",
+        "forward-error-correction",
+        "fountain-codes",
+        "interactive-article",
+        "linear-algebra",
+        "lt-codes",
+        "raptorq",
+        "rfc6330",
+        "threejs",
+        "visualization"
+      ]
+    },
+    {
+      "name": "readme_smoke_wt-pages",
+      "html_url": "https://github.com/Dicklesworthstone/readme_smoke_wt-pages",
+      "clone_url": "https://github.com/Dicklesworthstone/readme_smoke_wt-pages.git",
+      "default_branch": "main",
+      "language": "HTML",
+      "description": "Issue tracker dashboard",
+      "size_kb": 3250,
+      "pushed_at": "2026-09-03T04:32:25Z",
+      "fork": false,
+      "archived": false,
+      "topics": []
+    },
+    {
+      "name": "remote_compilation_helper",
+      "html_url": "https://github.com/Dicklesworthstone/remote_compilation_helper",
+      "clone_url": "https://github.com/Dicklesworthstone/remote_compilation_helper.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Intercepts cargo/gcc builds from AI coding agents via hooks and transparently routes them to remote worker machines, returning artifacts as if compiled locally",
+      "size_kb": 127920,
+      "pushed_at": "2026-09-03T03:50:57Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai-agents",
+        "compilation",
+        "developer-tools",
+        "distributed-computing",
+        "rust"
+      ]
+    },
+    {
+      "name": "repo_updater",
+      "html_url": "https://github.com/Dicklesworthstone/repo_updater",
+      "clone_url": "https://github.com/Dicklesworthstone/repo_updater.git",
+      "default_branch": "main",
+      "language": "Shell",
+      "description": "Pure-bash CLI for keeping hundreds of GitHub repos in sync: parallel clone/pull, conflict detection, JSON output, and meaningful exit codes for CI",
+      "size_kb": 6755,
+      "pushed_at": "2026-08-26T06:46:48Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "automation",
+        "bash",
+        "cli",
+        "developer-tools",
+        "git"
+      ]
+    },
+    {
+      "name": "rich_rust",
+      "html_url": "https://github.com/Dicklesworthstone/rich_rust",
+      "clone_url": "https://github.com/Dicklesworthstone/rich_rust.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Beautiful terminal output for Rust inspired by Python's Rich: tables, panels, syntax highlighting, progress bars, and full-color rendering",
+      "size_kb": 4901,
+      "pushed_at": "2026-08-27T17:34:08Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "cli",
+        "developer-tools",
+        "rust",
+        "terminal",
+        "tui"
+      ]
+    },
+    {
+      "name": "rust-block",
+      "html_url": "https://github.com/Dicklesworthstone/rust-block",
+      "clone_url": "https://github.com/Dicklesworthstone/rust-block.git",
+      "default_branch": "main",
+      "language": "",
+      "description": "Rust interface for Apple's C language extension of blocks.",
+      "size_kb": 64,
+      "pushed_at": "2026-07-29T15:37:42Z",
+      "fork": true,
+      "archived": false,
+      "topics": []
+    },
+    {
+      "name": "rust_proxy",
+      "html_url": "https://github.com/Dicklesworthstone/rust_proxy",
+      "clone_url": "https://github.com/Dicklesworthstone/rust_proxy.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Targeted transparent proxy using iptables+ipset to route only selected domains (API providers, cloud services) through an upstream HTTP proxy without global system changes",
+      "size_kb": 3857,
+      "pushed_at": "2026-08-24T17:00:32Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "iptables",
+        "linux",
+        "networking",
+        "proxy",
+        "rust"
+      ]
+    },
+    {
+      "name": "rust_scriptbots",
+      "html_url": "https://github.com/Dicklesworthstone/rust_scriptbots",
+      "clone_url": "https://github.com/Dicklesworthstone/rust_scriptbots.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Deterministic artificial-life simulator in Rust: agent-based evolution with pluggable brain implementations, GPU-accelerated UI, DuckDB analytics, and LLM-in-the-loop experimentation",
+      "size_kb": 41340,
+      "pushed_at": "2026-09-03T04:10:34Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "artificial-life",
+        "evolution",
+        "gpu",
+        "rust",
+        "simulation"
+      ]
+    },
+    {
+      "name": "rust_stream_deck",
+      "html_url": "https://github.com/Dicklesworthstone/rust_stream_deck",
+      "clone_url": "https://github.com/Dicklesworthstone/rust_stream_deck.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Rust driver and programmable interface for Elgato Stream Deck devices",
+      "size_kb": 4410,
+      "pushed_at": "2026-08-21T19:07:06Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "cli",
+        "hardware",
+        "rust",
+        "stream-deck",
+        "usb"
+      ]
+    },
+    {
+      "name": "sassaman_and_dingledine_on_remailers_at_blackhat_2003",
+      "html_url": "https://github.com/Dicklesworthstone/sassaman_and_dingledine_on_remailers_at_blackhat_2003",
+      "clone_url": "https://github.com/Dicklesworthstone/sassaman_and_dingledine_on_remailers_at_blackhat_2003.git",
+      "default_branch": "main",
+      "language": "",
+      "description": "A Full Transcript and Slides from the talk \"Attacks on Anonymity Systems:  The Theory\" by Len Sassaman and Roger Dingledine in 2003",
+      "size_kb": 856,
+      "pushed_at": "2024-02-28T17:45:11Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "cryptography",
+        "history",
+        "privacy",
+        "transcript"
+      ]
+    },
+    {
+      "name": "savant-elite",
+      "html_url": "https://github.com/Dicklesworthstone/savant-elite",
+      "clone_url": "https://github.com/Dicklesworthstone/savant-elite.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Native macOS programmer for the discontinued Kinesis Savant Elite USB foot pedal",
+      "size_kb": 981,
+      "pushed_at": "2026-09-02T00:06:51Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "hardware",
+        "kinesis",
+        "macos",
+        "usb"
+      ]
+    },
+    {
+      "name": "scoop-bucket",
+      "html_url": "https://github.com/Dicklesworthstone/scoop-bucket",
+      "clone_url": "https://github.com/Dicklesworthstone/scoop-bucket.git",
+      "default_branch": "main",
+      "language": "Shell",
+      "description": "Scoop bucket for NTM and other tools",
+      "size_kb": 136,
+      "pushed_at": "2026-09-01T23:03:24Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "package-manager",
+        "scoop",
+        "windows"
+      ]
+    },
+    {
+      "name": "slb",
+      "html_url": "https://github.com/Dicklesworthstone/slb",
+      "clone_url": "https://github.com/Dicklesworthstone/slb.git",
+      "default_branch": "main",
+      "language": "Go",
+      "description": "Two-person rule CLI for AI coding agents: peer review and approval required before running potentially destructive commands",
+      "size_kb": 1263,
+      "pushed_at": "2026-08-26T06:41:01Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai-agents",
+        "cli",
+        "developer-tools",
+        "go",
+        "safety"
+      ]
+    },
+    {
+      "name": "some_thoughts_on_ai_alignment",
+      "html_url": "https://github.com/Dicklesworthstone/some_thoughts_on_ai_alignment",
+      "clone_url": "https://github.com/Dicklesworthstone/some_thoughts_on_ai_alignment.git",
+      "default_branch": "main",
+      "language": "",
+      "description": "Some Thoughts on AI Alignment: Using AI to Control AI",
+      "size_kb": 1128,
+      "pushed_at": "2025-02-25T05:11:40Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai",
+        "ai-alignment",
+        "alignment",
+        "llm-aligment",
+        "llm-safety"
+      ]
+    },
+    {
+      "name": "source_to_prompt_tui",
+      "html_url": "https://github.com/Dicklesworthstone/source_to_prompt_tui",
+      "clone_url": "https://github.com/Dicklesworthstone/source_to_prompt_tui.git",
+      "default_branch": "main",
+      "language": "TypeScript",
+      "description": "TUI for combining source code files into LLM-ready prompts: tree explorer, syntax preview, token estimation, and structured XML output",
+      "size_kb": 317,
+      "pushed_at": "2026-08-24T03:36:32Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "cli",
+        "developer-tools",
+        "llm",
+        "rust",
+        "tui"
+      ]
+    },
+    {
+      "name": "sqlalchemy_data_model_visualizer",
+      "html_url": "https://github.com/Dicklesworthstone/sqlalchemy_data_model_visualizer",
+      "clone_url": "https://github.com/Dicklesworthstone/sqlalchemy_data_model_visualizer.git",
+      "default_branch": "main",
+      "language": "Python",
+      "description": "Automatically turn your SQLalchemy Data Models into a Nice SVG Diagram",
+      "size_kb": 39,
+      "pushed_at": "2025-02-27T11:26:30Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "datamodel",
+        "orm",
+        "orm-model",
+        "schema",
+        "sqlalchemy",
+        "visualization"
+      ]
+    },
+    {
+      "name": "sqlmodel_rust",
+      "html_url": "https://github.com/Dicklesworthstone/sqlmodel_rust",
+      "clone_url": "https://github.com/Dicklesworthstone/sqlmodel_rust.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Rust ORM inspired by Python's SQLModel: derive-macro models, type-safe query builder, multi-dialect SQL generation, and cancel-correct async via asupersync",
+      "size_kb": 7005,
+      "pushed_at": "2026-09-03T04:36:59Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "database",
+        "orm",
+        "rust",
+        "sql",
+        "sqlite"
+      ]
+    },
+    {
+      "name": "storage_ballast_helper",
+      "html_url": "https://github.com/Dicklesworthstone/storage_ballast_helper",
+      "clone_url": "https://github.com/Dicklesworthstone/storage_ballast_helper.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Cross-platform Rust daemon that prevents disk-full incidents for AI coding workloads using predictive pressure control, safe artifact cleanup, and multi-volume ballast pools.",
+      "size_kb": 15236,
+      "pushed_at": "2026-09-03T05:12:28Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai-agents",
+        "artifact-cleanup",
+        "automation",
+        "build-artifacts",
+        "cli",
+        "daemon",
+        "disk-pressure",
+        "disk-recovery",
+        "disk-space",
+        "launchd",
+        "observability",
+        "rust",
+        "storage",
+        "storage-management",
+        "systemd"
+      ]
+    },
+    {
+      "name": "suno2cd",
+      "html_url": "https://github.com/Dicklesworthstone/suno2cd",
+      "clone_url": "https://github.com/Dicklesworthstone/suno2cd.git",
+      "default_branch": "main",
+      "language": "TypeScript",
+      "description": "Convert Suno AI audio to CD quality (44.1kHz 16-bit WAV) in your browser",
+      "size_kb": 162,
+      "pushed_at": "2026-03-22T01:30:31Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "audio",
+        "converter",
+        "music",
+        "web-app"
+      ]
+    },
+    {
+      "name": "surface-dial-rust",
+      "html_url": "https://github.com/Dicklesworthstone/surface-dial-rust",
+      "clone_url": "https://github.com/Dicklesworthstone/surface-dial-rust.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Turn your Microsoft Surface Dial into a premium volume knob for any OS",
+      "size_kb": 2759,
+      "pushed_at": "2026-08-24T03:36:34Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "hardware",
+        "microsoft",
+        "rust",
+        "usb"
+      ]
+    },
+    {
+      "name": "swiss_army_llama",
+      "html_url": "https://github.com/Dicklesworthstone/swiss_army_llama",
+      "clone_url": "https://github.com/Dicklesworthstone/swiss_army_llama.git",
+      "default_branch": "main",
+      "language": "Python",
+      "description": "A FastAPI service for semantic text search using precomputed embeddings and advanced similarity measures, with built-in support for various file types through textract.",
+      "size_kb": 7603,
+      "pushed_at": "2025-02-27T11:19:55Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "embedding-similarity",
+        "embedding-vectors",
+        "embeddings",
+        "llama2",
+        "llamacpp",
+        "semantic-search"
+      ]
+    },
+    {
+      "name": "system_resource_protection_script",
+      "html_url": "https://github.com/Dicklesworthstone/system_resource_protection_script",
+      "clone_url": "https://github.com/Dicklesworthstone/system_resource_protection_script.git",
+      "default_branch": "main",
+      "language": "Shell",
+      "description": "Prevent processes from taking down your machine or making it unresponsive.",
+      "size_kb": 231,
+      "pushed_at": "2026-09-02T20:27:37Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "bash",
+        "linux",
+        "process-management",
+        "system-administration"
+      ]
+    },
+    {
+      "name": "textract-py3",
+      "html_url": "https://github.com/Dicklesworthstone/textract-py3",
+      "clone_url": "https://github.com/Dicklesworthstone/textract-py3.git",
+      "default_branch": "main",
+      "language": "",
+      "description": "Minimally maintained fork of deanmalmgren/textract to remove '*' dependencies",
+      "size_kb": 4480,
+      "pushed_at": "2023-07-30T13:56:52Z",
+      "fork": true,
+      "archived": false,
+      "topics": [
+        "fork",
+        "python",
+        "text-extraction"
+      ]
+    },
+    {
+      "name": "textsynth_server_cluster",
+      "html_url": "https://github.com/Dicklesworthstone/textsynth_server_cluster",
+      "clone_url": "https://github.com/Dicklesworthstone/textsynth_server_cluster.git",
+      "default_branch": "main",
+      "language": "Python",
+      "description": "Cluster management for TextSynth inference servers",
+      "size_kb": 59,
+      "pushed_at": "2023-08-07T22:31:27Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "infrastructure",
+        "llm",
+        "python"
+      ]
+    },
+    {
+      "name": "the_lighthill_debate_on_ai",
+      "html_url": "https://github.com/Dicklesworthstone/the_lighthill_debate_on_ai",
+      "clone_url": "https://github.com/Dicklesworthstone/the_lighthill_debate_on_ai.git",
+      "default_branch": "main",
+      "language": "",
+      "description": "A Full Transcript of the Lighthill Debate on AI from 1973, with Introductory Remarks",
+      "size_kb": 1539,
+      "pushed_at": "2024-02-25T19:54:01Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai",
+        "education",
+        "history",
+        "transcript"
+      ]
+    },
+    {
+      "name": "toon-go",
+      "html_url": "https://github.com/Dicklesworthstone/toon-go",
+      "clone_url": "https://github.com/Dicklesworthstone/toon-go.git",
+      "default_branch": "main",
+      "language": "Go",
+      "description": "Go wrapper for TOON using toon_rust (tru)",
+      "size_kb": 48,
+      "pushed_at": "2026-03-22T01:30:34Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "data-format",
+        "go",
+        "serialization",
+        "toon"
+      ]
+    },
+    {
+      "name": "toon_rust",
+      "html_url": "https://github.com/Dicklesworthstone/toon_rust",
+      "clone_url": "https://github.com/Dicklesworthstone/toon_rust.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Spec-first Rust port of TOON (a token-efficient data format): deterministic JSON<->TOON conversion with strict validation and streaming support",
+      "size_kb": 1214,
+      "pushed_at": "2026-08-28T03:22:26Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "cli",
+        "data-format",
+        "json",
+        "rust",
+        "serialization"
+      ]
+    },
+    {
+      "name": "tsap_mcp_server",
+      "html_url": "https://github.com/Dicklesworthstone/tsap_mcp_server",
+      "clone_url": "https://github.com/Dicklesworthstone/tsap_mcp_server.git",
+      "default_branch": "main",
+      "language": "HTML",
+      "description": "MCP server for text search and code analysis: advanced pattern matching, processing pipelines, and static analysis exposed as MCP tools",
+      "size_kb": 4674,
+      "pushed_at": "2026-07-24T21:56:11Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai-agents",
+        "code-analysis",
+        "mcp",
+        "python",
+        "search"
+      ]
+    },
+    {
+      "name": "ultimate_bug_scanner",
+      "html_url": "https://github.com/Dicklesworthstone/ultimate_bug_scanner",
+      "clone_url": "https://github.com/Dicklesworthstone/ultimate_bug_scanner.git",
+      "default_branch": "main",
+      "language": "Shell",
+      "description": "Static analysis tool that catches 1000+ bug patterns across all popular programming languages, with auto-wiring into AI coding agent quality guardrails",
+      "size_kb": 20557,
+      "pushed_at": "2026-09-03T04:16:42Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "agent-tools",
+        "ai-agents",
+        "bash",
+        "bugs",
+        "cli",
+        "code-quality",
+        "developer-tools",
+        "linting",
+        "static-analysis"
+      ]
+    },
+    {
+      "name": "ultimate_mcp_client",
+      "html_url": "https://github.com/Dicklesworthstone/ultimate_mcp_client",
+      "clone_url": "https://github.com/Dicklesworthstone/ultimate_mcp_client.git",
+      "default_branch": "main",
+      "language": "Python",
+      "description": "Async Python client for the Model Context Protocol with interactive CLI and reactive Web UI, connecting AI models to MCP servers via stdio and SSE",
+      "size_kb": 10253,
+      "pushed_at": "2026-08-26T15:52:53Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai-agents",
+        "cli",
+        "mcp",
+        "python",
+        "web-ui"
+      ]
+    },
+    {
+      "name": "ultimate_mcp_server",
+      "html_url": "https://github.com/Dicklesworthstone/ultimate_mcp_server",
+      "clone_url": "https://github.com/Dicklesworthstone/ultimate_mcp_server.git",
+      "default_branch": "main",
+      "language": "Python",
+      "description": "Comprehensive MCP server exposing dozens of capabilities to AI agents: multi-provider LLM delegation, browser automation, document processing, vector ops, and cognitive memory systems",
+      "size_kb": 26360,
+      "pushed_at": "2026-08-22T18:47:30Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "agent",
+        "llm",
+        "mcp",
+        "mcp-server"
+      ]
+    },
+    {
+      "name": "ultrasearch",
+      "html_url": "https://github.com/Dicklesworthstone/ultrasearch",
+      "clone_url": "https://github.com/Dicklesworthstone/ultrasearch.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Windows desktop search engine combining NTFS MFT enumeration (instant filename search) with Tantivy full-text content indexing, in a multi-process Rust architecture",
+      "size_kb": 1371,
+      "pushed_at": "2026-08-31T20:53:58Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "desktop",
+        "rust",
+        "search",
+        "tantivy",
+        "windows"
+      ]
+    },
+    {
+      "name": "useful_coding_guides_for_llms",
+      "html_url": "https://github.com/Dicklesworthstone/useful_coding_guides_for_llms",
+      "clone_url": "https://github.com/Dicklesworthstone/useful_coding_guides_for_llms.git",
+      "default_branch": "main",
+      "language": "",
+      "description": "Detailed Next.js best-practice guides designed for humans and LLM coding assistants to collaboratively build robust applications",
+      "size_kb": 150,
+      "pushed_at": "2026-07-24T22:21:13Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "developer-tools",
+        "guides",
+        "llm",
+        "nextjs"
+      ]
+    },
+    {
+      "name": "useful_tmux_commands",
+      "html_url": "https://github.com/Dicklesworthstone/useful_tmux_commands",
+      "clone_url": "https://github.com/Dicklesworthstone/useful_tmux_commands.git",
+      "default_branch": "main",
+      "language": "Shell",
+      "description": "Tmux session management toolkit for spawning and coordinating multiple AI coding agents across tiled panes",
+      "size_kb": 311,
+      "pushed_at": "2026-07-24T21:56:12Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai-agents",
+        "bash",
+        "developer-tools",
+        "tmux"
+      ]
+    },
+    {
+      "name": "vibe_cockpit",
+      "html_url": "https://github.com/Dicklesworthstone/vibe_cockpit",
+      "clone_url": "https://github.com/Dicklesworthstone/vibe_cockpit.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Real-time monitoring dashboard for AI coding agent fleets: session health, output streaming, and observability across Claude, Codex, and Gemini",
+      "size_kb": 6306,
+      "pushed_at": "2026-08-24T03:36:35Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "ai-agents",
+        "dashboard",
+        "developer-tools",
+        "monitoring",
+        "typescript"
+      ]
+    },
+    {
+      "name": "visual_astar_python",
+      "html_url": "https://github.com/Dicklesworthstone/visual_astar_python",
+      "clone_url": "https://github.com/Dicklesworthstone/visual_astar_python.git",
+      "default_branch": "main",
+      "language": "Python",
+      "description": "Generate Cool-Looking Mazes and Animations Illustrating the A* Pathfinding Algorithm",
+      "size_kb": 717,
+      "pushed_at": "2025-02-27T11:25:30Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "astar",
+        "astar-algorithm",
+        "mazes",
+        "pathfinding"
+      ]
+    },
+    {
+      "name": "wasm_cmaes",
+      "html_url": "https://github.com/Dicklesworthstone/wasm_cmaes",
+      "clone_url": "https://github.com/Dicklesworthstone/wasm_cmaes.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Fast WASM version of CMA-ES written in Rust, for use in Javascript, with a nice demo page ",
+      "size_kb": 715,
+      "pushed_at": "2026-08-17T17:11:02Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "cma-es",
+        "javascript",
+        "optimization",
+        "rust",
+        "wasm"
+      ]
+    },
+    {
+      "name": "wezterm",
+      "html_url": "https://github.com/Dicklesworthstone/wezterm",
+      "clone_url": "https://github.com/Dicklesworthstone/wezterm.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "A GPU-accelerated cross-platform terminal emulator and multiplexer written by @wez and implemented in Rust",
+      "size_kb": 312812,
+      "pushed_at": "2026-07-24T22:21:16Z",
+      "fork": true,
+      "archived": false,
+      "topics": [
+        "fork",
+        "gpu",
+        "rust",
+        "terminal"
+      ]
+    },
+    {
+      "name": "xf",
+      "html_url": "https://github.com/Dicklesworthstone/xf",
+      "clone_url": "https://github.com/Dicklesworthstone/xf.git",
+      "default_branch": "main",
+      "language": "Rust",
+      "description": "Search your X/Twitter data archive from the command line with sub-millisecond full-text queries via Tantivy and SQLite",
+      "size_kb": 8844,
+      "pushed_at": "2026-08-24T03:36:33Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "cli",
+        "rust",
+        "search",
+        "tantivy",
+        "twitter"
+      ]
+    },
+    {
+      "name": "your-source-to-prompt.html",
+      "html_url": "https://github.com/Dicklesworthstone/your-source-to-prompt.html",
+      "clone_url": "https://github.com/Dicklesworthstone/your-source-to-prompt.html.git",
+      "default_branch": "main",
+      "language": "HTML",
+      "description": "Quickly and securely turn your code projects into LLM prompts, all locally on your own machine!",
+      "size_kb": 1330,
+      "pushed_at": "2025-02-27T11:21:28Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "developer-tools",
+        "javascript",
+        "llm",
+        "web-app"
+      ]
+    },
+    {
+      "name": "youtube_transcript_cleaner",
+      "html_url": "https://github.com/Dicklesworthstone/youtube_transcript_cleaner",
+      "clone_url": "https://github.com/Dicklesworthstone/youtube_transcript_cleaner.git",
+      "default_branch": "main",
+      "language": "HTML",
+      "description": "YouTube Transcript Cleaner is a simple web-based application that improves the readability of YouTube transcripts.",
+      "size_kb": 613,
+      "pushed_at": "2025-02-27T11:28:08Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "javascript",
+        "transcription",
+        "web-app",
+        "youtube"
+      ]
+    },
+    {
+      "name": "yto_blog_posts",
+      "html_url": "https://github.com/Dicklesworthstone/yto_blog_posts",
+      "clone_url": "https://github.com/Dicklesworthstone/yto_blog_posts.git",
+      "default_branch": "main",
+      "language": "",
+      "description": "Blog posts for YouTube Transcript Optimizer covering the Python backend, Next.js frontend, and case studies in historical analysis and finance",
+      "size_kb": 1942,
+      "pushed_at": "2025-01-26T14:58:10Z",
+      "fork": false,
+      "archived": false,
+      "topics": [
+        "blog",
+        "writing",
+        "youtube"
+      ]
+    }
+  ]
+}

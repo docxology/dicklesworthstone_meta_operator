@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+title: Dicklesworthstone Meta-Operator
+message: >-
+  If you use this software, please cite it using the metadata below.
+authors:
+  - family-names: Friedman
+    given-names: Daniel Ari
+    email: daniel@activeinference.institute
+    orcid: https://orcid.org/0000-0002-3318-5902
+version: 0.2.0
+date-released: "2026-09-03"
+license: MIT
+repository-code: "https://github.com/docxology/dicklesworthstone_meta_operator"
+keywords:
+  - git
+  - repository-fleet
+  - orchestration
+  - automation
+  - dashboard
+  - upstream-sync
+abstract: >-
+  Meta-operator over a GitHub user's entire repository corpus: clone every
+  repo, verify each clone sits on its upstream default branch with a clean
+  worktree, orchestrate commands across selector-filtered subsets, build
+  per-repo interpretability profiles, and render a static self-contained
+  HTML dashboard with a binary health gate.
