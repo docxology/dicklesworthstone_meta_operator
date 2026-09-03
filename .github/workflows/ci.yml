@@ -31,7 +31,7 @@ jobs:
         run: pytest tests/ --cov=src --cov-report=term-missing --cov-fail-under=90
       - name: Zero-mock audit
         run: |
-          if grep -rn "unittest\.mock\|MagicMock\|@patch\|create_autospec" tests/; then
+          if grep -rn --include="*.py" "unittest\.mock\|MagicMock\|@patch\|create_autospec" tests/; then
             echo "VIOLATION — mocks found in tests/"; exit 1
           else
             echo "Clean — no mocks found"
