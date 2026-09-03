@@ -15,10 +15,10 @@ from pathlib import Path
 import pytest
 
 from src.models import UpstreamStatus, from_dict
-from src.upstream_check import build_report, verify_all, verify_one
+from src.upstream_check import build_report, find_unborn, verify_all, verify_one
 
-GIT_IDENTITY = ["-c", "user.email=test@example.com", "-c", "user.name=Test"]
 DEFAULT_BRANCH = "main"
+GIT_IDENTITY = ["-c", "user.name=Fixture", "-c", "user.email=fixture@example.com"]
 
 
 def git(args: list[str], cwd: Path) -> str:
@@ -328,3 +328,16 @@ def test_smart_fetch_probes_clean_and_refetches_drifted(tmp_path) -> None:
     assert statuses["drifted"].state == "behind"
     assert statuses["drifted"].fetched is True
     assert statuses["drifted"].behind == 1
+
+
+def test_find_unborn(tmp_path) -> None:
+    """Empty repo -> unborn; committed repo and missing clone -> not listed."""
+    empty = tmp_path / "empty"
+    git(["init", "-b", DEFAULT_BRANCH, str(empty)], tmp_path)
+    seeded = tmp_path / "seeded"
+    git(["init", "-b", DEFAULT_BRANCH, str(seeded)], tmp_path)
+    (seeded / "f.txt").write_text("x\n", encoding="utf-8")
+    commit_all(seeded, "init")
+
+    result = find_unborn(["empty", "seeded", "absent"], tmp_path)
+    assert result == ["empty"]

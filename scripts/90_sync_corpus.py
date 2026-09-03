@@ -24,6 +24,7 @@ sys.path.insert(0, str(REPO_ROOT))
 
 from src.config import load_config  # noqa: E402
 from src.orchestrator import run_and_save, summarize  # noqa: E402
+from src.upstream_check import find_unborn  # noqa: E402
 from src.registry import load_registry, registry_metas  # noqa: E402
 
 
@@ -49,6 +50,12 @@ def main() -> int:
     if not names:
         print("registry is empty — run scripts/10_build_registry.py first")
         return 1
+    repos_dir = REPO_ROOT / config.repos_dir
+    unborn = find_unborn(names, repos_dir)
+    names = [n for n in names if n not in set(unborn)]
+    if unborn:
+        print(f"skipping {len(unborn)} unborn repos (empty upstream, nothing to pull): "
+              + ", ".join(unborn))
 
     failed = False
 

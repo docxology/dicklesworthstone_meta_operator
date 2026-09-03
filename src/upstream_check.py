@@ -252,6 +252,26 @@ def _verify_existing(repo: Path, default_branch: str, *, do_fetch: bool) -> Upst
         fetched=fetched,
     )
 
+
+def find_unborn(names: list[str], repos_dir: Path) -> list[str]:
+    """Repos with no commits at HEAD (``git rev-parse --verify HEAD`` fails).
+
+    An empty-upstream clone cannot pull; the caller should exclude these from
+    pull passes and report them explicitly (no-silent-caps rule). Returns a
+    sorted list; a missing clone directory is NOT unborn (that is the
+    orchestrator's ``missing clone`` skip, different reason).
+    """
+    unborn: list[str] = []
+    for name in sorted(set(names)):
+        repo = repos_dir / name
+        if not repo.is_dir():
+            continue
+        proc = _run_git(["rev-parse", "--verify", "-q", "HEAD"], repo)
+        if proc.returncode != 0:
+            unborn.append(name)
+    return sorted(unborn)
+
+
 def _remote_tip_moved(repo: Path, default_branch: str) -> bool:
     """True when ``origin``'s current tip for ``default_branch`` differs from
     the locally cached ``origin/<default_branch>`` ref (cheap ``ls-remote``,
