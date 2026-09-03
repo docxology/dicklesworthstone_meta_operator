@@ -1,5 +1,7 @@
 # Dicklesworthstone Meta-Operator
 
+[![CI](https://github.com/docxology/dicklesworthstone_meta_operator/actions/workflows/ci.yml/badge.svg)](https://github.com/docxology/dicklesworthstone_meta_operator/actions/workflows/ci.yml)
+
 Meta-operator over the entire [github.com/Dicklesworthstone](https://github.com/Dicklesworthstone)
 corpus (~207 repos, ~10 GB cloned): clone every repo, confirm every clone sits on its
 upstream default branch with a clean worktree, orchestrate commands across the

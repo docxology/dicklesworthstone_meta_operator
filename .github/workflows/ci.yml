@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyyaml pytest pytest-cov
+      - name: Ensure tests were collected
+        run: |
+          COLLECTED=$(pytest tests/ --collect-only -q | tail -1)
+          echo "collected: $COLLECTED"
+          echo "$COLLECTED" | grep -Eq '[1-9][0-9]* tests? collected'
+      - name: Run tests with coverage gate
+        run: pytest tests/ --cov=src --cov-report=term-missing --cov-fail-under=90
+      - name: Zero-mock audit
+        run: |
+          if grep -rn "unittest\.mock\|MagicMock\|@patch\|create_autospec" tests/; then
+            echo "VIOLATION — mocks found in tests/"; exit 1
+          else
+            echo "Clean — no mocks found"
+          fi
