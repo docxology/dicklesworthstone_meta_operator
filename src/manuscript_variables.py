@@ -248,11 +248,15 @@ def generate_variables(
     put("FIGURE_COUNT", figure_count)
 
     # -- artifact integrity hashes --------------------------------------------
+    # health_gate.json is deliberately EXCLUDED: the gate's hash depends on
+    # figure presence (figures_present check), and the figures are regenerated
+    # from the tracked artifacts in CI before tests run — hashing it here would
+    # make the token map self-referential (the map's content changes the gate,
+    # which changes the map). The other three artifacts are pure inputs.
     artifact_keys = {
         "repo_registry.json": "ARTIFACT_SHA8_REGISTRY",
         "upstream_status.json": "ARTIFACT_SHA8_UPSTREAM",
         "inventory.json": "ARTIFACT_SHA8_INVENTORY",
-        "health_gate.json": "ARTIFACT_SHA8_GATE",
     }
     for filename, key in artifact_keys.items():
         path = ddir / filename

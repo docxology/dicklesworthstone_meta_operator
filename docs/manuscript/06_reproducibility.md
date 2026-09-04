@@ -18,9 +18,8 @@ Each consumed artifact is pinned by the first eight hex characters of its SHA-25
 | `output/data/repo_registry.json` | `{{ARTIFACT_SHA8_REGISTRY}}` |
 | `output/data/upstream_status.json` | `{{ARTIFACT_SHA8_UPSTREAM}}` |
 | `output/data/inventory.json` | `{{ARTIFACT_SHA8_INVENTORY}}` |
-| `output/data/health_gate.json` | `{{ARTIFACT_SHA8_GATE}}` |
 
-The verification snapshot itself is stamped {{VERIFY_GENERATED_AT}}. Re-running the pipeline stages (10 → 90) regenerates every artifact; re-running `scripts/65_generate_figures.py` regenerates all {{FIGURE_COUNT}} manuscript figures from the same inputs deterministically (fixed palette, sorted inputs, no embedded timestamps).
+The verification snapshot itself is stamped {{VERIFY_GENERATED_AT}}. The health-gate artifact is deliberately not hash-pinned here: its content depends on figure presence, and the figures are regenerated in the same pipeline that hydrates this document — the gate is a *derived verdict*, not input evidence. Re-running the pipeline stages (10 → 90) regenerates every artifact; re-running `scripts/65_generate_figures.py` regenerates all {{FIGURE_COUNT}} manuscript figures from the same inputs deterministically (fixed palette, sorted inputs, no embedded timestamps).
 
 ## Test discipline {#sec:test-discipline}
 The suite spans {{FIGURE_COUNT}}+ figure, gate, inventory, orchestration, dashboard, and contract tests — 180 at the time of writing — with zero mocks: no `unittest.mock`, `MagicMock`, `@patch`, or `create_autospec` anywhere in `tests/`. Git behavior is tested against real fixture repositories built by `git init`/`commit`/`push` in temporary directories; the GitHub boundary is exercised through a real PATH-stubbed `gh` executable that emits fixture pages; figure code is tested by generating real PNGs and asserting byte-identical determinism. Branch coverage on `src/` is gated at ≥90 % (achieved: 94 %+) and enforced both locally and in CI on Python 3.11, 3.12, and 3.13, which also regenerates the figures from the tracked artifacts on every push.

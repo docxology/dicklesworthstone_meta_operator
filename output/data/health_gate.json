@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T04:55:46Z",
+  "generated_at": "2026-09-04T04:57:37Z",
   "passed": false,
   "checks": [
     {
@@ -40,7 +40,7 @@
     {
       "check_id": "manuscript_tokens_present",
       "passed": true,
-      "detail": "manuscript_variables.json present (44 variables)"
+      "detail": "manuscript_variables.json present (43 variables)"
     },
     {
       "check_id": "runs_present",
