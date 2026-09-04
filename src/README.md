@@ -21,7 +21,9 @@ artifacts under `output/data/`).
 | `inventory.py` | Per-repo interpretability profiles | fs walk + `git log` |
 | `orchestrator.py` | Selector-filtered command runs + reports | subprocess |
 | `dashboard.py` | Self-contained HTML dashboard + markdown catalog (pure renderers) | none (pure) |
-| `health_gate.py` | Binary go/no-go over the artifact tree | jsonio reads |
+| `health_gate.py` | Binary go/no-go over the artifact tree (incl. figures + token map) | jsonio reads |
+| `figures.py` | Deterministic manuscript figure builders (pure, colorblind-safe) | matplotlib (Agg) |
+| `manuscript_variables.py` | `{{TOKEN}}` generator: tracked artifacts → prose token map | jsonio + config |
 
 ## API Reference
 

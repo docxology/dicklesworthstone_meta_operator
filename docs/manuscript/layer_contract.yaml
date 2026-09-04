@@ -1,0 +1,3 @@
+# Infrastructure-free fork: no monorepo adapters at all.
+# src/ imports only stdlib, pyyaml, matplotlib (figures), and the contract modules.
+allow_infrastructure_imports: []

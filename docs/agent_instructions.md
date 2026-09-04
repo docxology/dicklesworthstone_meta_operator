@@ -63,4 +63,9 @@ grep -r "unittest.mock\|MagicMock\|@patch\|create_autospec" tests/ || echo "Clea
 
 # 3. Pipeline still consistent after touching any producer/consumer
 uv run python scripts/60_dashboard.py && uv run python scripts/70_health_gate.py
+
+# 4. Manuscript accuracy contract (when touching prose, figures, or artifacts)
+uv run python scripts/z_generate_manuscript_variables.py
+uv run python scripts/65_generate_figures.py
+uv run pytest tests/test_manuscript_variables.py tests/test_figures.py -q
 ```

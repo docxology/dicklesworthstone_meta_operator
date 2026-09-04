@@ -33,6 +33,8 @@ and the pipeline stages re-runnable in any order.
 | `output/data/inventory.json` | `{"generated_at", "repos": [RepoProfile…], "missing": [names]}` (name-sorted) |
 | `output/data/runs/<run_id>/results.json` | `{"run_id", "generated_at", "command", "selector", "repos": [RunResult…]}` (name-sorted) |
 | `output/data/health_gate.json` | `{"generated_at", "passed", "checks": [GateCheck…]}` |
+| `output/figures/fig_*.png` (4) | deterministic manuscript figures (`src/figures.py` via script 65) |
+| `output/data/manuscript_variables.json` | `{{TOKEN}}` map for the manuscript (one generator, dual-direction test) |
 
 State vocabularies live in `src/models.py` (single source of truth):
 `CloneOutcome.status` ∈ {cloned, already_cloned, failed, mismatch};

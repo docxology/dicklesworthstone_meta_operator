@@ -1,0 +1,36 @@
+# Claim ledger — manuscript claims sourced outside {{TOKEN}} injection
+# Schema: docs/manuscript/../../../data/AGENTS.md (claim_id, kind, value, source,
+# source_tier, freshness, artifact_path). Regenerate tokens via
+# scripts/z_generate_manuscript_variables.py; ledger rows are for claims that
+# CANNOT be artifact-generated.
+
+claims:
+  - claim_id: test-suite-scale
+    kind: test_count
+    value: "180 tests, 94.05% branch coverage on src/ at v0.2.0"
+    source: "pytest run on the release tree; CI matrix 3.11/3.12/3.13 green"
+    source_tier: ci_receipt
+    freshness: "re-verified per push by .github/workflows/ci.yml"
+    artifact_path: .github/workflows/ci.yml
+
+  - claim_id: corpus-owner-attribution
+    kind: attribution
+    value: "The corpus is the public GitHub corpus of user Dicklesworthstone, accessed 2026-09-03"
+    source: "https://github.com/Dicklesworthstone"
+    source_tier: external_receipt
+    freshness: "static attribution; corpus size changes are re-captured by stage 10"
+
+  - claim_id: template-lineage
+    kind: provenance
+    value: "Project is a self-contained fork of the docxology/template research-project paradigm (template_code_project conventions)"
+    source: "docxology/template repository; lane history in the private sidecar"
+    source_tier: repo_history
+    freshness: "stable; re-affirmed on each release"
+
+  - claim_id: operational-failures-real
+    kind: operational_evidence
+    value: "Stale ORIG_HEAD.lock (aadc), unborn clone (asupersync-beads), external-storage EPERM flapping observed and remediated during operation"
+    source: "run artifacts 20260903-*, operator logs, fix commits 8884eeb and c2c665e"
+    source_tier: run_receipt
+    freshness: "dated 2026-09-03; individual lock/unborn cases recur and are handled by scripts/90_sync_corpus.py"
+    artifact_path: output/data/runs

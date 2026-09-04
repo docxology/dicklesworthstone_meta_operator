@@ -1,0 +1,53 @@
+# Dicklesworthstone Meta-Operator — manuscript configuration
+# Loaded by scripts/z_generate_manuscript_variables.py (paper metadata) and the
+# template render pipeline. Mirrors docs/manuscript/config.yaml.example fields.
+
+paper:
+  title: "A Meta-Operator for a 200-Repository GitHub Corpus: Registry-Driven Cloning, Upstream-Sync Verification, and Interpretability at Fleet Scale"
+  subtitle: "The dicklesworthstone_meta_operator system"
+  version: "0.2.0"
+  date: ""  # auto-generated when empty
+
+authors:
+  - name: "Daniel Ari Friedman"
+    email: "daniel@activeinference.institute"
+    affiliation: "Active Inference Institute"
+    corresponding: true
+
+publication:
+  doi: ""
+  version_doi: ""
+  version_record: ""
+  github_repository: "docxology/dicklesworthstone_meta_operator"
+  journal: ""
+  year: ""
+
+keywords:
+  - "git"
+  - "repository fleet"
+  - "orchestration"
+  - "upstream synchronization"
+  - "reproducibility"
+  - "dashboard"
+
+metadata:
+  license: "MIT"
+  language: "en"
+
+testing:
+  max_test_failures: 0
+  max_infra_test_failures: 0
+  max_project_test_failures: 0
+
+render:
+  formats:
+    pdf: true
+    html: true
+    slides: false
+    docx: false
+    epub: false
+
+operator:
+  # Correlates the prose with data/operator_config.yaml (the runtime input).
+  github_user: "Dicklesworthstone"
+  include_forks: true

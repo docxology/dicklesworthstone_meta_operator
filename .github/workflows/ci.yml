@@ -21,7 +21,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pyyaml pytest pytest-cov
+          pip install pyyaml pytest pytest-cov matplotlib
       - name: Ensure tests were collected
         run: |
           COLLECTED=$(pytest tests/ --collect-only -q | tail -1)
@@ -29,6 +29,9 @@ jobs:
           echo "$COLLECTED" | grep -Eq '[1-9][0-9]* tests? collected'
       - name: Run tests with coverage gate
         run: pytest tests/ --cov=src --cov-report=term-missing --cov-fail-under=90
+      - name: Generate figures from tracked artifacts
+        run: |
+          python scripts/65_generate_figures.py && test -s output/figures/fig_state_distribution.png
       - name: Zero-mock audit
         run: |
           if grep -rn --include="*.py" "unittest\.mock\|MagicMock\|@patch\|create_autospec" tests/; then

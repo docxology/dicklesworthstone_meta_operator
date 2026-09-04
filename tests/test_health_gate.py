@@ -12,6 +12,7 @@ import shutil
 import subprocess
 
 from src import project_paths
+from src.figures import build_all_figures
 from src.health_gate import CHECK_IDS, load_gate, run_gate, save_gate
 
 
@@ -141,6 +142,31 @@ def build_tree(root: Path, scratch: Path) -> None:
     (ddir / project_paths.CORPUS_CATALOG).write_text(
         "# Corpus Catalog\n\nall good\n", encoding="utf-8"
     )
+    _add_figures_and_manuscript(root, REPO_NAMES)
+
+
+def _add_figures_and_manuscript(root: Path, names: tuple[str, ...]) -> None:
+    """Render real figures and a minimal manuscript-variables artifact."""
+    ddir = project_paths.data_dir(root)
+    build_all_figures(
+        _registry_payload(names),
+        {
+            "generated_at": "2026-08-02T00:00:00Z",
+            "checked": len(names),
+            "ok": len(names),
+            "repos": [_upstream_entry(n) for n in names],
+        },
+        {
+            "generated_at": "2026-08-02T00:00:00Z",
+            "repos": [_profile(n) for n in names],
+        },
+        project_paths.figures_dir(root),
+    )
+    _write_json(
+        ddir / "manuscript_variables.json",
+        {f"var_{i:02d}": i for i in range(10)},
+    )
+
 
 
 def _by_id(report):
@@ -248,6 +274,7 @@ def test_missing_clones_capped_at_ten(tmp_path: Path) -> None:
         "<html><body>" + "x" * 12000 + "</body></html>", encoding="utf-8"
     )
     (ddir / project_paths.CORPUS_CATALOG).write_text("# Corpus Catalog\n", encoding="utf-8")
+    _add_figures_and_manuscript(tmp_path, names)
     report = run_gate(tmp_path)
     _assert_only_fails(report, "clones_complete")
     detail = _by_id(report)["clones_complete"].detail
@@ -301,3 +328,23 @@ def test_malformed_upstream_entries_fail(tmp_path: Path) -> None:
     check = _by_id(report)["upstream_all_ok"]
     assert not check.passed
     assert "malformed" in check.detail
+
+
+def test_missing_figures_fail_only_figures_present(tmp_path: Path) -> None:
+    """Removing output/figures fails exactly the figures check, with the fix hint."""
+    build_tree(tmp_path, tmp_path / "scratch")
+    shutil.rmtree(project_paths.figures_dir(tmp_path))
+    report = run_gate(tmp_path)
+    _assert_only_fails(report, "figures_present")
+    detail = _by_id(report)["figures_present"].detail
+    assert "65_generate_figures.py" in detail
+
+
+def test_missing_manuscript_variables_fails_only_manuscript_check(tmp_path: Path) -> None:
+    """A missing manuscript_variables.json fails its check with the draft-generation hint."""
+    build_tree(tmp_path, tmp_path / "scratch")
+    (project_paths.data_dir(tmp_path) / "manuscript_variables.json").unlink()
+    report = run_gate(tmp_path)
+    _assert_only_fails(report, "manuscript_tokens_present")
+    detail = _by_id(report)["manuscript_tokens_present"].detail
+    assert "z_generate_manuscript_variables.py" in detail and "--allow-draft" in detail

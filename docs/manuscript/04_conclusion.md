@@ -1,0 +1,7 @@
+# Conclusion {#sec:conclusion}
+
+A corpus of {{CORPUS_REPO_TOTAL}} repositories is not an inventory problem; it is a *verification* problem. The contribution of this work is a closed operational loop in which the answer to "is every clone on its upstream main?" is a typed artifact produced by a bounded, probe-first procedure, and every other question — what is in each repository, what can be run where, what changed since the last look — is answered from the same artifact chain rather than from memory.
+
+Three design decisions carried most of the weight. **Artifact-mediated module communication** (no workflow module imports another) made every stage independently re-runnable and made the zero-mock test discipline a consequence of the architecture rather than an act of discipline. **Typed outcomes at every subprocess boundary** turned real infrastructure failures — stale lock files from killed pulls, unborn clones from empty upstreams, storage-layer flapping — into named, tested, and permanently fixed cases rather than recurring tribal knowledge. **Token-gated manuscript numbers** keep this document honest by construction: the prose cannot drift from the artifacts without a red CI run ([@sec:reproducibility]).
+
+The gate's honest NO-GO on a corpus whose upstreams move hourly is the system behaving correctly: a fleet operator that reported "everything in sync" against a corpus under active development would be lying by omission. The steady-state loop — synchronize, verify, render, gate — is scheduled daily and produces exactly this record.

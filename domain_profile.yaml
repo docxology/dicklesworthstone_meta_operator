@@ -13,6 +13,11 @@ artifact_expectations:
   - output/data/repo_registry.json
   - output/data/upstream_status.json
   - output/data/inventory.json
+  - output/figures/fig_state_distribution.png
+  - output/figures/fig_language_distribution.png
+  - output/figures/fig_loc_size.png
+  - output/figures/fig_staleness.png
+  - output/data/manuscript_variables.json
   - output/web/dashboard.html
   - output/data/health_gate.json
 citation_policy: none
@@ -20,4 +25,9 @@ source_policy: "The corpus is third-party: read and run it, never modify or push
 review_gates:
   - upstream_all_ok
   - health_gate
-llm_prompt_guidance: "Use the generated registry, upstream status, and inventory artifacts as the only evidence source for corpus claims; missing artifacts are blockers, not assumptions."
+llm_prompt_guidance: "Use the generated registry, upstream status, inventory artifacts, and the token map (output/data/manuscript_variables.json) as the only evidence source for corpus claims; never invent numbers in prose — every manuscript numeric is a {{TOKEN}} emitted from tracked artifacts."
+figure_types:
+  - state_distribution
+  - language_distribution
+  - loc_size_scatter
+  - staleness_histogram

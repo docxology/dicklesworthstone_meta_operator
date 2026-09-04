@@ -16,7 +16,7 @@ SCRIPTS = sorted((PROJECT_ROOT / "scripts").glob("*.py"))
 
 
 def test_all_scripts_compile():
-    assert len(SCRIPTS) == 9
+    assert len(SCRIPTS) == 11
     for script in SCRIPTS:
         py_compile.compile(str(script), doraise=True)
 

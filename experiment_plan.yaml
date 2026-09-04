@@ -26,6 +26,11 @@ expected_artifacts:
   - output/data/clone_outcomes.json
   - output/data/upstream_status.json
   - output/data/inventory.json
+  - output/figures/fig_state_distribution.png
+  - output/figures/fig_language_distribution.png
+  - output/figures/fig_loc_size.png
+  - output/figures/fig_staleness.png
+  - output/data/manuscript_variables.json
   - output/web/dashboard.html
   - output/data/corpus_catalog.md
   - output/data/health_gate.json

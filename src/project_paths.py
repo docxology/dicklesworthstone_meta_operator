@@ -15,6 +15,7 @@ HEALTH_GATE = "health_gate.json"
 CORPUS_CATALOG = "corpus_catalog.md"
 DASHBOARD = "dashboard.html"
 RUNS_DIRNAME = "runs"
+FIGURES_DIRNAME = "figures"
 
 
 def resolve_project_root() -> Path:
@@ -32,6 +33,10 @@ def reports_dir(project_root: Path | None = None) -> Path:
 
 def web_dir(project_root: Path | None = None) -> Path:
     return (project_root or resolve_project_root()) / "output" / "web"
+
+
+def figures_dir(project_root: Path | None = None) -> Path:
+    return (project_root or resolve_project_root()) / "output" / FIGURES_DIRNAME
 
 
 def runs_dir(project_root: Path | None = None) -> Path:

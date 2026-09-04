@@ -13,7 +13,9 @@ is in `../AGENTS.md`.
 | `40_inventory.py` | inventory | registry | `output/data/inventory.json` | clones missing |
 | `50_orchestrate.py` | run | inventory + registry | `output/data/runs/<id>/results.json`, `output/reports/<id>.md` | any run failed/timed out |
 | `60_dashboard.py` | dashboard | registry + status + inventory + runs | `output/web/dashboard.html`, `output/data/corpus_catalog.md` | registry missing |
+| `65_generate_figures.py` | figures | registry + status + inventory | `output/figures/fig_*.png` (4) | required artifact missing |
 | `70_health_gate.py` | gate | everything | `output/data/health_gate.json` | any gate check failed |
+| `z_generate_manuscript_variables.py` | tokens | all artifacts | `output/data/manuscript_variables.json` | required artifact missing (strict mode) |
 | `90_sync_corpus.py` | sync | registry | `output/data/runs/<id>/results.json` | any pull failed/timed out |
 
 ## Usage
