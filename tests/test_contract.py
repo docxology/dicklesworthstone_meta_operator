@@ -184,12 +184,22 @@ class TestConfig:
             ({"run_workers": 0}, "run_workers"),
             ({"run_timeout_s": 0}, "run_timeout_s"),
             ({"stream_tail_bytes": 0}, "stream_tail_bytes"),
+            ({"cma_dir": "/absolute/cma"}, "cma_dir"),
+            ({"cma_dir": ""}, "cma_dir"),
         ],
     )
     def test_validated_rejects_nonsense(self, overrides, fragment):
         config = OperatorConfig(**overrides)
         with pytest.raises(ValueError, match=fragment):
             config.validated()
+
+    def test_cma_dir_default_is_relative_checkout(self, tmp_path: Path):
+        assert OperatorConfig().cma_dir == "../code_meta_analysis"
+        (tmp_path / "data").mkdir()
+        (tmp_path / "data" / "operator_config.yaml").write_text(
+            "cma_dir: ../../docxology/code_meta_analysis\n", encoding="utf-8"
+        )
+        assert load_config(tmp_path).cma_dir == "../../docxology/code_meta_analysis"
 
 
 # ---------------------------------------------------------------------------

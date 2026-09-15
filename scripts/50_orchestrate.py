@@ -24,6 +24,7 @@ sys.path.insert(0, str(REPO_ROOT))
 from src.config import load_config  # noqa: E402
 from src.inventory import build_inventory  # noqa: E402
 from src.jsonio import read_json, write_text  # noqa: E402
+from src.cma_lane import CMA_AUTO_KEY, CMA_COMMAND_LABEL, render_cma_section, run_cma_analyze  # noqa: E402
 from src.models import AUTO_COMMAND_KEYS  # noqa: E402
 from src.orchestrator import (  # noqa: E402
     SelectorSpec,
@@ -44,8 +45,9 @@ def build_parser() -> argparse.ArgumentParser:
     group.add_argument("--command", help="exact argv command to run in each repo")
     group.add_argument(
         "--auto",
-        choices=sorted(AUTO_COMMAND_KEYS),
-        help="use each repo's auto-detected command for this key",
+        choices=sorted(AUTO_COMMAND_KEYS | {CMA_AUTO_KEY}),
+        help="use each repo's auto-detected command for this key "
+        f"('{CMA_AUTO_KEY}' runs code_meta_analysis lanes per repo)",
     )
     parser.add_argument("--set", nargs="+", dest="names", help="explicit repo names")
     parser.add_argument("--language", help="filter by primary language")
@@ -101,12 +103,15 @@ def main() -> int:
         language=args.language,
         min_loc=args.min_loc,
         exclude=tuple(args.exclude or ()),
+        limit=args.limit,
         sort=args.sort,
-        forks=False if args.no_forks else None,
     )
     names = filter_repos(merged, selector)
     overrides: dict[str, str] = {}
-    if args.auto is not None:
+    if args.auto == CMA_AUTO_KEY:
+        # cma lanes are orchestration-driven; no per-repo auto-cmd capability.
+        command = CMA_COMMAND_LABEL
+    elif args.auto is not None:
         names, overrides, skipped = resolve_auto(names, merged, args.auto)
         if skipped:
             print(
@@ -129,20 +134,32 @@ def main() -> int:
         f"min_loc={args.min_loc} sort={args.sort} limit={args.limit or '*'}"
     )
     print(f"running in {len(names)} repos: {command}")
-    run_id, artifact = run_and_save(
-        names,
-        command,
-        project_root=REPO_ROOT,
-        selector_desc=selector_desc,
-        workers=args.workers or config.run_workers,
-        timeout_s=args.timeout_s or config.run_timeout_s,
-        tail_bytes=args.tail_bytes or config.stream_tail_bytes,
-        overrides=overrides or None,
-    )
+    if args.auto == CMA_AUTO_KEY:
+        run_id, artifact = run_cma_analyze(
+            names,
+            project_root=REPO_ROOT,
+            config=config,
+            selector_desc=selector_desc,
+            workers=args.workers,
+            timeout_s=args.timeout_s,
+            tail_bytes=args.tail_bytes,
+        )
+    else:
+        run_id, artifact = run_and_save(
+            names,
+            command,
+            project_root=REPO_ROOT,
+            selector_desc=selector_desc,
+            workers=args.workers or config.run_workers,
+            timeout_s=args.timeout_s or config.run_timeout_s,
+            tail_bytes=args.tail_bytes or config.stream_tail_bytes,
+            overrides=overrides or None,
+        )
     summary = summarize(artifact)
-    report_path = write_text(
-        reports_dir(REPO_ROOT) / f"{run_id}.md", render_run_report(artifact, summary)
-    )
+    report = render_run_report(artifact, summary)
+    if args.auto == CMA_AUTO_KEY:
+        report += render_cma_section(artifact.get("cma") or {})
+    report_path = write_text(reports_dir(REPO_ROOT) / f"{run_id}.md", report)
     print(
         f"run {run_id}: {summary['ok']} ok / {summary['failed']} failed / "
         f"{summary['timed_out']} timed out / {summary['skipped']} skipped"

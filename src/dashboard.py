@@ -31,6 +31,10 @@ _CHIP_SEVERITY: dict[str, str] = {
     "detached": "bad",
     "off_default": "bad",
     "missing": "bad",
+    # cma lane statuses share the chip renderer (never upstream states).
+    "ok": "ok",
+    "failed": "bad",
+    "timed_out": "warn",
 }
 
 
@@ -91,8 +95,32 @@ def load_payload(project_root: Path, *, run_id: str | None = None) -> dict:
         "upstream": upstream,
         "inventory": inventory,
         "run": _load_run(project_paths.runs_dir(root), run_id),
+        "cma_run": _load_cma_run(project_paths.runs_dir(root)),
         "runs_history": _load_run_history(project_paths.runs_dir(root)),
     }
+
+
+def _load_cma_run(runs_root: Path) -> dict | None:
+    """Latest run artifact carrying a ``cma`` mapping (lexicographic scan).
+
+    Absent, corrupt, or non-cma runs are skipped; ``None`` when no cma run
+    exists (the dashboard renders its empty-state panel).
+    """
+    if not runs_root.is_dir():
+        return None
+    for target in sorted(
+        (
+            d
+            for d in runs_root.iterdir()
+            if d.is_dir() and (d / "results.json").is_file()
+        ),
+        key=lambda d: d.name,
+        reverse=True,
+    ):
+        raw = _read_optional_json(target / "results.json")
+        if isinstance(raw, dict) and isinstance(raw.get("cma"), dict):
+            return raw
+    return None
 
 
 def _load_run(runs_root: Path, run_id: str | None) -> dict | None:
@@ -185,8 +213,6 @@ def compute_summary(payload: dict) -> dict:
         if lang:
             languages[lang] = languages.get(lang, 0) + 1
         total_size_kb += int(r.get("size_kb") or 0)
-    languages = dict(sorted(languages.items(), key=lambda kv: (-kv[1], kv[0])))
-
     upstream_repos: list[dict] = list((upstream or {}).get("repos", []) or [])
     states: dict[str, int] = {}
     upstream_ok = 0
@@ -199,16 +225,20 @@ def compute_summary(payload: dict) -> dict:
 
     inv_repos: list[dict] = list((inventory or {}).get("repos", []) or [])
     total_loc = sum(int(r.get("total_loc") or 0) for r in inv_repos)
-
-
     top = sorted(
         inv_repos,
         key=lambda r: (-(int(r.get("total_loc") or 0)), str(r.get("name") or "")),
     )
+    cma_run = payload.get("cma_run") if isinstance(payload.get("cma_run"), dict) else None
     top_by_loc = [
         {"name": str(r.get("name") or ""), "total_loc": int(r.get("total_loc") or 0)}
         for r in top[:10]
     ]
+    cma_rows = dict(cma_run.get("cma") or {}) if cma_run else {}
+    cma_ok = sum(1 for row in cma_rows.values() if (row or {}).get("status") == "ok")
+    cma_issues_total = sum(
+        int((row or {}).get("issues_count") or 0) for row in cma_rows.values()
+    )
 
     return {
         "total": len(repos),
@@ -221,6 +251,10 @@ def compute_summary(payload: dict) -> dict:
         "total_size_kb": total_size_kb,
         "stale_days_max": _max_stale_days(inv_repos, datetime.now(timezone.utc)),
         "top_by_loc": top_by_loc,
+        "cma_repos": len(cma_rows),
+        "cma_ok": cma_ok,
+        "cma_failed": len(cma_rows) - cma_ok,
+        "cma_issues_total": cma_issues_total,
     }
 
 
@@ -565,6 +599,59 @@ def render_dashboard(payload: dict, summary: dict) -> str:
             + "</tbody></table></section>"
         )
 
+    # --- cma panel ---------------------------------------------------------
+    cma_run = payload.get("cma_run") if isinstance(payload.get("cma_run"), dict) else None
+    cma_html = ""
+    if cma_run is not None:
+        cma_rows: dict[str, dict] = dict(cma_run.get("cma") or {})
+        corpus_names = {str(r.get("name") or "") for r in repos}
+        names = sorted(corpus_names | set(cma_rows))
+        cma_rows_html: list[str] = []
+        for name in names:
+            row = cma_rows.get(name)
+            if row is None:
+                cma_rows_html.append(
+                    '<tr><td>%s</td><td colspan="5" class="muted">'
+                    "no cma report yet</td></tr>" % _esc(name)
+                )
+                continue
+            row = row or {}
+            count = row.get("issues_count")
+            central = row.get("central_file")
+            coupling = row.get("coupling")
+            lanes = row.get("lanes") or {}
+            cma_rows_html.append(
+                "<tr><td>%s</td><td class=\"num\">%s</td><td>%s</td>"
+                "<td class=\"num\">%s</td><td>%s</td><td>%s</td></tr>"
+                % (
+                    _esc(name),
+                    _esc(count) if count is not None else '<span class="muted">—</span>',
+                    _esc(central) if central else '<span class="muted">—</span>',
+                    _esc(coupling) if coupling is not None else '<span class="muted">—</span>',
+                    _chip(str(lanes.get("issues", ""))) if lanes.get("issues")
+                    else '<span class="muted">—</span>',
+                    _chip(str(row.get("status", ""))) if row.get("status")
+                    else '<span class="muted">—</span>',
+                )
+            )
+        cma_html = (
+            '<section class="cma"><h2>cma (code_meta_analysis)</h2>'
+            f'<p class="meta">run <b>{_esc(cma_run.get("run_id") or "")}</b> · '
+            f"generated_at {_esc(cma_run.get('generated_at') or '')}</p>"
+            "<table><thead><tr><th>Repo</th><th>Issues</th>"
+            "<th>Top central file</th><th>Coupling</th>"
+            "<th>Issues lane</th><th>Status</th></tr></thead><tbody>"
+            + "".join(cma_rows_html)
+            + "</tbody></table></section>"
+        )
+    else:
+        cma_html = (
+            '<div class="empty-panel">no cma report yet — run '
+            "<code>scripts/50_orchestrate.py --auto cma-analyze</code> to "
+            "populate issues, dependency-graph centrality, and lane status."
+            "</div>"
+        )
+
     meta_line = (
         f"github user <b>{_esc(payload.get('github_user') or '')}</b> · "
         f"include_forks <b>{_esc('yes' if payload.get('include_forks') else 'no')}</b> · "
@@ -582,6 +669,7 @@ def render_dashboard(payload: dict, summary: dict) -> str:
         + panels
         + table
         + runs_html
+        + cma_html
         + '<aside id="drawer"><button id="drawerClose">Close</button>'
         "<h2 id=\"dTitle\"></h2>"
         '<div class="kv"><b>Readme summary</b><div id="dSummary"></div></div>'

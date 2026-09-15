@@ -22,3 +22,8 @@ run_timeout_s: 600
 
 # Trailing bytes kept of captured stdout/stderr per run result.
 stream_tail_bytes: 20000
+
+# Path to the code_meta_analysis checkout used by the cma-analyze
+# orchestration lane (relative to the project root; resolves through the
+# ongoing/docxology mirror of the private sidecar).
+cma_dir: ../../docxology/code_meta_analysis

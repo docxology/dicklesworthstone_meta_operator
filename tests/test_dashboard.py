@@ -197,6 +197,7 @@ def test_load_payload_shape_and_missing_artifacts(tmp_path: Path) -> None:
         "upstream",
         "inventory",
         "run",
+        "cma_run",
         "runs_history",
     }
     assert payload["github_user"] == "Dicklesworthstone"
@@ -333,6 +334,106 @@ def test_render_dashboard_runs_section() -> None:
     assert "exit-ok" in html and "exit-timeout" in html
     # raw </script> inside stderr must not break out of the script/data blocks
     assert "<script>line two" not in html
+
+
+def _cma_run(repos_row_count: int = 2) -> dict:
+    """A cma run artifact: alpha fully reported, beta failed, gamma missing."""
+    rows = {
+        "alpha": {
+            "issues_count": 7,
+            "central_file": "src/a.py",
+            "coupling": 0.42,
+            "lanes": {"issues": "ok", "deps": "ok"},
+            "status": "ok",
+        },
+        "beta": {
+            "issues_count": None,
+            "central_file": None,
+            "coupling": None,
+            "lanes": {"issues": "failed", "deps": "failed"},
+            "status": "failed",
+        },
+    }
+    return {
+        "run_id": "2026-01-03_cma",
+        "generated_at": "2026-01-03T00:00:00Z",
+        "command": "cma:issues+deps",
+        "selector": "test",
+        "repos": [],
+        "cma": rows,
+    }
+
+
+def test_compute_summary_cma_counts() -> None:
+    payload = {
+        "repos": [],
+        "upstream": None,
+        "inventory": None,
+        "run": None,
+        "cma_run": _cma_run(),
+    }
+    s = compute_summary(payload)
+    assert s["cma_repos"] == 2
+    assert s["cma_ok"] == 1 and s["cma_failed"] == 1
+    assert s["cma_issues_total"] == 7
+    s_empty = compute_summary({"repos": [], "upstream": None, "inventory": None, "run": None})
+    assert s_empty["cma_repos"] == 0 and s_empty["cma_issues_total"] == 0
+
+
+def test_render_dashboard_cma_panel_content() -> None:
+    payload = {
+        "generated_at": "2026-08-02T00:00:00Z",
+        "github_user": "Dicklesworthstone",
+        "include_forks": True,
+        "repos": [_meta("alpha", "Python"), _meta("beta", "Go"), _meta("gamma", "Rust")],
+        "upstream": None,
+        "inventory": None,
+        "run": None,
+        "cma_run": _cma_run(),
+    }
+    html = render_dashboard(payload, compute_summary(payload))
+    assert 'class="cma"' in html
+    assert "cma (code_meta_analysis)" in html
+    assert "2026-01-03_cma" in html
+    assert "chip-ok" in html and "chip-failed" in html
+    assert "0.42" in html and "src/a.py" in html
+    # corpus repos without a cma row render the empty-state cell
+    assert "no cma report yet" in html
+
+
+def test_render_dashboard_cma_empty_state() -> None:
+    payload = {
+        "generated_at": "2026-08-02T00:00:00Z",
+        "github_user": "Dicklesworthstone",
+        "include_forks": True,
+        "repos": [_meta("alpha", "Python")],
+        "upstream": None,
+        "inventory": None,
+        "run": None,
+        "cma_run": None,
+    }
+    html = render_dashboard(payload, compute_summary(payload))
+    assert "no cma report yet" in html and "--auto cma-analyze" in html
+
+
+def test_load_cma_run_picks_latest_cma_run(tmp_path: Path) -> None:
+    from src.dashboard import _load_cma_run
+
+    rdir = project_paths.runs_dir(tmp_path)
+    for rid, cma in (("2026-01-01_a", None), ("2026-01-02_b", {"alpha": {"status": "ok"}})):
+        (rdir / rid).mkdir(parents=True)
+        artifact = {"run_id": rid, "repos": []}
+        if cma is not None:
+            artifact["cma"] = cma
+        _write_json(rdir / rid / "results.json", artifact)
+    assert _load_cma_run(rdir)["run_id"] == "2026-01-02_b"
+    (rdir / "2026-01-03_c").mkdir(parents=True)
+    _write_json(rdir / "2026-01-03_c" / "results.json", {"run_id": "2026-01-03_c", "repos": []})
+    # a later plain run does not shadow the latest cma run
+    assert _load_cma_run(rdir)["run_id"] == "2026-01-02_b"
+    empty = tmp_path / "elsewhere"
+    empty.mkdir()
+    assert _load_cma_run(empty) is None
 
 
 def test_render_catalog_sections_sorted_and_deterministic() -> None:

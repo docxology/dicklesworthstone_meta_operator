@@ -82,9 +82,9 @@ tasks:
         dispatchable: true
   - id: dmo-4
     title: Corpus-scale cma integration lane and dashboard panel
-    status: todo
+    status: done
     start: 2026-09-15
-    progress: 0
+    progress: 1
     milestone: false
     deps:
       - dmo-2
@@ -92,7 +92,14 @@ tasks:
       - joint
       - cross-tool
     notes: "Bead dmo-rlf. Orchestrate code_meta_analysis lanes over corpus repos via
-      --auto cma-analyze; stage 60 cma panel; per-repo failure isolation."
+      --auto cma-analyze; stage 60 cma panel; per-repo failure isolation.
+      Done 2026-09-15: run 20260915-220941 (3 ok / 0 failed) via validationCommand;
+      dashboard regen output/web/dashboard.html cma panel verified; pytest gate green
+      (coverage >= 90%). Also fixed pre-existing --limit bug in stage 50 SelectorSpec.
+      TODO row for coordinator: add 'CMA-LANE: corpus-scale cma analysis over the
+      Dicklesworthstone corpus (scripts/50_orchestrate.py --auto cma-analyze,
+      src/cma_lane.py) with dashboard panel (stage 60) — status done, artifact
+      output/data/runs/<run_id>/results.json carries cma per-repo rows.'"
     priority: high
     lifeArea: work
     assignee: DAF
@@ -101,7 +108,7 @@ tasks:
       - id: dmo-4-ns-1
         action: Implement cma-analyze orchestration lane and dashboard panel
         agentPrompt: ""
-        status: todo
+        status: done
         dispatchable: true
   - id: dmo-5
     title: Flywheel adoption review hardening round

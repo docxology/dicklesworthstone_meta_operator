@@ -42,6 +42,7 @@ def test_orchestrate_help_exit_zero():
     )
     assert proc.returncode == 0
     assert "--auto" in proc.stdout
+    assert "cma-analyze" in proc.stdout
 
 
 def test_health_gate_help_exit_zero():
