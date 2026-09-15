@@ -1,0 +1,9 @@
+{
+  "ledgerPath": "/Volumes/external_drive/Git/projects/ongoing/DAF/operator/data/operator.sqlite",
+  "dafStackRoot": "/Volumes/external_drive/Git/projects/ongoing/DAF/daf-stack",
+  "brPath": "br",
+  "repoName": "dicklesworthstone_meta_operator",
+  "planDir": "flywheel-adopts-dicklesworthstone_meta_operator",
+  "totalCapMs": 120000,
+  "timeoutMs": { "doctor": 120000, "br": 60000 }
+}
