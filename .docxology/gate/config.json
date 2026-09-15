@@ -8,12 +8,5 @@
   "timeoutMs": {
     "doctor": 120000,
     "br": 60000
-  },
-  "doctorArgv": [
-    "uv",
-    "run",
-    "python",
-    "-c",
-    "from daf_stack.checks import run_checks\nfrom daf_stack.manifest import StackManifest, RepoEntry\nfrom pathlib import Path\nimport json\ne = RepoEntry(name='dicklesworthstone_meta_operator', path=Path('/Volumes/external_drive/Git/projects/ongoing/Code_Tools/dicklesworthstone_meta_operator'), branch='main', require_board=True, required_files=('AGENTS.md', 'README.md', 'tasks.yaml'))\nsolo = StackManifest(repos=[e], boards_root=Path('/Volumes/external_drive/Git/projects/ongoing/Code_Tools'))\nrep = run_checks(solo, check_sync=False)\nprint(json.dumps(rep.to_dict()))\n"
-  ]
+  }
 }
