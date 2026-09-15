@@ -105,7 +105,7 @@ tasks:
         dispatchable: true
   - id: dmo-5
     title: Flywheel adoption review hardening round
-    status: todo
+    status: blocked
     start: 2026-09-15
     progress: 0
     milestone: false
