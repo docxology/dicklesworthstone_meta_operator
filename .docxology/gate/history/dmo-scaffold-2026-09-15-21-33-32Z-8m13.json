@@ -1,0 +1,48 @@
+{
+  "checks": [
+    {
+      "check_id": "plan-refined",
+      "passed": true,
+      "detail": "PLAN.md: refinement log rounds=3; bead-creation transition=YES"
+    },
+    {
+      "check_id": "beads-polished",
+      "passed": true,
+      "detail": "br doctor exit 0; 5 beads in issues.jsonl"
+    },
+    {
+      "check_id": "swarm-launched",
+      "passed": false,
+      "detail": "no runs in window: 0 succeeded dispatch(es) for project dicklesworthstone_meta_operator in ledger dispatches"
+    },
+    {
+      "check_id": "reviews-clean",
+      "passed": true,
+      "detail": "0 open review finding(s) in /Volumes/external_drive/Git/template/projects/ongoing/Code_Tools/dicklesworthstone_meta_operator/docs/plans/flywheel-adopts-dicklesworthstone_meta_operator/reviews.jsonl"
+    },
+    {
+      "check_id": "sidecar-sealed",
+      "passed": true,
+      "detail": "1 lock(s) parse, 0 sealed file(s) verified (0 = vacuous pass, mirrors daf-stack check_sidecar \"not required\")"
+    },
+    {
+      "check_id": "doctor-green",
+      "passed": false,
+      "detail": "daf-stack-doctor exit 1: AttributeError: 'NoneType' object has no attribute 'path'"
+    },
+    {
+      "check_id": "ledger-receipted",
+      "passed": false,
+      "detail": "no cycle_close_receipt matches evidence hash 73cd1d3ea10d… (5 receipt row(s) consulted in audit_events)"
+    },
+    {
+      "check_id": "board-synced",
+      "passed": false,
+      "detail": "1 drift pair(s): dmo-5 (board todo vs bead dmo-0dy open)"
+    }
+  ],
+  "passed": false,
+  "generated_at": "2026-09-15T21:33:32Z",
+  "cycle": "dmo-scaffold",
+  "emitter_version": "1"
+}
