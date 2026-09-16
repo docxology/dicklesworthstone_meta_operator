@@ -14,17 +14,22 @@ from __future__ import annotations
 
 import argparse
 import sys
+import time
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT))
 
 from src.config import load_config  # noqa: E402
-from src.jsonio import write_json  # noqa: E402
+from src.jsonio import read_json, write_json  # noqa: E402
 from src.models import UPSTREAM_OK_STATES  # noqa: E402
 from src.project_paths import UPSTREAM_STATUS, data_dir  # noqa: E402
 from src.registry import load_registry, registry_metas  # noqa: E402
-from src.upstream_check import build_report, verify_all  # noqa: E402
+from src.upstream_check import (  # noqa: E402
+    build_report,
+    load_prev_tips,
+    verify_all,
+)
 
 
 def main() -> int:
@@ -34,6 +39,11 @@ def main() -> int:
         "--no-fetch",
         action="store_true",
         help="verify against cached remote refs (no network; accurate right after a clone)",
+    )
+    parser.add_argument(
+        "--no-cache",
+        action="store_true",
+        help="ignore the previous artifact's tip cache and probe/fetch as if it were absent",
     )
     parser.add_argument(
         "--full-fetch",
@@ -52,15 +62,28 @@ def main() -> int:
     requests = [
         (name, repos_dir / name, meta.default_branch) for name, meta in metas.items()
     ]
+    prev_tips: dict[str, tuple[str, str]] = {}
+    if not args.no_cache:
+        prev_artifact = read_json(
+            data_dir(REPO_ROOT) / UPSTREAM_STATUS, required=False
+        )
+        prev_tips = load_prev_tips(prev_artifact)
+    started = time.perf_counter()
     statuses = verify_all(
         requests,
         do_fetch=not args.no_fetch,
         fetch_workers=config.fetch_workers,
         smart_fetch=not args.full_fetch,
+        prev_tips=prev_tips,
     )
+    elapsed = time.perf_counter() - started
     report = build_report(statuses)
     path = write_json(data_dir(REPO_ROOT) / UPSTREAM_STATUS, report)
     print(f"upstream status written: {path}")
+    print(
+        f"cache: {sum(s.cache_hit for s in statuses)} hits / {len(statuses)} repos "
+        f"(prev tips loaded: {len(prev_tips)}); verify wall-clock: {elapsed:.2f}s"
+    )
 
     state_counts: dict[str, int] = {}
     for status in statuses:

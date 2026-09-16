@@ -171,6 +171,10 @@ class UpstreamStatus:
     # True when origin/<default> was freshly fetched during THIS verification;
     # False for pre-fetch exit paths, --no-fetch mode, and failed fetches.
     fetched: bool = False
+    # True when this verification was served from the prev-artifact tip cache
+    # (offline classification only: no fetch, no ls-remote probe). Additive
+    # schema field; old artifacts load with the default False.
+    cache_hit: bool = False
 
 
 # ---------------------------------------------------------------------------

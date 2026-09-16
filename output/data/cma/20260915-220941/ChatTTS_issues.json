@@ -1,0 +1,199 @@
+{
+  "issues": [
+    {
+      "agent_task": "In this repo, refactor ChatTTS/model/gpt.py: cyclomatic complexity 45, 197 code lines. Extract cohesive submodules and add characterization tests for current behavior before restructuring. Do not change public behavior.",
+      "category": "complexity",
+      "evidence": [
+        "cyclomatic=45",
+        "lines_code=197",
+        "language=python"
+      ],
+      "files": [
+        "ChatTTS/model/gpt.py"
+      ],
+      "id": "COMP-001",
+      "severity": "medium",
+      "suggested_fix": "Split the file along its largest internal seams (per concern); extract pure helper modules with tests before moving logic.",
+      "title": "High-complexity file: ChatTTS/model/gpt.py"
+    },
+    {
+      "agent_task": "At folder `./` of this repo: missing AGENTS.md. Read the folder's actual contents, then write/repair AGENTS.md and README.md to be concise and accurate: no placeholder text, no stale path references, README grounded in real entries. Do not duplicate parent docs; link up instead.",
+      "category": "docs",
+      "evidence": [
+        "missing AGENTS.md"
+      ],
+      "files": [
+        "AGENTS.md"
+      ],
+      "id": "DOCS-001",
+      "severity": "medium",
+      "suggested_fix": "Write accurate, concise AGENTS.md (layout, invariants, gotchas, verify commands) and README.md (purpose, usage, entry points) grounded in the actual folder contents.",
+      "title": "Documentation gaps at ./: missing AGENTS.md"
+    },
+    {
+      "agent_task": "At folder `ChatTTS/` of this repo: missing AGENTS.md; missing README.md. Read the folder's actual contents, then write/repair AGENTS.md and README.md to be concise and accurate: no placeholder text, no stale path references, README grounded in real entries. Do not duplicate parent docs; link up instead.",
+      "category": "docs",
+      "evidence": [
+        "missing AGENTS.md",
+        "missing README.md"
+      ],
+      "files": [
+        "AGENTS.md",
+        "README.md"
+      ],
+      "id": "DOCS-002",
+      "severity": "medium",
+      "suggested_fix": "Write accurate, concise AGENTS.md (layout, invariants, gotchas, verify commands) and README.md (purpose, usage, entry points) grounded in the actual folder contents.",
+      "title": "Documentation gaps at ChatTTS/: missing AGENTS.md; missing README.md"
+    },
+    {
+      "agent_task": "At folder `ChatTTS/experimental/` of this repo: missing AGENTS.md; missing README.md. Read the folder's actual contents, then write/repair AGENTS.md and README.md to be concise and accurate: no placeholder text, no stale path references, README grounded in real entries. Do not duplicate parent docs; link up instead.",
+      "category": "docs",
+      "evidence": [
+        "missing AGENTS.md",
+        "missing README.md"
+      ],
+      "files": [
+        "AGENTS.md",
+        "README.md"
+      ],
+      "id": "DOCS-003",
+      "severity": "medium",
+      "suggested_fix": "Write accurate, concise AGENTS.md (layout, invariants, gotchas, verify commands) and README.md (purpose, usage, entry points) grounded in the actual folder contents.",
+      "title": "Documentation gaps at ChatTTS/experimental/: missing AGENTS.md; missing README.md"
+    },
+    {
+      "agent_task": "At folder `ChatTTS/infer/` of this repo: missing AGENTS.md; missing README.md. Read the folder's actual contents, then write/repair AGENTS.md and README.md to be concise and accurate: no placeholder text, no stale path references, README grounded in real entries. Do not duplicate parent docs; link up instead.",
+      "category": "docs",
+      "evidence": [
+        "missing AGENTS.md",
+        "missing README.md"
+      ],
+      "files": [
+        "AGENTS.md",
+        "README.md"
+      ],
+      "id": "DOCS-004",
+      "severity": "medium",
+      "suggested_fix": "Write accurate, concise AGENTS.md (layout, invariants, gotchas, verify commands) and README.md (purpose, usage, entry points) grounded in the actual folder contents.",
+      "title": "Documentation gaps at ChatTTS/infer/: missing AGENTS.md; missing README.md"
+    },
+    {
+      "agent_task": "At folder `ChatTTS/model/` of this repo: missing AGENTS.md; missing README.md. Read the folder's actual contents, then write/repair AGENTS.md and README.md to be concise and accurate: no placeholder text, no stale path references, README grounded in real entries. Do not duplicate parent docs; link up instead.",
+      "category": "docs",
+      "evidence": [
+        "missing AGENTS.md",
+        "missing README.md"
+      ],
+      "files": [
+        "AGENTS.md",
+        "README.md"
+      ],
+      "id": "DOCS-005",
+      "severity": "medium",
+      "suggested_fix": "Write accurate, concise AGENTS.md (layout, invariants, gotchas, verify commands) and README.md (purpose, usage, entry points) grounded in the actual folder contents.",
+      "title": "Documentation gaps at ChatTTS/model/: missing AGENTS.md; missing README.md"
+    },
+    {
+      "agent_task": "At folder `ChatTTS/utils/` of this repo: missing AGENTS.md; missing README.md. Read the folder's actual contents, then write/repair AGENTS.md and README.md to be concise and accurate: no placeholder text, no stale path references, README grounded in real entries. Do not duplicate parent docs; link up instead.",
+      "category": "docs",
+      "evidence": [
+        "missing AGENTS.md",
+        "missing README.md"
+      ],
+      "files": [
+        "AGENTS.md",
+        "README.md"
+      ],
+      "id": "DOCS-006",
+      "severity": "medium",
+      "suggested_fix": "Write accurate, concise AGENTS.md (layout, invariants, gotchas, verify commands) and README.md (purpose, usage, entry points) grounded in the actual folder contents.",
+      "title": "Documentation gaps at ChatTTS/utils/: missing AGENTS.md; missing README.md"
+    },
+    {
+      "agent_task": "In this repo, review near-duplicate file pairs: ChatTTS/__init__.py ~ ChatTTS/utils/__init__.py (similarity=0.907, method=lexical-hash-fallback). Extract shared logic into a common module where behavior truly overlaps; document intentional divergence where not.",
+      "category": "duplication",
+      "evidence": [
+        "ChatTTS/__init__.py ~ ChatTTS/utils/__init__.py (similarity=0.907, method=lexical-hash-fallback)"
+      ],
+      "files": [
+        "ChatTTS/__init__.py",
+        "ChatTTS/utils/__init__.py"
+      ],
+      "id": "DUPL-001",
+      "severity": "medium",
+      "suggested_fix": "Review pairs for extractable shared helpers; confirm before merging.",
+      "title": "Near-duplicate files (embedding similarity, method=lexical-hash-fallback)"
+    },
+    {
+      "agent_task": "Test ratio is 0.0 (target >= 0.2). Identify the three most important untested modules and add focused tests; report coverage before/after.",
+      "category": "testing",
+      "evidence": [
+        "test_to_code_ratio=0.0",
+        "nontest_code_lines=680",
+        "test_files=0"
+      ],
+      "files": [],
+      "id": "TEST-001",
+      "severity": "medium",
+      "suggested_fix": "Grow coverage from high-coupling and high-churn modules outward.",
+      "title": "Low test-to-code ratio: 0.0"
+    },
+    {
+      "agent_task": "In this repo, flatten nesting in ChatTTS/model/dvae.py (max depth 8): apply guard clauses and early returns; preserve behavior with tests.",
+      "category": "complexity",
+      "evidence": [
+        "max_nesting=8"
+      ],
+      "files": [
+        "ChatTTS/model/dvae.py"
+      ],
+      "id": "COMP-002",
+      "severity": "low",
+      "suggested_fix": "Use early returns / guard clauses; flatten nested branches.",
+      "title": "Deep nesting: ChatTTS/model/dvae.py"
+    },
+    {
+      "agent_task": "In this repo, reduce ChatTTS/core.py complexity (cyclomatic 32, 127 lines): extract at least one cohesive function/module with tests; keep behavior identical.",
+      "category": "complexity",
+      "evidence": [
+        "cyclomatic=32",
+        "lines_code=127",
+        "language=python"
+      ],
+      "files": [
+        "ChatTTS/core.py"
+      ],
+      "id": "COMP-003",
+      "severity": "low",
+      "suggested_fix": "Extract the most-changed functions; add tests at current behavior first.",
+      "title": "Elevated complexity: ChatTTS/core.py"
+    },
+    {
+      "agent_task": "Add a minimal GitHub Actions workflow to ChatTTS: install, lint, test on push/PR to main.",
+      "category": "hygiene",
+      "evidence": [
+        "no .github/workflows/* in inventory"
+      ],
+      "files": [],
+      "id": "HYGI-001",
+      "severity": "low",
+      "suggested_fix": "Add CI running lint and tests on push/PR.",
+      "title": "No CI workflow detected"
+    },
+    {
+      "agent_task": "Scaffold a tests/ directory and minimal CI (lint + pytest or equivalent) for ChatTTS.",
+      "category": "hygiene",
+      "evidence": [
+        "no path matching the shared test-path heuristic (tests/, test_*, *_test.go, spec/)"
+      ],
+      "files": [],
+      "id": "HYGI-002",
+      "severity": "low",
+      "suggested_fix": "Scaffold a test directory and CI configuration.",
+      "title": "No test directory detected"
+    }
+  ],
+  "repo": "ChatTTS",
+  "root": "/Volumes/external_drive/Git/projects/ongoing/Code_Tools/dicklesworthstone_meta_operator/repos/ChatTTS"
+}

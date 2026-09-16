@@ -38,7 +38,7 @@ from src.models import UPSTREAM_OK_STATES, UpstreamStatus, to_dict
 
 logger = logging.getLogger(__name__)
 
-__all__ = ["_run_git", "verify_one", "verify_all", "build_report"]
+__all__ = ["_run_git", "verify_one", "verify_all", "build_report", "load_prev_tips"]
 
 
 
@@ -294,6 +294,34 @@ def _remote_tip_moved(repo: Path, default_branch: str) -> bool:
     cached = _resolve_remote(repo, default_branch)
     return bool(cached) and remote_tip != cached
 
+
+def load_prev_tips(artifact: dict | None) -> dict[str, tuple[str, str]]:
+    """Extract the incremental-verify cache from the previous artifact.
+
+    Maps repo name -> ``(default_branch, remote_sha)`` for repos whose
+    previous verification ended in an upstream-ok state with a resolved
+    ``origin/<default>`` sha. Anything else (old artifacts, missing keys,
+    malformed rows, non-ok states, unborn clones) simply yields no entry,
+    so the loader is backward compatible by construction: an old
+    ``upstream_status.json`` that predates the cache still loads and just
+    produces zero hits on the first post-upgrade run.
+    """
+    tips: dict[str, tuple[str, str]] = {}
+    if not isinstance(artifact, dict):
+        return tips
+    entries = artifact.get("repos")
+    if not isinstance(entries, list):
+        return tips
+    for entry in entries:
+        if not isinstance(entry, dict):
+            continue
+        name = entry.get("name")
+        branch = entry.get("default_branch")
+        sha = entry.get("remote_sha")
+        if name and branch and sha and entry.get("state") in UPSTREAM_OK_STATES:
+            tips[name] = (branch, sha)
+    return tips
+
 def verify_one(repo_path: Path, default_branch: str, *, do_fetch: bool = True) -> UpstreamStatus:
     """Verify one local clone against its upstream default branch.
 
@@ -325,6 +353,7 @@ def verify_all(
     do_fetch: bool = True,
     fetch_workers: int = 8,
     smart_fetch: bool = False,
+    prev_tips: dict[str, tuple[str, str]] | None = None,
 ) -> list[UpstreamStatus]:
     """Verify many (name, repo_path, default_branch) requests, sorted by name.
 
@@ -340,6 +369,14 @@ def verify_all(
     probe — if the remote tip moved past the cached ref, they are fetched and
     re-verified too. A synced corpus thus costs only lightweight network
     probes instead of full fetches, while still detecting upstream movement.
+
+    With ``prev_tips`` (from :func:`load_prev_tips` over the previous
+    artifact), clean repos whose locally observed tip still equals the sha
+    recorded by the previous fully verified run AND whose default branch is
+    unchanged become cache hits: the offline classification stands, no
+    probe, no fetch, ``cache_hit=True``. A repo whose tip moved since the
+    previous artifact (or whose default branch changed) is always
+    re-verified through the normal probe/fetch path.
     """
     results: dict[str, UpstreamStatus] = {}
     existing: list[tuple[str, Path, str]] = []
@@ -377,6 +414,17 @@ def verify_all(
             (name, repo, branch)
             for name, repo, branch in existing
             if results[name].state in UPSTREAM_OK_STATES
+        ]
+        hits: set[str] = set()
+        for name, _repo, branch in tip_targets:
+            entry = (prev_tips or {}).get(name)
+            if entry is not None and entry[0] == branch and entry[1] == results[name].remote_sha:
+                hits.add(name)
+                results[name] = replace(results[name], cache_hit=True)
+        tip_targets = [
+            (name, repo, branch)
+            for name, repo, branch in tip_targets
+            if name not in hits
         ]
         with ThreadPoolExecutor(max_workers=max(1, fetch_workers)) as probe_pool:
             probes = [

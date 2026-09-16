@@ -21,15 +21,15 @@ dashboard drawer.
 
 | ID | Status | Size | Dependency | Next action / unblock condition | Proving artifact | Acceptance command | Negative control |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| OPS-1 | open | S | none | Add `scripts/90_sync_corpus.py` (fetch + `git pull --ff-only` across the corpus) so stage 30 stops being the sync mechanism | `output/data/runs/<id>/results.json` with zero failed pulls | `uv run python scripts/90_sync_corpus.py && uv run python scripts/30_verify_upstream.py` | A repo with a diverged upstream keeps state `diverged` and fails the gate |
-| OPS-2 | open | S | none | Expose `--include-forks/--no-forks` on script 50/60 selectors instead of config-only | `--help` output showing the flag | `uv run python scripts/50_orchestrate.py --auto test --no-forks --set <fork-repo>` excludes it | Fork repos still selectable when the flag is omitted |
-| OPS-3 | open | S | OPS-1 | Per-repo `git submodule update --init` option for orchestrator runs | runs artifact recording submodule status | select a repo with submodules, assert success | Repos without `.gitmodules` skip cleanly |
+| OPS-1 | done | S | none | Add `scripts/90_sync_corpus.py` (fetch + `git pull --ff-only` across the corpus) so stage 30 stops being the sync mechanism | `output/data/runs/<id>/results.json` with zero failed pulls | `uv run python scripts/90_sync_corpus.py && uv run python scripts/30_verify_upstream.py` | A repo with a diverged upstream keeps state `diverged` and fails the gate |
+| OPS-2 | done | S | none | Expose `--include-forks/--no-forks` on script 50/60 selectors instead of config-only | `--help` output showing the flag | `uv run python scripts/50_orchestrate.py --auto test --no-forks --set <fork-repo>` excludes it | Fork repos still selectable when the flag is omitted |
+| OPS-3 | done | S | OPS-1 | Per-repo `git submodule update --init` option for orchestrator runs | runs artifact recording submodule status | select a repo with submodules, assert success | Repos without `.gitmodules` skip cleanly |
 
 ## Medium upcoming
 
 | ID | Status | Size | Dependency | Next action / unblock condition | Proving artifact | Acceptance command | Negative control |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| OPS-4 | open | M | none | Incremental verify: skip repos whose `origin/<default>` sha is unchanged since the last artifact (hash the state) | verify wall-clock drop on second run | run 30 twice; second run reports cache hits | A repo with a moved upstream is always re-verified |
+| OPS-4 | done | M | none | Incremental verify: skip repos whose `origin/<default>` sha is unchanged since the last artifact (prev-tips cache; `--no-cache` escape) | run 2 over the live 207-repo corpus: 145/207 cache hits; moved tips re-verified (mutation test in tests/test_upstream_check.py, 22 pass) | run 30 twice; second run reports cache hits | A repo with a moved upstream is always re-verified |
 | OPS-5 | open | M | none | Language-aware test triage in the dashboard: surface per-repo auto_cmds success history from runs artifacts | dashboard runs panel per repo | run tests twice, open dashboard, see history | No runs → panel shows "no runs yet" |
 
 ## Blocked

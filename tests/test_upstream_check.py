@@ -14,8 +14,16 @@ from pathlib import Path
 
 import pytest
 
-from src.models import UpstreamStatus, from_dict
-from src.upstream_check import build_report, find_unborn, verify_all, verify_one
+from dataclasses import replace
+
+from src.models import UpstreamStatus, from_dict, to_dict
+from src.upstream_check import (
+    build_report,
+    find_unborn,
+    load_prev_tips,
+    verify_all,
+    verify_one,
+)
 
 DEFAULT_BRANCH = "main"
 GIT_IDENTITY = ["-c", "user.name=Fixture", "-c", "user.email=fixture@example.com"]
@@ -341,3 +349,131 @@ def test_find_unborn(tmp_path) -> None:
 
     result = find_unborn(["empty", "seeded", "absent"], tmp_path)
     assert result == ["empty"]
+
+
+def _corpus_pair(tmp_path: Path, tag: str) -> tuple[Path, Path]:
+    """Bare upstream on main + a fresh working clone (seed pushed)."""
+    upstream = tmp_path / f"{tag}.git"
+    git(["init", "--bare", "-b", DEFAULT_BRANCH, str(upstream)], tmp_path)
+    seed = tmp_path / f"{tag}_seed"
+    git(["clone", str(upstream), str(seed)], tmp_path)
+    (seed / "r.md").write_text(f"# {tag}\n", encoding="utf-8")
+    commit_all(seed, "init")
+    git(["push", "origin", DEFAULT_BRANCH], seed)
+    work = tmp_path / f"{tag}_work"
+    git(["clone", str(upstream), str(work)], tmp_path)
+    return seed, work
+
+
+def test_load_prev_tips_filters_and_tolerates_old_shapes() -> None:
+    """Only upstream-ok rows with a resolved tip are cached; old/malformed
+    artifacts (missing keys, non-dict rows, empty repos) load as no cache."""
+    artifact = {
+        "generated_at": "2026-09-01T00:00:00Z",
+        "checked": 4,
+        "ok": 2,
+        "repos": [
+            {
+                "name": "good",
+                "default_branch": "main",
+                "remote_sha": "abc123",
+                "state": "on_upstream",
+            },
+            {
+                "name": "behind_repo",
+                "default_branch": "main",
+                "remote_sha": "def456",
+                "state": "behind",
+            },
+            {
+                "name": "unborn_repo",
+                "default_branch": "main",
+                "remote_sha": "",
+                "state": "unborn",
+            },
+            "not-a-dict",
+            {"name": "no_sha", "default_branch": "main", "state": "on_upstream"},
+        ],
+    }
+    assert load_prev_tips(artifact) == {"good": ("main", "abc123")}
+    assert load_prev_tips(None) == {}
+    assert load_prev_tips({}) == {}
+    assert load_prev_tips({"repos": []}) == {}
+    assert load_prev_tips({"repos": "junk"}) == {}
+
+
+def test_prev_tips_cache_hits_and_moved_tip_reverify(tmp_path) -> None:
+    """Incremental verify: unchanged tips are cache hits with no fetch; a tip
+    that moved since the previous artifact is always fully re-verified."""
+    stable_seed, stable = _corpus_pair(tmp_path, "stable")
+    drift_seed, drifted = _corpus_pair(tmp_path, "drift")
+    requests = [
+        ("drifted", drifted, DEFAULT_BRANCH),
+        ("stable", stable, DEFAULT_BRANCH),
+    ]
+
+    first = verify_all(requests, smart_fetch=True)
+    tips = load_prev_tips(build_report(first))
+    assert tips == {
+        "drifted": (DEFAULT_BRANCH, git(["rev-parse", "HEAD"], drifted).strip()),
+        "stable": (DEFAULT_BRANCH, git(["rev-parse", "HEAD"], stable).strip()),
+    }
+
+    second = {s.name: s for s in verify_all(requests, smart_fetch=True, prev_tips=tips)}
+    assert second["stable"].cache_hit is True
+    assert second["stable"].fetched is False
+    assert second["stable"].state == "on_upstream"
+    assert second["drifted"].cache_hit is True
+    assert second["drifted"].state == "on_upstream"
+
+    # Mutation: upstream of `drifted` moves AND the clone observes it (the
+    # stage-90 sync shape: fetch updates the cached origin ref). The stale
+    # prev tip must not serve a cache hit.
+    (drift_seed / "new.txt").write_text("upstream moves\n", encoding="utf-8")
+    commit_all(drift_seed, "upstream moves")
+    git(["push", "origin", DEFAULT_BRANCH], drift_seed)
+    git(["fetch", "origin", "--quiet"], drifted)
+
+    third = {s.name: s for s in verify_all(requests, smart_fetch=True, prev_tips=tips)}
+    assert third["drifted"].cache_hit is False
+    assert third["drifted"].fetched is True
+    assert third["drifted"].state == "behind"
+    assert third["drifted"].behind == 1
+    assert third["stable"].cache_hit is True
+
+
+def test_prev_tips_branch_or_sha_mismatch_defeats_cache(tmp_path) -> None:
+    """A cached entry for a different default branch, or a tip sha that no
+    longer matches the locally observed origin ref, never serves a hit."""
+    _seed, work = _corpus_pair(tmp_path, "br")
+    requests = [("work", work, DEFAULT_BRANCH)]
+    wrong_branch = {"work": ("master", git(["rev-parse", "HEAD"], work).strip())}
+    wrong_sha = {"work": (DEFAULT_BRANCH, "0" * 40)}
+    for tips in (wrong_branch, wrong_sha, {}):
+        (status,) = verify_all(requests, smart_fetch=True, prev_tips=tips)
+        assert status.cache_hit is False
+        assert status.state == "on_upstream"
+
+
+def test_upstream_status_row_backward_compat() -> None:
+    """Old artifact rows (pre-cache_hit) reconstruct via from_dict with the
+    default False; new rows round-trip the flag through to_dict."""
+    old_row = {
+        "name": "legacy",
+        "default_branch": "main",
+        "checked_out_branch": "main",
+        "head_sha": "a" * 40,
+        "remote_sha": "b" * 40,
+        "on_upstream_default": True,
+        "ahead": 0,
+        "behind": 0,
+        "dirty": False,
+        "detached": False,
+        "unborn": False,
+        "state": "on_upstream",
+    }
+    status = from_dict(UpstreamStatus, old_row)
+    assert status.cache_hit is False
+    assert status.fetched is False
+    status = replace(status, cache_hit=True)
+    assert to_dict(status)["cache_hit"] is True

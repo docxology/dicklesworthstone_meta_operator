@@ -1,0 +1,159 @@
+{
+  "issues": [
+    {
+      "agent_task": "In this repo, scripts/star_history.py was touched in 11 commits with cyclomatic 122. Add characterization tests covering its current branches, then simplify its two largest functions. Behavior must not change.",
+      "category": "churn-risk",
+      "evidence": [
+        "commits_touching=11",
+        "cyclomatic=122"
+      ],
+      "files": [
+        "scripts/star_history.py"
+      ],
+      "id": "CHUR-001",
+      "severity": "high",
+      "suggested_fix": "Most-edited and most-complex: harden with tests, then simplify; every future change here is expensive.",
+      "title": "Change magnet (churn x complexity): scripts/star_history.py"
+    },
+    {
+      "agent_task": "In this repo, scripts/update_readme.py was touched in 15 commits with cyclomatic 265. Add characterization tests covering its current branches, then simplify its two largest functions. Behavior must not change.",
+      "category": "churn-risk",
+      "evidence": [
+        "commits_touching=15",
+        "cyclomatic=265"
+      ],
+      "files": [
+        "scripts/update_readme.py"
+      ],
+      "id": "CHUR-002",
+      "severity": "high",
+      "suggested_fix": "Most-edited and most-complex: harden with tests, then simplify; every future change here is expensive.",
+      "title": "Change magnet (churn x complexity): scripts/update_readme.py"
+    },
+    {
+      "agent_task": "In this repo, tests/test_profile_generators.py was touched in 10 commits with cyclomatic 22. Add characterization tests covering its current branches, then simplify its two largest functions. Behavior must not change.",
+      "category": "churn-risk",
+      "evidence": [
+        "commits_touching=10",
+        "cyclomatic=22"
+      ],
+      "files": [
+        "tests/test_profile_generators.py"
+      ],
+      "id": "CHUR-003",
+      "severity": "high",
+      "suggested_fix": "Most-edited and most-complex: harden with tests, then simplify; every future change here is expensive.",
+      "title": "Change magnet (churn x complexity): tests/test_profile_generators.py"
+    },
+    {
+      "agent_task": "In this repo, refactor scripts/recent_activity.py: cyclomatic complexity 88, 394 code lines. Extract cohesive submodules and add characterization tests for current behavior before restructuring. Do not change public behavior.",
+      "category": "complexity",
+      "evidence": [
+        "cyclomatic=88",
+        "lines_code=394",
+        "language=python"
+      ],
+      "files": [
+        "scripts/recent_activity.py"
+      ],
+      "id": "COMP-001",
+      "severity": "medium",
+      "suggested_fix": "Split the file along its largest internal seams (per concern); extract pure helper modules with tests before moving logic.",
+      "title": "High-complexity file: scripts/recent_activity.py"
+    },
+    {
+      "agent_task": "In this repo, refactor scripts/star_history.py: cyclomatic complexity 122, 579 code lines. Extract cohesive submodules and add characterization tests for current behavior before restructuring. Do not change public behavior.",
+      "category": "complexity",
+      "evidence": [
+        "cyclomatic=122",
+        "lines_code=579",
+        "language=python"
+      ],
+      "files": [
+        "scripts/star_history.py"
+      ],
+      "id": "COMP-002",
+      "severity": "medium",
+      "suggested_fix": "Split the file along its largest internal seams (per concern); extract pure helper modules with tests before moving logic.",
+      "title": "High-complexity file: scripts/star_history.py"
+    },
+    {
+      "agent_task": "In this repo, refactor scripts/update_readme.py: cyclomatic complexity 265, 1100 code lines. Extract cohesive submodules and add characterization tests for current behavior before restructuring. Do not change public behavior.",
+      "category": "complexity",
+      "evidence": [
+        "cyclomatic=265",
+        "lines_code=1100",
+        "language=python"
+      ],
+      "files": [
+        "scripts/update_readme.py"
+      ],
+      "id": "COMP-003",
+      "severity": "medium",
+      "suggested_fix": "Split the file along its largest internal seams (per concern); extract pure helper modules with tests before moving logic.",
+      "title": "High-complexity file: scripts/update_readme.py"
+    },
+    {
+      "agent_task": "At folder `scripts/` of this repo: missing AGENTS.md; missing README.md. Read the folder's actual contents, then write/repair AGENTS.md and README.md to be concise and accurate: no placeholder text, no stale path references, README grounded in real entries. Do not duplicate parent docs; link up instead.",
+      "category": "docs",
+      "evidence": [
+        "missing AGENTS.md",
+        "missing README.md"
+      ],
+      "files": [
+        "AGENTS.md",
+        "README.md"
+      ],
+      "id": "DOCS-001",
+      "severity": "medium",
+      "suggested_fix": "Write accurate, concise AGENTS.md (layout, invariants, gotchas, verify commands) and README.md (purpose, usage, entry points) grounded in the actual folder contents.",
+      "title": "Documentation gaps at scripts/: missing AGENTS.md; missing README.md"
+    },
+    {
+      "agent_task": "At folder `tests/` of this repo: missing AGENTS.md; missing README.md. Read the folder's actual contents, then write/repair AGENTS.md and README.md to be concise and accurate: no placeholder text, no stale path references, README grounded in real entries. Do not duplicate parent docs; link up instead.",
+      "category": "docs",
+      "evidence": [
+        "missing AGENTS.md",
+        "missing README.md"
+      ],
+      "files": [
+        "AGENTS.md",
+        "README.md"
+      ],
+      "id": "DOCS-002",
+      "severity": "medium",
+      "suggested_fix": "Write accurate, concise AGENTS.md (layout, invariants, gotchas, verify commands) and README.md (purpose, usage, entry points) grounded in the actual folder contents.",
+      "title": "Documentation gaps at tests/: missing AGENTS.md; missing README.md"
+    },
+    {
+      "agent_task": "Add a LICENSE file to Dicklesworthstone matching any license declared in package metadata; if none is declared, propose one and ask before committing.",
+      "category": "hygiene",
+      "evidence": [
+        "LICENSE absent from inventory"
+      ],
+      "files": [],
+      "id": "HYGI-001",
+      "severity": "medium",
+      "suggested_fix": "Add a license matching the project's declared license (if any).",
+      "title": "No LICENSE file"
+    },
+    {
+      "agent_task": "In this repo, reduce tests/test_profile_generators.py complexity (cyclomatic 22, 595 lines): extract at least one cohesive function/module with tests; keep behavior identical.",
+      "category": "complexity",
+      "evidence": [
+        "cyclomatic=22",
+        "lines_code=595",
+        "language=python"
+      ],
+      "files": [
+        "tests/test_profile_generators.py"
+      ],
+      "id": "COMP-004",
+      "severity": "low",
+      "suggested_fix": "Extract the most-changed functions; add tests at current behavior first.",
+      "title": "Elevated complexity: tests/test_profile_generators.py"
+    }
+  ],
+  "repo": "Dicklesworthstone",
+  "root": "/Volumes/external_drive/Git/projects/ongoing/Code_Tools/dicklesworthstone_meta_operator/repos/Dicklesworthstone"
+}

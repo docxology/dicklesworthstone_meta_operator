@@ -1,0 +1,225 @@
+{
+  "issues": [
+    {
+      "agent_task": "In this repo, src/main.rs was touched in 25 commits with cyclomatic 358. Add characterization tests covering its current branches, then simplify its two largest functions. Behavior must not change.",
+      "category": "churn-risk",
+      "evidence": [
+        "commits_touching=25",
+        "cyclomatic=358"
+      ],
+      "files": [
+        "src/main.rs"
+      ],
+      "id": "CHUR-001",
+      "severity": "high",
+      "suggested_fix": "Most-edited and most-complex: harden with tests, then simplify; every future change here is expensive.",
+      "title": "Change magnet (churn x complexity): src/main.rs"
+    },
+    {
+      "agent_task": "In this repo, refactor src/main.rs: cyclomatic complexity 358, 5038 code lines. Extract cohesive submodules and add characterization tests for current behavior before restructuring. Do not change public behavior.",
+      "category": "complexity",
+      "evidence": [
+        "cyclomatic=358",
+        "lines_code=5038",
+        "language=rust"
+      ],
+      "files": [
+        "src/main.rs"
+      ],
+      "id": "COMP-001",
+      "severity": "high",
+      "suggested_fix": "Split the file along its largest internal seams (per concern); extract pure helper modules with tests before moving logic.",
+      "title": "High-complexity file: src/main.rs"
+    },
+    {
+      "agent_task": "In this repo, flatten nesting in src/main.rs (max depth 12): apply guard clauses and early returns; preserve behavior with tests.",
+      "category": "complexity",
+      "evidence": [
+        "max_nesting=12"
+      ],
+      "files": [
+        "src/main.rs"
+      ],
+      "id": "COMP-002",
+      "severity": "medium",
+      "suggested_fix": "Use early returns / guard clauses; flatten nested branches.",
+      "title": "Deep nesting: src/main.rs"
+    },
+    {
+      "agent_task": "In this repo, refactor tests/integration.rs: cyclomatic complexity 27, 659 code lines. Extract cohesive submodules and add characterization tests for current behavior before restructuring. Do not change public behavior.",
+      "category": "complexity",
+      "evidence": [
+        "cyclomatic=27",
+        "lines_code=659",
+        "language=rust"
+      ],
+      "files": [
+        "tests/integration.rs"
+      ],
+      "id": "COMP-003",
+      "severity": "medium",
+      "suggested_fix": "Split the file along its largest internal seams (per concern); extract pure helper modules with tests before moving logic.",
+      "title": "High-complexity file: tests/integration.rs"
+    },
+    {
+      "agent_task": "At folder `benches/` of this repo: missing AGENTS.md; missing README.md. Read the folder's actual contents, then write/repair AGENTS.md and README.md to be concise and accurate: no placeholder text, no stale path references, README grounded in real entries. Do not duplicate parent docs; link up instead.",
+      "category": "docs",
+      "evidence": [
+        "missing AGENTS.md",
+        "missing README.md"
+      ],
+      "files": [
+        "AGENTS.md",
+        "README.md"
+      ],
+      "id": "DOCS-001",
+      "severity": "medium",
+      "suggested_fix": "Write accurate, concise AGENTS.md (layout, invariants, gotchas, verify commands) and README.md (purpose, usage, entry points) grounded in the actual folder contents.",
+      "title": "Documentation gaps at benches/: missing AGENTS.md; missing README.md"
+    },
+    {
+      "agent_task": "At folder `src/` of this repo: missing AGENTS.md; missing README.md. Read the folder's actual contents, then write/repair AGENTS.md and README.md to be concise and accurate: no placeholder text, no stale path references, README grounded in real entries. Do not duplicate parent docs; link up instead.",
+      "category": "docs",
+      "evidence": [
+        "missing AGENTS.md",
+        "missing README.md"
+      ],
+      "files": [
+        "AGENTS.md",
+        "README.md"
+      ],
+      "id": "DOCS-002",
+      "severity": "medium",
+      "suggested_fix": "Write accurate, concise AGENTS.md (layout, invariants, gotchas, verify commands) and README.md (purpose, usage, entry points) grounded in the actual folder contents.",
+      "title": "Documentation gaps at src/: missing AGENTS.md; missing README.md"
+    },
+    {
+      "agent_task": "At folder `tests/` of this repo: missing AGENTS.md; missing README.md. Read the folder's actual contents, then write/repair AGENTS.md and README.md to be concise and accurate: no placeholder text, no stale path references, README grounded in real entries. Do not duplicate parent docs; link up instead.",
+      "category": "docs",
+      "evidence": [
+        "missing AGENTS.md",
+        "missing README.md"
+      ],
+      "files": [
+        "AGENTS.md",
+        "README.md"
+      ],
+      "id": "DOCS-003",
+      "severity": "medium",
+      "suggested_fix": "Write accurate, concise AGENTS.md (layout, invariants, gotchas, verify commands) and README.md (purpose, usage, entry points) grounded in the actual folder contents.",
+      "title": "Documentation gaps at tests/: missing AGENTS.md; missing README.md"
+    },
+    {
+      "agent_task": "At folder `tests/fixtures/` of this repo: missing AGENTS.md; missing README.md. Read the folder's actual contents, then write/repair AGENTS.md and README.md to be concise and accurate: no placeholder text, no stale path references, README grounded in real entries. Do not duplicate parent docs; link up instead.",
+      "category": "docs",
+      "evidence": [
+        "missing AGENTS.md",
+        "missing README.md"
+      ],
+      "files": [
+        "AGENTS.md",
+        "README.md"
+      ],
+      "id": "DOCS-004",
+      "severity": "medium",
+      "suggested_fix": "Write accurate, concise AGENTS.md (layout, invariants, gotchas, verify commands) and README.md (purpose, usage, entry points) grounded in the actual folder contents.",
+      "title": "Documentation gaps at tests/fixtures/: missing AGENTS.md; missing README.md"
+    },
+    {
+      "agent_task": "At folder `tests/fixtures/ascii/` of this repo: missing AGENTS.md; missing README.md. Read the folder's actual contents, then write/repair AGENTS.md and README.md to be concise and accurate: no placeholder text, no stale path references, README grounded in real entries. Do not duplicate parent docs; link up instead.",
+      "category": "docs",
+      "evidence": [
+        "missing AGENTS.md",
+        "missing README.md"
+      ],
+      "files": [
+        "AGENTS.md",
+        "README.md"
+      ],
+      "id": "DOCS-005",
+      "severity": "medium",
+      "suggested_fix": "Write accurate, concise AGENTS.md (layout, invariants, gotchas, verify commands) and README.md (purpose, usage, entry points) grounded in the actual folder contents.",
+      "title": "Documentation gaps at tests/fixtures/ascii/: missing AGENTS.md; missing README.md"
+    },
+    {
+      "agent_task": "At folder `tests/fixtures/edge_cases/` of this repo: missing AGENTS.md; missing README.md. Read the folder's actual contents, then write/repair AGENTS.md and README.md to be concise and accurate: no placeholder text, no stale path references, README grounded in real entries. Do not duplicate parent docs; link up instead.",
+      "category": "docs",
+      "evidence": [
+        "missing AGENTS.md",
+        "missing README.md"
+      ],
+      "files": [
+        "AGENTS.md",
+        "README.md"
+      ],
+      "id": "DOCS-006",
+      "severity": "medium",
+      "suggested_fix": "Write accurate, concise AGENTS.md (layout, invariants, gotchas, verify commands) and README.md (purpose, usage, entry points) grounded in the actual folder contents.",
+      "title": "Documentation gaps at tests/fixtures/edge_cases/: missing AGENTS.md; missing README.md"
+    },
+    {
+      "agent_task": "At folder `tests/fixtures/large/` of this repo: missing AGENTS.md; missing README.md. Read the folder's actual contents, then write/repair AGENTS.md and README.md to be concise and accurate: no placeholder text, no stale path references, README grounded in real entries. Do not duplicate parent docs; link up instead.",
+      "category": "docs",
+      "evidence": [
+        "missing AGENTS.md",
+        "missing README.md"
+      ],
+      "files": [
+        "AGENTS.md",
+        "README.md"
+      ],
+      "id": "DOCS-007",
+      "severity": "medium",
+      "suggested_fix": "Write accurate, concise AGENTS.md (layout, invariants, gotchas, verify commands) and README.md (purpose, usage, entry points) grounded in the actual folder contents.",
+      "title": "Documentation gaps at tests/fixtures/large/: missing AGENTS.md; missing README.md"
+    },
+    {
+      "agent_task": "At folder `tests/fixtures/mixed/` of this repo: missing AGENTS.md; missing README.md. Read the folder's actual contents, then write/repair AGENTS.md and README.md to be concise and accurate: no placeholder text, no stale path references, README grounded in real entries. Do not duplicate parent docs; link up instead.",
+      "category": "docs",
+      "evidence": [
+        "missing AGENTS.md",
+        "missing README.md"
+      ],
+      "files": [
+        "AGENTS.md",
+        "README.md"
+      ],
+      "id": "DOCS-008",
+      "severity": "medium",
+      "suggested_fix": "Write accurate, concise AGENTS.md (layout, invariants, gotchas, verify commands) and README.md (purpose, usage, entry points) grounded in the actual folder contents.",
+      "title": "Documentation gaps at tests/fixtures/mixed/: missing AGENTS.md; missing README.md"
+    },
+    {
+      "agent_task": "At folder `tests/fixtures/unicode/` of this repo: missing AGENTS.md; missing README.md. Read the folder's actual contents, then write/repair AGENTS.md and README.md to be concise and accurate: no placeholder text, no stale path references, README grounded in real entries. Do not duplicate parent docs; link up instead.",
+      "category": "docs",
+      "evidence": [
+        "missing AGENTS.md",
+        "missing README.md"
+      ],
+      "files": [
+        "AGENTS.md",
+        "README.md"
+      ],
+      "id": "DOCS-009",
+      "severity": "medium",
+      "suggested_fix": "Write accurate, concise AGENTS.md (layout, invariants, gotchas, verify commands) and README.md (purpose, usage, entry points) grounded in the actual folder contents.",
+      "title": "Documentation gaps at tests/fixtures/unicode/: missing AGENTS.md; missing README.md"
+    },
+    {
+      "agent_task": "Test ratio is 0.1285 (target >= 0.2). Identify the three most important untested modules and add focused tests; report coverage before/after.",
+      "category": "testing",
+      "evidence": [
+        "test_to_code_ratio=0.1285",
+        "nontest_code_lines=5128",
+        "test_files=1"
+      ],
+      "files": [],
+      "id": "TEST-001",
+      "severity": "medium",
+      "suggested_fix": "Grow coverage from high-coupling and high-churn modules outward.",
+      "title": "Low test-to-code ratio: 0.1285"
+    }
+  ],
+  "repo": "aadc",
+  "root": "/Volumes/external_drive/Git/projects/ongoing/Code_Tools/dicklesworthstone_meta_operator/repos/aadc"
+}
