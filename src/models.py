@@ -27,7 +27,7 @@ from __future__ import annotations
 
 import dataclasses
 from dataclasses import dataclass, field, fields, is_dataclass
-from typing import Any
+from typing import Any, Literal
 
 # ---------------------------------------------------------------------------
 # State vocabularies
@@ -175,6 +175,20 @@ class UpstreamStatus:
     # (offline classification only: no fetch, no ls-remote probe). Additive
     # schema field; old artifacts load with the default False.
     cache_hit: bool = False
+
+
+@dataclass(frozen=True, slots=True)
+class VerificationError:
+    """An attempted verification with no repository classification or cache hit."""
+
+    name: str
+    default_branch: str
+    error: str
+    state: Literal["error"] = "error"
+
+    @property
+    def cache_hit(self) -> bool:
+        return False
 
 
 # ---------------------------------------------------------------------------

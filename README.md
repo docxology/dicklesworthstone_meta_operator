@@ -91,3 +91,19 @@ uv run pytest tests/ --cov=src --cov-fail-under=90 -q
 
 Tests are offline and zero-mock: real git fixture repos, real subprocesses,
 real files. See `docs/testing_philosophy.md`.
+
+`uv sync --locked` installs the default dev group. With an external `TMPDIR`,
+`bash scripts/gate.sh` copies all source/tests and required saved inputs into
+retained scratch, strictly regenerates the clock-dependent token map there,
+and runs the unchanged complete coverage gate and figure generator against it.
+Checkout outputs remain historical inputs, not newly qualified live results.
+The gate rejects test-selection overrides. The shared
+`src/git_probe.py` boundary resolves and binds inventory/upstream queries to
+each checkout. Its per-process timeout defaults to 60 seconds. Batch verification
+retains a typed error row for timed-out/unavailable probes and continues following
+repos; unknown results never count as synchronized. See `docs/architecture.md`
+for the distinct classification and error-row contracts.
+
+Stage 50's `--auto cma-analyze` composes the retained CMA issues/dependencies
+lane. Set the relative `cma_dir` in `data/operator_config.yaml`, or pass
+`--cma-dir` for a detached worktree. A missing checkout is an explicit error.

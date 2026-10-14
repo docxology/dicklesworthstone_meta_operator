@@ -17,6 +17,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from src.models import AUTO_COMMAND_KEYS, RepoProfile, to_dict
+from src.git_probe import run_git
 
 logger = logging.getLogger(__name__)
 
@@ -398,13 +399,7 @@ def _auto_cmds(repo_path: Path) -> dict[str, str]:
 def _last_commit(repo_path: Path) -> tuple[str, str, str]:
     """(sha, committer-date-ISO8601, subject) of HEAD; ("", "", "") on failure."""
     try:
-        proc = subprocess.run(
-            ["git", "log", "-1", "--format=%H%x00%cI%x00%s"],
-            cwd=repo_path,
-            capture_output=True,
-            text=True,
-            timeout=30,
-        )
+        proc = run_git(repo_path, ["log", "-1", "--format=%H%x00%cI%x00%s"])
     except (OSError, subprocess.SubprocessError) as exc:
         logger.debug("inventory: git log failed in %s: %s", repo_path, exc)
         return "", "", ""

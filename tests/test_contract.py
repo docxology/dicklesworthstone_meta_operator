@@ -6,7 +6,10 @@ atomic-write behavior. Zero mocks.
 
 from __future__ import annotations
 
+import importlib.util
 import json
+import shutil
+import tomllib
 from pathlib import Path
 
 import pytest
@@ -21,6 +24,7 @@ from src.models import (
     UPSTREAM_STATES,
     CloneOutcome,
     RepoMeta,
+    VerificationError,
     from_dict,
     to_dict,
 )
@@ -82,6 +86,14 @@ class TestModels:
         assert UPSTREAM_OK_STATES == {"on_upstream", "unborn"}
         assert AUTO_COMMAND_KEYS == {"test", "lint", "typecheck"}
         assert "off_default" in UPSTREAM_STATES
+
+    def test_verification_error_preserves_cache_and_serialization_contract(self):
+        row = VerificationError("alpha", "main", "git probe timed out")
+        assert row.cache_hit is False and row.state not in UPSTREAM_STATES
+        payload = to_dict(row)
+        assert payload == {"name": "alpha", "default_branch": "main", "error": "git probe timed out", "state": "error"}
+        assert from_dict(VerificationError, payload) == row
+        assert sum(status.cache_hit for status in [row]) == 0
 
 
 # ---------------------------------------------------------------------------
@@ -179,6 +191,8 @@ class TestConfig:
             ({"github_user": "org/name"}, "bare username"),
             ({"github_user": ""}, "bare username"),
             ({"repos_dir": "/absolute/path"}, "relative"),
+            ({"cma_dir": ""}, "cma_dir"),
+            ({"cma_dir": "/absolute/path"}, "relative"),
             ({"clone_workers": 0}, "clone_workers"),
             ({"fetch_workers": -1}, "fetch_workers"),
             ({"run_workers": 0}, "run_workers"),
@@ -208,10 +222,26 @@ class TestConfig:
 
 
 class TestProjectPaths:
-    def test_resolve_project_root_is_parent_of_src(self):
+    def test_published_checkout_root_name(self, tmp_path: Path):
+        from src import project_paths as live_project_paths
+
+        root = tmp_path / "dicklesworthstone_meta_operator"
+        target = root / "src/project_paths.py"
+        target.parent.mkdir(parents=True)
+        shutil.copy2(live_project_paths.__file__, target)
+        spec = importlib.util.spec_from_file_location("published_project_paths", target)
+        assert spec is not None and spec.loader is not None
+        project_paths = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(project_paths)
         assert project_paths.resolve_project_root().name == (
             "dicklesworthstone_meta_operator"
         )
+
+    def test_resolve_project_root_is_parent_of_src(self):
+        root = project_paths.resolve_project_root()
+        metadata = tomllib.loads((root / "pyproject.toml").read_text())
+        assert metadata["project"]["name"] == "dicklesworthstone_meta_operator"
+        assert (root / "src/project_paths.py").samefile(project_paths.__file__)
 
     def test_output_dirs_and_ensure_idempotent(self, tmp_path: Path):
         dirs = project_paths.ensure_output_dirs(tmp_path)

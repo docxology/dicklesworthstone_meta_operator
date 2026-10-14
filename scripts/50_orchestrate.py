@@ -15,6 +15,7 @@ clone with a per-repo timeout. Results land in
 from __future__ import annotations
 
 import argparse
+from dataclasses import replace
 import sys
 from pathlib import Path
 
@@ -22,6 +23,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT))
 
 from src.config import load_config  # noqa: E402
+from src.cma_lane import CMA_AUTO_KEY, CMA_COMMAND_LABEL, run_cma_analyze  # noqa: E402
 from src.inventory import build_inventory  # noqa: E402
 from src.jsonio import read_json, write_text  # noqa: E402
 from src.cma_lane import CMA_AUTO_KEY, CMA_COMMAND_LABEL, render_cma_section, run_cma_analyze  # noqa: E402
@@ -68,6 +70,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--workers", type=int, help="parallel repos (default: config)")
     parser.add_argument("--timeout-s", type=int, dest="timeout_s", help="per-repo timeout")
     parser.add_argument("--tail-bytes", type=int, help="captured stream tail size")
+    parser.add_argument("--cma-dir", help="relative CMA checkout override for --auto cma-analyze")
     return parser
 
 
@@ -75,6 +78,8 @@ def main() -> int:
     """Select repos, run the command, persist + report the run."""
     args = build_parser().parse_args()
     config = load_config(REPO_ROOT)
+    if args.cma_dir is not None:
+        config = replace(config, cma_dir=args.cma_dir).validated()
 
     try:
         inventory = read_json(data_dir(REPO_ROOT) / INVENTORY, required=True)

@@ -9,6 +9,8 @@ mutated with real ``git checkout`` / ``commit`` / ``fetch`` operations.
 from __future__ import annotations
 
 import json
+import shlex
+import shutil
 import subprocess
 from pathlib import Path
 
@@ -24,6 +26,69 @@ from src.upstream_check import (
     verify_all,
     verify_one,
 )
+
+
+@pytest.mark.parametrize("do_fetch,smart_fetch", [(False, False), (True, False), (True, True)])
+def test_slow_git_reports_error_and_preserves_following_repos(fleet, tmp_path: Path, monkeypatch, do_fetch: bool, smart_fetch: bool) -> None:
+    from src import git_probe
+
+    slow, fast = fleet("slow"), fleet("fast")
+    real_git = shutil.which("git")
+    assert real_git is not None
+    executable = tmp_path / "probe-bin" / "git"
+    executable.parent.mkdir()
+    executable.write_text('#!/bin/sh\ncase "$*" in *"/slow/.git"*) exec /bin/sleep 2;; esac\nexec ' + shlex.quote(real_git) + ' "$@"\n')
+    executable.chmod(0o755)
+    monkeypatch.setenv("PATH", str(executable.parent))
+    monkeypatch.setattr(git_probe, "DEFAULT_TIMEOUT_SECONDS", 1.0)
+
+    rows = verify_all([("a-slow", slow, "main"), ("b-fast", fast, "main"), ("c-absent", tmp_path / "absent", "main")],
+                      do_fetch=do_fetch, smart_fetch=smart_fetch)
+
+    assert [row.name for row in rows] == ["a-slow", "b-fast", "c-absent"]
+    report = build_report(rows)
+    assert report["checked"] == 3
+    assert report["ok"] == 1
+    assert report["repos"][0]["state"] == "error"
+    assert "timed out" in report["repos"][0]["error"]
+    assert report["repos"][1]["state"] == "on_upstream"
+    assert report["repos"][2]["state"] == "missing"
+
+
+def test_smart_tip_timeout_is_a_per_repo_error(fleet, tmp_path: Path, monkeypatch) -> None:
+    from src import git_probe
+
+    slow, fast = fleet("slow"), fleet("fast")
+    real_git = shutil.which("git")
+    assert real_git is not None
+    executable = tmp_path / "tip-bin" / "git"
+    executable.parent.mkdir()
+    executable.write_text('#!/bin/sh\ncase "$*" in *"/slow/.git"*"ls-remote"*) exec /bin/sleep 2;; esac\nexec ' + shlex.quote(real_git) + ' "$@"\n')
+    executable.chmod(0o755)
+    monkeypatch.setenv("PATH", str(executable.parent))
+    monkeypatch.setattr(git_probe, "DEFAULT_TIMEOUT_SECONDS", 1.0)
+
+    rows = verify_all([("a-slow", slow, "main"), ("b-fast", fast, "main")], smart_fetch=True)
+
+    report = build_report(rows)
+    assert report["checked"] == 2 and report["ok"] == 1
+    assert report["repos"][0]["state"] == "error"
+    assert "timed out" in report["repos"][0]["error"]
+    assert report["repos"][1]["state"] == "on_upstream"
+
+
+def test_unavailable_git_reports_each_error_without_claiming_a_classification(fleet, tmp_path: Path, monkeypatch) -> None:
+    first, second = fleet("first"), fleet("second")
+    monkeypatch.setenv("PATH", str(tmp_path / "missing-programs"))
+
+    rows = verify_all([("first", first, "main"), ("second", second, "main"), ("absent", tmp_path / "absent", "main")], do_fetch=False)
+
+    report = build_report(rows)
+    assert report["checked"] == 3 and report["ok"] == 0
+    assert [row["name"] for row in report["repos"]] == ["absent", "first", "second"]
+    for row in report["repos"][1:]:
+        assert row["state"] == "error" and "git" in row["error"]
+        assert "head_sha" not in row and "on_upstream_default" not in row
 
 DEFAULT_BRANCH = "main"
 GIT_IDENTITY = ["-c", "user.name=Fixture", "-c", "user.email=fixture@example.com"]

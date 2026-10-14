@@ -9,6 +9,7 @@ the PNGs into ``output/figures/``:
 
 from __future__ import annotations
 
+import argparse
 import sys
 from pathlib import Path
 
@@ -21,6 +22,9 @@ from src.figures import build_all_figures  # noqa: E402
 
 def main() -> int:
     """Render all figures; exit 1 when a required upstream artifact is missing."""
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--out-dir", type=Path)
+    args = parser.parse_args()
     ddir = project_paths.data_dir(REPO_ROOT)
     try:
         registry = jsonio.read_json(ddir / project_paths.REPO_REGISTRY)
@@ -29,7 +33,8 @@ def main() -> int:
     except FileNotFoundError as exc:
         sys.stderr.write(f"{exc}\nfix: run scripts/30_verify_upstream.py and scripts/40_inventory.py first\n")
         return 1
-    written = build_all_figures(registry, upstream, inventory, project_paths.figures_dir(REPO_ROOT))
+    written = build_all_figures(registry, upstream, inventory,
+                                args.out_dir or project_paths.figures_dir(REPO_ROOT))
     for path in written:
         print(f"figure written: {path}")
     return 0

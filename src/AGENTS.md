@@ -15,6 +15,8 @@ table in `../docs/architecture.md` in the same change.
 - **Subprocess boundaries stay thin.** Parsing/decision logic is a pure
   function next to the subprocess wrapper, so tests hit real git fixtures and
   the logic directly.
+- `git_probe.run_git` is the shared explicit-checkout boundary for inventory
+  and upstream probes; callers preserve their existing result/error contracts.
 - **Zero-mock testability**: if new code needs a mock, restructure until it
   needs a real fixture instead (see `../docs/testing_philosophy.md`).
 

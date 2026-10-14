@@ -31,26 +31,33 @@ from __future__ import annotations
 import logging
 import subprocess
 from concurrent.futures import ThreadPoolExecutor
-from dataclasses import replace
+from dataclasses import dataclass, replace
 from pathlib import Path
-
-from src.models import UPSTREAM_OK_STATES, UpstreamStatus, to_dict
+from src.models import UPSTREAM_OK_STATES, UpstreamStatus, VerificationError, to_dict
+from src.git_probe import run_git
 
 logger = logging.getLogger(__name__)
 
 __all__ = ["_run_git", "verify_one", "verify_all", "build_report", "load_prev_tips"]
 
 
+@dataclass(frozen=True, slots=True)
+class GitProbeTimeout(RuntimeError):
+    repo: Path
+
+    def __str__(self) -> str:
+        return f"git probe timed out in {self.repo}"
+
+
+VerificationResult = UpstreamStatus | VerificationError
 
 
 def _run_git(args: list[str], cwd: Path) -> subprocess.CompletedProcess[str]:
     """Run one ``git`` command in ``cwd`` with text-mode captured output."""
-    return subprocess.run(
-        ["git", *args],
-        cwd=str(cwd),
-        text=True,
-        capture_output=True,
-    )
+    result = run_git(cwd, args)
+    if result.returncode == 124:
+        raise GitProbeTimeout(cwd)
+    return result
 
 
 def _resolve_head(repo: Path) -> tuple[bool, bool, str, str]:
@@ -347,6 +354,13 @@ def verify_one(repo_path: Path, default_branch: str, *, do_fetch: bool = True) -
     return _verify_existing(repo_path, default_branch, do_fetch=do_fetch)
 
 
+def _verify_batch(repo: Path, default_branch: str, *, do_fetch: bool) -> VerificationResult:
+    try:
+        return _verify_existing(repo, default_branch, do_fetch=do_fetch)
+    except (OSError, RuntimeError) as error:
+        return VerificationError(name=repo.name, default_branch=default_branch, error=str(error))
+
+
 def verify_all(
     requests: list[tuple[str, Path, str]],
     *,
@@ -354,7 +368,7 @@ def verify_all(
     fetch_workers: int = 8,
     smart_fetch: bool = False,
     prev_tips: dict[str, tuple[str, str]] | None = None,
-) -> list[UpstreamStatus]:
+) -> list[VerificationResult]:
     """Verify many (name, repo_path, default_branch) requests, sorted by name.
 
     Missing paths map to the ``missing`` state without touching git. When
@@ -378,7 +392,7 @@ def verify_all(
     previous artifact (or whose default branch changed) is always
     re-verified through the normal probe/fetch path.
     """
-    results: dict[str, UpstreamStatus] = {}
+    results: dict[str, VerificationResult] = {}
     existing: list[tuple[str, Path, str]] = []
     for name, repo_path, default_branch in requests:
         if not repo_path.is_dir():
@@ -403,12 +417,12 @@ def verify_all(
     if do_fetch and smart_fetch:
         for name, repo, branch in existing:
             results[name] = replace(
-                _verify_existing(repo, branch, do_fetch=False), name=name
+                _verify_batch(repo, branch, do_fetch=False), name=name
             )
         stale_names = {
             name
             for name, repo, branch in existing
-            if results[name].state not in UPSTREAM_OK_STATES
+            if results[name].state not in UPSTREAM_OK_STATES and results[name].state != "error"
         }
         tip_targets = [
             (name, repo, branch)
@@ -428,11 +442,16 @@ def verify_all(
         ]
         with ThreadPoolExecutor(max_workers=max(1, fetch_workers)) as probe_pool:
             probes = [
-                (name, probe_pool.submit(_remote_tip_moved, repo, branch))
+                (name, branch, probe_pool.submit(_remote_tip_moved, repo, branch))
                 for name, repo, branch in tip_targets
             ]
-            for name, future in probes:
-                if future.result():
+            for name, branch, future in probes:
+                try:
+                    moved = future.result()
+                except (OSError, RuntimeError) as error:
+                    results[name] = VerificationError(name=name, default_branch=branch, error=str(error))
+                    continue
+                if moved:
                     stale_names.add(name)
         fetch_targets = [
             (name, repo, branch)
@@ -443,7 +462,7 @@ def verify_all(
     if do_fetch:
         with ThreadPoolExecutor(max_workers=max(1, fetch_workers)) as pool:
             futures = [
-                (name, pool.submit(_verify_existing, repo, branch, do_fetch=True))
+                (name, pool.submit(_verify_batch, repo, branch, do_fetch=True))
                 for name, repo, branch in fetch_targets
             ]
             for name, future in futures:
@@ -451,14 +470,14 @@ def verify_all(
     else:
         for name, repo, branch in existing:
             results[name] = replace(
-                _verify_existing(repo, branch, do_fetch=False), name=name
+                _verify_batch(repo, branch, do_fetch=False), name=name
             )
 
     return [results[name] for name in sorted(results)]
 
 
 def build_report(
-    statuses: list[UpstreamStatus], *, generated_at: str | None = None
+    statuses: list[VerificationResult], *, generated_at: str | None = None
 ) -> dict:
     """Assemble the ``upstream_status.json`` artifact payload (exact shape)."""
     if generated_at is None:

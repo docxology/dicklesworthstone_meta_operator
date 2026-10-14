@@ -26,6 +26,12 @@ dev = [
     "pytest-cov>=4.1.0",
 ]
 
+[dependency-groups]
+dev = [
+    "pytest>=9.0.3",
+    "pytest-cov>=4.1.0",
+]
+
 [tool.pytest.ini_options]
 # RASP Strict Assertion: Tests must be clearly separated and structurally identifiable
 pythonpath = [".", "src"]
