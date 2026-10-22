@@ -24,6 +24,7 @@ artifacts under `output/data/`).
 | `health_gate.py` | Binary go/no-go over the artifact tree (incl. figures + token map) | jsonio reads |
 | `figures.py` | Deterministic manuscript figure builders (pure, colorblind-safe) | matplotlib (Agg) |
 | `manuscript_variables.py` | `{{TOKEN}}` generator: tracked artifacts → prose token map | jsonio + config |
+| `source_evidence.py` | Verified gate snapshots, input manifests, source receipts | filesystem + jsonio; GateCheck/GateReport |
 
 ## API Reference
 

@@ -51,6 +51,16 @@ This source qualification does not synchronize a live corpus or qualify its
 historical generated outputs for integration. Canonical manuscript variables
 and live health artifacts require regeneration in a separately reviewed context.
 
+`src/source_evidence.py` owns the gate's declared input manifest and verified
+copy. It rejects symlinks, compares content hashes and permission bits, and
+never traverses `repos/`. After snapshot preparation, the shell's exit trap
+retains a source receipt for successful and failed runs. Its checks require
+the entire gate's zero exit, executed JUnit cases without failures/errors,
+branch measurement meeting the coverage threshold, and original inputs still
+matching the snapshot. Consumers must recompare inputs before receipt reuse;
+the runtime executable/version and observation timestamp remain evidence,
+not an assertion of installed dependency parity. See [evidence.md](evidence.md).
+
 ## Artifact contract (exact shapes)
 
 | Artifact | Shape |
@@ -64,6 +74,9 @@ and live health artifacts require regeneration in a separately reviewed context.
 | `output/figures/fig_*.png` (4) | deterministic manuscript figures (`src/figures.py` via script 65) |
 | `output/data/manuscript_variables.json` | `{{TOKEN}}` map for the manuscript (one generator, dual-direction test) |
 | `output/data/cma/<run_id>/<repo>_issues.json` | cma `issues` lane report per repo (written by the cma checkout, kept for inspection) |
+| External gate scratch `source_manifest.json` | name-sorted `[{path: relative input filename, sha256: content hash, mode: permission bits}]` |
+| External gate scratch `source_gate.json` | `{generated_at, passed, checks: [GateCheck…], scope: "offline-source", source_root, source_manifest, source_manifest_sha256, python_executable, python_version}`; no corpus/Sidecar/adoption verdict |
+| External gate scratch `pytest.xml`, `coverage.json` | Native pytest JUnit and coverage.py JSON evidence; neither replaces an overall source verdict |
 
 State vocabularies live in `src/models.py` (single source of truth):
 `CloneOutcome.status` ∈ {cloned, already_cloned, failed, mismatch};

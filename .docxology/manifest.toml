@@ -1,0 +1,8 @@
+schema_version = 1
+repo_id = "dicklesworthstone_meta_operator"
+repo_name = "dicklesworthstone_meta_operator"
+owner = ""
+orcid = ""
+hum_lab_project = ""
+tags = ["corpus", "meta-operator"]
+license_note = "MIT; see LICENSE"

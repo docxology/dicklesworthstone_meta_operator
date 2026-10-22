@@ -97,6 +97,11 @@ real files. See `docs/testing_philosophy.md`.
 retained scratch, strictly regenerates the clock-dependent token map there,
 and runs the unchanged complete coverage gate and figure generator against it.
 Checkout outputs remain historical inputs, not newly qualified live results.
+The gate retains `source_manifest.json`, `pytest.xml`, `coverage.json`, and
+`source_gate.json` beside the snapshot. Its receipt requires executed tests,
+branch coverage, a successful complete gate, and unchanged declared inputs.
+See [evidence and Sidecar boundaries](docs/evidence.md) for the scope and reuse
+checks; corpus health and Flywheel adoption retain their separate verdicts.
 The gate rejects test-selection overrides. The shared
 `src/git_probe.py` boundary resolves and binds inventory/upstream queries to
 each checkout. Its per-process timeout defaults to 60 seconds. Batch verification

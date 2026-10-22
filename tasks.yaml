@@ -11,6 +11,28 @@ project:
   life_area: work
   repo: docxology/dicklesworthstone_meta_operator
 tasks:
+  - id: dmo-6
+    title: Source-bound offline gate evidence and Sidecar foothold
+    status: done
+    progress: 100
+    deps: []
+    tags:
+      - evidence
+      - sidecar
+      - operability
+    notes: "OPS-7; source receipt reuses GateCheck/GateReport shapes in external scratch.
+      Sidecar manifest uses native serialization with unclassified identity; retained
+      lock and failed historical Flywheel report stay independent. See docs/evidence.md."
+    priority: high
+    lifeArea: work
+    assignee: DAF
+    validationCommand: TMPDIR=/tmp bash scripts/gate.sh
+    nextSteps:
+      - id: dmo-6-ns-1
+        action: Verify source gate and evidence mutation controls using an existing bound runtime
+        agentPrompt: ""
+        status: done
+        dispatchable: false
   - id: dmo-1
     title: Adopt flywheel scaffolding (board, beads, plan, gate)
     status: done

@@ -32,7 +32,13 @@ dashboard drawer.
 | OPS-4 | done | M | none | Incremental verify: skip repos whose `origin/<default>` sha is unchanged since the last artifact (prev-tips cache; `--no-cache` escape) | run 2 over the live 207-repo corpus: 145/207 cache hits; moved tips re-verified (mutation test in tests/test_upstream_check.py, 22 pass) | run 30 twice; second run reports cache hits | A repo with a moved upstream is always re-verified |
 | OPS-5 | open | M | none | Language-aware test triage in the dashboard: surface per-repo auto_cmds success history from runs artifacts | dashboard runs panel per repo | run tests twice, open dashboard, see history | No runs → panel shows "no runs yet" |
 
-## Blocked
+## Source evidence and Sidecar
+
+| ID | Status | Size | Dependency | Next action / unblock condition | Proving artifact | Acceptance command | Negative control |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| OPS-7 | done | S | existing offline gate | Retain a verified scratch snapshot with source-bound GateReport checks; use `docs/evidence.md` reuse checks before integration | External `source_gate.json`, `source_manifest.json`, `pytest.xml`, `coverage.json`; `docs/evidence.md` | `TMPDIR=/tmp bash scripts/gate.sh` with the existing bound runtime | `pytest tests/test_source_evidence.py`: changed source, empty execution, malformed evidence, low/line-only coverage and nonzero process must fail |
+
+## Blocked dependencies
 
 | ID | Status | Size | Dependency | Next action / unblock condition | Proving artifact | Acceptance command | Negative control |
 | --- | --- | --- | --- | --- | --- | --- | --- |

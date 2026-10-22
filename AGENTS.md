@@ -13,6 +13,7 @@ dashboard, gate.
 | `src/github_client.py` | Subprocess boundary (`gh`); parsing is pure (`parse_repos`). |
 | `src/git_probe.py` | Shared explicit-checkout Git boundary for inventory and upstream verification; inherited Git selectors and ancestor discovery are disabled. |
 | `src/cloner.py`, `src/upstream_check.py`, `src/inventory.py`, `src/orchestrator.py`, `src/dashboard.py`, `src/health_gate.py` | Importable workflow modules: explicit I/O (git, filesystem, HTML), pure decision logic kept separable. |
+| `src/source_evidence.py` | Offline source snapshot and gate receipt boundary; no fleet traversal or Sidecar/Flywheel verdict substitution. |
 | `scripts/` | Thin orchestrators: argv parsing + delegation to `src/` + artifact writes. No business logic. |
 | `output/` | Disposable generated artifacts. Never edit; regenerate. |
 | `data/` | Versioned inputs only (`operator_config.yaml`). No generated JSON. |
