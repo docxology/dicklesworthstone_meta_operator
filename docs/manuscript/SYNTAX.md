@@ -63,7 +63,7 @@ All tokens are emitted by `src/manuscript_variables.py::generate_variables` from
 | `CORPUS_*` | registry + inventory | `CORPUS_REPO_TOTAL`, `CORPUS_FORK_TOTAL`, `CORPUS_ARCHIVED_TOTAL`, `CORPUS_LANG_COUNT`, `CORPUS_LANG1..5_NAME`, `CORPUS_LANG1..5_COUNT`, `CORPUS_LANG_OTHER_REPOS`, `CORPUS_TOTAL_LOC`, `CORPUS_TOTAL_SIZE_GB`, `CORPUS_WITH_TESTS`, `CORPUS_WITH_TESTS_PCT`, `CORPUS_CI_WORKFLOWS`, `CORPUS_CARGO_MANIFESTS`, `CORPUS_PYPROJECT_MANIFESTS`, `CORPUS_STALE_MAX_DAYS`, `CORPUS_STALE_MEDIAN_DAYS` |
 | `VERIFY_*` | upstream_status.json | `VERIFY_TOTAL`, `VERIFY_ON_UPSTREAM`, `VERIFY_BEHIND`, `VERIFY_UNBORN`, `VERIFY_OTHER_NOT_OK`, `VERIFY_OK`, `VERIFY_OK_PCT`, `VERIFY_GENERATED_AT` |
 | `GATE_*` / `FIGURE_*` | health_gate.json + figures | `GATE_VERDICT`, `GATE_CHECKS_TOTAL`, `GATE_CHECKS_PASSED`, `FIGURE_COUNT` |
-| `ARTIFACT_SHA8_*` | file hashes | `ARTIFACT_SHA8_REGISTRY`, `ARTIFACT_SHA8_UPSTREAM`, `ARTIFACT_SHA8_INVENTORY`, `ARTIFACT_SHA8_GATE` |
+| `ARTIFACT_SHA8_*` | file hashes | `ARTIFACT_SHA8_REGISTRY`, `ARTIFACT_SHA8_UPSTREAM`, `ARTIFACT_SHA8_INVENTORY` |
 
 **Edit protocol.** To change a number-bearing sentence, change the artifact-producing behavior, regenerate, and let the token test tell you which tokens changed. Never hand-write a number into prose; never hand-edit `output/data/manuscript_variables.json`.
 

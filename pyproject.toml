@@ -3,33 +3,33 @@
 # when run from there; standalone `uv run` builds a project-local venv.
 
 [build-system]
-requires = ["setuptools>=61.0"]
+requires = ["setuptools>=77.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "dicklesworthstone_meta_operator"
 version = "0.2.0"
-license = {text = "MIT"}
+license = "MIT"
 description = "Meta-operator over the Dicklesworthstone GitHub corpus: clone, verify upstream sync, orchestrate, interpret, dashboard"
 authors = [
     {name = "Daniel Ari Friedman", email = "daniel@activeinference.institute"}
 ]
 requires-python = ">=3.11"
 dependencies = [
-    "pyyaml>=6.0",
-    "matplotlib>=3.7",
+    "pyyaml>=6.0.3",
+    "matplotlib>=3.11.2",
 ]
 
 [project.optional-dependencies]
 dev = [
-    "pytest>=9.0.3",
-    "pytest-cov>=4.1.0",
+    "pytest>=9.1.1",
+    "pytest-cov>=7.1.0",
 ]
 
 [dependency-groups]
 dev = [
-    "pytest>=9.0.3",
-    "pytest-cov>=4.1.0",
+    "pytest>=9.1.1",
+    "pytest-cov>=7.1.0",
 ]
 
 [tool.pytest.ini_options]

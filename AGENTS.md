@@ -12,7 +12,7 @@ dashboard, gate.
 | `src/models.py`, `src/jsonio.py`, `src/config.py`, `src/project_paths.py` | Frozen contract: pure models + artifact I/O + typed config + path resolution. No subprocess. |
 | `src/github_client.py` | Subprocess boundary (`gh`); parsing is pure (`parse_repos`). |
 | `src/git_probe.py` | Shared explicit-checkout Git boundary for inventory and upstream verification; inherited Git selectors and ancestor discovery are disabled. |
-| `src/cloner.py`, `src/upstream_check.py`, `src/inventory.py`, `src/orchestrator.py`, `src/dashboard.py`, `src/health_gate.py` | Importable workflow modules: explicit I/O (git, filesystem, HTML), pure decision logic kept separable. |
+| `src/registry.py`, `src/cloner.py`, `src/upstream_check.py`, `src/inventory.py`, `src/orchestrator.py`, `src/cma_lane.py`, `src/dashboard.py`, `src/figures.py`, `src/manuscript_variables.py`, `src/health_gate.py` | Importable workflow modules: explicit I/O (git, filesystem, HTML, matplotlib), pure decision logic kept separable. |
 | `src/source_evidence.py` | Offline source snapshot and gate receipt boundary; no fleet traversal or Sidecar/Flywheel verdict substitution. |
 | `scripts/` | Thin orchestrators: argv parsing + delegation to `src/` + artifact writes. No business logic. |
 | `output/` | Disposable generated artifacts. Never edit; regenerate. |
@@ -60,8 +60,8 @@ scripts 50/60/70 and the dashboard.
 ```mermaid
 flowchart TB
     P[projects/ongoing/Code_Tools/dicklesworthstone_meta_operator]
-    P --> SRC[src — logic: models, jsonio, config, paths, github_client, registry, cloner, upstream_check, inventory, orchestrator, dashboard, health_gate]
-    P --> SC[scripts — 8 thin numbered stages 00-70]
+    P --> SRC[src — logic: models, jsonio, config, paths, github_client, registry, git_probe, cloner, upstream_check, inventory, orchestrator, dashboard, health_gate, cma_lane, figures, manuscript_variables, source_evidence]
+    P --> SC[scripts — thin numbered stages 00-90 + z_ token generator]
     P --> T[tests — zero-mock suite, ≥90 % gate]
     P --> D[data — operator_config.yaml input]
     P --> OUT[output — generated artifacts, disposable]

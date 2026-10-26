@@ -1,8 +1,9 @@
 # src/ — Operator Logic
 
 Importable project logic. Four frozen contract modules (models, jsonio,
-config, project_paths) plus six workflow modules (github_client, registry,
-cloner, upstream_check, inventory, orchestrator, dashboard, health_gate —
+config, project_paths) plus thirteen workflow/boundary modules (github_client,
+git_probe, registry, cloner, upstream_check, inventory, orchestrator, cma_lane,
+dashboard, figures, manuscript_variables, health_gate, source_evidence —
 workflow modules never import each other; they communicate through JSON
 artifacts under `output/data/`).
 
@@ -15,11 +16,13 @@ artifacts under `output/data/`).
 | `config.py` | Typed `operator_config.yaml` loader, unknown-key rejection | yaml |
 | `project_paths.py` | Project root, output dirs, artifact filenames | stdlib only |
 | `github_client.py` | Repo enumeration via `gh api --paginate` (subprocess); pure parsing | subprocess `gh` |
+| `git_probe.py` | Explicit-checkout `git` probes shared by inventory + upstream verification | subprocess `git` |
 | `registry.py` | Registry artifact build/save/load/diff | jsonio |
 | `cloner.py` | Idempotent parallel clone planning + execution | subprocess `git` |
 | `upstream_check.py` | Per-clone upstream-default verification, state machine | subprocess `git` |
 | `inventory.py` | Per-repo interpretability profiles | fs walk + `git log` |
 | `orchestrator.py` | Selector-filtered command runs + reports | subprocess |
+| `cma_lane.py` | code_meta_analysis lane (`--auto cma-analyze`): issues + deps per repo | subprocess `uv run` in the cma checkout |
 | `dashboard.py` | Self-contained HTML dashboard + markdown catalog (pure renderers) | none (pure) |
 | `health_gate.py` | Binary go/no-go over the artifact tree (incl. figures + token map) | jsonio reads |
 | `figures.py` | Deterministic manuscript figure builders (pure, colorblind-safe) | matplotlib (Agg) |

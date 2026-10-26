@@ -5,11 +5,13 @@
 `dicklesworthstone_meta_operator` is a meta-operator over the
 [Dicklesworthstone](https://github.com/Dicklesworthstone) GitHub corpus: clone
 everything, verify upstream sync, orchestrate commands, interpret repos, and
-render a dashboard. It lives in the private sidecar
-(`projects/ongoing/Code_Tools/`) and is deliberately infrastructure-free:
-unlike the exemplar it forked from, it imports nothing from the template
-monorepo's `infrastructure/` — logging is stdlib, artifact I/O is `src/jsonio`,
-and the subprocess boundaries are `gh` + `git`.
+render a dashboard. It is published as
+[`docxology/dicklesworthstone_meta_operator`](https://github.com/docxology/dicklesworthstone_meta_operator)
+and also lives in the sidecar workspace (`projects/ongoing/Code_Tools/`); it is
+deliberately infrastructure-free: unlike the exemplar it forked from, it
+imports nothing from the template monorepo's `infrastructure/` — logging is
+stdlib, artifact I/O is `src/jsonio`, and the subprocess boundaries are `gh`,
+`git`, and `uv` (the optional code_meta_analysis lane).
 
 ## Copy This When
 
