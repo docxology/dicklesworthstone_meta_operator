@@ -8,3 +8,16 @@ board = "../../tasks.yaml"
 backlog = "../../TODO.md"
 voice_protocol = "daf-dot"
 spatialized_information = "daf-operator"
+
+# Nonsecret task navigation only; commands are not validation receipts or execution grants.
+[task_handoff]
+path_base = "repository-root"
+repository = "docxology/dicklesworthstone_meta_operator"
+board = "tasks.yaml"
+todo = "TODO.md"
+native_gate = "bash scripts/gate.sh"
+native_contract = "AGENTS.md"
+stack_registry = "../../Private/daf-stack/src/daf_stack/manifest.py"
+flywheel_contract = "../../Private/daf-flywheel/docs/continuous-factory.md"
+horizon_contract = "../../Private/daf-horizon/docs/evidence.md"
+operator_contract = "../../Private/daf-operator/docs/TASK_MODEL.md"

@@ -1,3 +1,30 @@
+# dicklesworthstone_meta_operator task index
+
+The canonical task records are in [tasks.yaml](tasks.yaml). Follow the linked IDs
+for current status, dependencies, acceptance criteria, prompts and owner holds.
+This view records no independent task state. Preserve blocked and completed records.
+
+Native contracts: [AGENTS.md](AGENTS.md). Task and gate signposts:
+[public/links.toml](.docxology/public/links.toml). Resolve ecosystem members from
+`daf_stack.manifest.default_manifest()`; Flywheel proposals and Horizon previews
+remain subject to Operator policy, source freshness and separate execution admission.
+
+- [dmo-6](tasks.yaml#L14) — Source-bound offline gate evidence and Sidecar foothold
+- [dmo-1](tasks.yaml#L36) — Adopt flywheel scaffolding (board, beads, plan, gate)
+- [dmo-2](tasks.yaml#L59) — Reconcile OPS backlog truth (run OPS-1..3 acceptance commands)
+- [dmo-3](tasks.yaml#L83) — OPS-4 incremental upstream verify (cache unchanged origin tips)
+- [dmo-4](tasks.yaml#L107) — Corpus-scale cma integration lane and dashboard panel
+- [dmo-5](tasks.yaml#L138) — Flywheel adoption review hardening round
+
+## Retained notes
+
+The following material is preserved verbatim as historical context. Its checkboxes,
+status labels, counts and suggestions are not a current queue or validation receipt.
+Unmapped suggestions require owner reconciliation against canonical task IDs before work.
+Read the board above for current state; these notes grant no dispatch authority.
+
+---
+
 # dicklesworthstone_meta_operator TODO
 
 Future-only backlog. Every active row needs a stable ID, size, dependency, next
