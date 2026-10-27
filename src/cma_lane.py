@@ -29,6 +29,7 @@ from __future__ import annotations
 
 import json
 import logging
+import os
 import subprocess
 import time
 from dataclasses import dataclass
@@ -189,6 +190,11 @@ def _run_lane(
         proc = subprocess.run(
             argv,
             cwd=str(cwd),
+            # Select CMA's own project environment; retain external cache/TMP
+            # bindings without lending it this caller's interpreter or venv.
+            env={key: value for key, value in os.environ.items() if key not in {
+                "UV_PROJECT_ENVIRONMENT", "UV_PYTHON", "UV_PROJECT", "UV_WORKING_DIRECTORY", "VIRTUAL_ENV",
+            }},
             capture_output=True,
             text=True,
             timeout=timeout_s,

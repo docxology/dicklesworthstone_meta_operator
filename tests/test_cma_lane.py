@@ -9,6 +9,9 @@ subprocess runs exercise ``uv run python scripts/lanes.py`` end to end.
 from __future__ import annotations
 
 import json
+import os
+import subprocess
+import sys
 from pathlib import Path
 
 import pytest
@@ -80,6 +83,13 @@ def make_fake_cma(tmp_path: Path) -> Path:
     lanes = cma / "scripts" / "lanes.py"
     lanes.write_text(FAKE_LANES, encoding="utf-8")
     lanes.chmod(0o755)
+    # A standalone fixture must not discover the containing GitVault project.
+    (cma / "pyproject.toml").write_text(
+        '[project]\nname = "cma-lane-fixture"\nversion = "0.0.0"\n'
+        f'requires-python = "=={sys.version_info.major}.{sys.version_info.minor}.*"\n'
+        'dependencies = []\n', encoding="utf-8",
+    )
+    (cma / ".python-version").write_text(sys.executable + "\n", encoding="utf-8")
     return cma
 
 
@@ -294,6 +304,34 @@ def test_run_cma_analyze_real_subprocess(tmp_path: Path) -> None:
 # ---------------------------------------------------------------------------
 # Timeout path
 # ---------------------------------------------------------------------------
+
+
+def test_lane_does_not_inherit_the_parent_project_runtime(tmp_path: Path) -> None:
+    child = tmp_path / "environment.py"
+    child.write_text(
+        "import json,os; names=('UV_PROJECT_ENVIRONMENT','UV_PYTHON','UV_PROJECT',"
+        "'UV_WORKING_DIRECTORY','VIRTUAL_ENV','UV_CACHE_DIR'); "
+        "print(json.dumps({k:os.environ[k] for k in names if k in os.environ}))", encoding="utf-8",
+    )
+    probe = tmp_path / "probe.py"
+    project_root = Path(__file__).resolve().parents[1]
+    probe.write_text(
+        "import sys\nfrom pathlib import Path\n"
+        f"sys.path.insert(0, {str(project_root)!r})\n"
+        "from src.cma_lane import _run_lane\n"
+        f"r = _run_lane([sys.executable, {str(child)!r}], Path({str(tmp_path)!r}), timeout_s=5, tail_bytes=100000)\n"
+        "print(r.stdout_tail)\nraise SystemExit(r.exit_code)\n",
+        encoding="utf-8",
+    )
+    selectors = ("UV_PROJECT_ENVIRONMENT", "UV_PYTHON", "UV_PROJECT", "UV_WORKING_DIRECTORY", "VIRTUAL_ENV")
+    cache = str(tmp_path / "retained-cache")
+    result = subprocess.run(
+        [sys.executable, str(probe)], check=True, capture_output=True, text=True,
+        env={**os.environ, **dict.fromkeys(selectors, str(tmp_path / "parent-only")), "UV_CACHE_DIR": cache},
+    )
+    observed = json.loads(result.stdout)
+    assert not (set(selectors) & observed.keys())
+    assert observed["UV_CACHE_DIR"] == cache
 
 
 def test_run_lane_timeout_is_typed(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:

@@ -28,7 +28,12 @@ The retained CMA lane is an explicit composition of orchestration helpers:
 stage 50 accepts `--auto cma-analyze` and delegates to `run_cma_analyze`.
 `OperatorConfig.cma_dir` resolves relative to the project root; `--cma-dir`
 overrides it for a detached worktree. It must identify the CMA checkout's
-`scripts/lanes.py`. The lane runs issues and dependencies per selected repo,
+`scripts/lanes.py`. Child lanes clear the caller's `UV_PROJECT_ENVIRONMENT`,
+`UV_PYTHON`, `UV_PROJECT`, `UV_WORKING_DIRECTORY`, and `VIRTUAL_ENV`; CMA selects
+its own project and interpreter while retaining external cache and temporary
+storage bindings. Standalone test projects declare their metadata and Python
+selection, preventing discovery of a containing management project.
+The lane runs issues and dependencies per selected repo,
 records failures in its existing `cma` rows, and preserves the ordinary
 `AUTO_COMMAND_KEYS` vocabulary for repository-detected commands.
 
