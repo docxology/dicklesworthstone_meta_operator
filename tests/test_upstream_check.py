@@ -9,9 +9,11 @@ mutated with real ``git checkout`` / ``commit`` / ``fetch`` operations.
 from __future__ import annotations
 
 import json
+import os
 import shlex
 import shutil
 import subprocess
+import sys
 from pathlib import Path
 
 import pytest
@@ -96,8 +98,11 @@ GIT_IDENTITY = ["-c", "user.name=Fixture", "-c", "user.email=fixture@example.com
 
 def git(args: list[str], cwd: Path) -> str:
     """Run a real git command and assert success, returning stdout."""
+    env = {key: value for key, value in os.environ.items() if not key.startswith("GIT_")}
+    env.update(GIT_CONFIG_NOSYSTEM="1", GIT_CONFIG_GLOBAL=os.devnull, GIT_TERMINAL_PROMPT="0")
     proc = subprocess.run(
-        ["git", *args], cwd=str(cwd), text=True, capture_output=True
+        ["git", "-c", "core.fsmonitor=false", *args], cwd=str(cwd), env=env,
+        stdin=subprocess.DEVNULL, text=True, capture_output=True
     )
     assert proc.returncode == 0, f"git {args} failed: {proc.stderr}"
     return proc.stdout
@@ -542,3 +547,53 @@ def test_upstream_status_row_backward_compat() -> None:
     assert status.fetched is False
     status = replace(status, cache_hit=True)
     assert to_dict(status)["cache_hit"] is True
+
+
+@pytest.mark.parametrize("selector", ["repository", "index", "objects", "config", "global-config"])
+def test_fixture_git_ignores_inherited_selectors(tmp_path: Path, selector: str) -> None:
+    """Fixture Git cannot borrow the caller's repository, storage, or config."""
+    work, decoy = tmp_path / "work", tmp_path / "decoy"
+    git(["init", "-b", DEFAULT_BRANCH, str(work)], tmp_path)
+    git(["init", "-b", DEFAULT_BRANCH, str(decoy)], tmp_path)
+    env = os.environ.copy()
+    args = ["rev-parse", "--show-toplevel"]
+    expected = work
+    if selector == "repository":
+        env.update(GIT_DIR=str(decoy / ".git"), GIT_WORK_TREE=str(decoy))
+    elif selector == "index":
+        env["GIT_INDEX_FILE"] = str(decoy / "alternate-index")
+        args = ["rev-parse", "--path-format=absolute", "--git-path", "index"]
+        expected = work / ".git/index"
+    elif selector == "objects":
+        env["GIT_OBJECT_DIRECTORY"] = str(decoy / ".git/objects")
+        args = ["rev-parse", "--path-format=absolute", "--git-path", "objects"]
+        expected = work / ".git/objects"
+    elif selector == "config":
+        env.update(GIT_CONFIG_COUNT="1", GIT_CONFIG_KEY_0="git01.marker", GIT_CONFIG_VALUE_0="caller")
+        args = ["config", "--list"]
+    else:
+        config = tmp_path / "caller.gitconfig"
+        config.write_text("[git01]\n\tmarker = caller\n", encoding="utf-8")
+        args = ["config", "--list"]
+        env["GIT_CONFIG_GLOBAL"] = str(config)
+    child = subprocess.run(
+        [sys.executable, "-B", "-c", """
+import json
+from pathlib import Path
+import sys
+source, work, args = sys.argv[1:]
+scope = {"__name__": "fixture_git_probe", "__file__": source}
+exec(compile(Path(source).read_bytes(), source, "exec"), scope)
+print(scope["git"](json.loads(args), Path(work)).strip())
+""", str(Path(__file__).resolve()), str(work), json.dumps(args)],
+        cwd=Path(__file__).resolve().parents[1],
+        env=env,
+        stdin=subprocess.DEVNULL,
+        capture_output=True,
+        text=True,
+    )
+    assert child.returncode == 0, child.stderr
+    if selector in {"config", "global-config"}:
+        assert "git01.marker=caller" not in child.stdout.splitlines()
+    else:
+        assert Path(child.stdout.strip()).resolve() == expected.resolve()
