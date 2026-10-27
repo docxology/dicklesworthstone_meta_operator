@@ -102,7 +102,7 @@ def _check_clones(project_root: Path, ddir: Path) -> GateCheck:
 
 
 def _check_upstream(ddir: Path) -> GateCheck:
-    """upstream_all_ok: upstream_status.json exists and every state is OK."""
+    """upstream_all_ok: unique rows cover the registry with consistent OK counts."""
     cid = "upstream_all_ok"
     try:
         raw = jsonio.read_json(ddir / project_paths.UPSTREAM_STATUS, required=True)
@@ -129,6 +129,28 @@ def _check_upstream(ddir: Path) -> GateCheck:
             f"upstream_status.json has {malformed} malformed (non-object) entries "
             "— re-run the upstream verification step",
         )
+    names = _registry_names(ddir)
+    if names is None:
+        return GateCheck(cid, False, f"registry unreadable — {_REGISTRY_FIX}")
+    row_names = [entry.get("name") for entry in entries]
+    if any(not isinstance(name, str) or not name.strip() for name in row_names):
+        return GateCheck(
+            cid,
+            False,
+            "upstream repos require nonempty string names — run the upstream verification step",
+        )
+    unique_names = set(row_names)
+    if len(unique_names) != len(row_names) or sorted(row_names) != names:
+        detail = "upstream rows do not uniquely cover registry"
+        if len(unique_names) != len(row_names):
+            detail += "; duplicate names"
+        uncovered = sorted(set(names) - unique_names)
+        unknown = sorted(unique_names - set(names))
+        if uncovered:
+            detail += f"; uncovered: {', '.join(uncovered[:10])}"
+        if unknown:
+            detail += f"; not in registry: {', '.join(unknown[:10])}"
+        return GateCheck(cid, False, detail + " — run the upstream verification step")
     offenders = sorted(
         (str(u.get("name") or "?"), str(u.get("state") or "?"))
         for u in entries
@@ -142,6 +164,16 @@ def _check_upstream(ddir: Path) -> GateCheck:
             False,
             "offenders: " + ", ".join(parts) + extra
             + " — run the upstream verification step",
+        )
+    if any(
+        type(raw.get(field)) is not int or raw[field] != len(entries)
+        for field in ("checked", "ok")
+    ):
+        return GateCheck(
+            cid,
+            False,
+            "upstream checked/ok counts do not match repos entries "
+            "— run the upstream verification step",
         )
     fresh = sum(1 for u in entries if u.get("fetched") is True)
     return GateCheck(

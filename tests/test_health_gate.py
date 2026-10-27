@@ -10,10 +10,13 @@ from __future__ import annotations
 import json
 import shutil
 import subprocess
+from pathlib import Path
+
+import pytest
 
 from src import project_paths
 from src.figures import build_all_figures
-from src.health_gate import CHECK_IDS, load_gate, run_gate, save_gate
+from src.health_gate import CHECK_IDS, _check_upstream, load_gate, run_gate, save_gate
 
 
 def _write_json(path: Path, payload: dict) -> None:
@@ -348,3 +351,164 @@ def test_missing_manuscript_variables_fails_only_manuscript_check(tmp_path: Path
     _assert_only_fails(report, "manuscript_tokens_present")
     detail = _by_id(report)["manuscript_tokens_present"].detail
     assert "z_generate_manuscript_variables.py" in detail and "--allow-draft" in detail
+
+
+@pytest.mark.parametrize("names", [("alpha",), ("alpha", "alpha"), ("alien",)])
+def test_upstream_rows_must_uniquely_cover_registry(
+    tmp_path: Path, names: tuple[str, ...]
+) -> None:
+    # Given: a complete real two-repository tree and a row-coherent upstream report.
+    build_tree(tmp_path, tmp_path / "scratch")
+    path = project_paths.data_dir(tmp_path) / project_paths.UPSTREAM_STATUS
+    raw = _read_json(path)
+    raw.update(checked=len(names), ok=len(names), repos=[_upstream_entry(n) for n in names])
+    _write_json(path, raw)
+
+    # When: the complete health gate reads the saved artifacts.
+    report = run_gate(tmp_path)
+
+    # Then: only the upstream coverage check refuses the tree.
+    _assert_only_fails(report, "upstream_all_ok")
+
+
+@pytest.fixture
+def upstream_data_dir(tmp_path: Path) -> Path:
+    """Create the real JSON inputs for focused upstream-loader challenges."""
+    ddir = project_paths.data_dir(tmp_path)
+    _write_json(ddir / project_paths.REPO_REGISTRY, _registry_payload())
+    _write_json(ddir / project_paths.UPSTREAM_STATUS, {
+        "generated_at": "2026-08-02T00:00:00Z",
+        "checked": 2,
+        "ok": 2,
+        "repos": [_upstream_entry(n) for n in REPO_NAMES],
+    })
+    return ddir
+
+
+@pytest.mark.parametrize("names", [
+    ("alpha", "alien"),
+    ("alpha", "beta", "alien"),
+    ("alpha", "beta", "alpha"),
+])
+def test_upstream_extra_or_substituted_rows_fail(
+    upstream_data_dir: Path, names: tuple[str, ...]
+) -> None:
+    # Given: coherent aggregate counts cannot conceal foreign or duplicate rows.
+    path = upstream_data_dir / project_paths.UPSTREAM_STATUS
+    raw = _read_json(path)
+    raw.update(checked=len(names), ok=len(names), repos=[_upstream_entry(n) for n in names])
+    _write_json(path, raw)
+
+    # When: the actual upstream check loads the report.
+    check = _check_upstream(upstream_data_dir)
+
+    # Then: registry coverage is refused.
+    assert not check.passed
+
+
+@pytest.mark.parametrize("name", ["", " ", None, 17])
+def test_upstream_invalid_names_fail(
+    upstream_data_dir: Path, name: str | int | None
+) -> None:
+    # Given: an otherwise complete report has an invalid repository name.
+    path = upstream_data_dir / project_paths.UPSTREAM_STATUS
+    raw = _read_json(path)
+    raw["repos"][1]["name"] = name
+    _write_json(path, raw)
+
+    # When: the actual upstream check loads the report.
+    check = _check_upstream(upstream_data_dir)
+
+    # Then: missing identity cannot certify coverage.
+    assert not check.passed
+
+
+def test_upstream_missing_name_fails(upstream_data_dir: Path) -> None:
+    # Given: a saved row omits its repository identity.
+    path = upstream_data_dir / project_paths.UPSTREAM_STATUS
+    raw = _read_json(path)
+    raw["repos"][1].pop("name")
+    _write_json(path, raw)
+
+    # When: the actual upstream check loads the report.
+    check = _check_upstream(upstream_data_dir)
+
+    # Then: the row is refused without raising a lookup error.
+    assert not check.passed
+
+
+@pytest.mark.parametrize("field", ["checked", "ok"])
+@pytest.mark.parametrize("value", [0, 1, 3, 2.0, True, "2", None])
+def test_upstream_incoherent_aggregate_fails(
+    upstream_data_dir: Path, field: str, value: int | float | str | None
+) -> None:
+    # Given: valid complete rows have a false or non-integer producer aggregate.
+    path = upstream_data_dir / project_paths.UPSTREAM_STATUS
+    raw = _read_json(path)
+    raw[field] = value
+    _write_json(path, raw)
+
+    # When: the actual upstream check loads the report.
+    check = _check_upstream(upstream_data_dir)
+
+    # Then: the inconsistent report is refused.
+    assert not check.passed
+
+
+@pytest.mark.parametrize("field", ["checked", "ok"])
+def test_upstream_missing_aggregate_fails(upstream_data_dir: Path, field: str) -> None:
+    # Given: a complete report omits a required producer aggregate.
+    path = upstream_data_dir / project_paths.UPSTREAM_STATUS
+    raw = _read_json(path)
+    raw.pop(field)
+    _write_json(path, raw)
+
+    # When: the actual upstream check loads the report.
+    check = _check_upstream(upstream_data_dir)
+
+    # Then: coverage is not certified from an incomplete report.
+    assert not check.passed
+
+
+def test_upstream_requires_readable_registry(upstream_data_dir: Path) -> None:
+    # Given: complete upstream rows have no registry to bind their coverage.
+    (upstream_data_dir / project_paths.REPO_REGISTRY).unlink()
+
+    # When: the actual upstream check loads the report.
+    check = _check_upstream(upstream_data_dir)
+
+    # Then: the unbound report is refused.
+    assert not check.passed
+
+
+def test_upstream_verification_error_remains_a_failure(upstream_data_dir: Path) -> None:
+    # Given: the producer's real VerificationError shape covers beta but is not OK.
+    path = upstream_data_dir / project_paths.UPSTREAM_STATUS
+    raw = _read_json(path)
+    raw["repos"][1] = {
+        "name": "beta", "default_branch": "main", "state": "error",
+        "error": "synthetic local verification failure",
+    }
+    raw["ok"] = 1
+    _write_json(path, raw)
+
+    # When: the actual upstream check loads the report.
+    check = _check_upstream(upstream_data_dir)
+
+    # Then: complete name coverage never promotes a verification failure.
+    assert not check.passed
+
+
+def test_upstream_complete_reordered_unborn_rows_pass(upstream_data_dir: Path) -> None:
+    # Given: complete valid rows may use either existing OK state, in either order.
+    path = upstream_data_dir / project_paths.UPSTREAM_STATUS
+    raw = _read_json(path)
+    raw["repos"][1]["state"] = "unborn"
+    raw["repos"].reverse()
+    _write_json(path, raw)
+
+    # When: the actual upstream check loads the report.
+    check = _check_upstream(upstream_data_dir)
+
+    # Then: valid complete reports retain their acceptance.
+    assert check.passed
