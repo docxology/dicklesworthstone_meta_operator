@@ -92,7 +92,7 @@ detached, off_default, unborn, missing}; OK-for-gate = {on_upstream, unborn};
 `cma` run rows additionally carry lane statuses ∈ {ok, failed} per lane
 (`issues`, `deps`); a repo with no cma report is absent from the `cma` map and
 renders "no cma report yet" in the dashboard panel. The cma checkout path is
-`OperatorConfig.cma_dir` (default `../code_meta_analysis`, resolved relative
+`OperatorConfig.cma_dir` (default `../daf-code-analysis`, resolved relative
 to the project root).
 
 `models.VerificationError` (also exported by `upstream_check`) is a separate batch outcome, not an

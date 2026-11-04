@@ -208,12 +208,12 @@ class TestConfig:
             config.validated()
 
     def test_cma_dir_default_is_relative_checkout(self, tmp_path: Path):
-        assert OperatorConfig().cma_dir == "../code_meta_analysis"
+        assert OperatorConfig().cma_dir == "../daf-code-analysis"
         (tmp_path / "data").mkdir()
         (tmp_path / "data" / "operator_config.yaml").write_text(
-            "cma_dir: ../../docxology/code_meta_analysis\n", encoding="utf-8"
+            "cma_dir: ../../docxology/daf-code-analysis\n", encoding="utf-8"
         )
-        assert load_config(tmp_path).cma_dir == "../../docxology/code_meta_analysis"
+        assert load_config(tmp_path).cma_dir == "../../docxology/daf-code-analysis"
 
 
 # ---------------------------------------------------------------------------

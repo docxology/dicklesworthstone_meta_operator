@@ -393,7 +393,7 @@ def test_render_dashboard_cma_panel_content() -> None:
     }
     html = render_dashboard(payload, compute_summary(payload))
     assert 'class="cma"' in html
-    assert "cma (code_meta_analysis)" in html
+    assert "cma (daf-code-analysis)" in html
     assert "2026-01-03_cma" in html
     assert "chip-ok" in html and "chip-failed" in html
     assert "0.42" in html and "src/a.py" in html

@@ -22,7 +22,7 @@ artifacts under `output/data/`).
 | `upstream_check.py` | Per-clone upstream-default verification, state machine | subprocess `git` |
 | `inventory.py` | Per-repo interpretability profiles | fs walk + `git log` |
 | `orchestrator.py` | Selector-filtered command runs + reports | subprocess |
-| `cma_lane.py` | code_meta_analysis lane (`--auto cma-analyze`): issues + deps per repo | subprocess `uv run` in the cma checkout |
+| `cma_lane.py` | daf-code-analysis lane (`--auto cma-analyze`): issues + deps per repo | subprocess `uv run` in the cma checkout |
 | `dashboard.py` | Self-contained HTML dashboard + markdown catalog (pure renderers) | none (pure) |
 | `health_gate.py` | Binary go/no-go over the artifact tree (incl. figures + token map) | jsonio reads |
 | `figures.py` | Deterministic manuscript figure builders (pure, colorblind-safe) | matplotlib (Agg) |

@@ -1,7 +1,7 @@
-"""code_meta_analysis integration lane: orchestration-only corpus analysis.
+"""daf-code-analysis integration lane: orchestration-only corpus analysis.
 
 Pipeline position: an orchestration lane of stage 50 (``--auto cma-analyze``).
-It invokes the code_meta_analysis checkout's lanes CLI (``scripts/lanes.py``)
+It invokes the daf-code-analysis checkout's lanes CLI (``scripts/lanes.py``)
 per repo, parses the two signals the dashboard surfaces (issue count from the
 ``issues`` lane, dependency-graph centrality from the ``deps`` lane), and
 records per-repo results in the run artifact under a ``cma`` mapping.
@@ -71,7 +71,7 @@ class LaneOutcome:
 
 
 def resolve_cma_dir(config: Any, project_root: Path) -> Path:
-    """Resolve the code_meta_analysis checkout path from ``config.cma_dir``.
+    """Resolve the daf-code-analysis checkout path from ``config.cma_dir``.
 
     Relative to ``project_root``. Raises ``FileNotFoundError`` with a fix hint
     when the checkout (or its lanes CLI) is missing — a configuration error
@@ -83,7 +83,7 @@ def resolve_cma_dir(config: Any, project_root: Path) -> Path:
     if not entry.is_file():
         raise FileNotFoundError(
             f"cma checkout not found at {candidate} (cma_dir={config.cma_dir!r}) — "
-            "clone code_meta_analysis there or set cma_dir in data/operator_config.yaml"
+            "clone daf-code-analysis there or set cma_dir in data/operator_config.yaml"
         )
     return candidate
 
@@ -342,7 +342,7 @@ def render_cma_section(cma_rows: dict[str, dict]) -> str:
     """Deterministic markdown cma section appended to the stage-50 report."""
     if not cma_rows:
         return ""
-    lines = ["", "## cma (code_meta_analysis)", ""]
+    lines = ["", "## cma (daf-code-analysis)", ""]
     lines.append(
         "| Repo | Issues | Top central file | Coupling | Issues lane | Deps lane | Status |"
     )

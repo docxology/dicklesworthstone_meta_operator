@@ -28,7 +28,7 @@ class OperatorConfig:
     run_workers: int = 6
     run_timeout_s: int = 600
     stream_tail_bytes: int = 20000
-    cma_dir: str = "../code_meta_analysis"
+    cma_dir: str = "../daf-code-analysis"
 
     def validated(self) -> "OperatorConfig":
         """Reject nonsensical values instead of failing downstream."""
@@ -37,7 +37,7 @@ class OperatorConfig:
         if self.repos_dir.startswith("/"):
             raise ValueError("repos_dir must be relative to the project root")
         if not self.cma_dir or self.cma_dir.startswith("/"):
-            raise ValueError("cma_dir must be a relative path to the code_meta_analysis checkout")
+            raise ValueError("cma_dir must be a relative path to the daf-code-analysis checkout")
         for name in ("clone_workers", "fetch_workers", "run_workers"):
             if getattr(self, name) < 1:
                 raise ValueError(f"{name} must be >= 1")

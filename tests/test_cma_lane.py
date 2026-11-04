@@ -1,4 +1,4 @@
-"""Tests for ``src/cma_lane.py`` — the code_meta_analysis orchestration lane.
+"""Tests for ``src/cma_lane.py`` — the daf-code-analysis orchestration lane.
 
 Zero-mock: the cma CLI is faked with a REAL stdlib ``scripts/lanes.py``
 executable in a tmp checkout (the "fake cma CLI via injected script path"

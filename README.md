@@ -12,7 +12,7 @@ A self-contained fork of the
 [`template_code_project`](https://github.com/docxology/template) conventions:
 thin orchestrators in `scripts/`, logic in `src/`, zero-mock tests gated at
 ≥90 % branch coverage. No framework dependencies — the only subprocess
-boundaries are `gh`, `git`, and `uv` (the optional code_meta_analysis lane), and
+boundaries are `gh`, `git`, and `uv` (the optional daf-code-analysis lane), and
 the only runtime dependencies are `pyyaml` (config parsing) and `matplotlib`
 (manuscript figures).
 

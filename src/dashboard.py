@@ -635,7 +635,7 @@ def render_dashboard(payload: dict, summary: dict) -> str:
                 )
             )
         cma_html = (
-            '<section class="cma"><h2>cma (code_meta_analysis)</h2>'
+            '<section class="cma"><h2>cma (daf-code-analysis)</h2>'
             f'<p class="meta">run <b>{_esc(cma_run.get("run_id") or "")}</b> · '
             f"generated_at {_esc(cma_run.get('generated_at') or '')}</p>"
             "<table><thead><tr><th>Repo</th><th>Issues</th>"

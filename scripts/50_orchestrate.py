@@ -49,7 +49,7 @@ def build_parser() -> argparse.ArgumentParser:
         "--auto",
         choices=sorted(AUTO_COMMAND_KEYS | {CMA_AUTO_KEY}),
         help="use each repo's auto-detected command for this key "
-        f"('{CMA_AUTO_KEY}' runs code_meta_analysis lanes per repo)",
+        f"('{CMA_AUTO_KEY}' runs daf-code-analysis lanes per repo)",
     )
     parser.add_argument("--set", nargs="+", dest="names", help="explicit repo names")
     parser.add_argument("--language", help="filter by primary language")

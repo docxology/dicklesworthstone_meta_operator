@@ -38,7 +38,7 @@ uv run python scripts/50_orchestrate.py --command "git log -1 --format=%h %s"
 `--exclude` · `--limit` · `--sort name|size|loc|recent` · `--no-forks` · `--command "argv"`
 (mutually exclusive with) `--auto test|lint|typecheck|cma-analyze` (per-repo
 auto-detected command; repos without one are skipped with a printed list;
-`cma-analyze` composes the code_meta_analysis lane and needs `cma_dir`).
+`cma-analyze` composes the daf-code-analysis lane and needs `cma_dir`).
 
 ## Testing
 

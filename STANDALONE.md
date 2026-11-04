@@ -11,7 +11,7 @@ and also lives in the sidecar workspace (`projects/ongoing/Code_Tools/`); it is
 deliberately infrastructure-free: unlike the exemplar it forked from, it
 imports nothing from the template monorepo's `infrastructure/` — logging is
 stdlib, artifact I/O is `src/jsonio`, and the subprocess boundaries are `gh`,
-`git`, and `uv` (the optional code_meta_analysis lane).
+`git`, and `uv` (the optional daf-code-analysis lane).
 
 ## Copy This When
 
