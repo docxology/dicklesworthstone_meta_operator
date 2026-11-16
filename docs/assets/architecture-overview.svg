@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 650" width="1120" height="650" role="img" aria-labelledby="svg-title svg-desc">
+  <title id="svg-title">Dicklesworthstone Meta-Operator Architecture Overview</title>
+  <desc id="svg-desc">Staged 00-90 pipeline, artifact-coupled workflow modules, four contract modules, and offline source-evidence gate.</desc>
+  <defs>
+    <marker id="arrow-slate" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#475569"/></marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#2563eb"/></marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#0d9488"/></marker>
+    <marker id="arrow-indigo" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#4f46e5"/></marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#d97706"/></marker>
+    <marker id="arrow-emerald" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#059669"/></marker>
+    <marker id="arrow-rose" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#e11d48"/></marker>
+    <marker id="arrow-purple" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#7c3aed"/></marker>
+  </defs>
+  <rect x="4" y="4" width="1112" height="642" rx="16" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <rect x="4" y="4" width="1112" height="68" rx="16" fill="#0f172a"/>
+  <rect x="4" y="56" width="1112" height="16" fill="#0f172a"/>
+  <line x1="4" y1="72" x2="1116" y2="72" stroke="#38bdf8" stroke-width="2.5"/>
+  <rect x="855" y="21" width="243" height="30" rx="15" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2"/>
+  <text x="976.5" y="40.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.5" font-weight="700" fill="#38bdf8" text-anchor="middle">Python 3.11–3.15 · ≥90% Branch</text>
+  <text x="26.0" y="32.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#f8fafc" text-anchor="start">Dicklesworthstone Meta-Operator — Corpus Orchestration &amp; Gate Engine</text>
+  <text x="26.0" y="54.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#cbd5e1" text-anchor="start">Thin scripts/00–90 orchestrating ~207 GitHub repositories (~10 GB) through JSON artifacts and an offline source gate</text>
+  <rect x="20" y="88" width="1080" height="272" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.4"/>
+  <rect x="20" y="88" width="1080" height="32" rx="12" fill="#2563eb" fill-opacity="0.10"/>
+  <line x1="20" y1="120" x2="1100" y2="120" stroke="#2563eb" stroke-opacity="0.35" stroke-width="1"/>
+  <rect x="890" y="94" width="200" height="20" rx="6" fill="#2563eb" fill-opacity="0.16" stroke="#2563eb" stroke-width="0.8"/>
+  <text x="990.0" y="108.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11" font-weight="700" fill="#2563eb" text-anchor="middle">Zero Cross-Workflow Imports</text>
+  <text x="34.0" y="109.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#0f172a" text-anchor="start">1. Artifact-Coupled Pipeline Stages (scripts/00..90 → src/* → output/)</text>
+  <rect x="36" y="132" width="248" height="96" rx="8" fill="#f8fafc" stroke="#2563eb" stroke-width="1.3"/>
+  <rect x="36" y="132" width="5" height="96" rx="2.5" fill="#2563eb"/>
+  <text x="50.0" y="152.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0f172a" text-anchor="start">00 Preflight &amp; 10 Registry</text>
+  <text x="50.0" y="170.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">github_client.py + registry.py</text>
+  <text x="50.0" y="186.5" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">gh CLI query for github_user</text>
+  <text x="50.0" y="203.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">→ data/repo_registry.json</text>
+  <rect x="302" y="132" width="248" height="96" rx="8" fill="#f8fafc" stroke="#0284c7" stroke-width="1.3"/>
+  <rect x="302" y="132" width="5" height="96" rx="2.5" fill="#0284c7"/>
+  <text x="316.0" y="152.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0f172a" text-anchor="start">20 Clone Corpus</text>
+  <text x="316.0" y="170.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">src/cloner.py (parallel pool)</text>
+  <text x="316.0" y="186.5" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">Idempotent git clone to repos/</text>
+  <text x="316.0" y="203.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">→ data/clone_outcomes.json</text>
+  <rect x="568" y="132" width="248" height="96" rx="8" fill="#f8fafc" stroke="#0d9488" stroke-width="1.3"/>
+  <rect x="568" y="132" width="5" height="96" rx="2.5" fill="#0d9488"/>
+  <text x="582.0" y="152.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0f172a" text-anchor="start">30 Verify Upstream</text>
+  <text x="582.0" y="170.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">upstream_check + git_probe.py</text>
+  <text x="582.0" y="186.5" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">Isolated .git + 60s timeout</text>
+  <text x="582.0" y="203.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">→ data/upstream_status.json</text>
+  <rect x="834" y="132" width="250" height="96" rx="8" fill="#f8fafc" stroke="#059669" stroke-width="1.3"/>
+  <rect x="834" y="132" width="5" height="96" rx="2.5" fill="#059669"/>
+  <text x="848.0" y="152.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0f172a" text-anchor="start">40 Corpus Inventory</text>
+  <text x="848.0" y="170.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">src/inventory.py</text>
+  <text x="848.0" y="186.5" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">LOC, langs, manifests, digests</text>
+  <text x="848.0" y="203.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">→ output/data/inventory.json</text>
+  <path d="M 284.0 180.0 L 302.0 180.0" fill="none" stroke="#2563eb" stroke-width="1.8" marker-end="url(#arrow-blue)"/>
+  <path d="M 550.0 180.0 L 568.0 180.0" fill="none" stroke="#0d9488" stroke-width="1.8" marker-end="url(#arrow-teal)"/>
+  <path d="M 816.0 180.0 L 834.0 180.0" fill="none" stroke="#059669" stroke-width="1.8" marker-end="url(#arrow-emerald)"/>
+  <rect x="36" y="248" width="248" height="96" rx="8" fill="#f8fafc" stroke="#7c3aed" stroke-width="1.3"/>
+  <rect x="36" y="248" width="5" height="96" rx="2.5" fill="#7c3aed"/>
+  <text x="50.0" y="268.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0f172a" text-anchor="start">50 Orchestrate + CMA Lane</text>
+  <text x="50.0" y="286.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">orchestrator.py · cma_lane.py</text>
+  <text x="50.0" y="302.5" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">test/lint + auto cma-analyze</text>
+  <text x="50.0" y="319.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">→ data/runs/&lt;id&gt;/results.json</text>
+  <rect x="302" y="248" width="248" height="96" rx="8" fill="#f8fafc" stroke="#4f46e5" stroke-width="1.3"/>
+  <rect x="302" y="248" width="5" height="96" rx="2.5" fill="#4f46e5"/>
+  <text x="316.0" y="268.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0f172a" text-anchor="start">60 Dashboard &amp; Catalog</text>
+  <text x="316.0" y="286.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">src/dashboard.py (pure render)</text>
+  <text x="316.0" y="302.5" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">→ output/web/dashboard.html</text>
+  <text x="316.0" y="319.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">→ data/corpus_catalog.md</text>
+  <rect x="568" y="248" width="248" height="96" rx="8" fill="#f8fafc" stroke="#d97706" stroke-width="1.3"/>
+  <rect x="568" y="248" width="5" height="96" rx="2.5" fill="#d97706"/>
+  <text x="582.0" y="268.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0f172a" text-anchor="start">65 Figures &amp; z_ Variables</text>
+  <text x="582.0" y="286.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">figures.py · manuscript_vars</text>
+  <text x="582.0" y="302.5" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">→ output/figures/fig_*.png</text>
+  <text x="582.0" y="319.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">→ manuscript_variables.json</text>
+  <rect x="834" y="248" width="250" height="96" rx="8" fill="#f8fafc" stroke="#e11d48" stroke-width="1.3"/>
+  <rect x="834" y="248" width="5" height="96" rx="2.5" fill="#e11d48"/>
+  <text x="848.0" y="268.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0f172a" text-anchor="start">70 Health Gate &amp; 90 Sync</text>
+  <text x="848.0" y="286.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">health_gate.py (9 CHECK_IDS)</text>
+  <text x="848.0" y="302.5" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">sync_corpus.py state refresh</text>
+  <text x="848.0" y="319.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">→ output/data/health_gate.json</text>
+  <path d="M 959.0 228.0 L 959.0 238.0 L 160.0 238.0 L 160.0 248.0" fill="none" stroke="#7c3aed" stroke-width="1.8" marker-end="url(#arrow-purple)"/>
+  <path d="M 284.0 296.0 L 302.0 296.0" fill="none" stroke="#4f46e5" stroke-width="1.8" marker-end="url(#arrow-indigo)"/>
+  <path d="M 550.0 296.0 L 568.0 296.0" fill="none" stroke="#d97706" stroke-width="1.8" marker-end="url(#arrow-amber)"/>
+  <path d="M 816.0 296.0 L 834.0 296.0" fill="none" stroke="#e11d48" stroke-width="1.8" marker-end="url(#arrow-rose)"/>
+  <rect x="20" y="380" width="526" height="216" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.4"/>
+  <rect x="20" y="380" width="526" height="32" rx="12" fill="#475569" fill-opacity="0.10"/>
+  <line x1="20" y1="412" x2="546" y2="412" stroke="#475569" stroke-opacity="0.35" stroke-width="1"/>
+  <rect x="410" y="386" width="126" height="20" rx="6" fill="#475569" fill-opacity="0.16" stroke="#475569" stroke-width="0.8"/>
+  <text x="473.0" y="400.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11" font-weight="700" fill="#475569" text-anchor="middle">Shared Core Only</text>
+  <text x="34.0" y="401.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#0f172a" text-anchor="start">2. Frozen Contract Foundation</text>
+  <rect x="36" y="422" width="238" height="74" rx="8" fill="#f8fafc" stroke="#475569" stroke-width="1.3"/>
+  <rect x="36" y="422" width="5" height="74" rx="2.5" fill="#475569"/>
+  <text x="50.0" y="442.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="12.5" font-weight="700" fill="#0f172a" text-anchor="start">src/models.py</text>
+  <text x="50.0" y="460.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">RepoMeta, CloneOutcome, Gate</text>
+  <text x="50.0" y="476.5" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">UPSTREAM_STATES · to/from_dict</text>
+  <rect x="292" y="422" width="238" height="74" rx="8" fill="#f8fafc" stroke="#475569" stroke-width="1.3"/>
+  <rect x="292" y="422" width="5" height="74" rx="2.5" fill="#475569"/>
+  <text x="306.0" y="442.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="12.5" font-weight="700" fill="#0f172a" text-anchor="start">src/jsonio.py</text>
+  <text x="306.0" y="460.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">Atomic tmp-rename JSON/text I/O</text>
+  <text x="306.0" y="476.5" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">Deterministic sha8 digests</text>
+  <rect x="36" y="508" width="238" height="74" rx="8" fill="#f8fafc" stroke="#475569" stroke-width="1.3"/>
+  <rect x="36" y="508" width="5" height="74" rx="2.5" fill="#475569"/>
+  <text x="50.0" y="528.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="12.5" font-weight="700" fill="#0f172a" text-anchor="start">src/config.py</text>
+  <text x="50.0" y="546.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">operator_config.yaml loader</text>
+  <text x="50.0" y="562.5" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">Strict schema &amp; path validation</text>
+  <rect x="292" y="508" width="238" height="74" rx="8" fill="#f8fafc" stroke="#475569" stroke-width="1.3"/>
+  <rect x="292" y="508" width="5" height="74" rx="2.5" fill="#475569"/>
+  <text x="306.0" y="528.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="12.5" font-weight="700" fill="#0f172a" text-anchor="start">src/project_paths.py</text>
+  <text x="306.0" y="546.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">Canonical root, output/ &amp; repos/</text>
+  <text x="306.0" y="562.5" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">Artifact filename constants</text>
+  <rect x="574" y="380" width="526" height="216" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.4"/>
+  <rect x="574" y="380" width="526" height="32" rx="12" fill="#059669" fill-opacity="0.10"/>
+  <line x1="574" y1="412" x2="1100" y2="412" stroke="#059669" stroke-opacity="0.35" stroke-width="1"/>
+  <rect x="972" y="386" width="118" height="20" rx="6" fill="#059669" fill-opacity="0.16" stroke="#059669" stroke-width="0.8"/>
+  <text x="1031.0" y="400.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11" font-weight="700" fill="#059669" text-anchor="middle">scripts/gate.sh</text>
+  <text x="588.0" y="401.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#0f172a" text-anchor="start">3. Offline Source-Evidence Gate</text>
+  <rect x="590" y="422" width="494" height="160" rx="10" fill="#0f172a" stroke="#34d399" stroke-width="1.3"/>
+  <text x="604.0" y="442.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#34d399" text-anchor="start">Hermetic Snapshot &amp; Receipt Verification (source_evidence.py)</text>
+  <text x="604.0" y="460.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#e2e8f0" text-anchor="start">1. prepare_snapshot(): hashes &amp; copies src, scripts, tests, docs,</text>
+  <text x="604.0" y="476.5" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.0" font-weight="500" fill="#e2e8f0" text-anchor="start">   data, output/data, output/figures + lockfiles outside checkout</text>
+  <text x="604.0" y="493.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#e2e8f0" text-anchor="start">2. Runs under UV_OFFLINE=1: z_generate_manuscript_variables.py,</text>
+  <text x="604.0" y="509.5" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.0" font-weight="500" fill="#e2e8f0" text-anchor="start">   pytest --cov=src --cov-branch (&gt;=90%), 65_generate_figures.py</text>
+  <text x="604.0" y="526.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#e2e8f0" text-anchor="start">3. finish_gate(): zero input drift + zero mocks → source_gate.json</text>
+  <rect x="16" y="612" width="1088" height="28" rx="8" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="28.0" y="630.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e293b" text-anchor="start">Subprocess Boundaries Only: gh · git · uv (sanitized env for child CMA lanes) · Runtime deps: pyyaml, matplotlib</text>
+  <text x="1092.0" y="630.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="end">Zero-Mock Gate · MIT License</text>
+</svg>
