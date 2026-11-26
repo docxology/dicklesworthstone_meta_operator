@@ -11,6 +11,7 @@ validation_gates:
   - health_gate
 artifact_expectations:
   - output/data/repo_registry.json
+  - output/data/clone_outcomes.json
   - output/data/upstream_status.json
   - output/data/inventory.json
   - output/figures/fig_state_distribution.png
@@ -19,6 +20,7 @@ artifact_expectations:
   - output/figures/fig_staleness.png
   - output/data/manuscript_variables.json
   - output/web/dashboard.html
+  - output/data/corpus_catalog.md
   - output/data/health_gate.json
 citation_policy: none
 source_policy: "The corpus is third-party: read and run it, never modify or push to it. Operator claims about repos come from generated artifacts, never from memory."

@@ -1,0 +1,19 @@
+flowchart LR
+    GH["gh api<br/>(10_build_registry)"] --> REG["repo_registry.json"]
+    GIT["git clone<br/>(20_clone_corpus)"] --> CLONES["repos/"]
+    REG --> UP
+    CLONES --> UP["git fetch + classify<br/>(30_verify_upstream)"]
+    UP --> US["upstream_status.json"]
+    CLONES --> INV["walk + git log<br/>(40_inventory)"]
+    INV --> IJ["inventory.json"]
+    REG --> ORC["subprocess runs<br/>(50_orchestrate / 90_sync)"]
+    ORC --> ORCH["runs/&lt;id&gt;/results.json"]
+    ORCH --> DASH
+    US --> DASH["pure render<br/>(60_dashboard)"]
+    IJ --> DASH
+    REG --> DASH
+    DASH --> HTML["dashboard.html<br/>corpus_catalog.md"]
+    REG --> GATE["binary gate<br/>(70_health_gate)"]
+    US --> GATE
+    IJ --> GATE
+    HTML --> GATE

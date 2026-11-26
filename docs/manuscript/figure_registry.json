@@ -1,0 +1,34 @@
+{
+  "figures": [
+    {
+      "label": "fig:pipeline",
+      "filename": "pipeline.png",
+      "alt_text": "Repository registry, local verification and inventory, and the downstream reporting stages",
+      "generated_by": "Mermaid CLI from docs/manuscript/figures/pipeline.mmd"
+    },
+    {
+      "label": "fig:languages",
+      "filename": "fig_language_distribution.png",
+      "alt_text": "Primary-language distribution across the enumerated corpus",
+      "generated_by": "scripts/65_generate_figures.py"
+    },
+    {
+      "label": "fig:states",
+      "filename": "fig_state_distribution.png",
+      "alt_text": "Upstream verification state distribution at capture time",
+      "generated_by": "scripts/65_generate_figures.py"
+    },
+    {
+      "label": "fig:loc_size",
+      "filename": "fig_loc_size.png",
+      "alt_text": "Repository content volume: counted source lines versus packed repository size",
+      "generated_by": "scripts/65_generate_figures.py"
+    },
+    {
+      "label": "fig:staleness",
+      "filename": "fig_staleness.png",
+      "alt_text": "Repository staleness: days since the last commit",
+      "generated_by": "scripts/65_generate_figures.py"
+    }
+  ]
+}

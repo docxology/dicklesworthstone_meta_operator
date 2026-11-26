@@ -1,5 +1,5 @@
 # Claim ledger — manuscript claims sourced outside {{TOKEN}} injection
-# Schema: docs/manuscript/../../../data/AGENTS.md (claim_id, kind, value, source,
+# Schema: data/AGENTS.md (claim_id, kind, value, source,
 # source_tier, freshness, artifact_path). Regenerate tokens via
 # scripts/z_generate_manuscript_variables.py; ledger rows are for claims that
 # CANNOT be artifact-generated.
@@ -30,7 +30,7 @@ claims:
   - claim_id: operational-failures-real
     kind: operational_evidence
     value: "Stale ORIG_HEAD.lock (aadc), unborn clone (asupersync-beads), external-storage EPERM flapping observed and remediated during operation"
-    source: "run artifacts 20260903-*, operator logs, fix commits 8884eeb and c2c665e"
-    source_tier: run_receipt
+    source: "commits 8884eeb and c2c665e record the clone fixes; operator notes record the external-volume incident"
+    source_tier: repo_history
     freshness: "dated 2026-09-03; individual lock/unborn cases recur and are handled by scripts/90_sync_corpus.py"
-    artifact_path: output/data/runs
+    artifact_path: scripts/90_sync_corpus.py

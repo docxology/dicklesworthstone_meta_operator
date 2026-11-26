@@ -2,30 +2,11 @@
 
 ## System architecture {#sec:architecture}
 
-The operator is a pipeline of nine numbered stages over twelve typed modules. Communication between modules is **artifact-mediated**: workflow modules never import each other; they exchange data through JSON artifacts under `output/data/` with fixed shapes. This is what keeps every stage independently re-runnable and every module independently testable.
+Numbered stages delegate to typed workflow modules. The stages exchange fixed-shape JSON artifacts under `output/data/` and can be rerun once their required inputs are available.
 
-```mermaid
-flowchart LR
-    GH["gh api<br/>(10_build_registry)"] --> REG["repo_registry.json"]
-    GIT["git clone<br/>(20_clone_corpus)"] --> CLONES["repos/"]
-    REG --> CL
-    CL --> UP["git fetch + classify<br/>(30_verify_upstream)"]
-    UP --> US["upstream_status.json"]
-    CL --> INV["walk + git log<br/>(40_inventory)"]
-    INV --> IJ["inventory.json"]
-    REG --> ORC["subprocess runs<br/>(50_orchestrate / 90_sync)"]
-    ORCH["runs/&lt;id&gt;/results.json"] --> DASH
-    US --> DASH["pure render<br/>(60_dashboard)"]
-    INV --> DASH
-    REG --> DASH
-    DASH --> HTML["dashboard.html<br/>corpus_catalog.md"]
-    REG --> GATE["binary gate<br/>(70_health_gate)"]
-    US --> GATE
-    IJ --> GATE
-    HTML --> GATE
-```
+![Repository registry, local verification and inventory, and the downstream reporting stages](../../output/figures/pipeline.png){#fig:pipeline width=88%}
 
-The four contract modules (`src/models.py`, `src/jsonio.py`, `src/config.py`, `src/project_paths.py`) are frozen: pure dataclasses with fixed state vocabularies, atomic JSON I/O, typed configuration, and path resolution. Workflow modules (`github_client`, `registry`, `cloner`, `upstream_check`, `inventory`, `orchestrator`, `dashboard`, `figures`, `manuscript_variables`, `health_gate`) import only the contract modules.
+The four contract modules (`src/models.py`, `src/jsonio.py`, `src/config.py`, `src/project_paths.py`) are frozen: pure dataclasses with fixed state vocabularies, atomic JSON I/O, typed configuration, and path resolution. Workflow modules reuse the typed contracts and narrow helpers. Inventory and upstream verification share `src/git_probe.py` to bind Git queries to the intended checkout.
 
 ## Upstream-verification formalism {#sec:verification-formalism}
 

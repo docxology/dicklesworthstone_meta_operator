@@ -26,12 +26,13 @@ All keys must exist in [`references.bib`](references.bib). Never write raw `\cit
 
 | Label | PNG filename | Generator (`src/figures.py`, orchestrated via `scripts/65_generate_figures.py`) |
 |---|---|---|
+| `{#fig:pipeline}` | `output/figures/pipeline.png` | [Architecture source](figures/pipeline.mmd), exported and staged for rendering |
 | `{#fig:states}` | `output/figures/fig_state_distribution.png` | `build_state_distribution_figure()` |
 | `{#fig:languages}` | `output/figures/fig_language_distribution.png` | `build_language_distribution_figure()` |
 | `{#fig:loc_size}` | `output/figures/fig_loc_size.png` | `build_loc_size_figure()` |
 | `{#fig:staleness}` | `output/figures/fig_staleness.png` | `build_staleness_figure()` |
 
-Images live in `output/figures/` and are referenced as `../../output/figures/<name>.png`. Captions are self-contained. Figures are regenerated deterministically from tracked artifacts by `scripts/65_generate_figures.py`.
+Images live in `output/figures/` and are referenced as `../../output/figures/<name>.png`. Captions are self-contained. The corpus figures are generated from tracked inputs by `scripts/65_generate_figures.py`.
 
 ## Table label registry
 

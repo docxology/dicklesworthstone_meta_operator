@@ -24,7 +24,7 @@ table in `../docs/architecture.md` in the same change.
 
 1. Write the module with full type hints + docstrings.
 2. Write `tests/test_<module>.py` with real fixtures (zero-mock).
-3. Update `README.md` table + `../AGENTS.md` layer contract.
+3. Update the [module table](../docs/reference/source.md) + `../AGENTS.md` layer contract.
 4. If it introduces a new artifact, add its shape to
    `../docs/architecture.md` and a health-gate check if it gates anything.
 
