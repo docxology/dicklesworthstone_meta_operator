@@ -4,8 +4,8 @@ Importable project logic. Four frozen contract modules (models, jsonio,
 config, project_paths) plus thirteen workflow/boundary modules (github_client,
 git_probe, registry, cloner, upstream_check, inventory, orchestrator, cma_lane,
 dashboard, figures, manuscript_variables, health_gate, source_evidence —
-workflow modules never import each other; they communicate through JSON
-artifacts under `output/data/`).
+workflow modules use typed helpers and share data through JSON artifacts
+under `output/data/`).
 
 ## Modules
 
@@ -32,7 +32,7 @@ artifacts under `output/data/`).
 ## API Reference
 
 Signatures are documented in each module's docstrings; the artifact shapes are
-fixed in `../docs/architecture.md`. Key entry points:
+fixed in [architecture](../architecture.md). Key entry points:
 
 - `github_client.enumerate_repos(user, *, include_forks, runner=None) -> list[RepoMeta]`
 - `registry.build_registry / save_registry / load_registry / registry_metas`
@@ -46,7 +46,7 @@ fixed in `../docs/architecture.md`. Key entry points:
 ## Rules
 
 - No `infrastructure.*` imports (this fork is infrastructure-free by design —
-  see `../STANDALONE.md`).
+  see [standalone setup](../standalone.md)).
 - No `print()` — `logging.getLogger(__name__)`.
 - Every subprocess failure becomes a typed outcome, never an unhandled crash
   inside batch loops; genuinely unexpected errors raise with context.

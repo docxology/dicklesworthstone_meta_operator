@@ -2,7 +2,7 @@
 
 Thin orchestrators, numbered in pipeline order. Each script: argv parsing +
 delegation to `src/` + artifact writes. No business logic — the boundary test
-is in `../AGENTS.md`.
+is in [layer contract](../../AGENTS.md).
 
 | Script | Stage | Reads | Writes | Exit 1 when |
 | --- | --- | --- | --- | --- |
@@ -18,30 +18,15 @@ is in `../AGENTS.md`.
 | `z_generate_manuscript_variables.py` | tokens | all artifacts | `output/data/manuscript_variables.json` | required artifact missing (strict mode) |
 | `90_sync_corpus.py` | sync | registry | `output/data/runs/<id>/results.json` | any pull failed/timed out |
 
-## Usage
+## Running stages
 
-From the template monorepo root:
+The [snapshot quickstart](../README.md#use-the-saved-snapshot) uses saved
+inputs for the dashboard and figures. Stage 30 can read only the local
+checkout and tracking references with `--no-fetch`. Its default mode checks
+remote tips and may update local tracking references. Stage 40 reads the
+local clone contents. Stages 20 and 90 write to local fleet clones. The
+optional Stage 50 executes commands in selected local checkouts, so its
+results and side effects depend on the commands and checkout contents.
 
-```bash
-uv run python projects/ongoing/Code_Tools/dicklesworthstone_meta_operator/scripts/50_orchestrate.py --auto test --language Python --limit 5
-```
-
-or from the project directory:
-
-```bash
-uv run python scripts/50_orchestrate.py --command "git log -1 --format=%h %s"
-```
-
-## Orchestration selectors (50_orchestrate)
-
-`--set N1 N2` explicit names · `--language` primary language · `--min-loc` ·
-`--exclude` · `--limit` · `--sort name|size|loc|recent` · `--no-forks` · `--command "argv"`
-(mutually exclusive with) `--auto test|lint|typecheck|cma-analyze` (per-repo
-auto-detected command; repos without one are skipped with a printed list;
-`cma-analyze` composes the daf-code-analysis lane and needs `cma_dir`).
-
-## Testing
-
-Script smoke tests live in `../tests/test_scripts_smoke.py` (preflight
-`--offline` subprocess run + compile checks). All script behavior is covered
-through the `src/` modules they delegate to.
+The [offline source gate](../evidence.md#source-acceptance) verifies these
+boundaries with local fixtures. It does not require current upstream data.

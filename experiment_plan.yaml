@@ -21,19 +21,14 @@ metrics:
     name: upstream_sync_ratio
     direction: maximize
 protocol: "Run the pipeline stages in order (10→70) against the live corpus; every stage is idempotent and re-runnable given its predecessors' artifacts."
-expected_artifacts:
-  - output/data/repo_registry.json
-  - output/data/clone_outcomes.json
-  - output/data/upstream_status.json
-  - output/data/inventory.json
-  - output/figures/fig_state_distribution.png
-  - output/figures/fig_language_distribution.png
-  - output/figures/fig_loc_size.png
-  - output/figures/fig_staleness.png
-  - output/data/manuscript_variables.json
-  - output/web/dashboard.html
-  - output/data/corpus_catalog.md
-  - output/data/health_gate.json
+expected_figures:
+  - fig:pipeline
+  - fig:languages
+  - fig:states
+  - fig:loc_size
+  - fig:staleness
+expected_tables:
+  - tbl:languages
 baselines:
   - registry
 ablations:

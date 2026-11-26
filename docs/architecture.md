@@ -19,10 +19,9 @@ src/jsonio.py (atomic JSON/text I/O)   src/config.py (operator_config.yaml)
 src/project_paths.py (root, dirs, filenames)
 ```
 
-Import rule: workflow modules may import the four contract modules; they never
-import each other. Cross-module communication happens through the JSON
-artifacts (below) — this is what keeps every module independently testable
-and the pipeline stages re-runnable in any order.
+Workflow modules share typed contracts and narrow helpers. Pipeline stages
+communicate through the JSON artifacts below. Rerun a stage after its required
+inputs are available.
 
 The retained CMA lane is an explicit composition of orchestration helpers:
 stage 50 accepts `--auto cma-analyze` and delegates to `run_cma_analyze`.

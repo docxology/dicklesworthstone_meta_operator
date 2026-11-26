@@ -67,5 +67,5 @@ flowchart TB
     P --> OUT[output — generated artifacts, disposable]
     P --> R[repos/ — fleet clones, gitignored]
     P --> DOCS[docs — agent hub]
-    P --> CFG[pyproject.toml · experiment_plan.yaml · domain_profile.yaml · TODO.md · STANDALONE.md]
+    P --> CFG[pyproject.toml · experiment_plan.yaml · domain_profile.yaml · docs/task-index.md · docs/standalone.md]
 ```

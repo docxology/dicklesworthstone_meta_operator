@@ -3,7 +3,7 @@
 Real git fixture repos, real subprocesses, real files — offline. No
 `unittest.mock`/`MagicMock`/`@patch`/`create_autospec`. `pytest.MonkeyPatch`
 only on module attributes for error paths. See
-`../docs/testing_philosophy.md`.
+[testing philosophy](../testing_philosophy.md).
 
 | File | Covers |
 | --- | --- |
@@ -16,7 +16,7 @@ only on module attributes for error paths. See
 | `test_inventory.py` | language counting, manifests, entry points, auto-cmds, README digests |
 | `test_orchestrator.py` | selectors, run execution, timeouts, tails, reports |
 | `test_dashboard.py` | payload load, summary math, deterministic HTML/catalog render, XSS escaping |
-| `test_cma_lane.py` | cma lane composition against a real fake `lanes.py` checkout |
+| `test_cma_lane.py` | cma lane composition against a local fixture `lanes.py` checkout |
 | `test_figures.py` | real matplotlib PNGs, byte-level determinism |
 | `test_manuscript_variables.py` | `{{TOKEN}}` map ↔ manuscript prose, both directions |
 | `test_source_evidence.py` | gate snapshots, input manifests, receipt checks |

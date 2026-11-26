@@ -37,4 +37,4 @@ code, external receipts, or generated reports rather than `{{TOKEN}}` injection
 3. Do not store generated CSV/JSON/PNG under `data/` — that is what `output/`
    is for.
 
-Quick orientation: [`README.md`](README.md).
+Quick orientation: [runtime input reference](../docs/reference/data.md).
