@@ -82,14 +82,20 @@ def _days_since(iso: str, now: datetime) -> int | None:
 
 
 def generate_variables(
-    project_root: Path, *, require_analysis_outputs: bool = True
+    project_root: Path,
+    *,
+    require_analysis_outputs: bool = True,
+    as_of: datetime | None = None,
 ) -> dict[str, str]:
     """Build the flat ``UPPERCASE_KEY -> value`` token map.
 
     When ``require_analysis_outputs`` is True (the pipeline path), a missing
     required artifact raises ``FileNotFoundError``; with False (draft mode),
     result-derived tokens fall back to ``"N/A"`` so early drafts render.
+    Pass a timezone-aware ``as_of`` to replay ages from a saved manuscript.
     """
+    if as_of is not None and as_of.utcoffset() is None:
+        raise ValueError("as_of must include a timezone")
     root = Path(project_root)
     ddir = data_dir(root)
 
@@ -184,7 +190,7 @@ def generate_variables(
         put("CORPUS_WITH_TESTS_PCT", f"{100 * with_tests / len(inv_repos):.0f}")
         manifests: dict[str, int] = {}
         ages: list[int] = []
-        now = datetime.now(timezone.utc)
+        now = as_of if as_of is not None else datetime.now(timezone.utc)
         for r in inv_repos:
             for key in (r.get("manifests") or {}):
                 manifests[key] = manifests.get(key, 0) + 1
@@ -268,6 +274,17 @@ def generate_variables(
     return tokens
 
 
-def save_variables(variables: dict[str, str], output_path: Path) -> Path:
+def save_variables(
+    variables: dict[str, str], output_path: Path, *, as_of: datetime | None = None
+) -> Path:
     """Write the token map for rendering and debugging (tracked artifact)."""
-    return write_json(output_path, variables)
+    path = write_json(output_path, variables)
+    if as_of is not None:
+        write_json(
+            path.with_suffix(".receipt.json"),
+            {
+                "as_of": as_of.isoformat(),
+                "variables_sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
+            },
+        )
+    return path

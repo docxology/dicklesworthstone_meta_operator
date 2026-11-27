@@ -66,5 +66,15 @@ The combined paper goes to
 `output/reports/rendered_provenance.json`.
 
 The Stage 03 flag uses the prepared manuscript and preserves the saved
-token map. The native [offline source gate](../evidence.md#source-acceptance) exercises token
-regeneration in scratch, where the current date affects staleness values.
+token map. To reproduce the saved ages from the same artifacts, run this in
+a disposable checkout. The timestamp is the recorded time of the commit that
+regenerated the two staleness tokens.
+[Regeneration commit](https://github.com/docxology/dicklesworthstone_meta_operator/commit/d61b92d4fd92d2ce7c7b83f6a63f47f1cd174e7b)
+
+```sh
+uv run python scripts/z_generate_manuscript_variables.py --as-of 2026-11-04T00:25:42Z
+```
+
+For fresh tokens, omit `--as-of` to measure against the current time. Keep
+`output/data/manuscript_variables.receipt.json` with the regenerated token map.
+It records the replay timestamp and a digest that binds it to the map.

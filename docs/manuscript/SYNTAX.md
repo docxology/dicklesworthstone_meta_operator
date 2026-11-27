@@ -20,7 +20,8 @@ All keys must exist in [`references.bib`](references.bib). Never write raw `\cit
 | `{#eq:state_machine}` | Priority-ordered nine-state upstream classification | `02_methodology.md` |
 | `{#eq:loc_count}` | Bounded source-line counting $L(r)$ | `02_methodology.md` |
 | `{#eq:gate}` | Binary health gate as conjunction of checks | `02_methodology.md` |
-| `{#eq:staleness}` | Repository age $\Delta_r$ | `03_results.md` |
+
+The repository age formula $\Delta_r$ appears inline in [Results](03_results.md).
 
 ## Figure label registry
 

@@ -12,9 +12,11 @@ contract with ``src/figures`` is asserted explicitly.
 
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 import sys
+from datetime import datetime
 from pathlib import Path
 
 import pytest
@@ -70,12 +72,16 @@ def test_all_generated_tokens_are_used():
     assert not unused, f"generator emits tokens the prose never uses: {unused}"
 
 
-def test_saved_token_map_matches_generator(tmp_path: Path):
+def test_saved_token_map_matches_generator():
     """The tracked manuscript_variables.json artifact is exactly the generated map."""
     saved_path = PROJECT_ROOT / "output" / "data" / "manuscript_variables.json"
     assert saved_path.exists(), "run scripts/z_generate_manuscript_variables.py"
-    saved = json.loads(saved_path.read_text(encoding="utf-8"))
-    assert saved == generate_variables(PROJECT_ROOT, require_analysis_outputs=True)
+    saved_bytes = saved_path.read_bytes()
+    saved = json.loads(saved_bytes)
+    receipt = json.loads(saved_path.with_suffix(".receipt.json").read_text(encoding="utf-8"))
+    assert receipt["variables_sha256"] == hashlib.sha256(saved_bytes).hexdigest()
+    as_of = datetime.fromisoformat(receipt["as_of"])
+    assert saved == generate_variables(PROJECT_ROOT, as_of=as_of)
 
 
 def test_strict_mode_fails_on_missing_artifacts(tmp_path: Path):
