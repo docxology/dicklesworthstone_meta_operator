@@ -41,7 +41,7 @@ The behind set is not a defect of the synchronization mechanism — the pull pas
 
 ![Repository content volume: counted source lines versus packed repository size](../../output/figures/fig_loc_size.png){#fig:loc_size width=78%}
 
-[@fig:staleness] shows the distribution of repository ages at capture time, measured per [@eq:staleness] as $\Delta_r = t_{\mathrm{now}} - t_{\mathrm{commit}}(r)$. The corpus contains both day-fresh development repositories and long-dormant projects (maximum {{CORPUS_STALE_MAX_DAYS}} days; median {{CORPUS_STALE_MEDIAN_DAYS}} days).
+[@fig:staleness] shows the saved distribution of repository ages, measured as $\Delta_r = t_{\mathrm{now}} - t_{\mathrm{commit}}(r)$. At the recorded manuscript token regeneration time, the maximum age was {{CORPUS_STALE_MAX_DAYS}} days and the median was {{CORPUS_STALE_MEDIAN_DAYS}} days.
 
 ![Repository staleness: days since the last commit](../../output/figures/fig_staleness.png){#fig:staleness width=78%}
 

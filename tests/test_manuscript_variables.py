@@ -15,6 +15,7 @@ from __future__ import annotations
 import json
 import re
 import sys
+from datetime import datetime
 from pathlib import Path
 
 import pytest
@@ -70,12 +71,15 @@ def test_all_generated_tokens_are_used():
     assert not unused, f"generator emits tokens the prose never uses: {unused}"
 
 
-def test_saved_token_map_matches_generator(tmp_path: Path):
+def test_saved_token_map_matches_generator():
     """The tracked manuscript_variables.json artifact is exactly the generated map."""
     saved_path = PROJECT_ROOT / "output" / "data" / "manuscript_variables.json"
     assert saved_path.exists(), "run scripts/z_generate_manuscript_variables.py"
     saved = json.loads(saved_path.read_text(encoding="utf-8"))
-    assert saved == generate_variables(PROJECT_ROOT, require_analysis_outputs=True)
+    # The tracked token map was regenerated in commit d61b92d4. Replay it at
+    # the recorded commit time so saved ages do not grow with the wall clock.
+    as_of = datetime.fromisoformat("2026-11-04T00:25:42Z")
+    assert saved == generate_variables(PROJECT_ROOT, as_of=as_of)
 
 
 def test_strict_mode_fails_on_missing_artifacts(tmp_path: Path):
