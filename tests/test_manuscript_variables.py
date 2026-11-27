@@ -12,6 +12,7 @@ contract with ``src/figures`` is asserted explicitly.
 
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 import sys
@@ -75,10 +76,11 @@ def test_saved_token_map_matches_generator():
     """The tracked manuscript_variables.json artifact is exactly the generated map."""
     saved_path = PROJECT_ROOT / "output" / "data" / "manuscript_variables.json"
     assert saved_path.exists(), "run scripts/z_generate_manuscript_variables.py"
-    saved = json.loads(saved_path.read_text(encoding="utf-8"))
-    # The tracked token map was regenerated in commit d61b92d4. Replay it at
-    # the recorded commit time so saved ages do not grow with the wall clock.
-    as_of = datetime.fromisoformat("2026-11-04T00:25:42Z")
+    saved_bytes = saved_path.read_bytes()
+    saved = json.loads(saved_bytes)
+    receipt = json.loads(saved_path.with_suffix(".receipt.json").read_text(encoding="utf-8"))
+    assert receipt["variables_sha256"] == hashlib.sha256(saved_bytes).hexdigest()
+    as_of = datetime.fromisoformat(receipt["as_of"])
     assert saved == generate_variables(PROJECT_ROOT, as_of=as_of)
 
 

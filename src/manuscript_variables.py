@@ -274,6 +274,17 @@ def generate_variables(
     return tokens
 
 
-def save_variables(variables: dict[str, str], output_path: Path) -> Path:
+def save_variables(
+    variables: dict[str, str], output_path: Path, *, as_of: datetime | None = None
+) -> Path:
     """Write the token map for rendering and debugging (tracked artifact)."""
-    return write_json(output_path, variables)
+    path = write_json(output_path, variables)
+    if as_of is not None:
+        write_json(
+            path.with_suffix(".receipt.json"),
+            {
+                "as_of": as_of.isoformat(),
+                "variables_sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
+            },
+        )
+    return path

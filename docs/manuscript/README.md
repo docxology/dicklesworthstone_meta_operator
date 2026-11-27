@@ -75,4 +75,6 @@ regenerated the two staleness tokens.
 uv run python scripts/z_generate_manuscript_variables.py --as-of 2026-11-04T00:25:42Z
 ```
 
-For fresh tokens, omit `--as-of` to measure against the current time.
+For fresh tokens, omit `--as-of` to measure against the current time. Keep
+`output/data/manuscript_variables.receipt.json` with the regenerated token map.
+It records the replay timestamp and a digest that binds it to the map.
